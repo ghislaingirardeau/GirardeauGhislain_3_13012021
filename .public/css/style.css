@@ -9,6 +9,25 @@ header img {
 
 nav {
   border: 2px dashed green;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  height: 80px;
+  padding-bottom: 20px;
+}
+nav h1 {
+  border: 2px dashed blue;
+  width: 50%;
+  margin-top: 0px;
+}
+nav div {
+  border: 2px dashed red;
+  width: 50%;
+}
+nav .nav__input {
+  margin-top: 30px;
+  padding-left: 10%;
 }
 
 aside {
