@@ -6,6 +6,8 @@ body {
 
 header img {
   width: 20%;
+  padding-left: 2%;
+  padding-top: 2%;
 }
 
 nav {
@@ -24,6 +26,7 @@ nav {
           justify-content: flex-start;
   height: 80px;
   padding-bottom: 20px;
+  padding-left: 2%;
 }
 
 nav h1 {
@@ -56,6 +59,7 @@ aside {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-left: 2%;
 }
 
 aside h2 {
@@ -112,6 +116,7 @@ footer {
       -ms-flex-pack: start;
           justify-content: flex-start;
   height: 80px;
+  padding-left: 2%;
 }
 
 footer p {
@@ -122,12 +127,32 @@ footer p {
 
 footer .footer__logo {
   border: 2px dashed blue;
-  margin-left: 5%;
   padding-top: 2%;
   width: 10%;
 }
 
 .footer__logo img {
   width: 90%;
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    height: 120px;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  nav .nav__input {
+    padding-left: unset;
+  }
+  aside {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  aside h2 {
+    width: 100%;
+  }
+  aside div {
+    width: 30%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
