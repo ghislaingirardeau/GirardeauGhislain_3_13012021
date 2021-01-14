@@ -1,0 +1,12 @@
+
+/* mise en page bloc et ssbloc */
+@mixin border ($col) {
+    border: 2px dashed $col;
+}
+
+@mixin flex ($dir, $wrap, $content) {
+    display: flex;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $content;
+}
