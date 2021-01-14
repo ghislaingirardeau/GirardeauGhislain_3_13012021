@@ -32,6 +32,18 @@ nav .nav__input {
 
 aside {
   border: 2px dashed green;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+aside h2 {
+  border: 2px dashed blue;
+  width: 20%;
+}
+aside div {
+  border: 2px dashed red;
+  width: 33%;
 }
 
 main {

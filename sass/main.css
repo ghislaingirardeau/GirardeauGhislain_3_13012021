@@ -43,6 +43,28 @@ nav .nav__input {
 
 aside {
   border: 2px dashed green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+aside h2 {
+  border: 2px dashed blue;
+  width: 20%;
+}
+
+aside div {
+  border: 2px dashed red;
+  width: 33%;
 }
 
 main {

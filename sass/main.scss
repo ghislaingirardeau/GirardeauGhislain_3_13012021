@@ -31,7 +31,15 @@ nav {
 
 aside{
     @include border(green);
-    
+    @include flex (row, nowrap, space-between);
+    & h2{
+        @include border(blue);
+        width: 20%;
+    }
+    & div {
+        @include border(red);
+        width: 33%;
+    }
 }
 
 
