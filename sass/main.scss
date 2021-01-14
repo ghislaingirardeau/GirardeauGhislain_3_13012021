@@ -1,0 +1,22 @@
+@import "./base/color";
+@import "./layout/accueil";
+
+body {
+    max-width: 1440px;
+    margin: auto;
+}
+header img {
+    width: 20%;
+}
+nav {
+    @include border(green)
+}
+aside{
+    @include border(green)
+}
+main{
+    @include border(green)
+}
+footer{
+    @include border(green)
+}
