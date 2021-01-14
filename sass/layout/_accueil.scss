@@ -9,22 +9,19 @@ header img {
 }
 nav {
     @include border(green);
-    @include flex (column, wrap, flex-start);
+    @include flex (row, wrap, flex-start);
     height: 80px;
     padding-bottom: 20px;
     padding-left: 2%;
-    & h1 {
-        @include border(blue);
-        width: 50%;
-        margin-top: 0px;
-    }
-    & div{
+    
+    & .nav__description{
         @include border(red);
-        width: 50%;
+        width: 45%;
     }
-    & .nav__input {
-        margin-top: 30px;
-        padding-left: 10%;
+    & .nav__btn {
+        @include border(blue);
+        padding-top: 40px;
+        width: 25%;
     }
 }
 
@@ -84,12 +81,11 @@ footer{
 }
 
 @include tablette {
-
 nav{
-    height: 120px;
-    flex-wrap: nowrap;
-    & .nav__input {
-        padding-left: unset;
+    height: 180px;
+    
+    & .nav__description {
+       width: 100%;
     }
 }
 aside{
@@ -101,4 +97,21 @@ aside{
         width: 30%;
     }
 }
+}
+
+@include mobile {
+
+    nav{
+        @include flex (column, nowrap, space-between);
+        height: 340px;
+    }
+    .nav__description {
+        order: 2;
+    }
+    #localisation {
+        order: 1;    
+    }
+    #explorer {
+        order: 3;
+    }
 }
