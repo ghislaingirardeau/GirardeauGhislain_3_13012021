@@ -15,10 +15,13 @@
   justify-content: $content;
 }
 
-@mixin largeur($width_element) {
+@mixin position_element($width_element, $textalign) {
   width: percentage($width_element / $width-totale);
   margin-left: percentage(20px / $width-totale);
+  text-align: $textalign;
 }
+
+
 @mixin btn_accueil ($margin, $border, $BG, $padding, $align, $font, $weight) {
   margin: $margin;
   border: $border;
@@ -28,6 +31,15 @@
   font-size: $font;
   font-weight: $weight;
 }
+
+@mixin liste_nav ($color, $radius, $col_shad) {
+    background-color: $color;
+    border-radius: $radius;
+    box-shadow: 5px 5px 5px $col_shad;
+    
+}
+
+
 
 @mixin tablette {
   @media screen and (max-width: 1024px) {

@@ -8,11 +8,11 @@ footer{
     & p {
         @include border(red);
         margin-top: -1rem;
-        @include largeur (325px);
+        @include position_element(325px, left);
     }
     h4{
         font-family: 'Shrikhand', cursive;
         font-size: 1.5rem;
-        @include largeur (325px);
+        @include position_element(325px, left);
     }
 }

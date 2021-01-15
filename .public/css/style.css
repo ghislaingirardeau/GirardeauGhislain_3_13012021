@@ -31,12 +31,14 @@ footer p {
   margin-top: -1rem;
   width: 86.6666666667%;
   margin-left: 5.3333333333%;
+  text-align: left;
 }
 footer h4 {
   font-family: "Shrikhand", cursive;
   font-size: 1.5rem;
   width: 86.6666666667%;
   margin-left: 5.3333333333%;
+  text-align: left;
 }
 
 .accueil__nav {
@@ -56,8 +58,8 @@ footer h4 {
 .accueil__nav .__description {
   width: 86.6666666667%;
   margin-left: 5.3333333333%;
-  height: 144px;
   text-align: center;
+  height: 144px;
   margin-bottom: 35px;
 }
 
@@ -92,17 +94,25 @@ footer h4 {
   flex-wrap: nowrap;
   justify-content: space-around;
   height: 440px;
+  padding-bottom: 60px;
 }
 .accueil__aside .__titre {
-  border: 2px dashed blue;
   width: 86.6666666667%;
   margin-left: 5.3333333333%;
+  text-align: left;
 }
 .accueil__aside .__liste {
-  border: 2px dashed red;
+  height: 75px;
   width: 86.6666666667%;
   margin-left: 5.3333333333%;
+  text-align: center;
   background-color: #f6f6f6;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eaeaea;
+}
+.accueil__aside p {
+  margin-top: 25px;
+  font-weight: bold;
 }
 
 .accueil__main {
@@ -117,13 +127,14 @@ footer h4 {
   background-color: #f6f6f6;
 }
 .accueil__main .__titre {
-  border: 2px dashed blue;
   width: 86.6666666667%;
   margin-left: 5.3333333333%;
+  text-align: left;
 }
 .accueil__main .__restaurant {
   width: 86.6666666667%;
   margin-left: 5.3333333333%;
+  text-align: center;
   border: 2px dashed red;
   height: 255px;
 }

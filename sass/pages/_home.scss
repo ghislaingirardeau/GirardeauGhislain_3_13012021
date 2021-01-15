@@ -10,9 +10,8 @@
     background: linear-gradient(to bottom, $col_start_deg_loc 0%, $col_end_deg_loc 15%)
   }
   & .__description {
-    @include largeur(325px);
+    @include position_element(325px, center);
     height: 144px;
-    text-align: center;
     margin-bottom: 35px;
   }
 }
@@ -31,14 +30,18 @@
   @include border(green);
   @include flex(column, nowrap, space-around);
   height: 440px;
+  padding-bottom: 60px;
   & .__titre {
-    @include border(blue);
-    @include largeur(325px);
+    @include position_element(325px, left);
   }
   & .__liste {
-    @include border(red);
-    @include largeur(325px);
-    background-color: $color_background;
+    height: 75px;
+    @include position_element(325px, center);
+    @include liste_nav ($color_background, 20px, $col_end_deg_loc);
+  }
+  & p {
+    margin-top: 25px;
+    font-weight: bold;
   }
 }
 
@@ -51,11 +54,10 @@
   background-color: $color_background;
 
   & .__titre {
-    @include border(blue);
-    @include largeur(325px);
+    @include position_element(325px, left);
   }
   & .__restaurant {
-    @include largeur(325px);
+    @include position_element(325px, center);
     @include border(red);
     height: 255px;
   }
