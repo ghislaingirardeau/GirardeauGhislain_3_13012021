@@ -1,0 +1,22 @@
+.accueil__footer{
+    @include border(green);
+    @include flex (column, nowrap, space-around);
+    height: 195px;
+    padding-left: 3%;
+    padding-top: 20px;
+    background-color: $color_background;
+    & p {
+        @include border(red);
+        margin-top: -2rem;
+        color: white;
+    }
+    & .footer__logo{
+        @include border(blue);
+        margin-bottom: 2rem; 
+        
+        &--white{
+        filter: invert(1);
+        width: 100px;
+        }
+    }
+}

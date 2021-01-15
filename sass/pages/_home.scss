@@ -1,0 +1,54 @@
+
+
+.accueil_nav {
+    @include border(green);
+    @include flex (column, nowrap, flex-start);
+    height: 340px;
+    padding-bottom: 20px;
+    padding-left: 2%;
+    
+    & .nav__description{
+        @include border(red);
+        width: 45%;
+    }
+    & .nav__btn {
+        @include border(blue);
+        padding-top: 40px;
+        width: 25%;
+    }
+}
+
+
+aside{
+    @include border(green);
+    @include flex (row, nowrap, space-between);
+    padding-left: 2%;
+    & h2{
+        @include border(blue);
+        width: 20%;
+    }
+    & div {
+        @include border(red);
+        width: 33%;
+    }
+}
+
+
+main{
+    @include border(green);
+    @include flex (row, wrap, space-around);
+    align-content: space-around;
+    height: 800px;
+    
+    & h2{
+        @include border(blue);
+        width: 90%;
+    }
+    & article {
+        width: 40%;
+        height: 42%;
+        @include border(red);
+    }
+}
+
+
