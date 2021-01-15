@@ -72,7 +72,9 @@
         object-position: 0 -240px;
       }
     }
-
+    & .__descriptif {
+      @include descriptif_rest_accueil;
+    }
   }
 
 }
