@@ -81,33 +81,35 @@ footer .footer__logo--white {
 }
 
 .accueil__nav .__description {
-  border: 2px dashed red;
   width: 86.66667%;
   margin-left: 5.33333%;
   height: 144px;
-  padding: 45px 0 0;
   text-align: center;
+  margin-bottom: 35px;
 }
 
 #localisation {
-  margin-left: 35%;
-  margin-top: 10px;
+  margin: 10px 25% 0 25%;
   border: none;
   background-color: white;
-  padding: 0.7rem;
+  padding: 0.7rem 2.5rem;
   text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #eaeaea;
 }
 
 #explorer {
-  margin-left: 35%;
-  margin-top: 10px;
+  margin: 10px 25% 0 25%;
   border: none;
   background-color: white;
-  padding: 1.5rem;
+  padding: 1.2rem 2rem;
   text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(80%, #9356DC));
-  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 80%);
-  border-radius: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(95%, #9356DC));
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 95%);
+  border-radius: 30px;
   color: white;
 }
 

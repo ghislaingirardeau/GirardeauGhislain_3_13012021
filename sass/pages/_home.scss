@@ -10,20 +10,20 @@
     background: linear-gradient(to bottom, $col_start_deg_loc 0%, $col_end_deg_loc 15%)
   }
   & .__description {
-    @include border(red);
     @include largeur(325px);
     height: 144px;
-    padding: 45px 0 0;
     text-align: center;
+    margin-bottom: 35px;
   }
 }
 #localisation {
-  @include btn_accueil (35%, 10px, none, white, 0.7rem, center);
+  @include btn_accueil (10px 25% 0 25%, none, white, 0.7rem 2.5rem, center, 1rem, bold);
+  background-color: $col_end_deg_loc;
 }
 #explorer {
-  @include btn_accueil (35%, 10px, none, white, 1.5rem, center);
-  background: linear-gradient(to bottom, $secondary 0%, $primary 80%);
-  border-radius: 20px;
+  @include btn_accueil (10px 25% 0 25%, none, white, 1.2rem 2rem, center, 1.3rem, bold);
+  background: linear-gradient(to bottom, $secondary 0%, $primary 95%);
+  border-radius: 30px;
   color: $text_bouton;
 }
 

@@ -19,13 +19,14 @@
   width: percentage($width_element / $width-totale);
   margin-left: percentage(20px / $width-totale);
 }
-@mixin btn_accueil ($ML, $MT, $border, $BG, $padding, $align) {
-  margin-left: $ML;
-  margin-top: $MT;
+@mixin btn_accueil ($margin, $border, $BG, $padding, $align, $font, $weight) {
+  margin: $margin;
   border: $border;
   background-color: $BG;
   padding: $padding;
   text-align: $align;
+  font-size: $font;
+  font-weight: $weight;
 }
 
 @mixin tablette {
