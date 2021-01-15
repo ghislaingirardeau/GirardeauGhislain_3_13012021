@@ -21,25 +21,26 @@
   text-align: $textalign;
 }
 
-
-@mixin btn_accueil ($margin, $border, $BG, $padding, $align, $font, $weight) {
+@mixin btn_layout($margin, $border, $padding, $align, $font, $weight) {
   margin: $margin;
   border: $border;
-  background-color: $BG;
   padding: $padding;
   text-align: $align;
   font-size: $font;
   font-weight: $weight;
 }
-
-@mixin liste_nav ($color, $radius, $col_shad) {
-    background-color: $color;
-    border-radius: $radius;
-    box-shadow: 5px 5px 5px $col_shad;
-    
+@mixin btn_color ($col_shad) {
+  background: linear-gradient(to bottom, $secondary 0%, $primary 95%);
+  border-radius: 30px;
+  color: $text_bouton;
+  box-shadow: 5px 5px 5px $col_shad;
 }
 
-
+@mixin liste_nav($color, $radius, $col_shad) {
+  background-color: $color;
+  border-radius: $radius;
+  box-shadow: 5px 5px 5px $col_shad;
+}
 
 @mixin tablette {
   @media screen and (max-width: 1024px) {
