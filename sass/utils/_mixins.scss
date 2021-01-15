@@ -1,5 +1,10 @@
 
 /* mise en page bloc et ssbloc */
+@mixin font ($family, $size) {
+    font-family: $family;
+    font-size: $size;
+}
+
 @mixin border ($col) {
     border: 2px dashed $col;
 }
@@ -14,4 +19,10 @@
 @mixin largeur ($width_element) {
     width: percentage($width_element / $width-totale);
     margin-left: percentage(20px / $width-totale);
+}
+
+@mixin tablette {
+    @media screen and (max-width: 1024px) {
+        @content;
+    }   
 }

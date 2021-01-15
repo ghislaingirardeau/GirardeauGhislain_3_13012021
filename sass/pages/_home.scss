@@ -1,11 +1,13 @@
 .accueil__nav {
   @include border(green);
   @include flex(column, nowrap, flex-start);
-
+  background-color: $color_background;
   height: 340px;
+
   & .__btn__localisation {
-    @include border(blue);
     width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, $col_start_deg_loc 0%, $col_end_deg_loc 15%)
   }
   & .__description {
     @include border(red);
@@ -17,6 +19,7 @@
 #localisation {
   background-color: red;
   margin-left: 220px;
+  margin-top: 20px;
 }
 #explorer {
   background-color: red;
@@ -34,6 +37,7 @@
   & .__liste {
     @include border(red);
     @include largeur(325px);
+    background-color: $color_background;
   }
 }
 
@@ -42,7 +46,8 @@
   @include flex(column, nowrap, space-between);
   align-items: space-between;
   height: 1225px;
-  margin-bottom: 60px;
+  padding-bottom: 60px;
+  background-color: $color_background;
 
   & .__titre {
     @include border(blue);

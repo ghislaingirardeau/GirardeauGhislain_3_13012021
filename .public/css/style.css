@@ -2,6 +2,8 @@
 body {
   max-width: 678px;
   margin: auto;
+  font-family: roboto;
+  font-size: 1.3em;
 }
 
 header {
@@ -47,11 +49,13 @@ footer .footer__logo--white {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
+  background-color: #f6f6f6;
   height: 340px;
 }
 .accueil__nav .__btn__localisation {
-  border: 2px dashed blue;
   width: 100%;
+  height: 50px;
+  background: linear-gradient(to bottom, #cfcfcf 0%, #eaeaea 15%);
 }
 .accueil__nav .__description {
   border: 2px dashed red;
@@ -64,6 +68,7 @@ footer .footer__logo--white {
 #localisation {
   background-color: red;
   margin-left: 220px;
+  margin-top: 20px;
 }
 
 #explorer {
@@ -88,6 +93,7 @@ footer .footer__logo--white {
   border: 2px dashed red;
   width: 86.6666666667%;
   margin-left: 5.3333333333%;
+  background-color: #f6f6f6;
 }
 
 .accueil__main {
@@ -98,7 +104,8 @@ footer .footer__logo--white {
   justify-content: space-between;
   align-items: space-between;
   height: 1225px;
-  margin-bottom: 60px;
+  padding-bottom: 60px;
+  background-color: #f6f6f6;
 }
 .accueil__main .__titre {
   border: 2px dashed blue;

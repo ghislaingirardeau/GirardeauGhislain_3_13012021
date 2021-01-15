@@ -2,6 +2,8 @@
 body {
   max-width: 678px;
   margin: auto;
+  font-family: roboto;
+  font-size: 1.3em;
 }
 
 header {
@@ -67,12 +69,15 @@ footer .footer__logo--white {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  background-color: #f6f6f6;
   height: 340px;
 }
 
 .accueil__nav .__btn__localisation {
-  border: 2px dashed blue;
   width: 100%;
+  height: 50px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cfcfcf), color-stop(15%, #eaeaea));
+  background: linear-gradient(to bottom, #cfcfcf 0%, #eaeaea 15%);
 }
 
 .accueil__nav .__description {
@@ -86,6 +91,7 @@ footer .footer__logo--white {
 #localisation {
   background-color: red;
   margin-left: 220px;
+  margin-top: 20px;
 }
 
 #explorer {
@@ -119,6 +125,7 @@ footer .footer__logo--white {
   border: 2px dashed red;
   width: 86.66667%;
   margin-left: 5.33333%;
+  background-color: #f6f6f6;
 }
 
 .accueil__main {
@@ -139,7 +146,8 @@ footer .footer__logo--white {
       -ms-flex-align: space-between;
           align-items: space-between;
   height: 1225px;
-  margin-bottom: 60px;
+  padding-bottom: 60px;
+  background-color: #f6f6f6;
 }
 
 .accueil__main .__titre {
