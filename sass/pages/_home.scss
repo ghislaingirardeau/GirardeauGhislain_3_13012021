@@ -14,16 +14,17 @@
     @include largeur(325px);
     height: 144px;
     padding: 45px 0 0;
+    text-align: center;
   }
 }
 #localisation {
-  background-color: red;
-  margin-left: 220px;
-  margin-top: 20px;
+  @include btn_accueil (35%, 10px, none, white, 0.7rem, center);
 }
 #explorer {
-  background-color: red;
-  margin-left: 220px;
+  @include btn_accueil (35%, 10px, none, white, 1.5rem, center);
+  background: linear-gradient(to bottom, $secondary 0%, $primary 80%);
+  border-radius: 20px;
+  color: $text_bouton;
 }
 
 .accueil__aside {

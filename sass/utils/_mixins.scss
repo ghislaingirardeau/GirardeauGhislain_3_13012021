@@ -1,28 +1,35 @@
-
 /* mise en page bloc et ssbloc */
-@mixin font ($family, $size) {
-    font-family: $family;
-    font-size: $size;
+@mixin font($family, $size) {
+  font-family: $family;
+  font-size: $size;
 }
 
-@mixin border ($col) {
-    border: 2px dashed $col;
+@mixin border($col) {
+  border: 2px dashed $col;
 }
 
-@mixin flex ($dir, $wrap, $content) {
-    display: flex;
-    flex-direction: $dir;
-    flex-wrap: $wrap;
-    justify-content: $content;
+@mixin flex($dir, $wrap, $content) {
+  display: flex;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $content;
 }
 
-@mixin largeur ($width_element) {
-    width: percentage($width_element / $width-totale);
-    margin-left: percentage(20px / $width-totale);
+@mixin largeur($width_element) {
+  width: percentage($width_element / $width-totale);
+  margin-left: percentage(20px / $width-totale);
+}
+@mixin btn_accueil ($ML, $MT, $border, $BG, $padding, $align) {
+  margin-left: $ML;
+  margin-top: $MT;
+  border: $border;
+  background-color: $BG;
+  padding: $padding;
+  text-align: $align;
 }
 
 @mixin tablette {
-    @media screen and (max-width: 1024px) {
-        @content;
-    }   
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
 }

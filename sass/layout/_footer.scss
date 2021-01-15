@@ -2,13 +2,12 @@ footer{
     @include border(green);
     @include flex (column, nowrap, space-around);
     height: 195px;
-    
+    color: $text_bouton;
     padding-top: 20px;
     background-color: $color_bg_footer;
     & p {
         @include border(red);
         margin-top: -2rem;
-        color: white;
         @include largeur (325px);
     }
     & .footer__logo{
