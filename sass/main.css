@@ -141,6 +141,31 @@ footer h4 {
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px #eaeaea;
           box-shadow: 5px 5px 5px #eaeaea;
+  position: relative;
+}
+
+.accueil__aside .__liste.--A::before {
+  content: "";
+  color: white;
+  background-color: #9356DC;
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  position: absolute;
+  left: -12.5px;
+  top: 31.25px;
+}
+
+.accueil__aside .__liste.--B::before {
+  content: "";
+  color: white;
+  background-color: #9356DC;
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  position: absolute;
+  left: -12.5px;
+  top: 31.25px;
 }
 
 .accueil__aside p {
@@ -179,8 +204,11 @@ footer h4 {
 .accueil__main .__restaurant {
   width: 86.66667%;
   margin-left: 5.33333%;
-  text-align: center;
-  border: 2px dashed red;
+  text-align: left;
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 5px #eaeaea;
+          box-shadow: 5px 5px 5px #eaeaea;
   height: 255px;
 }
 /*# sourceMappingURL=main.css.map */

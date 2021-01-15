@@ -35,7 +35,11 @@
   & .__liste {
     height: 75px;
     @include position_element(325px, center);
-    @include liste_nav ($color_background, 20px, $col_end_deg_loc);
+    @include layout_sousbloc ($color_background, 20px, $col_end_deg_loc);
+    position: relative;
+    @include before (A);
+    @include before (B);
+  
   }
   & p {
     margin-top: 25px;
@@ -55,8 +59,8 @@
     @include position_element(325px, left);
   }
   & .__restaurant {
-    @include position_element(325px, center);
-    @include border(red);
+    @include position_element(325px, left);
+    @include layout_sousbloc (white, 20px, $col_end_deg_loc);
     height: 255px;
   }
 }

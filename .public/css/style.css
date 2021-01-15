@@ -108,6 +108,29 @@ footer h4 {
   background-color: #f6f6f6;
   border-radius: 20px;
   box-shadow: 5px 5px 5px #eaeaea;
+  position: relative;
+}
+.accueil__aside .__liste.--A::before {
+  content: "";
+  color: white;
+  background-color: #9356DC;
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  position: absolute;
+  left: -12.5px;
+  top: 31.25px;
+}
+.accueil__aside .__liste.--B::before {
+  content: "";
+  color: white;
+  background-color: #9356DC;
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+  position: absolute;
+  left: -12.5px;
+  top: 31.25px;
 }
 .accueil__aside p {
   margin-top: 25px;
@@ -133,8 +156,10 @@ footer h4 {
 .accueil__main .__restaurant {
   width: 86.6666666667%;
   margin-left: 5.3333333333%;
-  text-align: center;
-  border: 2px dashed red;
+  text-align: left;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #eaeaea;
   height: 255px;
 }
 
