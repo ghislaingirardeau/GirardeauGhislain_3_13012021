@@ -62,5 +62,17 @@
     @include position_element(325px, left);
     @include layout_sousbloc (white, 20px, $col_end_deg_loc);
     height: 255px;
+    overflow: hidden;
+    position: relative;
+
+    & .__img--fit {
+      @include img_rest_accueil;
+
+      &.--position {
+        object-position: 0 -240px;
+      }
+    }
+
   }
+
 }

@@ -161,6 +161,16 @@ footer h4 {
   border-radius: 20px;
   box-shadow: 5px 5px 5px #eaeaea;
   height: 255px;
+  overflow: hidden;
+  position: relative;
+}
+.accueil__main .__restaurant .__img--fit {
+  width: 100%;
+  object-fit: contain;
+  object-position: 0 -90px;
+}
+.accueil__main .__restaurant .__img--fit.--position {
+  object-position: 0 -240px;
 }
 
 /*# sourceMappingURL=style.css.map */

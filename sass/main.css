@@ -210,5 +210,20 @@ footer h4 {
   -webkit-box-shadow: 5px 5px 5px #eaeaea;
           box-shadow: 5px 5px 5px #eaeaea;
   height: 255px;
+  overflow: hidden;
+  position: relative;
+}
+
+.accueil__main .__restaurant .__img--fit {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: 0 -90px;
+     object-position: 0 -90px;
+}
+
+.accueil__main .__restaurant .__img--fit.--position {
+  -o-object-position: 0 -240px;
+     object-position: 0 -240px;
 }
 /*# sourceMappingURL=main.css.map */

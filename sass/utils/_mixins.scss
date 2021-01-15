@@ -42,6 +42,12 @@
   box-shadow: 5px 5px 5px $col_shad;
 }
 
+@mixin img_rest_accueil {
+  width: 100%;
+      object-fit: contain;
+      object-position: 0 -90px;
+}
+
 $rond_etape: (A: 1, B: 2, C: 3);
 @mixin before ($rond_etape) {
     @each $key, $val in $rond_etape {    
