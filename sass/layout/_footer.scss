@@ -1,4 +1,4 @@
-.accueil__footer{
+footer{
     @include border(green);
     @include flex (column, nowrap, space-around);
     height: 195px;

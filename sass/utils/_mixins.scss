@@ -11,4 +11,7 @@
     justify-content: $content;
 }
 
-
+@mixin largeur ($width_element) {
+    width: percentage($width_element / $width-totale);
+    margin-left: percentage(20px / $width-totale);
+}

@@ -1,16 +1,16 @@
 
 
-.accueil_nav {
+.accueil__nav {
     @include border(green);
     @include flex (column, nowrap, flex-start);
     align-items: center;
     height: 340px;
-    & .nav__btn__localisation {
+    & .__btn__localisation {
         @include border(blue);
         width: 100%;
         
     }
-    & .nav__description{
+    & .__description{
         @include border(red);
         width: 85%;
         height: 144px;
@@ -22,36 +22,40 @@
     margin-left: 220px;
 }
 
-aside{
+.accueil__aside{
     @include border(green);
-    @include flex (column, nowrap, space-between);
-    padding-left: 2%;
+    @include flex (column, nowrap, space-around);
+    
     height: 440px;
-    & h2{
+    & .__titre{
         @include border(blue);
-        width: 20%;
+        @include largeur (325px);
+      
     }
-    & div {
+    & .__liste {
         @include border(red);
-        width: 33%;
+        @include largeur (325px);
+        
     }
 }
 
 
-main{
+.accueil__main{
     @include border(green);
-    @include flex (row, wrap, space-around);
-    align-content: space-around;
-    height: 800px;
+    @include flex (column, nowrap, space-between);
+    align-items: space-between;
+    height: 1225px;
+    margin-bottom: 60px;
     
-    & h2{
+    & .__titre{
         @include border(blue);
-        width: 90%;
+        @include largeur (325px);
+        
     }
-    & article {
-        width: 40%;
-        height: 42%;
+    & .__restaurant {
+        @include largeur (325px);
         @include border(red);
+        height: 255px;
     }
 }
 
