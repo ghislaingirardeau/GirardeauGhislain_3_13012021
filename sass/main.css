@@ -64,20 +64,27 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 340px;
-  padding-bottom: 20px;
-  padding-left: 2%;
+}
+
+.accueil_nav .nav__btn__localisation {
+  border: 2px dashed blue;
+  width: 100%;
 }
 
 .accueil_nav .nav__description {
   border: 2px dashed red;
-  width: 45%;
+  width: 85%;
+  height: 144px;
+  padding: 45px 0 0;
 }
 
-.accueil_nav .nav__btn {
-  border: 2px dashed blue;
-  padding-top: 40px;
-  width: 25%;
+#localisation {
+  background-color: red;
+  margin-left: 220px;
 }
 
 aside {
@@ -85,16 +92,17 @@ aside {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-left: 2%;
+  height: 440px;
 }
 
 aside h2 {
