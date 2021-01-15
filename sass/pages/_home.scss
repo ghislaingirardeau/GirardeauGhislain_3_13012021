@@ -1,62 +1,56 @@
-
-
 .accueil__nav {
-    @include border(green);
-    @include flex (column, nowrap, flex-start);
-    align-items: center;
-    height: 340px;
-    & .__btn__localisation {
-        @include border(blue);
-        width: 100%;
-        
-    }
-    & .__description{
-        @include border(red);
-        width: 85%;
-        height: 144px;
-        padding: 45px 0 0;
-    }
+  @include border(green);
+  @include flex(column, nowrap, flex-start);
+
+  height: 340px;
+  & .__btn__localisation {
+    @include border(blue);
+    width: 100%;
+  }
+  & .__description {
+    @include border(red);
+    @include largeur(325px);
+    height: 144px;
+    padding: 45px 0 0;
+  }
 }
 #localisation {
-    background-color: red;
-    margin-left: 220px;
+  background-color: red;
+  margin-left: 220px;
+}
+#explorer {
+  background-color: red;
+  margin-left: 220px;
 }
 
-.accueil__aside{
-    @include border(green);
-    @include flex (column, nowrap, space-around);
-    
-    height: 440px;
-    & .__titre{
-        @include border(blue);
-        @include largeur (325px);
-      
-    }
-    & .__liste {
-        @include border(red);
-        @include largeur (325px);
-        
-    }
+.accueil__aside {
+  @include border(green);
+  @include flex(column, nowrap, space-around);
+  height: 440px;
+  & .__titre {
+    @include border(blue);
+    @include largeur(325px);
+  }
+  & .__liste {
+    @include border(red);
+    @include largeur(325px);
+  }
 }
 
+.accueil__main {
+  @include border(green);
+  @include flex(column, nowrap, space-between);
+  align-items: space-between;
+  height: 1225px;
+  margin-bottom: 60px;
 
-.accueil__main{
-    @include border(green);
-    @include flex (column, nowrap, space-between);
-    align-items: space-between;
-    height: 1225px;
-    margin-bottom: 60px;
-    
-    & .__titre{
-        @include border(blue);
-        @include largeur (325px);
-        
-    }
-    & .__restaurant {
-        @include largeur (325px);
-        @include border(red);
-        height: 255px;
-    }
+  & .__titre {
+    @include border(blue);
+    @include largeur(325px);
+  }
+  & .__restaurant {
+    @include largeur(325px);
+    @include border(red);
+    height: 255px;
+  }
 }
-
-

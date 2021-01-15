@@ -2,17 +2,19 @@ footer{
     @include border(green);
     @include flex (column, nowrap, space-around);
     height: 195px;
-    padding-left: 3%;
+    
     padding-top: 20px;
     background-color: $color_background;
     & p {
         @include border(red);
         margin-top: -2rem;
         color: white;
+        @include largeur (325px);
     }
     & .footer__logo{
         @include border(blue);
         margin-bottom: 2rem; 
+        @include largeur (325px);
         
         &--white{
         filter: invert(1);

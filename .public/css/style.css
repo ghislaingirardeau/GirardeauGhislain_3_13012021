@@ -20,7 +20,6 @@ footer {
   flex-wrap: nowrap;
   justify-content: space-around;
   height: 195px;
-  padding-left: 3%;
   padding-top: 20px;
   background-color: #353535;
 }
@@ -28,10 +27,14 @@ footer p {
   border: 2px dashed red;
   margin-top: -2rem;
   color: white;
+  width: 86.6666666667%;
+  margin-left: 5.3333333333%;
 }
 footer .footer__logo {
   border: 2px dashed blue;
   margin-bottom: 2rem;
+  width: 86.6666666667%;
+  margin-left: 5.3333333333%;
 }
 footer .footer__logo--white {
   filter: invert(1);
@@ -44,7 +47,6 @@ footer .footer__logo--white {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  align-items: center;
   height: 340px;
 }
 .accueil__nav .__btn__localisation {
@@ -53,12 +55,18 @@ footer .footer__logo--white {
 }
 .accueil__nav .__description {
   border: 2px dashed red;
-  width: 85%;
+  width: 86.6666666667%;
+  margin-left: 5.3333333333%;
   height: 144px;
   padding: 45px 0 0;
 }
 
 #localisation {
+  background-color: red;
+  margin-left: 220px;
+}
+
+#explorer {
   background-color: red;
   margin-left: 220px;
 }
