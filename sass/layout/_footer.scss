@@ -3,21 +3,16 @@ footer{
     @include flex (column, nowrap, space-around);
     height: 195px;
     color: $text_bouton;
-    padding-top: 20px;
     background-color: $color_bg_footer;
+    padding-bottom: 10px;
     & p {
         @include border(red);
-        margin-top: -2rem;
+        margin-top: -1rem;
         @include largeur (325px);
     }
-    & .footer__logo{
-        @include border(blue);
-        margin-bottom: 2rem; 
+    h4{
+        font-family: 'Shrikhand', cursive;
+        font-size: 1.5rem;
         @include largeur (325px);
-        
-        &--white{
-        filter: invert(1);
-        width: 100px;
-        }
     }
 }

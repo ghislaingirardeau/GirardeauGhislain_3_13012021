@@ -23,24 +23,20 @@ footer {
   justify-content: space-around;
   height: 195px;
   color: white;
-  padding-top: 20px;
   background-color: #353535;
+  padding-bottom: 10px;
 }
 footer p {
   border: 2px dashed red;
-  margin-top: -2rem;
+  margin-top: -1rem;
   width: 86.6666666667%;
   margin-left: 5.3333333333%;
 }
-footer .footer__logo {
-  border: 2px dashed blue;
-  margin-bottom: 2rem;
+footer h4 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5rem;
   width: 86.6666666667%;
   margin-left: 5.3333333333%;
-}
-footer .footer__logo--white {
-  filter: invert(1);
-  width: 100px;
 }
 
 .accueil__nav {
