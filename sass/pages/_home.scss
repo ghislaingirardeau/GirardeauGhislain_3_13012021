@@ -9,7 +9,7 @@
     );
   }
   & .__description {
-    @include sousbloc_position(325px, center);
+    @include sousbloc_position(325px, 20px, center);
     height: 144px;
   }
 }
@@ -25,12 +25,12 @@
 .accueil__aside {
   @include bloc_layout(column, nowrap, space-around, 440px, 60px, unset);
   & .__titre {
-    @include sousbloc_position(325px, left);
+    @include sousbloc_position(325px, 20px, left);
     margin-top: 0.5rem;
   }
   & .__liste {
     height: 75px;
-    @include sousbloc_position(325px, center);
+    @include sousbloc_position(325px, 20px, center);
     @include sousbloc_layout($color_background, 20px, $col_degrade_clair);
     position: relative;
     @include before(A);
@@ -54,10 +54,10 @@
   align-items: space-between;
 
   & .__titre {
-    @include sousbloc_position(325px, left);
+    @include sousbloc_position(325px, 20px, left);
   }
   & .__restaurant {
-    @include sousbloc_position(325px, left);
+    @include sousbloc_position(325px, 20px, left);
     @include sousbloc_layout(white, 20px, $col_degrade_clair);
     height: 255px;
     overflow: hidden;
@@ -77,14 +77,18 @@
 }
 
 @include tablette {
+  #explorer {
+    margin-top: 20px;
+  }
+  
   .accueil__aside{
     @include bloc_layout(row, wrap, space-around, 200px, 40px, unset);
     
     & .__liste{
-      @include sousbloc_position(100px, center);
+      @include sousbloc_position(100px, 10px, center);
     }
     & .__titre {
-      @include sousbloc_position(375px, left);
+      @include sousbloc_position(345px, 10px, left);
       margin-top: 2rem;
     }
   }
@@ -97,8 +101,11 @@
     655px,
     60px,
     $color_background);
+    & .__titre {
+      @include sousbloc_position(345px, 10px, left);
+    }
     & .__restaurant {
-      @include sousbloc_position(160px, left);
+      @include sousbloc_position(160px, 10px, left);
     }
   }
 }

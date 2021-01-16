@@ -211,6 +211,10 @@ footer h4 {
 }
 
 @media screen and (min-width: 678px) {
+  #explorer {
+    margin-top: 20px;
+  }
+
   .accueil__aside {
     display: flex;
     flex-direction: row;
@@ -223,13 +227,13 @@ footer h4 {
   .accueil__aside .__liste {
     /* ajustement commun lier a la forme */
     width: 26.6666666667%;
-    margin-left: 5.3333333333%;
+    margin-left: 2.6666666667%;
     text-align: center;
   }
   .accueil__aside .__titre {
     /* ajustement commun lier a la forme */
-    width: 100%;
-    margin-left: 5.3333333333%;
+    width: 92%;
+    margin-left: 2.6666666667%;
     text-align: left;
     margin-top: 2rem;
   }
@@ -243,10 +247,16 @@ footer h4 {
     padding-bottom: 60px;
     background-color: #f6f6f6;
   }
+  .accueil__main .__titre {
+    /* ajustement commun lier a la forme */
+    width: 92%;
+    margin-left: 2.6666666667%;
+    text-align: left;
+  }
   .accueil__main .__restaurant {
     /* ajustement commun lier a la forme */
     width: 42.6666666667%;
-    margin-left: 5.3333333333%;
+    margin-left: 2.6666666667%;
     text-align: left;
   }
 }

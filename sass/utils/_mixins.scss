@@ -19,9 +19,9 @@
   background-color: $colbg;
 }
 
-@mixin sousbloc_position ($width_element, $textalign) { /* ajustement commun lier a la forme */
+@mixin sousbloc_position ($width_element, $margleft, $textalign) { /* ajustement commun lier a la forme */
   width: percentage($width_element / $width-totale);
-  margin-left: percentage(20px / $width-totale);
+  margin-left: percentage($margleft / $width-totale);
   text-align: $textalign;
 }
 

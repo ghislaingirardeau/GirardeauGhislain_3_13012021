@@ -4,11 +4,11 @@ footer{
     color: $text_bouton;
     & p {
         margin-top: -1rem;
-        @include sousbloc_position (325px, left);
+        @include sousbloc_position (325px, 20px, left);
     }
     h4{
         @include font ('Shrikhand', 1.5rem, 200);
-        @include sousbloc_position (325px, left);
+        @include sousbloc_position (325px, 20px, left);
     }
 }
 
@@ -19,7 +19,7 @@ footer{
     justify-content: flex-start;
     
     & p {
-        @include sousbloc_position (100px, left);
+        @include sousbloc_position (100px, 20px, left);
     }
     & h4 {
         width: 100%;
