@@ -10,5 +10,15 @@ header {
     }
 }
 
+@include laptop {
+    header{
+        & img {
+        width: 320px;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        }
+      }
+}
+
 
 

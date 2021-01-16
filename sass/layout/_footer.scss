@@ -23,3 +23,9 @@ footer{
     }
     }
 }
+
+@include laptop {
+    footer h4{
+            margin-top: 0.6rem;     
+    }
+}

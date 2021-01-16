@@ -31,13 +31,11 @@
   box-shadow: 5px 5px 5px $col_shad;
 }
 
-@mixin btn_layout($margin, $border, $padding, $align, $font, $weight) {
+@mixin btn_layout($margin, $border, $padding, $align) {
   margin: $margin;
   border: $border;
   padding: $padding;
   text-align: $align;
-  font-size: $font;
-  font-weight: $weight;
 }
 @mixin btn_color ($col_shad) { /* commun au bouton type submit */
   background: linear-gradient(to bottom, $secondary 0%, $primary 95%);
