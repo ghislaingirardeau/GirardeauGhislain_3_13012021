@@ -4,6 +4,7 @@ body {
   margin: auto;
   font-family: roboto;
   font-size: 1.3em;
+  font-weight: 400;
 }
 
 header {
@@ -21,10 +22,10 @@ footer {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
-  height: 195px;
-  color: white;
-  background-color: #353535;
+  min-height: 195px;
   padding-bottom: 10px;
+  background-color: #353535;
+  color: white;
 }
 footer p {
   margin-top: -1rem;
@@ -33,7 +34,7 @@ footer p {
   text-align: left;
 }
 footer h4 {
-  font-family: "Shrikhand", cursive;
+  font-family: "Shrikhand";
   font-size: 1.5rem;
   font-weight: 200;
   width: 86.6666666667%;
@@ -47,8 +48,9 @@ footer h4 {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  background-color: #f6f6f6;
   min-height: 340px;
+  padding-bottom: 0;
+  background-color: #f6f6f6;
   text-align: center;
 }
 .accueil__nav .__btn__localisation {
@@ -90,8 +92,9 @@ footer h4 {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
-  height: 440px;
+  min-height: 440px;
   padding-bottom: 60px;
+  background-color: unset;
 }
 .accueil__aside .__titre {
   width: 86.6666666667%;
@@ -142,10 +145,10 @@ footer h4 {
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
-  align-items: space-between;
-  height: 1225px;
+  min-height: 1225px;
   padding-bottom: 60px;
   background-color: #f6f6f6;
+  align-items: space-between;
 }
 .accueil__main .__titre {
   width: 86.6666666667%;

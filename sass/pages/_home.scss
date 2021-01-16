@@ -1,15 +1,13 @@
 .accueil__nav {
   @include border(green);
-  @include flex(column, nowrap, flex-start);
-  background-color: $color_background;
-  min-height: 340px;
+  @include bloc_layout (column, nowrap, flex-start, 340px, 0, $color_background);
   text-align: center;
 
   & .__btn__localisation {
     background: linear-gradient(to bottom, $col_degrade_fonce 0%, $col_degrade_clair 15%)
   }
   & .__description {
-    @include position_element(325px, center);
+    @include sousbloc_position (325px, center);
     height: 144px;
   }
 }
@@ -24,17 +22,15 @@
 
 .accueil__aside {
   @include border(green);
-  @include flex(column, nowrap, space-around);
-  height: 440px;
-  padding-bottom: 60px;
+  @include bloc_layout (column, nowrap, space-around, 440px, 60px, unset); 
   & .__titre {
-    @include position_element(325px, left);
+    @include sousbloc_position (325px, left);
     margin-top: 0.5rem;
   }
   & .__liste {
     height: 75px;
-    @include position_element(325px, center);
-    @include layout_sousbloc ($color_background, 20px, $col_degrade_clair);
+    @include sousbloc_position (325px, center);
+    @include sousbloc_layout ($color_background, 20px, $col_degrade_clair);
     position: relative;
     @include before (A);
     @include before (B);
@@ -48,18 +44,15 @@
 
 .accueil__main {
   @include border(green);
-  @include flex(column, nowrap, space-between);
+  @include bloc_layout (column, nowrap, space-between, 1225px, 60px, $color_background); 
   align-items: space-between;
-  height: 1225px;
-  padding-bottom: 60px;
-  background-color: $color_background;
 
   & .__titre {
-    @include position_element(325px, left);
+    @include sousbloc_position (325px, left);
   }
   & .__restaurant {
-    @include position_element(325px, left);
-    @include layout_sousbloc (white, 20px, $col_degrade_clair);
+    @include sousbloc_position (325px, left);
+    @include sousbloc_layout (white, 20px, $col_degrade_clair);
     height: 255px;
     overflow: hidden;
     position: relative;

@@ -4,6 +4,7 @@ body {
   margin: auto;
   font-family: roboto;
   font-size: 1.3em;
+  font-weight: 400;
 }
 
 header {
@@ -29,10 +30,10 @@ footer {
       flex-wrap: nowrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 195px;
-  color: white;
-  background-color: #353535;
+  min-height: 195px;
   padding-bottom: 10px;
+  background-color: #353535;
+  color: white;
 }
 
 footer p {
@@ -43,7 +44,7 @@ footer p {
 }
 
 footer h4 {
-  font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand";
   font-size: 1.5rem;
   font-weight: 200;
   width: 86.66667%;
@@ -65,8 +66,9 @@ footer h4 {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  background-color: #f6f6f6;
   min-height: 340px;
+  padding-bottom: 0;
+  background-color: #f6f6f6;
   text-align: center;
 }
 
@@ -120,8 +122,9 @@ footer h4 {
       flex-wrap: nowrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 440px;
+  min-height: 440px;
   padding-bottom: 60px;
+  background-color: unset;
 }
 
 .accueil__aside .__titre {
@@ -186,12 +189,12 @@ footer h4 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  min-height: 1225px;
+  padding-bottom: 60px;
+  background-color: #f6f6f6;
   -webkit-box-align: space-between;
       -ms-flex-align: space-between;
           align-items: space-between;
-  height: 1225px;
-  padding-bottom: 60px;
-  background-color: #f6f6f6;
 }
 
 .accueil__main .__titre {

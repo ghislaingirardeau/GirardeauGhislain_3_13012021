@@ -1,18 +1,13 @@
 footer{
     @include border(green);
-    @include flex (column, nowrap, space-around);
-    height: 195px;
+    @include bloc_layout (column, nowrap, space-around, 195px, 10px, $color_bg_footer); 
     color: $text_bouton;
-    background-color: $color_bg_footer;
-    padding-bottom: 10px;
     & p {
         margin-top: -1rem;
-        @include position_element(325px, left);
+        @include sousbloc_position (325px, left);
     }
     h4{
-        font-family: 'Shrikhand', cursive;
-        font-size: 1.5rem;
-        font-weight: 200;
-        @include position_element(325px, left);
+        @include font ('Shrikhand', 1.5rem, 200);
+        @include sousbloc_position (325px, left);
     }
 }

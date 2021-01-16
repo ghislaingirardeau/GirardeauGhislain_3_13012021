@@ -1,18 +1,22 @@
 /* mise en page bloc et ssbloc */
-@mixin font($family, $size) {
+@mixin font($family, $size, $weight) {
   font-family: $family;
   font-size: $size;
+  font-weight: $weight;
 }
 
 @mixin border($col) {
   border: 2px dashed $col;
 }
 
-@mixin flex($dir, $wrap, $content) {
+@mixin bloc_layout($dir, $wrap, $content, $height, $padbot, $colbg) {
   display: flex;
   flex-direction: $dir;
   flex-wrap: $wrap;
   justify-content: $content;
+  min-height: $height;
+  padding-bottom: $padbot;
+  background-color: $colbg;
 }
 
 @mixin position_element($width_element, $textalign) {
@@ -20,12 +24,18 @@
   margin-left: percentage(20px / $width-totale);
   text-align: $textalign;
 }
+@mixin sousbloc_position ($width_element, $textalign) {
+  width: percentage($width_element / $width-totale);
+  margin-left: percentage(20px / $width-totale);
+  text-align: $textalign;
+}
 
-@mixin layout_sousbloc ($color, $radius, $col_shad) {
+@mixin sousbloc_layout ($color, $radius, $col_shad) {
   background-color: $color;
   border-radius: $radius;
   box-shadow: 5px 5px 5px $col_shad;
 }
+
 
 @mixin btn_layout($margin, $border, $padding, $align, $font, $weight) {
   margin: $margin;
@@ -42,8 +52,6 @@
   color: $text_bouton;
   box-shadow: 5px 5px 5px $col_shad;
 }
-
-
 
 @mixin img_rest_accueil {
   width: 100%;
