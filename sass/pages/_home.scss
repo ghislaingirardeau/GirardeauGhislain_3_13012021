@@ -1,40 +1,40 @@
 .accueil__nav {
-  @include border(green);
-  @include bloc_layout (column, nowrap, flex-start, 340px, 0, $color_background);
+  @include bloc_layout(column, nowrap, flex-start, 340px, 0, $color_background);
   text-align: center;
-
   & .__btn__localisation {
-    background: linear-gradient(to bottom, $col_degrade_fonce 0%, $col_degrade_clair 15%)
+    background: linear-gradient(
+      to bottom,
+      $col_degrade_fonce 0%,
+      $col_degrade_clair 15%
+    );
   }
   & .__description {
-    @include sousbloc_position (325px, center);
+    @include sousbloc_position(325px, center);
     height: 144px;
   }
 }
 #localisation {
- @include btn_layout (10px 0, none, 0.7rem 2.5rem, center, 1rem, bold);
-  background-color: $col_degrade_clair; 
+  @include btn_layout(10px 0, none, 0.7rem 2.5rem, center, 1rem, bold);
+  background-color: $col_degrade_clair;
 }
 #explorer {
- @include btn_layout (80px 0 35px, none, 1.2rem 2rem, center, 1.3rem, bold);
-  @include btn_color ($col_degrade_clair); 
+  @include btn_layout(80px 0 35px, none, 1.2rem 2rem, center, 1.3rem, bold);
+  @include btn_color($col_degrade_clair);
 }
 
 .accueil__aside {
-  @include border(green);
-  @include bloc_layout (column, nowrap, space-around, 440px, 60px, unset); 
+  @include bloc_layout(column, nowrap, space-around, 440px, 60px, unset);
   & .__titre {
-    @include sousbloc_position (325px, left);
+    @include sousbloc_position(325px, left);
     margin-top: 0.5rem;
   }
   & .__liste {
     height: 75px;
-    @include sousbloc_position (325px, center);
-    @include sousbloc_layout ($color_background, 20px, $col_degrade_clair);
+    @include sousbloc_position(325px, center);
+    @include sousbloc_layout($color_background, 20px, $col_degrade_clair);
     position: relative;
-    @include before (A);
-    @include before (B);
-  
+    @include before(A);
+    @include before(B);
   }
   & p {
     margin-top: 25px;
@@ -43,16 +43,22 @@
 }
 
 .accueil__main {
-  @include border(green);
-  @include bloc_layout (column, nowrap, space-between, 1225px, 60px, $color_background); 
+  @include bloc_layout(
+    column,
+    nowrap,
+    space-between,
+    1225px,
+    60px,
+    $color_background
+  );
   align-items: space-between;
 
   & .__titre {
-    @include sousbloc_position (325px, left);
+    @include sousbloc_position(325px, left);
   }
   & .__restaurant {
-    @include sousbloc_position (325px, left);
-    @include sousbloc_layout (white, 20px, $col_degrade_clair);
+    @include sousbloc_position(325px, left);
+    @include sousbloc_layout(white, 20px, $col_degrade_clair);
     height: 255px;
     overflow: hidden;
     position: relative;
@@ -61,12 +67,11 @@
       @include img_rest_accueil;
 
       &.--position {
-        object-position: 0 -240px;
+        object-position: 0 -200px;
       }
     }
     & .__descriptif {
       @include descriptif_rest_accueil;
     }
   }
-
 }

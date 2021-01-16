@@ -1,7 +1,7 @@
-/* mise en page bloc et ssbloc */
 body {
   max-width: 678px;
   margin: auto;
+  /* aujustement commun des font */
   font-family: roboto;
   font-size: 1.3em;
   font-weight: 400;
@@ -38,22 +38,24 @@ footer {
 
 footer p {
   margin-top: -1rem;
+  /* ajustement commun lier a la forme */
   width: 86.66667%;
   margin-left: 5.33333%;
   text-align: left;
 }
 
 footer h4 {
+  /* aujustement commun des font */
   font-family: "Shrikhand";
   font-size: 1.5rem;
   font-weight: 200;
+  /* ajustement commun lier a la forme */
   width: 86.66667%;
   margin-left: 5.33333%;
   text-align: left;
 }
 
 .accueil__nav {
-  border: 2px dashed green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,6 +80,7 @@ footer h4 {
 }
 
 .accueil__nav .__description {
+  /* ajustement commun lier a la forme */
   width: 86.66667%;
   margin-left: 5.33333%;
   text-align: center;
@@ -101,6 +104,7 @@ footer h4 {
   text-align: center;
   font-size: 1.3rem;
   font-weight: bold;
+  /* commun au bouton type submit */
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(95%, #9356DC));
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 95%);
   border-radius: 30px;
@@ -110,7 +114,6 @@ footer h4 {
 }
 
 .accueil__aside {
-  border: 2px dashed green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -128,6 +131,7 @@ footer h4 {
 }
 
 .accueil__aside .__titre {
+  /* ajustement commun lier a la forme */
   width: 86.66667%;
   margin-left: 5.33333%;
   text-align: left;
@@ -136,9 +140,11 @@ footer h4 {
 
 .accueil__aside .__liste {
   height: 75px;
+  /* ajustement commun lier a la forme */
   width: 86.66667%;
   margin-left: 5.33333%;
   text-align: center;
+  /* ajustement commun lie a la couleur */
   background-color: #f6f6f6;
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px #eaeaea;
@@ -176,7 +182,6 @@ footer h4 {
 }
 
 .accueil__main {
-  border: 2px dashed green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,15 +203,18 @@ footer h4 {
 }
 
 .accueil__main .__titre {
+  /* ajustement commun lier a la forme */
   width: 86.66667%;
   margin-left: 5.33333%;
   text-align: left;
 }
 
 .accueil__main .__restaurant {
+  /* ajustement commun lier a la forme */
   width: 86.66667%;
   margin-left: 5.33333%;
   text-align: left;
+  /* ajustement commun lie a la couleur */
   background-color: white;
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px #eaeaea;
@@ -220,13 +228,13 @@ footer h4 {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: 0 -90px;
-     object-position: 0 -90px;
+  -o-object-position: 0 -20px;
+     object-position: 0 -20px;
 }
 
 .accueil__main .__restaurant .__img--fit.--position {
-  -o-object-position: 0 -240px;
-     object-position: 0 -240px;
+  -o-object-position: 0 -200px;
+     object-position: 0 -200px;
 }
 
 .accueil__main .__restaurant .__descriptif {
@@ -235,7 +243,7 @@ footer h4 {
           box-sizing: content-box;
   bottom: 0;
   width: 100%;
-  height: 80px;
+  height: 31%;
   background-color: white;
   font-size: 1.2rem;
   line-height: 0.7rem;
