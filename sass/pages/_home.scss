@@ -37,7 +37,7 @@
     @include before(B);
   }
   & p {
-    margin-top: 25px;
+    margin-top: 8%;
     font-weight: bold;
   }
 }
@@ -72,6 +72,33 @@
     }
     & .__descriptif {
       @include descriptif_rest_accueil;
+    }
+  }
+}
+
+@include tablette {
+  .accueil__aside{
+    @include bloc_layout(row, wrap, space-around, 200px, 40px, unset);
+    
+    & .__liste{
+      @include sousbloc_position(100px, center);
+    }
+    & .__titre {
+      @include sousbloc_position(375px, left);
+      margin-top: 2rem;
+    }
+  }
+
+  .accueil__main {
+    @include bloc_layout(
+    row,
+    wrap,
+    space-around,
+    655px,
+    60px,
+    $color_background);
+    & .__restaurant {
+      @include sousbloc_position(160px, left);
     }
   }
 }

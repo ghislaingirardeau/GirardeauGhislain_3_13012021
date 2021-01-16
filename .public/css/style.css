@@ -157,7 +157,7 @@ footer h4 {
   top: 31.25px;
 }
 .accueil__aside p {
-  margin-top: 25px;
+  margin-top: 8%;
   font-weight: bold;
 }
 
@@ -208,6 +208,47 @@ footer h4 {
   font-size: 1.2rem;
   line-height: 0.7rem;
   padding-left: 15px;
+}
+
+@media screen and (min-width: 678px) {
+  .accueil__aside {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-height: 200px;
+    padding-bottom: 40px;
+    background-color: unset;
+  }
+  .accueil__aside .__liste {
+    /* ajustement commun lier a la forme */
+    width: 26.6666666667%;
+    margin-left: 5.3333333333%;
+    text-align: center;
+  }
+  .accueil__aside .__titre {
+    /* ajustement commun lier a la forme */
+    width: 100%;
+    margin-left: 5.3333333333%;
+    text-align: left;
+    margin-top: 2rem;
+  }
+
+  .accueil__main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    min-height: 655px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+  }
+  .accueil__main .__restaurant {
+    /* ajustement commun lier a la forme */
+    width: 42.6666666667%;
+    margin-left: 5.3333333333%;
+    text-align: left;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
