@@ -65,6 +65,9 @@
     overflow: hidden;
     position: relative;
 
+      &::after {
+      }
+
     & .__img--fit {
       @include img_rest_accueil;
 

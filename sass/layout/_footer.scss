@@ -1,31 +1,45 @@
-footer{
-    @include bloc_layout (column, nowrap, space-around, 195px, 10px, $color_bg_footer); 
-    color: $text_bouton;
-    & p {
-        margin-top: -1rem;
-        @include sousbloc_position (325px, 20px, left);
-    }
-    h4{
-        @include font ('Shrikhand', 1.5rem, 200);
-        @include sousbloc_position (325px, 20px, left);
-    }
+footer {
+  @include bloc_layout(
+    column,
+    nowrap,
+    space-around,
+    195px,
+    10px,
+    $color_bg_footer
+  );
+  color: $text_bouton;
+  & p {
+    margin-top: -1rem;
+    @include sousbloc_position(325px, 20px, left);
+  }
+  h4 {
+    @include font("Shrikhand", 1.5rem, 200);
+    @include sousbloc_position(325px, 20px, left);
+  }
 }
 
 @include tablette {
-footer{
-    @include bloc_layout (row, wrap, space-between, 100px, 10px, $color_bg_footer);
-    
+  footer {
+    @include bloc_layout(
+      row,
+      wrap,
+      space-between,
+      100px,
+      10px,
+      $color_bg_footer
+    );
+
     & p {
-        @include sousbloc_position (70px, 20px, left);
+      @include sousbloc_position(70px, 20px, left);
     }
     & h4 {
-        width: 100%;
+      width: 100%;
     }
-    }
+  }
 }
 
 @include laptop {
-    footer h4{
-            margin-top: 0.6rem;     
-    }
+  footer h4 {
+    margin-top: 0.6rem;
+  }
 }
