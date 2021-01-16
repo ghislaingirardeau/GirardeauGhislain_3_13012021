@@ -1,5 +1,4 @@
 body {
-  max-width: 678px;
   margin: auto;
   /* aujustement commun des font */
   font-family: roboto;
@@ -8,13 +7,14 @@ body {
 }
 
 header {
-  height: 65px;
+  min-height: 65px;
   text-align: center;
 }
 
 header img {
   width: 165px;
   margin-top: 3%;
+  margin-bottom: 2%;
 }
 
 footer {
@@ -53,6 +53,29 @@ footer h4 {
   width: 86.66667%;
   margin-left: 5.33333%;
   text-align: left;
+}
+
+@media screen and (min-width: 678px) {
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  footer p {
+    /* ajustement commun lier a la forme */
+    width: 26.66667%;
+    margin-left: 5.33333%;
+    text-align: left;
+  }
+  footer h4 {
+    width: 100%;
+  }
 }
 
 .accueil__nav {

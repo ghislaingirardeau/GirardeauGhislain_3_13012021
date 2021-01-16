@@ -11,3 +11,18 @@ footer{
         @include sousbloc_position (325px, left);
     }
 }
+
+@include tablette {
+footer{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    
+    & p {
+        @include sousbloc_position (100px, left);
+    }
+    & h4 {
+        width: 100%;
+    }
+    }
+}

@@ -1,5 +1,4 @@
 body {
-  max-width: 678px;
   margin: auto;
   /* aujustement commun des font */
   font-family: roboto;
@@ -8,12 +7,13 @@ body {
 }
 
 header {
-  height: 65px;
+  min-height: 65px;
   text-align: center;
 }
 header img {
   width: 165px;
   margin-top: 3%;
+  margin-bottom: 2%;
 }
 
 footer {
@@ -45,6 +45,22 @@ footer h4 {
   text-align: left;
 }
 
+@media screen and (min-width: 678px) {
+  footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  footer p {
+    /* ajustement commun lier a la forme */
+    width: 26.6666666667%;
+    margin-left: 5.3333333333%;
+    text-align: left;
+  }
+  footer h4 {
+    width: 100%;
+  }
+}
 .accueil__nav {
   display: flex;
   flex-direction: column;

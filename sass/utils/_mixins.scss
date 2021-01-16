@@ -31,7 +31,6 @@
   box-shadow: 5px 5px 5px $col_shad;
 }
 
-
 @mixin btn_layout($margin, $border, $padding, $align, $font, $weight) {
   margin: $margin;
   border: $border;
@@ -84,7 +83,7 @@ $rond_etape: (A: 1, B: 2, C: 3);
     
 
 @mixin tablette {
-  @media screen and (max-width: 1024px) {
+  @media screen and (min-width: 678px) {
     @content;
   }
 }
