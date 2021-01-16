@@ -6,7 +6,7 @@
   text-align: center;
 
   & .__btn__localisation {
-    background: linear-gradient(to bottom, $col_start_deg_loc 0%, $col_end_deg_loc 15%)
+    background: linear-gradient(to bottom, $col_degrade_fonce 0%, $col_degrade_clair 15%)
   }
   & .__description {
     @include position_element(325px, center);
@@ -15,11 +15,11 @@
 }
 #localisation {
  @include btn_layout (10px 0, none, 0.7rem 2.5rem, center, 1rem, bold);
-  background-color: $col_end_deg_loc; 
+  background-color: $col_degrade_clair; 
 }
 #explorer {
  @include btn_layout (80px 0 35px, none, 1.2rem 2rem, center, 1.3rem, bold);
-  @include btn_color ($col_end_deg_loc); 
+  @include btn_color ($col_degrade_clair); 
 }
 
 .accueil__aside {
@@ -34,7 +34,7 @@
   & .__liste {
     height: 75px;
     @include position_element(325px, center);
-    @include layout_sousbloc ($color_background, 20px, $col_end_deg_loc);
+    @include layout_sousbloc ($color_background, 20px, $col_degrade_clair);
     position: relative;
     @include before (A);
     @include before (B);
@@ -59,7 +59,7 @@
   }
   & .__restaurant {
     @include position_element(325px, left);
-    @include layout_sousbloc (white, 20px, $col_end_deg_loc);
+    @include layout_sousbloc (white, 20px, $col_degrade_clair);
     height: 255px;
     overflow: hidden;
     position: relative;
