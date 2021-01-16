@@ -1,0 +1,53 @@
+@include tablette {
+    #explorer {
+      margin-top: 20px;
+    }
+    
+    .accueil__aside{
+      @include bloc_layout(row, wrap, space-around, 200px, 40px, unset);
+      
+      & .__liste{
+        @include sousbloc_position(100px, 10px, center);
+      }
+      & .__titre {
+        @include sousbloc_position(345px, 10px, left);
+        margin-top: 2rem;
+      }
+    }
+  
+    .accueil__main {
+      @include bloc_layout(
+      row,
+      wrap,
+      space-around,
+      655px,
+      60px,
+      $color_background);
+      & .__titre {
+        @include sousbloc_position(345px, 10px, left);
+      }
+      & .__restaurant {
+        @include sousbloc_position(160px, 10px, left);
+      }
+    }
+  }
+
+
+  @include laptop{
+    .accueil__nav {
+      @include bloc_layout(row, wrap, space-between, 230px, 0, $color_background);
+      
+      & .__description {
+        @include sousbloc_position(200px, 20px, left);
+      }
+      & .__btn__localisation{
+        width: 100%;
+        height: 60px;
+      }
+      & .__btn__explorer{  
+        @include sousbloc_position(140px, 0px, left);
+        margin-top: 20px;
+        
+      }
+    }
+  }

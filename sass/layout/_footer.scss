@@ -1,5 +1,4 @@
 footer{
-    @include border(green);
     @include bloc_layout (column, nowrap, space-around, 195px, 10px, $color_bg_footer); 
     color: $text_bouton;
     & p {
@@ -14,12 +13,10 @@ footer{
 
 @include tablette {
 footer{
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    @include bloc_layout (row, wrap, space-between, 100px, 10px, $color_bg_footer);
     
     & p {
-        @include sousbloc_position (100px, 20px, left);
+        @include sousbloc_position (70px, 20px, left);
     }
     & h4 {
         width: 100%;
