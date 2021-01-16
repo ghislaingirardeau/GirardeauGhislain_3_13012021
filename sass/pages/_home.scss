@@ -2,26 +2,24 @@
   @include border(green);
   @include flex(column, nowrap, flex-start);
   background-color: $color_background;
-  height: 340px;
+  min-height: 340px;
+  text-align: center;
 
   & .__btn__localisation {
-    width: 100%;
-    height: 50px;
     background: linear-gradient(to bottom, $col_start_deg_loc 0%, $col_end_deg_loc 15%)
   }
   & .__description {
     @include position_element(325px, center);
     height: 144px;
-    margin-bottom: 35px;
   }
 }
 #localisation {
-  @include btn_layout (10px 25% 0 25%, none, 0.7rem 2.5rem, center, 1rem, bold);
-  background-color: $col_end_deg_loc;
+ @include btn_layout (10px 0, none, 0.7rem 2.5rem, center, 1rem, bold);
+  background-color: $col_end_deg_loc; 
 }
 #explorer {
-  @include btn_layout (10px 25% 0 25%, none, 1.2rem 2rem, center, 1.3rem, bold);
-  @include btn_color ($col_end_deg_loc);
+ @include btn_layout (80px 0 35px, none, 1.2rem 2rem, center, 1.3rem, bold);
+  @include btn_color ($col_end_deg_loc); 
 }
 
 .accueil__aside {
@@ -31,6 +29,7 @@
   padding-bottom: 60px;
   & .__titre {
     @include position_element(325px, left);
+    margin-top: 0.5rem;
   }
   & .__liste {
     height: 75px;

@@ -21,6 +21,12 @@
   text-align: $textalign;
 }
 
+@mixin layout_sousbloc ($color, $radius, $col_shad) {
+  background-color: $color;
+  border-radius: $radius;
+  box-shadow: 5px 5px 5px $col_shad;
+}
+
 @mixin btn_layout($margin, $border, $padding, $align, $font, $weight) {
   margin: $margin;
   border: $border;
@@ -29,6 +35,7 @@
   font-size: $font;
   font-weight: $weight;
 }
+
 @mixin btn_color ($col_shad) {
   background: linear-gradient(to bottom, $secondary 0%, $primary 95%);
   border-radius: 30px;
@@ -36,11 +43,7 @@
   box-shadow: 5px 5px 5px $col_shad;
 }
 
-@mixin layout_sousbloc ($color, $radius, $col_shad) {
-  background-color: $color;
-  border-radius: $radius;
-  box-shadow: 5px 5px 5px $col_shad;
-}
+
 
 @mixin img_rest_accueil {
   width: 100%;
