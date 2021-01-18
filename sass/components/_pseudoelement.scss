@@ -21,13 +21,10 @@ $rond_etape: (
 
 @mixin pseudoE_nouveau {
     content: "Nouveau";
-    box-sizing: content-box;
-    font-size: 1rem;
+    @include position_absolue (5%, 82%, 70%, 1rem);
     padding: 0.4rem;
     border-radius: 2px;
     background-color: $third;
     color: $thrid-sombre;
-    position: absolute;
-    left: 70%;
-    top: 5%;
+    
 }

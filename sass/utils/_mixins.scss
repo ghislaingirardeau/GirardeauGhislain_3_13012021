@@ -5,10 +5,6 @@
   font-weight: $weight;
 }
 
-@mixin border($col) {
-  border: 2px dashed $col;
-}
-
 @mixin bloc_layout($dir, $wrap, $content, $height, $padbot, $colbg) {
   display: flex;
   flex-direction: $dir;
@@ -31,39 +27,43 @@
   box-shadow: 5px 5px 5px $col_shad;
 }
 
+@mixin position_absolue ($top, $bottom, $left, $ftsize) {
+  box-sizing: content-box;
+  position: absolute;
+  top: $top;
+  bottom: $bottom;
+  left: $left;
+  font-size: $ftsize;
+}
+
 @mixin btn_layout($margin, $border, $padding, $align) {
   margin: $margin;
   border: $border;
   padding: $padding;
   text-align: $align;
 }
+
 @mixin btn_color ($col_shad) { /* commun au bouton type submit */
-  background: linear-gradient(to bottom, $secondary 0%, $primary 95%);
+  @include degrade_color ($secondary, 0%, $primary, 95%);
   border-radius: 30px;
   color: $text_bouton;
   box-shadow: 5px 5px 5px $col_shad;
 }
 
-@mixin img_rest_accueil {
+@mixin img_object ($axeY) {
   width: 100%;
       object-fit: contain;
-      object-position: 0 -20px;
+      object-position: 0 $axeY;
 }
 @mixin descriptif_rest_accueil {
-  position: absolute;
-      box-sizing: content-box;
-      bottom: 0;
+  @include position_absolue (100, 0, 0, 1.2rem);
       width: 100%;
       height: 31%;
       background-color: white;
-      font-size: 1.2rem;
       line-height: 0.7rem;
       padding-left: 15px;
 }
 
-
-
-    
 
 @mixin tablette {
   @media screen and (min-width: 678px) {

@@ -3,11 +3,7 @@
   text-align: center;
 
   &__btn {
-    background: linear-gradient(
-      to bottom,
-      $col_degrade_fonce 0%,
-      $col_degrade_clair 15%
-    );
+    @include degrade_color ($col_degrade_fonce, 0%, $col_degrade_clair, 15%);
 
     &--localisation{
       @include btn_layout(10px 0, none, 0.7rem 2.5rem, center);
@@ -47,7 +43,6 @@
   
 }
 
-
 .resultats {
   @include bloc_layout(
     column,
@@ -71,7 +66,7 @@
     position: relative;
 
     &--imgfit {
-      @include img_rest_accueil;
+      @include img_object (-20px);
 
       &.--pospotrait {
         object-position: 0 -200px;
@@ -85,6 +80,9 @@
     &--nouveau::after {
       @include pseudoE_nouveau;    
     }
+  }
+  & i {
+    @include position_absolue (30%, 35%, 80%, 1.7rem);
   }
 }
 

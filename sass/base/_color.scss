@@ -1,7 +1,7 @@
 $primary: #9356DC;
 $secondary: #FF79DA;
 $third: #99E2D0;
-$thrid-sombre: darken($third, 38%);
+$thrid-sombre: darken($third, 48%);
 $text_bouton: white;
 
 $color_background: #f6f6f6;
@@ -10,3 +10,11 @@ $col_degrade_fonce: #cfcfcf;
 $col_degrade_clair : #eaeaea;
 
 $color_bg_footer: #353535;
+
+@mixin degrade_color ($col_1, $esp_1, $col_2, $esp_2) {
+    background: linear-gradient(
+      to bottom,
+      $col_1 $esp_1,
+      $col_2 $esp_2
+    );
+}
