@@ -4,11 +4,14 @@
 
   &__btn {
     @include degrade_color ($col_degrade_fonce, 0%, $col_degrade_clair, 15%);
-
+    & > i {
+      margin-left: 70px;
+    }
     &--localisation{
-      @include btn_layout(10px 0, none, 0.7rem 2.5rem, center);
-  @include font (roboto, 1.2rem, bold);
-  background-color: $col_degrade_clair;
+    @include btn_layout(10px 0, none, 0.7rem 2.5rem 0.7rem 1rem, left);
+    @include font (roboto, 1.2rem, bold);
+    width: 225px;
+    background-color: $col_degrade_clair;
     }
   }
 
@@ -83,6 +86,10 @@
   }
   & i {
     @include position_absolue (30%, 35%, 80%, 1.7rem);
+    
+    &:hover{
+      
+    }
   }
 }
 

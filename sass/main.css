@@ -151,15 +151,20 @@ footer > h4 {
   background: linear-gradient(to bottom, #cfcfcf 0%, #eaeaea 15%);
 }
 
+.recherche__btn > i {
+  margin-left: 70px;
+}
+
 .recherche__btn--localisation {
   margin: 10px 0;
   border: none;
-  padding: 0.7rem 2.5rem;
-  text-align: center;
+  padding: 0.7rem 2.5rem 0.7rem 1rem;
+  text-align: left;
   /* aujustement commun des font */
   font-family: roboto;
   font-size: 1.2rem;
   font-weight: bold;
+  width: 225px;
   background-color: #eaeaea;
 }
 
