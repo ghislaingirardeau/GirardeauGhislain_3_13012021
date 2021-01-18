@@ -1,21 +1,21 @@
 @include tablette {
-  #explorer {
-    margin-top: 20px;
+  #submit {
+    margin-top: 10px;
   }
 
-  .accueil__aside {
+  .explicatif {
     @include bloc_layout(row, wrap, space-around, 200px, 40px, unset);
 
-    & .__liste {
+    &__fonction {
       @include sousbloc_position(100px, 10px, center);
     }
-    & .__titre {
+    & > h2 {
       @include sousbloc_position(345px, 10px, left);
       margin-top: 2rem;
     }
   }
 
-  .accueil__main {
+  .resultats {
     @include bloc_layout(
       row,
       wrap,
@@ -24,10 +24,10 @@
       60px,
       $color_background
     );
-    & .__titre {
+    & > h2 {
       @include sousbloc_position(345px, 10px, left);
     }
-    & .__restaurant {
+    &__contenu {
       @include sousbloc_position(160px, 10px, left);
     }
   }
@@ -38,37 +38,40 @@
     max-width: 1440px;
   }
 
-  .accueil__nav {
-    @include bloc_layout(row, wrap, space-between, 230px, 0, $color_background);
+  .recherche {
+    @include bloc_layout(row, wrap, space-between, 130px, 0, $color_background);
     min-height: unset;
-    & .__description {
+    &__description {
       @include sousbloc_position(200px, 20px, left);
     }
-    & .__btn__localisation {
+    &__btn {
       width: 100%;
       height: 60px;
     }
-    & .__btn__explorer {
-      @include sousbloc_position(140px, 0px, left);
+    &__btn--validation {
+      @include sousbloc_position(150px, 0px, center);
       margin-top: 20px;
     }
   }
 
-  .accueil__aside {
+  .explicatif {
     min-height: unset;
     & p {
       margin-top: 6%;
     }
   }
 
-  .accueil__main {
+  .resultats {
     min-height: unset;
     justify-content: space-around;
-    & .__restaurant {
+
+    &__contenu {
       @include sousbloc_position(90px, 0px, left);
-      & .__img--fit {
+
+      &--imgfit {
         object-position: 0 0px;
-        &.--position {
+
+        &.--pospotrait {
           object-position: 0 -60px;
         }
       }

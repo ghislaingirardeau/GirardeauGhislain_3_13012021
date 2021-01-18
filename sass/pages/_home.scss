@@ -1,50 +1,54 @@
-.accueil__nav {
+.recherche {
   @include bloc_layout(column, nowrap, flex-start, 340px, 0, $color_background);
   text-align: center;
-  & .__btn__localisation {
+
+  &__btn {
     background: linear-gradient(
       to bottom,
       $col_degrade_fonce 0%,
       $col_degrade_clair 15%
     );
+
+    &--localisation{
+      @include btn_layout(10px 0, none, 0.7rem 2.5rem, center);
+  @include font (roboto, 1.2rem, bold);
+  background-color: $col_degrade_clair;
+    }
   }
-  & .__description {
+
+  &__description {
     @include sousbloc_position(325px, 20px, center);
     height: 144px;
   }
 }
-#localisation {
-  @include btn_layout(10px 0, none, 0.7rem 2.5rem, center);
-  @include font (roboto, 1.2rem, bold);
-  background-color: $col_degrade_clair;
-}
-#explorer {
+
+#submit {
   @include btn_layout(80px 0 35px, none, 1.2rem 2rem, center);
   @include font (roboto, 1.3rem, bold);
   @include btn_color($col_degrade_clair);
 }
 
-.accueil__aside {
+.explicatif {
   @include bloc_layout(column, nowrap, space-around, 440px, 60px, unset);
-  & .__titre {
+  & > h2 {
     @include sousbloc_position(325px, 20px, left);
     margin-top: 0.5rem;
   }
-  & .__liste {
+
+  &__fonction {
     height: 75px;
     @include sousbloc_position(325px, 20px, center);
     @include sousbloc_layout($color_background, 20px, $col_degrade_clair);
     position: relative;
-    @include before(A);
-    @include before(B);
   }
+  
   & p {
     margin-top: 8%;
     font-weight: bold;
   }
 }
 
-.accueil__main {
+.resultats {
   @include bloc_layout(
     column,
     nowrap,
@@ -55,10 +59,11 @@
   );
   align-items: space-between;
 
-  & .__titre {
+  & > h2 {
     @include sousbloc_position(325px, 20px, left);
   }
-  & .__restaurant {
+
+  &__contenu {
     @include sousbloc_position(325px, 20px, left);
     @include sousbloc_layout(white, 20px, $col_degrade_clair);
     height: 255px;
@@ -68,14 +73,15 @@
       &::after {
       }
 
-    & .__img--fit {
+    &--imgfit {
       @include img_rest_accueil;
 
-      &.--position {
+      &.--pospotrait {
         object-position: 0 -200px;
       }
     }
-    & .__descriptif {
+    
+    &--layoutdescr {
       @include descriptif_rest_accueil;
     }
   }

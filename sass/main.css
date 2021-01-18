@@ -97,7 +97,7 @@ footer h4 {
   }
 }
 
-.accueil__nav {
+.recherche {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -116,20 +116,12 @@ footer h4 {
   text-align: center;
 }
 
-.accueil__nav .__btn__localisation {
+.recherche__btn {
   background: -webkit-gradient(linear, left top, left bottom, from(#cfcfcf), color-stop(15%, #eaeaea));
   background: linear-gradient(to bottom, #cfcfcf 0%, #eaeaea 15%);
 }
 
-.accueil__nav .__description {
-  /* ajustement commun lier a la forme */
-  width: 86.66667%;
-  margin-left: 5.33333%;
-  text-align: center;
-  height: 144px;
-}
-
-#localisation {
+.recherche__btn--localisation {
   margin: 10px 0;
   border: none;
   padding: 0.7rem 2.5rem;
@@ -141,7 +133,15 @@ footer h4 {
   background-color: #eaeaea;
 }
 
-#explorer {
+.recherche__description {
+  /* ajustement commun lier a la forme */
+  width: 86.66667%;
+  margin-left: 5.33333%;
+  text-align: center;
+  height: 144px;
+}
+
+#submit {
   margin: 80px 0 35px;
   border: none;
   padding: 1.2rem 2rem;
@@ -159,7 +159,7 @@ footer h4 {
           box-shadow: 5px 5px 5px #eaeaea;
 }
 
-.accueil__aside {
+.explicatif {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,7 +176,7 @@ footer h4 {
   background-color: unset;
 }
 
-.accueil__aside .__titre {
+.explicatif > h2 {
   /* ajustement commun lier a la forme */
   width: 86.66667%;
   margin-left: 5.33333%;
@@ -184,7 +184,7 @@ footer h4 {
   margin-top: 0.5rem;
 }
 
-.accueil__aside .__liste {
+.explicatif__fonction {
   height: 75px;
   /* ajustement commun lier a la forme */
   width: 86.66667%;
@@ -198,36 +198,12 @@ footer h4 {
   position: relative;
 }
 
-.accueil__aside .__liste.--A::before {
-  content: "";
-  color: white;
-  background-color: #9356DC;
-  width: 25px;
-  height: 25px;
-  border-radius: 15px;
-  position: absolute;
-  left: -12.5px;
-  top: 31.25px;
-}
-
-.accueil__aside .__liste.--B::before {
-  content: "";
-  color: white;
-  background-color: #9356DC;
-  width: 25px;
-  height: 25px;
-  border-radius: 15px;
-  position: absolute;
-  left: -12.5px;
-  top: 31.25px;
-}
-
-.accueil__aside p {
+.explicatif p {
   margin-top: 8%;
   font-weight: bold;
 }
 
-.accueil__main {
+.resultats {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -248,14 +224,14 @@ footer h4 {
           align-items: space-between;
 }
 
-.accueil__main .__titre {
+.resultats > h2 {
   /* ajustement commun lier a la forme */
   width: 86.66667%;
   margin-left: 5.33333%;
   text-align: left;
 }
 
-.accueil__main .__restaurant {
+.resultats__contenu {
   /* ajustement commun lier a la forme */
   width: 86.66667%;
   margin-left: 5.33333%;
@@ -270,7 +246,7 @@ footer h4 {
   position: relative;
 }
 
-.accueil__main .__restaurant .__img--fit {
+.resultats__contenu--imgfit {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -278,12 +254,12 @@ footer h4 {
      object-position: 0 -20px;
 }
 
-.accueil__main .__restaurant .__img--fit.--position {
+.resultats__contenu--imgfit.--pospotrait {
   -o-object-position: 0 -200px;
      object-position: 0 -200px;
 }
 
-.accueil__main .__restaurant .__descriptif {
+.resultats__contenu--layoutdescr {
   position: absolute;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -297,10 +273,10 @@ footer h4 {
 }
 
 @media screen and (min-width: 678px) {
-  #explorer {
-    margin-top: 20px;
+  #submit {
+    margin-top: 10px;
   }
-  .accueil__aside {
+  .explicatif {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -316,20 +292,20 @@ footer h4 {
     padding-bottom: 40px;
     background-color: unset;
   }
-  .accueil__aside .__liste {
+  .explicatif__fonction {
     /* ajustement commun lier a la forme */
     width: 26.66667%;
     margin-left: 2.66667%;
     text-align: center;
   }
-  .accueil__aside .__titre {
+  .explicatif > h2 {
     /* ajustement commun lier a la forme */
     width: 92%;
     margin-left: 2.66667%;
     text-align: left;
     margin-top: 2rem;
   }
-  .accueil__main {
+  .resultats {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -345,13 +321,13 @@ footer h4 {
     padding-bottom: 60px;
     background-color: #f6f6f6;
   }
-  .accueil__main .__titre {
+  .resultats > h2 {
     /* ajustement commun lier a la forme */
     width: 92%;
     margin-left: 2.66667%;
     text-align: left;
   }
-  .accueil__main .__restaurant {
+  .resultats__contenu {
     /* ajustement commun lier a la forme */
     width: 42.66667%;
     margin-left: 2.66667%;
@@ -363,7 +339,7 @@ footer h4 {
   body {
     max-width: 1440px;
   }
-  .accueil__nav {
+  .recherche {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -376,50 +352,50 @@ footer h4 {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    min-height: 230px;
+    min-height: 130px;
     padding-bottom: 0;
     background-color: #f6f6f6;
     min-height: unset;
   }
-  .accueil__nav .__description {
+  .recherche__description {
     /* ajustement commun lier a la forme */
     width: 53.33333%;
     margin-left: 5.33333%;
     text-align: left;
   }
-  .accueil__nav .__btn__localisation {
+  .recherche__btn {
     width: 100%;
     height: 60px;
   }
-  .accueil__nav .__btn__explorer {
+  .recherche__btn--validation {
     /* ajustement commun lier a la forme */
-    width: 37.33333%;
+    width: 40%;
     margin-left: 0%;
-    text-align: left;
+    text-align: center;
     margin-top: 20px;
   }
-  .accueil__aside {
+  .explicatif {
     min-height: unset;
   }
-  .accueil__aside p {
+  .explicatif p {
     margin-top: 6%;
   }
-  .accueil__main {
+  .resultats {
     min-height: unset;
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  .accueil__main .__restaurant {
+  .resultats__contenu {
     /* ajustement commun lier a la forme */
     width: 24%;
     margin-left: 0%;
     text-align: left;
   }
-  .accueil__main .__restaurant .__img--fit {
+  .resultats__contenu--imgfit {
     -o-object-position: 0 0px;
        object-position: 0 0px;
   }
-  .accueil__main .__restaurant .__img--fit.--position {
+  .resultats__contenu--imgfit.--pospotrait {
     -o-object-position: 0 -60px;
        object-position: 0 -60px;
   }
