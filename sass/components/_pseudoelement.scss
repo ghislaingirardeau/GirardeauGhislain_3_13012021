@@ -3,7 +3,7 @@ $rond_etape: (
   B: 2,
   C: 3,
 );
-@mixin before($rond_etape) {
+@mixin pseudoE_rond($rond_etape) {
   @each $key, $val in $rond_etape {
     &.--#{$key}::before {
       content: "#{$val}";
@@ -19,15 +19,14 @@ $rond_etape: (
   }
 }
 
-@mixin after {
+@mixin pseudoE_nouveau {
     content: "Nouveau";
     box-sizing: content-box;
     font-size: 1rem;
     padding: 0.4rem;
     border-radius: 2px;
-    background-color: $thrid;
-    $thrid-dark: saturate($thrid, 4%), darken($thrid, 8%) ;
-    color: $thrid-dark;
+    background-color: $third;
+    color: $thrid-sombre;
     position: absolute;
     left: 70%;
     top: 5%;

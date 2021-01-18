@@ -12,10 +12,19 @@ footer {
     margin-top: -1rem;
     @include sousbloc_position(325px, 20px, left);
   }
-  h4 {
+  & > h4 {
     @include font("Shrikhand", 1.5rem, 200);
     @include sousbloc_position(325px, 20px, left);
   }
+  
+}
+#icone--rotate {
+  transform: rotate(-45deg) scale(0.8);
+  margin-left: -2%;
+  margin-right: 4%;
+}
+#icone--margin {
+  margin-right: 5%;
 }
 
 @include tablette {

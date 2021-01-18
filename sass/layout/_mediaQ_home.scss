@@ -13,6 +13,9 @@
       @include sousbloc_position(345px, 10px, left);
       margin-top: 2rem;
     }
+    & i {
+      padding: 0 15px 0 15px;
+    }
   }
 
   .resultats {
@@ -27,7 +30,7 @@
     & > h2 {
       @include sousbloc_position(345px, 10px, left);
     }
-    &__contenu {
+    &__contenu, &__contenu--nouveau {
       @include sousbloc_position(160px, 10px, left);
     }
   }
@@ -57,7 +60,7 @@
   .explicatif {
     min-height: unset;
     & p {
-      margin-top: 6%;
+      margin-top: 8%;
     }
   }
 
@@ -65,7 +68,7 @@
     min-height: unset;
     justify-content: space-around;
 
-    &__contenu {
+    &__contenu, &__contenu--nouveau {
       @include sousbloc_position(90px, 0px, left);
 
       &--imgfit {

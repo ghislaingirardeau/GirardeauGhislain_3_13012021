@@ -31,16 +31,22 @@
 
   &__fonction {
     height: 75px;
-    @include sousbloc_position(325px, 20px, center);
+    @include sousbloc_position(325px, 20px, left);
     @include sousbloc_layout($color_background, 20px, $col_degrade_clair);
     position: relative;
   }
   
   & p {
     margin-top: 8%;
-    font-weight: bold;
+    @include font (roboto, 1rem, bold);
   }
+  & i {
+    color: $primary;
+    padding: 0 25px 0 35px;
+  }
+  
 }
+
 
 .resultats {
   @include bloc_layout(
@@ -57,15 +63,12 @@
     @include sousbloc_position(325px, 20px, left);
   }
 
-  &__contenu {
+  &__contenu, &__contenu--nouveau {
     @include sousbloc_position(325px, 20px, left);
     @include sousbloc_layout(white, 20px, $col_degrade_clair);
     height: 255px;
     overflow: hidden;
     position: relative;
-
-      &::after {
-      }
 
     &--imgfit {
       @include img_rest_accueil;
@@ -77,6 +80,10 @@
 
     &--layoutdescr {
       @include descriptif_rest_accueil;
+    }
+
+    &--nouveau::after {
+      @include pseudoE_nouveau;    
     }
   }
 }
