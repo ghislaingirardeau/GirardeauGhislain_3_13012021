@@ -33,22 +33,27 @@
     @include sousbloc_position(325px, 20px, left);
     @include sousbloc_layout($color_background, 20px, $col_degrade_clair);
     position: relative;
-    @include pseudoE_rond;
-    
+
+    @for $i from 1 through 3 {
+      &--#{$i}::before {
+      content: "#{$i}";
+      @include ajuster_after_before (white, center, $primary, 4px 8px, 20px);
+      @include position_absolue (26px, 26px, -12.5px, 0.8rem);
+      }
+    }
     &:hover{
       & i {
         color: $primary;
       }
     }
   }
-  
   & p {
     margin-top: 9%;
     @include font (roboto, 1rem, bold);
   }
   & i {
     padding: 0 25px 0 35px;
-    margin-left: 12.5px;
+    margin-left: 10px;
   }
   
 }
@@ -88,7 +93,9 @@
     }
 
     &--nouveau::after {
-      @include pseudoE_nouveau;    
+      content: "Nouveau";
+      @include position_absolue (5%, 82%, 70%, 1rem);
+      @include ajuster_after_before ($thrid-sombre, center, $third, 0.4rem, 2px);    
     }
   }
   & i {

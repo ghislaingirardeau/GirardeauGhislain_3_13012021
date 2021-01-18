@@ -170,37 +170,43 @@ footer > h4 {
 .explicatif__fonction--1::before {
   content: "1";
   color: white;
+  text-align: center;
   background-color: #9356DC;
   padding: 4px 8px;
   border-radius: 20px;
+  box-sizing: content-box;
   position: absolute;
-  left: -12.5px;
   top: 26px;
-  text-align: center;
+  bottom: 26px;
+  left: -12.5px;
   font-size: 0.8rem;
 }
 .explicatif__fonction--2::before {
   content: "2";
   color: white;
+  text-align: center;
   background-color: #9356DC;
   padding: 4px 8px;
   border-radius: 20px;
+  box-sizing: content-box;
   position: absolute;
-  left: -12.5px;
   top: 26px;
-  text-align: center;
+  bottom: 26px;
+  left: -12.5px;
   font-size: 0.8rem;
 }
 .explicatif__fonction--3::before {
   content: "3";
   color: white;
+  text-align: center;
   background-color: #9356DC;
   padding: 4px 8px;
   border-radius: 20px;
+  box-sizing: content-box;
   position: absolute;
-  left: -12.5px;
   top: 26px;
-  text-align: center;
+  bottom: 26px;
+  left: -12.5px;
   font-size: 0.8rem;
 }
 .explicatif__fonction:hover i {
@@ -214,7 +220,7 @@ footer > h4 {
 }
 .explicatif i {
   padding: 0 25px 0 35px;
-  margin-left: 12.5px;
+  margin-left: 10px;
 }
 
 .resultats {
@@ -274,10 +280,11 @@ footer > h4 {
   bottom: 82%;
   left: 70%;
   font-size: 1rem;
+  color: #1e6856;
+  text-align: center;
+  background-color: #99E2D0;
   padding: 0.4rem;
   border-radius: 2px;
-  background-color: #99E2D0;
-  color: #1e6856;
 }
 .resultats i {
   box-sizing: content-box;
@@ -316,6 +323,7 @@ footer > h4 {
   }
   .explicatif i {
     padding: 0 15px 0 15px;
+    margin-left: unset;
   }
 
   .resultats {

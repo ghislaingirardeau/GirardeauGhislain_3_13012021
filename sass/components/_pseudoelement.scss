@@ -1,26 +1,8 @@
-@mixin pseudoE_rond {
-  @for $i from 1 through 3 {
-    &--#{$i}::before {
-    content: "#{$i}";
-    color: white;
-    background-color: $primary;
-    padding: 4px 8px;
-    border-radius: 20px;
-    position: absolute;
-    left: (25px / -2);
-    top: 26px;
-    text-align: center;
-    font-size: 0.8rem;
-    }
-  }
-}
 
-@mixin pseudoE_nouveau {
-    content: "Nouveau";
-    @include position_absolue (5%, 82%, 70%, 1rem);
-    padding: 0.4rem;
-    border-radius: 2px;
-    background-color: $third;
-    color: $thrid-sombre;
-    
+@mixin ajuster_after_before ($colf, $alig, $colbg, $pad, $rad) {
+    color: $colf;
+    text-align: $alig;
+    background-color: $colbg;
+    padding: $pad;
+    border-radius: $rad;
 }
