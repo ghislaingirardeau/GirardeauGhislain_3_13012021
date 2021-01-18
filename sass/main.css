@@ -1,3 +1,21 @@
+#submit {
+  margin: 80px 0 35px;
+  border: none;
+  padding: 1.2rem 2rem;
+  text-align: center;
+  /* aujustement commun des font */
+  font-family: roboto;
+  font-size: 1.3rem;
+  font-weight: bold;
+  /* commun au bouton type submit */
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(95%, #9356DC));
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 95%);
+  border-radius: 30px;
+  color: white;
+  -webkit-box-shadow: 5px 5px 5px #eaeaea;
+          box-shadow: 5px 5px 5px #eaeaea;
+}
+
 body {
   margin: auto;
   /* aujustement commun des font */
@@ -139,24 +157,6 @@ footer h4 {
   margin-left: 5.33333%;
   text-align: center;
   height: 144px;
-}
-
-#submit {
-  margin: 80px 0 35px;
-  border: none;
-  padding: 1.2rem 2rem;
-  text-align: center;
-  /* aujustement commun des font */
-  font-family: roboto;
-  font-size: 1.3rem;
-  font-weight: bold;
-  /* commun au bouton type submit */
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(95%, #9356DC));
-  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 95%);
-  border-radius: 30px;
-  color: white;
-  -webkit-box-shadow: 5px 5px 5px #eaeaea;
-          box-shadow: 5px 5px 5px #eaeaea;
 }
 
 .explicatif {
