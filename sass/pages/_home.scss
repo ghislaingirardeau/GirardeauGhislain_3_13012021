@@ -33,15 +33,22 @@
     @include sousbloc_position(325px, 20px, left);
     @include sousbloc_layout($color_background, 20px, $col_degrade_clair);
     position: relative;
+    @include pseudoE_rond;
+    
+    &:hover{
+      & i {
+        color: $primary;
+      }
+    }
   }
   
   & p {
-    margin-top: 8%;
+    margin-top: 9%;
     @include font (roboto, 1rem, bold);
   }
   & i {
-    color: $primary;
     padding: 0 25px 0 35px;
+    margin-left: 12.5px;
   }
   
 }
@@ -62,7 +69,7 @@
   }
 
   &__contenu, &__contenu--nouveau {
-    @include sousbloc_position(325px, 20px, left);
+    @include sousbloc_position(335px, 20px, left);
     @include sousbloc_layout(white, 20px, $col_degrade_clair);
     height: 255px;
     overflow: hidden;

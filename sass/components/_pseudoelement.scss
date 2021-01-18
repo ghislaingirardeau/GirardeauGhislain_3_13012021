@@ -1,20 +1,16 @@
-$rond_etape: (
-  A: 1,
-  B: 2,
-  C: 3,
-);
-@mixin pseudoE_rond($rond_etape) {
-  @each $key, $val in $rond_etape {
-    &.--#{$key}::before {
-      content: "#{$val}";
-      color: white;
-      background-color: $primary;
-      width: 25px;
-      height: 25px;
-      border-radius: 15px;
-      position: absolute;
-      left: (25px / -2);
-      top: (62.5px / 2);
+@mixin pseudoE_rond {
+  @for $i from 1 through 3 {
+    &--#{$i}::before {
+    content: "#{$i}";
+    color: white;
+    background-color: $primary;
+    padding: 4px 8px;
+    border-radius: 20px;
+    position: absolute;
+    left: (25px / -2);
+    top: 26px;
+    text-align: center;
+    font-size: 0.8rem;
     }
   }
 }

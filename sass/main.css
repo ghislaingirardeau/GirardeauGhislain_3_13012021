@@ -1,13 +1,17 @@
+/* aujustement commun des font */
+/* aujuster les bloc en flex */
+/* aujuster les sousbloc en flex grace a width et margin */
+/* ajustement commun des sousblocs */
+/* pour tous les elements utilisant position absolue */
+/* commun au bouton type submit */
 #submit {
   margin: 80px 0 35px;
   border: none;
   padding: 1.2rem 2rem;
   text-align: center;
-  /* aujustement commun des font */
   font-family: roboto;
   font-size: 1.3rem;
   font-weight: bold;
-  /* commun au bouton type submit */
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(95%, #9356DC));
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 95%);
   border-radius: 30px;
@@ -18,7 +22,6 @@
 
 body {
   margin: auto;
-  /* aujustement commun des font */
   font-family: roboto;
   font-size: 1.3rem;
   font-weight: 400;
@@ -70,7 +73,6 @@ footer p {
 }
 
 footer > h4 {
-  /* aujustement commun des font */
   font-family: "Shrikhand";
   font-size: 1.5rem;
   font-weight: 200;
@@ -83,7 +85,7 @@ footer > h4 {
 #icone--rotate {
   -webkit-transform: rotate(-45deg) scale(0.8);
           transform: rotate(-45deg) scale(0.8);
-  margin-left: -2%;
+  margin-left: -1%;
   margin-right: 4%;
 }
 
@@ -160,7 +162,6 @@ footer > h4 {
   border: none;
   padding: 0.7rem 2.5rem 0.7rem 1rem;
   text-align: left;
-  /* aujustement commun des font */
   font-family: roboto;
   font-size: 1.2rem;
   font-weight: bold;
@@ -207,7 +208,6 @@ footer > h4 {
   width: 86.66667%;
   margin-left: 5.33333%;
   text-align: left;
-  /* ajustement commun lie a la couleur */
   background-color: #f6f6f6;
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px #eaeaea;
@@ -215,17 +215,59 @@ footer > h4 {
   position: relative;
 }
 
+.explicatif__fonction--1::before {
+  content: "1";
+  color: white;
+  background-color: #9356DC;
+  padding: 4px 8px;
+  border-radius: 20px;
+  position: absolute;
+  left: -12.5px;
+  top: 26px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.explicatif__fonction--2::before {
+  content: "2";
+  color: white;
+  background-color: #9356DC;
+  padding: 4px 8px;
+  border-radius: 20px;
+  position: absolute;
+  left: -12.5px;
+  top: 26px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.explicatif__fonction--3::before {
+  content: "3";
+  color: white;
+  background-color: #9356DC;
+  padding: 4px 8px;
+  border-radius: 20px;
+  position: absolute;
+  left: -12.5px;
+  top: 26px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.explicatif__fonction:hover i {
+  color: #9356DC;
+}
+
 .explicatif p {
-  margin-top: 8%;
-  /* aujustement commun des font */
+  margin-top: 9%;
   font-family: roboto;
   font-size: 1rem;
   font-weight: bold;
 }
 
 .explicatif i {
-  color: #9356DC;
   padding: 0 25px 0 35px;
+  margin-left: 12.5px;
 }
 
 .resultats {
@@ -258,10 +300,9 @@ footer > h4 {
 
 .resultats__contenu, .resultats__contenu--nouveau {
   /* ajustement commun lier a la forme */
-  width: 86.66667%;
+  width: 89.33333%;
   margin-left: 5.33333%;
   text-align: left;
-  /* ajustement commun lie a la couleur */
   background-color: white;
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 5px #eaeaea;

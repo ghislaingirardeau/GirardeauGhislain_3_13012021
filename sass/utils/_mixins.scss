@@ -1,9 +1,9 @@
 
-@mixin font($family, $size, $weight) { /* aujustement commun des font */
+@mixin font($family, $size, $weight) { 
   font-family: $family;
   font-size: $size;
   font-weight: $weight;
-}
+}/* aujustement commun des font */
 
 @mixin bloc_layout($dir, $wrap, $content, $height, $padbot, $colbg) {
   display: flex;
@@ -13,19 +13,19 @@
   min-height: $height;
   padding-bottom: $padbot;
   background-color: $colbg;
-}
+}/* aujuster les bloc en flex */
 
 @mixin sousbloc_position ($width_element, $margleft, $textalign) { /* ajustement commun lier a la forme */
   width: percentage($width_element / $width-totale);
   margin-left: percentage($margleft / $width-totale);
   text-align: $textalign;
-}
+}/* aujuster les sousbloc en flex grace a width et margin */
 
-@mixin sousbloc_layout ($color, $radius, $col_shad) { /* ajustement commun lie a la couleur */
+@mixin sousbloc_layout ($color, $radius, $col_shad) { 
   background-color: $color;
   border-radius: $radius;
   box-shadow: 5px 5px 5px $col_shad;
-}
+} /* ajustement commun des sousblocs */
 
 @mixin position_absolue ($top, $bottom, $left, $ftsize) {
   box-sizing: content-box;
@@ -34,7 +34,7 @@
   bottom: $bottom;
   left: $left;
   font-size: $ftsize;
-}
+}/* pour tous les elements utilisant position absolue */
 
 @mixin btn_layout($margin, $border, $padding, $align) {
   margin: $margin;
@@ -43,12 +43,12 @@
   text-align: $align;
 }
 
-@mixin btn_color ($col_shad) { /* commun au bouton type submit */
+@mixin btn_color ($col_shad) { 
   @include degrade_color ($secondary, 0%, $primary, 95%);
   border-radius: 30px;
   color: $text_bouton;
   box-shadow: 5px 5px 5px $col_shad;
-}
+}/* commun au bouton type submit */
 
 @mixin img_object ($axeY) {
   width: 100%;
