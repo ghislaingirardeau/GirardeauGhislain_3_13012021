@@ -52,6 +52,12 @@
   box-shadow: 5px 5px 5px $col_shad;
 }/* commun au bouton type submit */
 
+@mixin img_contain ($height) {
+    height: $height;
+    overflow: hidden;
+    position: relative;
+}
+
 @mixin img_object ($axeY) {
   width: 100%;
       object-fit: contain;

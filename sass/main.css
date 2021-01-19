@@ -289,9 +289,9 @@ footer > h4 {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-pack: between;
-      -ms-flex-pack: between;
-          justify-content: between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   min-height: 1225px;
   padding-bottom: 60px;
   background-color: #f6f6f6;
@@ -378,9 +378,17 @@ footer > h4 {
 }
 
 .presentation {
-  background-color: chartreuse;
   height: 310px;
+  overflow: hidden;
   position: relative;
+}
+
+.presentation > img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: 0 -40px;
+     object-position: 0 -40px;
 }
 
 .presentation__restaurant {

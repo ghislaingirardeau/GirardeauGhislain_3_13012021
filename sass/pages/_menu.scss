@@ -1,9 +1,9 @@
 .presentation{
-    background-color: chartreuse;
-    height: 310px;
-    position: relative;
-
-    &__restaurant{
+    @include img_contain (310px);
+    > img {
+        @include img_object (-40px);
+    }
+    &__restaurant{       
         @include position_absolue (100, 0px, 0, 1.2rem);
         width: 100%;
         height: 31%;

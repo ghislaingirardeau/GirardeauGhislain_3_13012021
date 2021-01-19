@@ -61,7 +61,7 @@
 }
 
 .resultats {
-  @include flex_layout (column, nowrap, between);
+  @include flex_layout (column, nowrap, space-between);
   @include box_height (1225px, 60px, $color_background);
   align-items: space-between;
 
@@ -72,9 +72,7 @@
   &__contenu, &__contenu--nouveau {
     @include box_width(335px, 20px, left);
     @include box_contour(white, 20px, $col_degrade_clair);
-    height: 255px;
-    overflow: hidden;
-    position: relative;
+    @include img_contain (255px);
 
     &--imgfit {
       @include img_object (-20px);
