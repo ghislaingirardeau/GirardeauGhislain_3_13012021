@@ -14,13 +14,38 @@
   padding-bottom: $padbot;
   background-color: $colbg;
 }/* aujuster les bloc en flex */
+/* 
+@mixin flex_layout($dir, $wrap, $content) {
+  display: flex;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $content; 
+}
+@mixin box_height ($height, $padbot, $colbg) {
+  min-height: $height;
+  padding-bottom: $padbot;
+  background-color: $colbg;
+}
+
+  @mixin box_width ($width_element, $margleft, $textalign) {
+  width: percentage($width_element / $width-totale);
+  margin-left: percentage($margleft / $width-totale);
+  text-align: $textalign;
+  }
+
+  @mixin box_contour ($color, $radius, $col_shad) {
+  background-color: $color;
+  border-radius: $radius;
+  box-shadow: 5px 5px 5px $col_shad;
+  }
+  */
 
 @mixin sousbloc_position ($width_element, $margleft, $textalign) { /* ajustement commun lier a la forme */
   width: percentage($width_element / $width-totale);
   margin-left: percentage($margleft / $width-totale);
   text-align: $textalign;
 }/* aujuster les sousbloc en flex grace a width et margin */
-
+ 
 @mixin sousbloc_layout ($color, $radius, $col_shad) { 
   background-color: $color;
   border-radius: $radius;

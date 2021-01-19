@@ -1,0 +1,31 @@
+@mixin border ($col) {
+    border: 2px dashed $col;
+}
+
+.presentation{
+    @include border(red);
+    position: relative;
+    > h1{
+        @include sousbloc_position(335px, 20px, left);
+    }
+    > i {
+        @include position_absolue (30%, 35%, 80%, 1.7rem);
+    }
+    
+}
+
+.entrees, .plats, .desserts {
+    @include bloc_layout(column, nowrap, space-around, 310px, 10px, $color_background);
+    > h2 {
+        @include sousbloc_position(335px, 20px, left);
+    }
+    > form {
+        @include sousbloc_position(335px, 20px, left);
+        @include border(blue);
+        > div {
+            @include border(green);
+            @include sousbloc_layout ($text_bouton, 10px, $col_degrade_clair);
+            margin-bottom: 15px;
+        }
+    }
+}

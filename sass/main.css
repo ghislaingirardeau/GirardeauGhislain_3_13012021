@@ -1,5 +1,30 @@
 /* aujustement commun des font */
 /* aujuster les bloc en flex */
+/* 
+@mixin flex_layout($dir, $wrap, $content) {
+  display: flex;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $content; 
+}
+@mixin box_height ($height, $padbot, $colbg) {
+  min-height: $height;
+  padding-bottom: $padbot;
+  background-color: $colbg;
+}
+
+  @mixin box_width ($width_element, $margleft, $textalign) {
+  width: percentage($width_element / $width-totale);
+  margin-left: percentage($margleft / $width-totale);
+  text-align: $textalign;
+  }
+
+  @mixin box_contour ($color, $radius, $col_shad) {
+  background-color: $color;
+  border-radius: $radius;
+  box-shadow: 5px 5px 5px $col_shad;
+  }
+  */
 /* aujuster les sousbloc en flex grace a width et margin */
 /* ajustement commun des sousblocs */
 /* pour tous les elements utilisant position absolue */
@@ -377,6 +402,69 @@ footer > h4 {
 
 .resultats i:hover {
   background-color: white;
+}
+
+.presentation {
+  border: 2px dashed red;
+  position: relative;
+}
+
+.presentation > h1 {
+  /* ajustement commun lier a la forme */
+  width: 89.33333%;
+  margin-left: 5.33333%;
+  text-align: left;
+}
+
+.presentation > i {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: absolute;
+  top: 30%;
+  bottom: 35%;
+  left: 80%;
+  font-size: 1.7rem;
+}
+
+.entrees, .plats, .desserts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 310px;
+  padding-bottom: 10px;
+  background-color: #f6f6f6;
+}
+
+.entrees > h2, .plats > h2, .desserts > h2 {
+  /* ajustement commun lier a la forme */
+  width: 89.33333%;
+  margin-left: 5.33333%;
+  text-align: left;
+}
+
+.entrees > form, .plats > form, .desserts > form {
+  /* ajustement commun lier a la forme */
+  width: 89.33333%;
+  margin-left: 5.33333%;
+  text-align: left;
+  border: 2px dashed blue;
+}
+
+.entrees > form > div, .plats > form > div, .desserts > form > div {
+  border: 2px dashed green;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 5px #eaeaea;
+          box-shadow: 5px 5px 5px #eaeaea;
+  margin-bottom: 15px;
 }
 
 @media screen and (min-width: 678px) {
