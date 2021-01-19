@@ -2,20 +2,30 @@
 /* aujuster les sousbloc en flex grace a width et margin */
 /* pour tous les elements utilisant position absolue */
 /* commun au bouton type submit */
-#submit {
-  margin: 80px 0 35px;
-  border: none;
-  padding: 1.2rem 2rem;
-  text-align: center;
+.submit {
   font-family: roboto;
   font-size: 1.3rem;
   font-weight: bold;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(95%, #9356DC));
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 95%);
-  border-radius: 30px;
+  border-radius: 40px;
   color: white;
   -webkit-box-shadow: 5px 5px 5px #eaeaea;
           box-shadow: 5px 5px 5px #eaeaea;
+}
+
+.submit--explorer {
+  margin: 80px 0 35px;
+  border: none;
+  padding: 1.2rem 2rem;
+  text-align: center;
+}
+
+.submit--commander {
+  margin: 45px 0 65px;
+  border: none;
+  padding: 1.2rem 5.2rem;
+  text-align: center;
 }
 
 body {
@@ -386,11 +396,16 @@ footer > h4 {
   background-color: #f6f6f6;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  padding-top: 35px;
+  padding-top: 1rem;
 }
 
 .presentation__restaurant > h1 {
-  padding-left: 5.3%;
+  width: 72%;
+  margin-left: 5.33333%;
+  text-align: left;
+  font-family: Shrikhand;
+  font-size: 2rem;
+  font-weight: 300;
 }
 
 .presentation__restaurant > i {
@@ -421,9 +436,14 @@ footer > h4 {
 }
 
 .entrees > h2, .plats > h2, .desserts > h2 {
-  width: 89.33333%;
+  width: 10.66667%;
   margin-left: 5.33333%;
   text-align: left;
+  font-family: roboto;
+  font-size: 1.3rem;
+  font-weight: 300;
+  padding-bottom: 8px;
+  border-bottom: 4px solid #99E2D0;
 }
 
 .entrees > form, .plats > form, .desserts > form {
@@ -432,33 +452,49 @@ footer > h4 {
   text-align: left;
 }
 
-.entrees > form div, .plats > form div, .desserts > form div {
+label {
   background-color: white;
   border-radius: 15px;
   -webkit-box-shadow: 5px 5px 5px #eaeaea;
           box-shadow: 5px 5px 5px #eaeaea;
-  margin-bottom: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   position: relative;
   padding-left: 15px;
+  margin-bottom: 15px;
   line-height: 10px;
 }
 
-.entrees > form div h3, .plats > form div h3, .desserts > form div h3 {
-  padding-top: 20px;
+label .menu--descriptif {
+  border: solid 2px green;
+  width: 80%;
 }
 
-.entrees > form div p, .plats > form div p, .desserts > form div p {
-  padding-bottom: 20px;
-}
-
-.entrees > form input, .entrees > form strong, .plats > form input, .plats > form strong, .desserts > form input, .desserts > form strong {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+label .menu--prix {
+  width: 60px;
   position: absolute;
-  top: 60%;
-  bottom: 0%;
-  left: 85%;
-  font-size: 1.7rem;
+  left: 80%;
+  padding-top: 11%;
+}
+
+label .menu--check {
+  width: 20%;
+  border: solid 2px green;
+}
+
+.btn-layout {
+  background-color: #f6f6f6;
+  text-align: center;
 }
 
 @media screen and (min-width: 678px) {

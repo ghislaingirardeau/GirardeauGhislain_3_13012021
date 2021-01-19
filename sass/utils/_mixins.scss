@@ -47,7 +47,7 @@
 
 @mixin btn_color ($col_shad) { 
   @include degrade_color ($secondary, 0%, $primary, 95%);
-  border-radius: 30px;
+  border-radius: 40px;
   color: $text_bouton;
   box-shadow: 5px 5px 5px $col_shad;
 }/* commun au bouton type submit */
