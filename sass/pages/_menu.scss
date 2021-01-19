@@ -1,7 +1,14 @@
+header{
+    > a {
+        @include position_absolue (2%, 0%, 20px, 1.2rem);
+        color: black;
+    }
+}
+
 .presentation{
     @include img_contain (310px);
     > img {
-        @include img_object (-40px);
+        @include img_object (-100px);
     }
     &__restaurant{       
         @include position_absolue (100, 0px, 0, 1.2rem);
@@ -27,7 +34,7 @@
     @include box_height (310px, 10px, $color_background);
     > h2 {
         @include box_width(40px, 20px, left);
-        @include font (roboto, 1.3rem, 300);
+        @include font (roboto, 1.1rem, 300);
         padding-bottom: 8px;
         border-bottom: 4px solid $third;
     }
