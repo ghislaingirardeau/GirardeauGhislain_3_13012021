@@ -1,34 +1,17 @@
 /* aujustement commun des font */
 /* aujuster les bloc en flex */
-/* 
-@mixin flex_layout($dir, $wrap, $content) {
-  display: flex;
-  flex-direction: $dir;
-  flex-wrap: $wrap;
-  justify-content: $content; 
-}
-@mixin box_height ($height, $padbot, $colbg) {
-  min-height: $height;
-  padding-bottom: $padbot;
-  background-color: $colbg;
-}
-
-  @mixin box_width ($width_element, $margleft, $textalign) {
-  width: percentage($width_element / $width-totale);
-  margin-left: percentage($margleft / $width-totale);
-  text-align: $textalign;
-  }
-
-  @mixin box_contour ($color, $radius, $col_shad) {
-  background-color: $color;
-  border-radius: $radius;
-  box-shadow: 5px 5px 5px $col_shad;
-  }
-  */
 /* aujuster les sousbloc en flex grace a width et margin */
 /* ajustement commun des sousblocs */
 /* pour tous les elements utilisant position absolue */
 /* commun au bouton type submit */
+/* @mixin bloc_descriptif {
+  width: 100%;
+  height: 31%;
+  background-color: white;
+  line-height: 0.7rem;
+  padding-left: 15px;
+}
+ */
 #submit {
   margin: 80px 0 35px;
   border: none;
@@ -91,7 +74,6 @@ footer {
 
 footer p {
   margin-top: -1rem;
-  /* ajustement commun lier a la forme */
   width: 86.66667%;
   margin-left: 5.33333%;
   text-align: left;
@@ -101,7 +83,6 @@ footer > h4 {
   font-family: "Shrikhand";
   font-size: 1.5rem;
   font-weight: 200;
-  /* ajustement commun lier a la forme */
   width: 86.66667%;
   margin-left: 5.33333%;
   text-align: left;
@@ -134,11 +115,8 @@ footer > h4 {
         -ms-flex-pack: justify;
             justify-content: space-between;
     min-height: 100px;
-    padding-bottom: 10px;
-    background-color: #353535;
   }
   footer p {
-    /* ajustement commun lier a la forme */
     width: 18.66667%;
     margin-left: 5.33333%;
     text-align: left;
@@ -410,7 +388,6 @@ footer > h4 {
 }
 
 .presentation > h1 {
-  /* ajustement commun lier a la forme */
   width: 89.33333%;
   margin-left: 5.33333%;
   text-align: left;
@@ -444,22 +421,18 @@ footer > h4 {
 }
 
 .entrees > h2, .plats > h2, .desserts > h2 {
-  /* ajustement commun lier a la forme */
   width: 89.33333%;
   margin-left: 5.33333%;
   text-align: left;
 }
 
 .entrees > form, .plats > form, .desserts > form {
-  /* ajustement commun lier a la forme */
   width: 89.33333%;
   margin-left: 5.33333%;
   text-align: left;
-  border: 2px dashed blue;
 }
 
 .entrees > form > div, .plats > form > div, .desserts > form > div {
-  border: 2px dashed green;
   background-color: white;
   border-radius: 10px;
   -webkit-box-shadow: 5px 5px 5px #eaeaea;
