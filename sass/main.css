@@ -376,21 +376,36 @@ footer > h4 {
 }
 
 .presentation {
-  border: 2px dashed red;
+  background-color: chartreuse;
+  height: 310px;
   position: relative;
 }
 
-.presentation > h1 {
-  width: 89.33333%;
-  margin-left: 5.33333%;
-  text-align: left;
-}
-
-.presentation > i {
+.presentation__restaurant {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   position: absolute;
-  top: 30%;
+  top: 100;
+  bottom: 0px;
+  left: 0;
+  font-size: 1.2rem;
+  width: 100%;
+  height: 31%;
+  background-color: #f6f6f6;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  padding-top: 35px;
+}
+
+.presentation__restaurant > h1 {
+  padding-left: 5.3%;
+}
+
+.presentation__restaurant > i {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: absolute;
+  top: 46%;
   bottom: 35%;
   left: 80%;
   font-size: 1.7rem;
@@ -425,12 +440,23 @@ footer > h4 {
   text-align: left;
 }
 
-.entrees > form > div, .plats > form > div, .desserts > form > div {
+.entrees > form div, .plats > form div, .desserts > form div {
   background-color: white;
   border-radius: 10px;
   -webkit-box-shadow: 5px 5px 5px #eaeaea;
           box-shadow: 5px 5px 5px #eaeaea;
   margin-bottom: 15px;
+  position: relative;
+}
+
+.entrees > form input, .plats > form input, .desserts > form input {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: absolute;
+  top: 46%;
+  bottom: 35%;
+  left: 80%;
+  font-size: 1.7rem;
 }
 
 @media screen and (min-width: 678px) {
