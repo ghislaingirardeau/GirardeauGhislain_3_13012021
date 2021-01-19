@@ -30,12 +30,21 @@
     > form {
         @include box_width(335px, 20px, left);
         & div {
-            @include box_contour ($text_bouton, 10px, $col_degrade_clair);
+            @include box_contour ($text_bouton, 15px, $col_degrade_clair);
             margin-bottom: 15px;
             position: relative;
+            padding-left: 15px;
+            line-height: 10px;
+           & h3 {
+            padding-top: 20px;
+           }
+           & p {
+            padding-bottom: 20px;
+           }
+        
         }
-        & input {
-            @include position_absolue (46%, 35%, 80%, 1.7rem);
+        & input, strong {
+            @include position_absolue (60%, 0%, 85%, 1.7rem);
         }       
     }
 }

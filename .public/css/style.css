@@ -2,14 +2,6 @@
 /* aujuster les sousbloc en flex grace a width et margin */
 /* pour tous les elements utilisant position absolue */
 /* commun au bouton type submit */
-/* @mixin bloc_descriptif {
-  width: 100%;
-  height: 31%;
-  background-color: white;
-  line-height: 0.7rem;
-  padding-left: 15px;
-}
- */
 #submit {
   margin: 80px 0 35px;
   border: none;
@@ -346,17 +338,25 @@ footer > h4 {
 }
 .entrees > form div, .plats > form div, .desserts > form div {
   background-color: white;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 5px 5px 5px #eaeaea;
   margin-bottom: 15px;
   position: relative;
+  padding-left: 15px;
+  line-height: 10px;
 }
-.entrees > form input, .plats > form input, .desserts > form input {
+.entrees > form div h3, .plats > form div h3, .desserts > form div h3 {
+  padding-top: 20px;
+}
+.entrees > form div p, .plats > form div p, .desserts > form div p {
+  padding-bottom: 20px;
+}
+.entrees > form input, .entrees > form strong, .plats > form input, .plats > form strong, .desserts > form input, .desserts > form strong {
   box-sizing: content-box;
   position: absolute;
-  top: 46%;
-  bottom: 35%;
-  left: 80%;
+  top: 60%;
+  bottom: 0%;
+  left: 85%;
   font-size: 1.7rem;
 }
 
