@@ -50,6 +50,14 @@ label {
     padding-left: 15px;
     margin-bottom: 15px;
     line-height: 10px;
+
+    & h3 {
+        font-size: 1.2rem;
+    }
+
+    & p, strong {
+        font-size: 1.1rem;
+    }
     
     & .menu--descriptif {
         border: solid 2px green;
@@ -60,7 +68,7 @@ label {
         width: 60px;
         position: absolute;
         left: 80%;
-        padding-top: 11%;
+        padding-top: 10%;  
     }
 
     & .menu--check{
@@ -68,8 +76,14 @@ label {
         border: solid 2px green;
     }
 }
-.btn-layout{
+
+
+.btn-bloc{
     background-color: $color_background;
     text-align: center;
 }
 
+input [type=checkbox] [name=test] {
+    background-color: red;
+    width: 10px;
+}

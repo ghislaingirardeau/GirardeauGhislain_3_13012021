@@ -494,6 +494,14 @@ label {
   line-height: 10px;
 }
 
+label h3 {
+  font-size: 1.2rem;
+}
+
+label p, label strong {
+  font-size: 1.1rem;
+}
+
 label .menu--descriptif {
   border: solid 2px green;
   width: 80%;
@@ -503,7 +511,7 @@ label .menu--prix {
   width: 60px;
   position: absolute;
   left: 80%;
-  padding-top: 11%;
+  padding-top: 10%;
 }
 
 label .menu--check {
@@ -511,9 +519,14 @@ label .menu--check {
   border: solid 2px green;
 }
 
-.btn-layout {
+.btn-bloc {
   background-color: #f6f6f6;
   text-align: center;
+}
+
+input [type=checkbox] [name=test] {
+  background-color: red;
+  width: 10px;
 }
 
 @media screen and (min-width: 678px) {
