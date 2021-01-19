@@ -1,5 +1,6 @@
 .recherche {
-  @include bloc_layout(column, nowrap, flex-start, 340px, 0, $color_background);
+  @include flex_layout (column, nowrap, flex-start);
+  @include box_height (340px, 0, $color_background);
   text-align: center;
 
   &__btn {
@@ -16,22 +17,23 @@
   }
 
   &__description {
-    @include sousbloc_position(325px, 20px, center);
+    @include box_width(325px, 20px, center);
     height: 144px;
   }
 }
 
 .explicatif {
-  @include bloc_layout(column, nowrap, space-around, 440px, 60px, unset);
+  @include flex_layout (column, nowrap, space-around);
+  @include box_height (440px, 60px, unset);
   & > h2 {
-    @include sousbloc_position(325px, 20px, left);
+    @include box_width(325px, 20px, left);
     margin-top: 0.5rem;
   }
 
   &__fonction {
     height: 75px;
-    @include sousbloc_position(325px, 20px, left);
-    @include sousbloc_layout($color_background, 20px, $col_degrade_clair);
+    @include box_width(325px, 20px, left);
+    @include box_contour($color_background, 20px, $col_degrade_clair);
     position: relative;
 
     @for $i from 1 through 3 {
@@ -59,23 +61,17 @@
 }
 
 .resultats {
-  @include bloc_layout(
-    column,
-    nowrap,
-    space-between,
-    1225px,
-    60px,
-    $color_background
-  );
+  @include flex_layout (column, nowrap, between);
+  @include box_height (1225px, 60px, $color_background);
   align-items: space-between;
 
   & > h2 {
-    @include sousbloc_position(325px, 20px, left);
+    @include box_width(325px, 20px, left);
   }
 
   &__contenu, &__contenu--nouveau {
-    @include sousbloc_position(335px, 20px, left);
-    @include sousbloc_layout(white, 20px, $col_degrade_clair);
+    @include box_width(335px, 20px, left);
+    @include box_contour(white, 20px, $col_degrade_clair);
     height: 255px;
     overflow: hidden;
     position: relative;

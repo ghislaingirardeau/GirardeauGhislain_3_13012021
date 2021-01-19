@@ -5,16 +5,6 @@
   font-weight: $weight;
 }/* aujustement commun des font */
 
-@mixin bloc_layout($dir, $wrap, $content, $height, $padbot, $colbg) {
-  display: flex;
-  flex-direction: $dir;
-  flex-wrap: $wrap;
-  justify-content: $content;
-  min-height: $height;
-  padding-bottom: $padbot;
-  background-color: $colbg;
-}/* aujuster les bloc en flex */
-
 @mixin flex_layout($dir, $wrap, $content) {
   display: flex;
   flex-direction: $dir;
@@ -31,26 +21,14 @@
   width: percentage($width_element / $width-totale);
   margin-left: percentage($margleft / $width-totale);
   text-align: $textalign;
-  }
+  }/* aujuster les sousbloc en flex grace a width et margin */
 
   @mixin box_contour ($color, $radius, $col_shad) {
   background-color: $color;
   border-radius: $radius;
   box-shadow: 5px 5px 5px $col_shad;
   }
-  
 
-@mixin sousbloc_position ($width_element, $margleft, $textalign) { /* ajustement commun lier a la forme */
-  width: percentage($width_element / $width-totale);
-  margin-left: percentage($margleft / $width-totale);
-  text-align: $textalign;
-}/* aujuster les sousbloc en flex grace a width et margin */
- 
-@mixin sousbloc_layout ($color, $radius, $col_shad) { 
-  background-color: $color;
-  border-radius: $radius;
-  box-shadow: 5px 5px 5px $col_shad;
-} /* ajustement commun des sousblocs */
 
 @mixin position_absolue ($top, $bottom, $left, $ftsize) {
   box-sizing: content-box;

@@ -1,7 +1,5 @@
 /* aujustement commun des font */
-/* aujuster les bloc en flex */
 /* aujuster les sousbloc en flex grace a width et margin */
-/* ajustement commun des sousblocs */
 /* pour tous les elements utilisant position absolue */
 /* commun au bouton type submit */
 /* @mixin bloc_descriptif {
@@ -173,7 +171,6 @@ footer > h4 {
 }
 
 .recherche__description {
-  /* ajustement commun lier a la forme */
   width: 86.66667%;
   margin-left: 5.33333%;
   text-align: center;
@@ -198,7 +195,6 @@ footer > h4 {
 }
 
 .explicatif > h2 {
-  /* ajustement commun lier a la forme */
   width: 86.66667%;
   margin-left: 5.33333%;
   text-align: left;
@@ -207,7 +203,6 @@ footer > h4 {
 
 .explicatif__fonction {
   height: 75px;
-  /* ajustement commun lier a la forme */
   width: 86.66667%;
   margin-left: 5.33333%;
   text-align: left;
@@ -292,9 +287,9 @@ footer > h4 {
           flex-direction: column;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: between;
+      -ms-flex-pack: between;
+          justify-content: between;
   min-height: 1225px;
   padding-bottom: 60px;
   background-color: #f6f6f6;
@@ -304,14 +299,12 @@ footer > h4 {
 }
 
 .resultats > h2 {
-  /* ajustement commun lier a la forme */
   width: 86.66667%;
   margin-left: 5.33333%;
   text-align: left;
 }
 
 .resultats__contenu, .resultats__contenu--nouveau {
-  /* ajustement commun lier a la forme */
   width: 89.33333%;
   margin-left: 5.33333%;
   text-align: left;
@@ -461,13 +454,11 @@ footer > h4 {
     background-color: unset;
   }
   .explicatif__fonction {
-    /* ajustement commun lier a la forme */
     width: 26.66667%;
     margin-left: 2.66667%;
     text-align: center;
   }
   .explicatif > h2 {
-    /* ajustement commun lier a la forme */
     width: 92%;
     margin-left: 2.66667%;
     text-align: left;
@@ -490,17 +481,15 @@ footer > h4 {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     min-height: 655px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     background-color: #f6f6f6;
   }
   .resultats > h2 {
-    /* ajustement commun lier a la forme */
     width: 92%;
     margin-left: 2.66667%;
     text-align: left;
   }
   .resultats__contenu, .resultats__contenu--nouveau {
-    /* ajustement commun lier a la forme */
     width: 42.66667%;
     margin-left: 2.66667%;
     text-align: left;
@@ -530,7 +519,6 @@ footer > h4 {
     min-height: unset;
   }
   .recherche__description {
-    /* ajustement commun lier a la forme */
     width: 53.33333%;
     margin-left: 5.33333%;
     text-align: left;
@@ -540,7 +528,6 @@ footer > h4 {
     height: 60px;
   }
   .recherche__btn--validation {
-    /* ajustement commun lier a la forme */
     width: 40%;
     margin-left: 0%;
     text-align: center;
@@ -558,7 +545,6 @@ footer > h4 {
         justify-content: space-around;
   }
   .resultats__contenu, .resultats__contenu--nouveau {
-    /* ajustement commun lier a la forme */
     width: 24%;
     margin-left: 0%;
     text-align: left;
