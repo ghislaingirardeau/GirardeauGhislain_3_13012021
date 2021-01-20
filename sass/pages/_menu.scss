@@ -12,18 +12,19 @@ header{
     }
     &__restaurant{       
         @include position_absolue (100, 0px, 0, 1.2rem);
-        @include description_inside ($color_background, 4rem, 20px);        
+        @include description_inside ($color_background, 4rem, 0px);        
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
+        width: 100%;
         
         > h1 {
             @include font (Shrikhand, 1.5rem, 300);
+            margin-left: 20px;
         }
         > i {
-            @include position_absolue (46%, 35%, 80%, 1.7rem);
+            @include position_absolue (38%, 0%, 80%, 1.7rem);
         }
     }
-    
 }
 
 .entrees, .plats, .desserts {
@@ -65,16 +66,10 @@ label {
     & .menu--prix{
         width: 60px;
         position: absolute;
-        left: 80%;
-        padding-top: 10%;  
-    }
-
-    & .menu--check{
-        width: 20%;
-        border: solid 2px green;
+        left: 85%;
+        padding-top: 5%;  
     }
 }
-
 
 .btn-bloc{
     background-color: $color_background;
@@ -82,6 +77,6 @@ label {
 }
 
 input [type=checkbox] [name=test] {
-    background-color: red;
+    
     width: 10px;
 }

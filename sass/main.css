@@ -402,10 +402,10 @@ header > a {
 
 .presentation > img {
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: -60px 0;
-     object-position: -60px 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: -60px;
+     object-position: -60px;
 }
 
 .presentation__restaurant {
@@ -420,23 +420,25 @@ header > a {
   height: 31%;
   background-color: #f6f6f6;
   line-height: 4rem;
-  padding-left: 20px;
+  padding-left: 0px;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  width: 100%;
 }
 
 .presentation__restaurant > h1 {
   font-family: Shrikhand;
   font-size: 1.5rem;
   font-weight: 300;
+  margin-left: 20px;
 }
 
 .presentation__restaurant > i {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   position: absolute;
-  top: 46%;
-  bottom: 35%;
+  top: 38%;
+  bottom: 0%;
   left: 80%;
   font-size: 1.7rem;
 }
@@ -517,13 +519,8 @@ label .menu--descriptif p {
 label .menu--prix {
   width: 60px;
   position: absolute;
-  left: 80%;
-  padding-top: 10%;
-}
-
-label .menu--check {
-  width: 20%;
-  border: solid 2px green;
+  left: 85%;
+  padding-top: 5%;
 }
 
 .btn-bloc {
@@ -532,7 +529,6 @@ label .menu--check {
 }
 
 input [type=checkbox] [name=test] {
-  background-color: red;
   width: 10px;
 }
 
@@ -654,6 +650,79 @@ input [type=checkbox] [name=test] {
   .resultats__contenu--imgfit.--pospotrait, .resultats__contenu--nouveau--imgfit.--pospotrait {
     -o-object-position: 0 -60px;
        object-position: 0 -60px;
+  }
+}
+
+@media screen and (min-width: 678px) {
+  body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  header {
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  header > a {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    position: absolute;
+    top: 25px;
+    bottom: 0%;
+    left: 80px;
+    font-size: 3rem;
+  }
+  .presentation {
+    width: 50%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    height: unset;
+  }
+  .presentation > img {
+    width: 120%;
+  }
+  .presentation h1 {
+    padding-top: 10px;
+  }
+  .entrees, .plats, .desserts {
+    width: 50%;
+  }
+  .entrees {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+  .plats {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .desserts {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  .btn-bloc {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+    margin: auto;
+    width: 100%;
+  }
+  footer {
+    width: 100%;
+    -webkit-box-ordinal-group: 8;
+        -ms-flex-order: 7;
+            order: 7;
   }
 }
 /*# sourceMappingURL=main.css.map */

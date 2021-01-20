@@ -316,8 +316,8 @@ header > a {
 }
 .presentation > img {
   height: 100%;
-  object-fit: contain;
-  object-position: -60px 0;
+  object-fit: cover;
+  object-position: -60px;
 }
 .presentation__restaurant {
   box-sizing: content-box;
@@ -330,20 +330,22 @@ header > a {
   height: 31%;
   background-color: #f6f6f6;
   line-height: 4rem;
-  padding-left: 20px;
+  padding-left: 0px;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  width: 100%;
 }
 .presentation__restaurant > h1 {
   font-family: Shrikhand;
   font-size: 1.5rem;
   font-weight: 300;
+  margin-left: 20px;
 }
 .presentation__restaurant > i {
   box-sizing: content-box;
   position: absolute;
-  top: 46%;
-  bottom: 35%;
+  top: 38%;
+  bottom: 0%;
   left: 80%;
   font-size: 1.7rem;
 }
@@ -402,12 +404,8 @@ label .menu--descriptif p {
 label .menu--prix {
   width: 60px;
   position: absolute;
-  left: 80%;
-  padding-top: 10%;
-}
-label .menu--check {
-  width: 20%;
-  border: solid 2px green;
+  left: 85%;
+  padding-top: 5%;
 }
 
 .btn-bloc {
@@ -416,7 +414,6 @@ label .menu--check {
 }
 
 input [type=checkbox] [name=test] {
-  background-color: red;
   width: 10px;
 }
 
@@ -516,6 +513,65 @@ input [type=checkbox] [name=test] {
   }
   .resultats__contenu--imgfit.--pospotrait, .resultats__contenu--nouveau--imgfit.--pospotrait {
     object-position: 0 -60px;
+  }
+}
+@media screen and (min-width: 678px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  header {
+    width: 100%;
+    order: 1;
+  }
+  header > a {
+    box-sizing: content-box;
+    position: absolute;
+    top: 25px;
+    bottom: 0%;
+    left: 80px;
+    font-size: 3rem;
+  }
+
+  .presentation {
+    width: 50%;
+    order: 2;
+    height: unset;
+  }
+  .presentation > img {
+    width: 120%;
+  }
+  .presentation h1 {
+    padding-top: 10px;
+  }
+
+  .entrees, .plats, .desserts {
+    width: 50%;
+  }
+
+  .entrees {
+    order: 4;
+  }
+
+  .plats {
+    order: 3;
+  }
+
+  .desserts {
+    order: 5;
+  }
+
+  .btn-bloc {
+    order: 6;
+    margin: auto;
+    width: 100%;
+  }
+
+  footer {
+    width: 100%;
+    order: 7;
   }
 }
 

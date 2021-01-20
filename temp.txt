@@ -1,4 +1,11 @@
-@mixin test ($a, $b){
-  width: $a;
-  margin: $b;
-};
+
+
+<div class="menu--check">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+
+                width: 120%; 
+  object-fit: contain;
+  background-color: red;
+
+  <input type="checkbox" name="test" id="test">

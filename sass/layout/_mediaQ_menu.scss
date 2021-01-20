@@ -1,0 +1,47 @@
+@include tablette {
+    body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+header {
+    width: 100%;
+    order: 1;
+    > a {
+        @include position_absolue (25px, 0%, 80px, 3rem);
+    }
+}
+
+.presentation {
+    width: 50%;
+    order: 2;
+    height: unset;
+    & > img{
+        width: 120%; 
+    }
+    & h1 {
+        padding-top: 10px;
+    }
+}
+.entrees, .plats, .desserts{
+    width: 50%;
+}
+.entrees {
+    order: 4;
+}
+.plats {
+    order: 3;
+}
+.desserts{
+order: 5;
+}
+.btn-bloc{
+    order: 6;
+    margin: auto;
+    width: 100%;
+}
+footer{
+    width: 100%;
+    order: 7;
+}
+}
