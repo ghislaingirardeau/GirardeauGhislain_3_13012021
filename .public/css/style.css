@@ -7,15 +7,16 @@
 /* commun au bouton type submit */
 .submit {
   font-family: roboto;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: bold;
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 95%);
   border-radius: 40px;
   color: white;
   box-shadow: 5px 5px 5px #eaeaea;
+  cursor: pointer;
 }
 .submit--explorer {
-  margin: 80px 0 35px;
+  margin: 30px 0 35px;
   border: none;
   padding: 1.2rem 2rem;
   text-align: center;
@@ -30,7 +31,7 @@
 body {
   margin: auto;
   font-family: roboto;
-  font-size: 1.3rem;
+  font-size: 17px;
   font-weight: 400;
 }
 
@@ -63,12 +64,12 @@ footer {
 }
 footer p {
   width: 86.6666666667%;
-  margin: 5px 20px;
+  margin: 0px 20px;
   text-align: left;
 }
 footer > h4 {
   font-family: "Shrikhand";
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 200;
   width: 86.6666666667%;
   margin: 20px 20px;
@@ -93,6 +94,7 @@ footer > h4 {
     flex-wrap: wrap;
     justify-content: space-between;
     min-height: 100px;
+    padding-left: 20px;
   }
   footer p {
     width: 18.6666666667%;
@@ -118,6 +120,9 @@ footer > h4 {
   background-color: #f6f6f6;
   text-align: center;
 }
+.recherche > h1 {
+  font-size: 1.5rem;
+}
 .recherche__btn {
   background: linear-gradient(to bottom, #cfcfcf 0%, #eaeaea 15%);
 }
@@ -130,16 +135,15 @@ footer > h4 {
   padding: 0.7rem 2.5rem 0.7rem 1rem;
   text-align: left;
   font-family: roboto;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   width: 225px;
   background-color: #eaeaea;
 }
 .recherche__description {
-  width: 86.6666666667%;
-  margin: 0 20px;
+  width: 82.6666666667%;
+  margin: auto;
   text-align: center;
-  height: 144px;
 }
 
 .explicatif {
@@ -381,12 +385,6 @@ label {
   padding-left: 15px;
   margin-bottom: 15px;
   line-height: 10px;
-}
-label h3 {
-  font-size: 1.2rem;
-}
-label p, label strong {
-  font-size: 1.1rem;
 }
 label .menu--descriptif {
   border: solid 2px green;

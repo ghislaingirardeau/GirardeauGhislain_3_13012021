@@ -3,6 +3,10 @@
   @include box_height (340px, 0, $color_background);
   text-align: center;
 
+    & > h1 {
+      font-size: 1.5rem;
+    }
+
   &__btn {
     @include degrade_color ($col_degrade_fonce, 0%, $col_degrade_clair, 15%);
     & > i {
@@ -10,15 +14,15 @@
     }
     &--localisation{
     @include btn_layout(10px 0, none, 0.7rem 2.5rem 0.7rem 1rem, left);
-    @include font (roboto, 1.2rem, bold);
+    @include font (roboto, 1.1rem, bold);
     width: 225px;
     background-color: $col_degrade_clair;
     }
   }
 
   &__description {
-    @include box_width(325px, 0 20px, center);
-    height: 144px;
+    @include box_width(310px, auto, center);
+    
   }
 }
 
