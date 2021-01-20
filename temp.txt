@@ -1,0 +1,4 @@
+@mixin test ($a, $b){
+  width: $a;
+  margin: $b;
+};

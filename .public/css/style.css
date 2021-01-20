@@ -1,6 +1,9 @@
 /* aujustement commun des font */
 /* aujuster les sousbloc en flex grace a width et margin */
 /* pour tous les elements utilisant position absolue */
+/* ajustement des images */
+/* ajustement bloc dans l'image en absolue */
+/* mixin bouton */
 /* commun au bouton type submit */
 .submit {
   font-family: roboto;
@@ -36,16 +39,16 @@ header {
   text-align: center;
 }
 header img {
-  width: 165px;
-  margin-top: 3%;
-  margin-bottom: 2%;
+  width: 44%;
+  margin: 3% 2%;
+  text-align: center;
 }
 
 @media screen and (min-width: 1025px) {
   header img {
-    width: 320px;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    width: 24%;
+    margin: 1% 1%;
+    text-align: center;
   }
 }
 footer {
@@ -59,9 +62,8 @@ footer {
   color: white;
 }
 footer p {
-  margin-top: -1rem;
   width: 86.6666666667%;
-  margin-left: 5.3333333333%;
+  margin: 5px 20px;
   text-align: left;
 }
 footer > h4 {
@@ -69,7 +71,7 @@ footer > h4 {
   font-size: 1.5rem;
   font-weight: 200;
   width: 86.6666666667%;
-  margin-left: 5.3333333333%;
+  margin: 20px 20px;
   text-align: left;
 }
 
@@ -94,7 +96,7 @@ footer > h4 {
   }
   footer p {
     width: 18.6666666667%;
-    margin-left: 5.3333333333%;
+    margin: 0 20px;
     text-align: left;
   }
   footer h4 {
@@ -135,7 +137,7 @@ footer > h4 {
 }
 .recherche__description {
   width: 86.6666666667%;
-  margin-left: 5.3333333333%;
+  margin: 0 20px;
   text-align: center;
   height: 144px;
 }
@@ -151,14 +153,13 @@ footer > h4 {
 }
 .explicatif > h2 {
   width: 86.6666666667%;
-  margin-left: 5.3333333333%;
+  margin: 0.5rem 20px;
   text-align: left;
-  margin-top: 0.5rem;
 }
 .explicatif__fonction {
   height: 75px;
   width: 86.6666666667%;
-  margin-left: 5.3333333333%;
+  margin: 0 20px;
   text-align: left;
   background-color: #f6f6f6;
   border-radius: 20px;
@@ -233,12 +234,12 @@ footer > h4 {
 }
 .resultats > h2 {
   width: 86.6666666667%;
-  margin-left: 5.3333333333%;
+  margin: 20px 20px;
   text-align: left;
 }
 .resultats__contenu, .resultats__contenu--nouveau {
   width: 89.3333333333%;
-  margin-left: 5.3333333333%;
+  margin: 0 20px;
   text-align: left;
   background-color: white;
   border-radius: 20px;
@@ -324,16 +325,14 @@ header > a {
   width: 100%;
   height: 31%;
   background-color: #f6f6f6;
+  line-height: 4rem;
+  padding-left: 20px;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
-  padding-top: 1rem;
 }
 .presentation__restaurant > h1 {
-  width: 72%;
-  margin-left: 5.3333333333%;
-  text-align: left;
   font-family: Shrikhand;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 300;
 }
 .presentation__restaurant > i {
@@ -356,7 +355,7 @@ header > a {
 }
 .entrees > h2, .plats > h2, .desserts > h2 {
   width: 10.6666666667%;
-  margin-left: 5.3333333333%;
+  margin: 20px;
   text-align: left;
   font-family: roboto;
   font-size: 1.1rem;
@@ -366,7 +365,7 @@ header > a {
 }
 .entrees > form, .plats > form, .desserts > form {
   width: 89.3333333333%;
-  margin-left: 5.3333333333%;
+  margin: 0 20px;
   text-align: left;
 }
 
@@ -415,10 +414,6 @@ input [type=checkbox] [name=test] {
 }
 
 @media screen and (min-width: 678px) {
-  #submit {
-    margin-top: 10px;
-  }
-
   .explicatif {
     display: flex;
     flex-direction: row;
@@ -430,14 +425,13 @@ input [type=checkbox] [name=test] {
   }
   .explicatif__fonction {
     width: 26.6666666667%;
-    margin-left: 2.6666666667%;
+    margin: 0 10px;
     text-align: center;
   }
   .explicatif > h2 {
     width: 92%;
-    margin-left: 2.6666666667%;
+    margin: 30px 10px;
     text-align: left;
-    margin-top: 2rem;
   }
   .explicatif i {
     padding: 0 15px 0 15px;
@@ -455,12 +449,12 @@ input [type=checkbox] [name=test] {
   }
   .resultats > h2 {
     width: 92%;
-    margin-left: 2.6666666667%;
+    margin: 30px 10px;
     text-align: left;
   }
   .resultats__contenu, .resultats__contenu--nouveau {
     width: 42.6666666667%;
-    margin-left: 2.6666666667%;
+    margin: 0 10px;
     text-align: left;
   }
 }
@@ -480,8 +474,8 @@ input [type=checkbox] [name=test] {
     min-height: unset;
   }
   .recherche__description {
-    width: 53.3333333333%;
-    margin-left: 5.3333333333%;
+    width: 48%;
+    margin: 0 58px;
     text-align: left;
   }
   .recherche__btn {
@@ -490,9 +484,8 @@ input [type=checkbox] [name=test] {
   }
   .recherche__btn--validation {
     width: 40%;
-    margin-left: 0%;
+    margin: -40px 0px 10px;
     text-align: center;
-    margin-top: 20px;
   }
 
   .explicatif {
@@ -508,7 +501,7 @@ input [type=checkbox] [name=test] {
   }
   .resultats__contenu, .resultats__contenu--nouveau {
     width: 24%;
-    margin-left: 0%;
+    margin: 0px 0px;
     text-align: left;
   }
   .resultats__contenu--imgfit, .resultats__contenu--nouveau--imgfit {

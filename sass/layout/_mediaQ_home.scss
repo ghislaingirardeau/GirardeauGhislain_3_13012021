@@ -1,19 +1,14 @@
 @include tablette {
- 
-  #submit {
-    margin-top: 10px;
-  }
 
   .explicatif {
     @include flex_layout (row, wrap, space-around);
     @include box_height (200px, 40px, unset);
 
     &__fonction {
-      @include box_width(100px, 10px, center);
+      @include box_width(100px, 0 10px, center);
     }
     & > h2 {
-      @include box_width(345px, 10px, left);
-      margin-top: 2rem;
+      @include box_width(345px, 30px 10px, left);
     }
     & i {
       padding: 0 15px 0 15px;
@@ -25,10 +20,10 @@
     @include flex_layout (row, wrap, space-around);
     @include box_height (655px, 40px, $color_background);
     & > h2 {
-      @include box_width(345px, 10px, left);
+      @include box_width(345px, 30px 10px, left);
     }
     &__contenu, &__contenu--nouveau {
-      @include box_width(160px, 10px, left);
+      @include box_width (160px, 0 10px, left);
     }
   }
 }
@@ -43,15 +38,14 @@
     @include box_height (130px, 0, $color_background);
     min-height: unset;
     &__description {
-      @include box_width(200px, 20px, left);
+      @include box_width (180px, 0 58px, left);
     }
     &__btn {
       width: 100%;
       height: 60px;
     }
     &__btn--validation {
-      @include box_width(150px, 0px, center);
-      margin-top: 20px;
+      @include box_width (150px, -40px 0px 10px, center);
     }
   }
 
@@ -67,7 +61,7 @@
     justify-content: space-around;
 
     &__contenu, &__contenu--nouveau {
-      @include box_width(90px, 0px, left);
+      @include box_width(90px, 0px 0px, left);
 
       &--imgfit {
         object-position: 0 0px;

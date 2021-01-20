@@ -12,15 +12,12 @@ header{
     }
     &__restaurant{       
         @include position_absolue (100, 0px, 0, 1.2rem);
-        width: 100%;
-        height: 31%;
-        background-color: $color_background;
+        @include description_inside ($color_background, 4rem, 20px);        
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
-        padding-top: 1rem;
+        
         > h1 {
-            @include box_width(270px, 20px, left);
-            @include font (Shrikhand, 2rem, 300);
+            @include font (Shrikhand, 1.5rem, 300);
         }
         > i {
             @include position_absolue (46%, 35%, 80%, 1.7rem);
@@ -39,7 +36,7 @@ header{
         border-bottom: 4px solid $third;
     }
     > form {
-        @include box_width(335px, 20px, left);
+        @include box_width(335px, 0 20px, left);
            
     }
 }
