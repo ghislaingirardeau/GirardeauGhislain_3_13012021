@@ -527,6 +527,26 @@ label .menu--prix {
   /* pour ne pas bouger la box en Y pour animation */
 }
 
+input[name=choix] {
+  position: relative;
+  margin-left: 0px;
+}
+
+input[name=choix]::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background-color: blue;
+  top: 0px;
+  left: 20px;
+}
+
+input[name=choix]:checked::before {
+  margin-right: 0.5em;
+  background-color: red;
+}
+
 .btn-bloc {
   background-color: #f6f6f6;
   text-align: center;
