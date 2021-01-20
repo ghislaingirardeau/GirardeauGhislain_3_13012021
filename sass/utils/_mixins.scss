@@ -52,6 +52,11 @@
   object-fit: contain;
   object-position: 0 $axeY;
 }
+@mixin img_object_menu($axeX) {
+  height: 100%;
+  object-fit: contain;
+  object-position: $axeX 0;
+}
 
 /* ajustement bloc dans l'image en absolue */
 @mixin description_inside ($bg, $lh, $padl){

@@ -8,7 +8,7 @@ header{
 .presentation{
     @include img_contain (310px);
     > img {
-        @include img_object (-100px);
+        @include img_object_menu (-60px);
     }
     &__restaurant{       
         @include position_absolue (100, 0px, 0, 1.2rem);
@@ -36,7 +36,7 @@ header{
         border-bottom: 4px solid $third;
     }
     > form {
-        @include box_width(335px, 0 20px, left);
+        @include box_width(350px, 0 12px, left);
            
     }
 }
@@ -44,13 +44,22 @@ label {
     @include box_contour ($text_bouton, 15px, $col_degrade_clair);
     @include flex_layout(row, nowrap, flex-start);
     position: relative;
-    padding-left: 15px;
+    padding-left: 10px;
     margin-bottom: 15px;
-    line-height: 10px;
     
     & .menu--descriptif {
         border: solid 2px green;
         width: 80%;
+        & h3 {
+            font-size: 1rem;
+        }
+        & p {
+            font-size: 1rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin-top: -0.5rem;
+        }
     }
 
     & .menu--prix{

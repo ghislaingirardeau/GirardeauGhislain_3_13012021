@@ -401,11 +401,11 @@ header > a {
 }
 
 .presentation > img {
-  width: 100%;
+  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: 0 -100px;
-     object-position: 0 -100px;
+  -o-object-position: -60px 0;
+     object-position: -60px 0;
 }
 
 .presentation__restaurant {
@@ -470,8 +470,8 @@ header > a {
 }
 
 .entrees > form, .plats > form, .desserts > form {
-  width: 89.33333%;
-  margin: 0 20px;
+  width: 93.33333%;
+  margin: 0 12px;
   text-align: left;
 }
 
@@ -493,14 +493,25 @@ label {
       -ms-flex-pack: start;
           justify-content: flex-start;
   position: relative;
-  padding-left: 15px;
+  padding-left: 10px;
   margin-bottom: 15px;
-  line-height: 10px;
 }
 
 label .menu--descriptif {
   border: solid 2px green;
   width: 80%;
+}
+
+label .menu--descriptif h3 {
+  font-size: 1rem;
+}
+
+label .menu--descriptif p {
+  font-size: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-top: -0.5rem;
 }
 
 label .menu--prix {
