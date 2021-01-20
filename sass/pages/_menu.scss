@@ -67,7 +67,7 @@ label {
         width: 60px;
         position: absolute;
         left: 85%;
-        padding-top: 5%;  
+        padding-top: 10%; /* pour ne pas bouger la box en Y pour animation */
     }
 }
 

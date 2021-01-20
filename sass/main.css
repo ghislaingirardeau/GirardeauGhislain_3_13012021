@@ -103,7 +103,7 @@ footer > h4 {
   margin-right: 5%;
 }
 
-@media screen and (min-width: 678px) {
+@media screen and (min-width: 666px) {
   footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -131,8 +131,11 @@ footer > h4 {
 }
 
 @media screen and (min-width: 1025px) {
-  footer h4 {
-    margin-top: 0.6rem;
+  footer > h4 {
+    margin-top: 0.8rem;
+  }
+  footer > p {
+    margin-top: -1rem;
   }
 }
 
@@ -520,7 +523,8 @@ label .menu--prix {
   width: 60px;
   position: absolute;
   left: 85%;
-  padding-top: 5%;
+  padding-top: 10%;
+  /* pour ne pas bouger la box en Y pour animation */
 }
 
 .btn-bloc {
@@ -532,7 +536,7 @@ input [type=checkbox] [name=test] {
   width: 10px;
 }
 
-@media screen and (min-width: 678px) {
+@media screen and (min-width: 666px) {
   .explicatif {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -653,7 +657,7 @@ input [type=checkbox] [name=test] {
   }
 }
 
-@media screen and (min-width: 678px) {
+@media screen and (min-width: 666px) {
   body {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -711,6 +715,12 @@ input [type=checkbox] [name=test] {
         -ms-flex-order: 5;
             order: 5;
   }
+  .menu--prix {
+    width: 60px;
+    position: absolute;
+    left: 85%;
+    padding-top: 5%;
+  }
   .btn-bloc {
     -webkit-box-ordinal-group: 7;
         -ms-flex-order: 6;
@@ -723,6 +733,43 @@ input [type=checkbox] [name=test] {
     -webkit-box-ordinal-group: 8;
         -ms-flex-order: 7;
             order: 7;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  header {
+    width: 100%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  header > a {
+    display: none;
+  }
+  .presentation {
+    width: 100%;
+    margin: auto;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    height: 300px;
+  }
+  .presentation__restaurant {
+    width: 40%;
+  }
+  .entrees, .plats, .desserts {
+    width: 33.3%;
+    padding-top: 20px;
+  }
+  .entrees {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+  .plats {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
   }
 }
 /*# sourceMappingURL=main.css.map */

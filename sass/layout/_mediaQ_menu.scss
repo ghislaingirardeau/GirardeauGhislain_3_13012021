@@ -11,7 +11,6 @@ header {
         @include position_absolue (25px, 0%, 80px, 3rem);
     }
 }
-
 .presentation {
     width: 50%;
     order: 2;
@@ -35,6 +34,13 @@ header {
 .desserts{
 order: 5;
 }
+.menu--prix{
+    width: 60px;
+    position: absolute;
+    left: 85%;
+    padding-top: 5%;  
+}
+
 .btn-bloc{
     order: 6;
     margin: auto;
@@ -44,4 +50,33 @@ footer{
     width: 100%;
     order: 7;
 }
+}
+
+@include laptop {
+    header {
+        width: 100%;
+        order: 1;
+        > a {
+            display: none;
+        }
+    }
+    .presentation {
+        width: 100%;
+        margin: auto;
+        order: 2;
+        height: 300px;
+        &__restaurant {
+            width: 40%;
+        } 
+    }
+    .entrees, .plats, .desserts{
+        width: 33.3%;
+        padding-top: 20px;
+    }
+    .entrees {
+        order: 3;
+    }
+    .plats {
+        order: 4;
+    }
 }

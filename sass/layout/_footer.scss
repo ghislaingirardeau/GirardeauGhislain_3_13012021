@@ -35,7 +35,12 @@ footer {
 }
 
 @include laptop {
-  footer h4 {
-    margin-top: 0.6rem;
+  footer {
+    > h4 {
+      margin-top: 0.8rem;
+    }
+    > p {
+      margin-top: -1rem;
+    }
   }
 }

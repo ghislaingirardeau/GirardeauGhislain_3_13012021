@@ -87,7 +87,7 @@ footer > h4 {
   margin-right: 5%;
 }
 
-@media screen and (min-width: 678px) {
+@media screen and (min-width: 666px) {
   footer {
     display: flex;
     flex-direction: row;
@@ -106,8 +106,11 @@ footer > h4 {
   }
 }
 @media screen and (min-width: 1025px) {
-  footer h4 {
-    margin-top: 0.6rem;
+  footer > h4 {
+    margin-top: 0.8rem;
+  }
+  footer > p {
+    margin-top: -1rem;
   }
 }
 .recherche {
@@ -405,7 +408,8 @@ label .menu--prix {
   width: 60px;
   position: absolute;
   left: 85%;
-  padding-top: 5%;
+  padding-top: 10%;
+  /* pour ne pas bouger la box en Y pour animation */
 }
 
 .btn-bloc {
@@ -417,7 +421,7 @@ input [type=checkbox] [name=test] {
   width: 10px;
 }
 
-@media screen and (min-width: 678px) {
+@media screen and (min-width: 666px) {
   .explicatif {
     display: flex;
     flex-direction: row;
@@ -515,7 +519,7 @@ input [type=checkbox] [name=test] {
     object-position: 0 -60px;
   }
 }
-@media screen and (min-width: 678px) {
+@media screen and (min-width: 666px) {
   body {
     display: flex;
     flex-direction: row;
@@ -563,6 +567,13 @@ input [type=checkbox] [name=test] {
     order: 5;
   }
 
+  .menu--prix {
+    width: 60px;
+    position: absolute;
+    left: 85%;
+    padding-top: 5%;
+  }
+
   .btn-bloc {
     order: 6;
     margin: auto;
@@ -572,6 +583,38 @@ input [type=checkbox] [name=test] {
   footer {
     width: 100%;
     order: 7;
+  }
+}
+@media screen and (min-width: 1025px) {
+  header {
+    width: 100%;
+    order: 1;
+  }
+  header > a {
+    display: none;
+  }
+
+  .presentation {
+    width: 100%;
+    margin: auto;
+    order: 2;
+    height: 300px;
+  }
+  .presentation__restaurant {
+    width: 40%;
+  }
+
+  .entrees, .plats, .desserts {
+    width: 33.3%;
+    padding-top: 20px;
+  }
+
+  .entrees {
+    order: 3;
+  }
+
+  .plats {
+    order: 4;
   }
 }
 
