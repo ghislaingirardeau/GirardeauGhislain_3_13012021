@@ -7,8 +7,11 @@ header{
 
 .presentation{
     @include img_contain (310px);
-    > img {
-        @include img_object_menu (-60px);
+    &--fitpaysage {
+        @include img_object_menu (-50px -30px);
+    }
+    &--fitportrait {
+        @include img_object (-30px);
     }
     &__restaurant{       
         @include position_absolue (100, 0px, 0, 1.2rem);

@@ -1,76 +1,83 @@
-@include tablette { 
-header {
+@include tablette {
+  header {
     > a {
-        @include position_absolue (25px, 0%, 80px, 3rem);
+      @include position_absolue(25px, 0%, 80px, 3rem);
     }
-}
+  }
 
-main {
+  main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-}
-.presentation {
+  }
+  .presentation {
     width: 50%;
     order: 1;
-    height: unset;
-    & > img{
-        width: 120%; 
-    }
+    height: 380px;
+
     & h1 {
-        padding-top: 10px;
+      padding-top: 10px;
     }
-}
-.entrees, .plats, .desserts{
+  }
+  .entrees,
+  .plats,
+  .desserts {
     width: 50%;
-}
-.entrees {
+  }
+  .entrees {
     order: 3;
-}
-.plats {
+  }
+  .plats {
     order: 2;
-}
-.desserts{
-order: 4;
-}
-.menu--prix{
+  }
+  .desserts {
+    order: 4;
+  }
+  .menu--prix {
     width: 60px;
     position: absolute;
     left: 85%;
-    padding-top: 5%;  
-}
+    padding-top: 5%;
+  }
 
-.btn-bloc{
+  .btn-bloc {
     order: 5;
     margin: auto;
     width: 100%;
-}
-
+  }
 }
 
 @include laptop {
-    header {
-        > a {
-            display: none;
-        }
+  header {
+    > a {
+      display: none;
     }
-    .presentation {
-        width: 100%;
-        margin: auto;
-        order: 1;
-        height: 300px;
-        &__restaurant {
-            width: 40%;
-        } 
+  }
+  .presentation {
+    width: 100%;
+    margin: auto;
+    order: 1;
+    height: 300px;
+
+    &--fitpaysage {
+      @include img_object(-300px);
+      height: unset;
     }
-    .entrees, .plats, .desserts{
-        width: 33.3%;
-        padding-top: 20px;
+
+    &__restaurant {
+      width: 40%;
     }
-    .entrees {
-        order: 2;
-    }
-    .plats {
-        order: 3;
-    }
+  }
+  .entrees,
+  .plats,
+  .desserts {
+    width: 33.3%;
+    padding-top: 20px;
+  }
+  .entrees {
+    order: 2;
+  }
+  .plats {
+    order: 3;
+  }
 }

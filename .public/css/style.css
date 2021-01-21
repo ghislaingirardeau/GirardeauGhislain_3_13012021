@@ -321,10 +321,15 @@ header > a {
   overflow: hidden;
   position: relative;
 }
-.presentation > img {
+.presentation--fitpaysage {
   height: 100%;
-  object-fit: cover;
-  object-position: -60px;
+  object-fit: contain;
+  object-position: -50px -30px;
+}
+.presentation--fitportrait {
+  width: 100%;
+  object-fit: contain;
+  object-position: 0 -30px;
 }
 .presentation__restaurant {
   box-sizing: content-box;
@@ -555,16 +560,15 @@ input[name=choix]:checked::before {
   .presentation {
     width: 50%;
     order: 1;
-    height: unset;
-  }
-  .presentation > img {
-    width: 120%;
+    height: 380px;
   }
   .presentation h1 {
     padding-top: 10px;
   }
 
-  .entrees, .plats, .desserts {
+  .entrees,
+.plats,
+.desserts {
     width: 50%;
   }
 
@@ -604,11 +608,19 @@ input[name=choix]:checked::before {
     order: 1;
     height: 300px;
   }
+  .presentation--fitpaysage {
+    width: 100%;
+    object-fit: contain;
+    object-position: 0 -300px;
+    height: unset;
+  }
   .presentation__restaurant {
     width: 40%;
   }
 
-  .entrees, .plats, .desserts {
+  .entrees,
+.plats,
+.desserts {
     width: 33.3%;
     padding-top: 20px;
   }

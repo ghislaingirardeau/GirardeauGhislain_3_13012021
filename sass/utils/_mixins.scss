@@ -54,7 +54,7 @@
 }
 @mixin img_object_menu($axeX) {
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: $axeX;
 }
 

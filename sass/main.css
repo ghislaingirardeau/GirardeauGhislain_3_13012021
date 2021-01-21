@@ -407,12 +407,20 @@ header > a {
   position: relative;
 }
 
-.presentation > img {
+.presentation--fitpaysage {
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: -60px;
-     object-position: -60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: -50px -30px;
+     object-position: -50px -30px;
+}
+
+.presentation--fitportrait {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: 0 -30px;
+     object-position: 0 -30px;
 }
 
 .presentation__restaurant {
@@ -699,15 +707,14 @@ input[name=choix]:checked::before {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    height: unset;
-  }
-  .presentation > img {
-    width: 120%;
+    height: 380px;
   }
   .presentation h1 {
     padding-top: 10px;
   }
-  .entrees, .plats, .desserts {
+  .entrees,
+  .plats,
+  .desserts {
     width: 50%;
   }
   .entrees {
@@ -752,10 +759,20 @@ input[name=choix]:checked::before {
             order: 1;
     height: 300px;
   }
+  .presentation--fitpaysage {
+    width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: 0 -300px;
+       object-position: 0 -300px;
+    height: unset;
+  }
   .presentation__restaurant {
     width: 40%;
   }
-  .entrees, .plats, .desserts {
+  .entrees,
+  .plats,
+  .desserts {
     width: 33.3%;
     padding-top: 20px;
   }
