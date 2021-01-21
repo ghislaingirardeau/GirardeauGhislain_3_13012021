@@ -1,6 +1,11 @@
 .recherche {
-  @include bloc_layout(column, nowrap, flex-start, 340px, 0, $color_background);
+  @include flex_layout (column, nowrap, flex-start);
+  @include box_height (340px, 0, $color_background);
   text-align: center;
+
+    & > h1 {
+      font-size: 1.5rem;
+    }
 
   &__btn {
     @include degrade_color ($col_degrade_fonce, 0%, $col_degrade_clair, 15%);
@@ -9,29 +14,29 @@
     }
     &--localisation{
     @include btn_layout(10px 0, none, 0.7rem 2.5rem 0.7rem 1rem, left);
-    @include font (roboto, 1.2rem, bold);
+    @include font (roboto, 1.1rem, bold);
     width: 225px;
     background-color: $col_degrade_clair;
     }
   }
 
   &__description {
-    @include sousbloc_position(325px, 20px, center);
-    height: 144px;
+    @include box_width(310px, auto, center);
+    
   }
 }
 
 .explicatif {
-  @include bloc_layout(column, nowrap, space-around, 440px, 60px, unset);
+  @include flex_layout (column, nowrap, space-around);
+  @include box_height (440px, 60px, unset);
   & > h2 {
-    @include sousbloc_position(325px, 20px, left);
-    margin-top: 0.5rem;
+    @include box_width(325px, 0.5rem 20px, left);
   }
 
   &__fonction {
     height: 75px;
-    @include sousbloc_position(325px, 20px, left);
-    @include sousbloc_layout($color_background, 20px, $col_degrade_clair);
+    @include box_width(325px, 0 20px, left);
+    @include box_contour($color_background, 20px, $col_degrade_clair);
     position: relative;
 
     @for $i from 1 through 3 {
@@ -59,37 +64,30 @@
 }
 
 .resultats {
-  @include bloc_layout(
-    column,
-    nowrap,
-    space-between,
-    1225px,
-    60px,
-    $color_background
-  );
+  @include flex_layout (column, nowrap, space-between);
+  @include box_height (1225px, 60px, $color_background);
   align-items: space-between;
 
   & > h2 {
-    @include sousbloc_position(325px, 20px, left);
+    @include box_width(325px, 20px 20px, left);
   }
 
   &__contenu, &__contenu--nouveau {
-    @include sousbloc_position(335px, 20px, left);
-    @include sousbloc_layout(white, 20px, $col_degrade_clair);
-    height: 255px;
-    overflow: hidden;
-    position: relative;
+    @include box_width(335px, 0 20px, left);
+    @include box_contour(white, 20px, $col_degrade_clair);
+    @include img_contain (255px);
 
     &--imgfit {
       @include img_object (-20px);
 
-      &.--pospotrait {
+      &.--potrait {
         object-position: 0 -200px;
       }
     }
 
     &--layoutdescr {
-      @include descriptif_rest_accueil;
+    @include position_absolue(100, 0, 0, 1.2rem);
+    @include description_inside(white, 0.7rem, 15px);
     }
 
     &--nouveau::after {

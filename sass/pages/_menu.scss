@@ -1,0 +1,101 @@
+header{
+    > a {
+        @include position_absolue (2%, 0%, 20px, 1.2rem);
+        color: black;
+    }
+}
+
+.presentation{
+    @include img_contain (310px);
+    > img {
+        @include img_object_menu (-60px);
+    }
+    &__restaurant{       
+        @include position_absolue (100, 0px, 0, 1.2rem);
+        @include description_inside ($color_background, 4rem, 0px);        
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        width: 100%;
+        
+        > h1 {
+            @include font (Shrikhand, 1.5rem, 300);
+            margin-left: 20px;
+        }
+        > i {
+            @include position_absolue (38%, 0%, 80%, 1.7rem);
+        }
+    }
+}
+
+.entrees, .plats, .desserts {
+    @include flex_layout(column, nowrap, space-around,);
+    @include box_height (310px, 10px, $color_background);
+    > h2 {
+        @include box_width(40px, 20px, left);
+        @include font (roboto, 1.1rem, 300);
+        padding-bottom: 8px;
+        border-bottom: 4px solid $third;
+    }
+    > form {
+        @include box_width(350px, 0 12px, left);
+           
+    }
+}
+label {
+    @include box_contour ($text_bouton, 15px, $col_degrade_clair);
+    @include flex_layout(row, nowrap, flex-start);
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    
+    & .menu--descriptif {
+        border: solid 2px green;
+        width: 80%;
+        & h3 {
+            font-size: 1rem;
+        }
+        & p {
+            font-size: 1rem;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            margin-top: -0.5rem;
+        }
+    }
+
+    & .menu--prix{
+        width: 60px;
+        position: absolute;
+        left: 85%;
+        padding-top: 10%; /* pour ne pas bouger la box en Y pour animation */
+    }
+}
+
+input[name=choix] {
+    position: relative;
+    margin-left: 0px;
+}    
+input[name=choix]::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        background-color: blue;
+        top: 0px;
+        left: 20px;
+} 
+input[name=choix]:checked::before {
+    margin-right: 0.5em;
+    background-color: red;
+}
+
+
+.btn-bloc{
+    background-color: $color_background;
+    text-align: center;
+}
+
+input [type=checkbox] [name=test] {
+    
+    width: 10px;
+}
