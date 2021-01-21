@@ -322,21 +322,28 @@ footer a {
   padding: 0.4rem;
   border-radius: 2px;
 }
-.resultats__contenu i, .resultats__contenu--nouveau i {
+.resultats__contenu .jaime, .resultats__contenu--nouveau .jaime {
   box-sizing: content-box;
   position: absolute;
   top: 77%;
   bottom: 0%;
-  left: 80%;
+  left: 85%;
   font-size: 1.7rem;
 }
 
+#jaime:checked #coeur--plein {
+  opacity: 1;
+}
+
 #coeur--plein {
+  box-sizing: content-box;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  font-size: 1.7rem;
   color: red;
   opacity: 0;
-}
-#coeur--plein:checked {
-  opacity: 1;
 }
 
 header > a {

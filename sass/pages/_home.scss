@@ -92,23 +92,29 @@
       font-size: $h3size;
     }
     }
-
     &--nouveau::after {
       content: "Nouveau";
       @include position_absolue (5%, 82%, 70%, 1rem);
       @include pseudoe_layout ($thrid-sombre, center, $third, 0.4rem, 2px);    
     }
-    & i{
-      @include position_absolue (77%, 0%, 80%, 1.7rem);
+    & .jaime{
+      @include position_absolue (77%, 0%, 85%, 1.7rem);
+    }
+  }
+}
+
+
+#jaime {
+  &:checked{
+  & #coeur--plein{
+      opacity: 1;
     }
   }
 }
 #coeur--plein{
+  @include position_absolue (0%, 0%, 0%, 1.7rem);
   color: red;
   opacity: 0;
-  &:checked {
-    opacity: 1;   
-  }
 }
 
 
