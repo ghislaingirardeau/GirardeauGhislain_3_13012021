@@ -78,7 +78,7 @@
     @include img_contain (255px);
 
     &--imgfit {
-      @include img_object (-20px);
+      @include img_ajust_width (-20px);
 
       &.--potrait {
         object-position: 0 -200px;

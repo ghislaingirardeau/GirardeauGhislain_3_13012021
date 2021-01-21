@@ -60,7 +60,7 @@
     height: 300px;
 
     &--fitpaysage {
-      @include img_object(-300px);
+      @include img_ajust_width (-300px);
       height: unset;
     }
 

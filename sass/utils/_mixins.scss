@@ -47,12 +47,13 @@
   position: relative;
 }
 
-@mixin img_object($axeY) {
+
+@mixin img_ajust_width ($axeY) {
   width: 100%;
   object-fit: contain;
   object-position: 0 $axeY;
 }
-@mixin img_object_menu($axeX) {
+@mixin img_ajust_height ($axeX) {
   height: 100%;
   object-fit: contain;
   object-position: $axeX;
