@@ -21,7 +21,7 @@ header{
         width: 100%;
         
         > h1 {
-            @include font (Shrikhand, 1.5rem, 300);
+            @include font (Shrikhand, $h1size, 300);
             margin-left: 20px;
         }
         > i {

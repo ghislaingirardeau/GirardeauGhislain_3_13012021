@@ -164,7 +164,7 @@ footer > h4 {
 }
 .explicatif > h2 {
   width: 86.6666666667%;
-  margin: 0.5rem 20px;
+  margin: 20px 20px;
   text-align: left;
 }
 .explicatif__fonction {
@@ -555,6 +555,7 @@ input[name=choix]:checked::before {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   .presentation {

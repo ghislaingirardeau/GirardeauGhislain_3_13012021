@@ -6,9 +6,7 @@
   }
 
   main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    @include flex_layout (row, wrap, flex-start);
   }
   .presentation {
     width: 50%;
