@@ -36,8 +36,8 @@ input[name=choix]::before {
   content: "";
   width: 15px;
   height: 15px;
-  position: absolute;
   background-color: blue;
+  position: absolute;
   top: 0px;
   left: 20px;
 }

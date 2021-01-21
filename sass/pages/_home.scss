@@ -42,7 +42,7 @@
     @for $i from 1 through 3 {
       &--#{$i}::before {
       content: "#{$i}";
-      @include ajuster_after_before ($text_bouton, center, $primary, 4px 8px, 20px);
+      @include pseudoe_layout ($text_bouton, center, $primary, 4px 8px, 20px);
       @include position_absolue (26px, 26px, -12.5px, 0.8rem);
       }
     }
@@ -96,7 +96,7 @@
     &--nouveau::after {
       content: "Nouveau";
       @include position_absolue (5%, 82%, 70%, 1rem);
-      @include ajuster_after_before ($thrid-sombre, center, $third, 0.4rem, 2px);    
+      @include pseudoe_layout ($thrid-sombre, center, $third, 0.4rem, 2px);    
     }
   }
   & i {

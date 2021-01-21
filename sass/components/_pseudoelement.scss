@@ -1,5 +1,5 @@
 
-@mixin ajuster_after_before ($colf, $alig, $colbg, $pad, $rad) {
+@mixin pseudoe_layout ($colf, $alig, $colbg, $pad, $rad) {
     color: $colf;
     text-align: $alig;
     background-color: $colbg;
