@@ -1,19 +1,18 @@
-@include tablette {
-    body {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+@include tablette { 
 header {
-    width: 100%;
-    order: 1;
     > a {
         @include position_absolue (25px, 0%, 80px, 3rem);
     }
 }
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 .presentation {
     width: 50%;
-    order: 2;
+    order: 1;
     height: unset;
     & > img{
         width: 120%; 
@@ -26,13 +25,13 @@ header {
     width: 50%;
 }
 .entrees {
-    order: 4;
-}
-.plats {
     order: 3;
 }
+.plats {
+    order: 2;
+}
 .desserts{
-order: 5;
+order: 4;
 }
 .menu--prix{
     width: 60px;
@@ -42,20 +41,15 @@ order: 5;
 }
 
 .btn-bloc{
-    order: 6;
+    order: 5;
     margin: auto;
     width: 100%;
 }
-footer{
-    width: 100%;
-    order: 7;
-}
+
 }
 
 @include laptop {
     header {
-        width: 100%;
-        order: 1;
         > a {
             display: none;
         }
@@ -63,7 +57,7 @@ footer{
     .presentation {
         width: 100%;
         margin: auto;
-        order: 2;
+        order: 1;
         height: 300px;
         &__restaurant {
             width: 40%;
@@ -74,9 +68,9 @@ footer{
         padding-top: 20px;
     }
     .entrees {
-        order: 3;
+        order: 2;
     }
     .plats {
-        order: 4;
+        order: 3;
     }
 }

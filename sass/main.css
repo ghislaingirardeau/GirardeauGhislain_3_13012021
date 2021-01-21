@@ -39,6 +39,10 @@ body {
   font-weight: 400;
 }
 
+a {
+  color: black;
+}
+
 header {
   min-height: 65px;
   text-align: center;
@@ -552,10 +556,6 @@ input[name=choix]:checked::before {
   text-align: center;
 }
 
-input [type=checkbox] [name=test] {
-  width: 10px;
-}
-
 @media screen and (min-width: 666px) {
   .explicatif {
     display: -webkit-box;
@@ -648,7 +648,7 @@ input [type=checkbox] [name=test] {
   }
   .recherche__btn--validation {
     width: 40%;
-    margin: -40px 0px 10px;
+    margin: 0px 0px 10px;
     text-align: center;
   }
   .explicatif {
@@ -671,14 +671,19 @@ input [type=checkbox] [name=test] {
     -o-object-position: 0 0px;
        object-position: 0 0px;
   }
-  .resultats__contenu--imgfit.--pospotrait, .resultats__contenu--nouveau--imgfit.--pospotrait {
-    -o-object-position: 0 -60px;
-       object-position: 0 -60px;
-  }
 }
 
 @media screen and (min-width: 666px) {
-  body {
+  header > a {
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    position: absolute;
+    top: 25px;
+    bottom: 0%;
+    left: 80px;
+    font-size: 3rem;
+  }
+  main {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -689,26 +694,11 @@ input [type=checkbox] [name=test] {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  header {
-    width: 100%;
+  .presentation {
+    width: 50%;
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-  }
-  header > a {
-    -webkit-box-sizing: content-box;
-            box-sizing: content-box;
-    position: absolute;
-    top: 25px;
-    bottom: 0%;
-    left: 80px;
-    font-size: 3rem;
-  }
-  .presentation {
-    width: 50%;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
     height: unset;
   }
   .presentation > img {
@@ -721,19 +711,19 @@ input [type=checkbox] [name=test] {
     width: 50%;
   }
   .entrees {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
-  }
-  .plats {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
   }
+  .plats {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
   .desserts {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
   }
   .menu--prix {
     width: 60px;
@@ -742,36 +732,24 @@ input [type=checkbox] [name=test] {
     padding-top: 5%;
   }
   .btn-bloc {
-    -webkit-box-ordinal-group: 7;
-        -ms-flex-order: 6;
-            order: 6;
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
     margin: auto;
     width: 100%;
-  }
-  footer {
-    width: 100%;
-    -webkit-box-ordinal-group: 8;
-        -ms-flex-order: 7;
-            order: 7;
   }
 }
 
 @media screen and (min-width: 1025px) {
-  header {
-    width: 100%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
   header > a {
     display: none;
   }
   .presentation {
     width: 100%;
     margin: auto;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     height: 300px;
   }
   .presentation__restaurant {
@@ -782,14 +760,14 @@ input [type=checkbox] [name=test] {
     padding-top: 20px;
   }
   .entrees {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .plats {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
-  }
-  .plats {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
   }
 }
 /*# sourceMappingURL=main.css.map */

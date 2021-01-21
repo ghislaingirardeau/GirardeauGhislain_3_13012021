@@ -2,6 +2,9 @@ body {
     margin: auto;
     @include font (roboto, 17px, 400);
 }
+a {
+    color: black;
+}
 
 
 

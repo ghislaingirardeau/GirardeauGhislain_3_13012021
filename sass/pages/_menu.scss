@@ -94,8 +94,3 @@ input[name=choix]:checked::before {
     background-color: $color_background;
     text-align: center;
 }
-
-input [type=checkbox] [name=test] {
-    
-    width: 10px;
-}
