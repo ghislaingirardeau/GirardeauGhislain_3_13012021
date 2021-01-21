@@ -42,7 +42,7 @@
     @for $i from 1 through 3 {
       &--#{$i}::before {
       content: "#{$i}";
-      @include ajuster_after_before (white, center, $primary, 4px 8px, 20px);
+      @include ajuster_after_before ($text_bouton, center, $primary, 4px 8px, 20px);
       @include position_absolue (26px, 26px, -12.5px, 0.8rem);
       }
     }
@@ -74,7 +74,7 @@
 
   &__contenu, &__contenu--nouveau {
     @include box_width(335px, 0 20px, left);
-    @include box_contour(white, 20px, $col_degrade_clair);
+    @include box_contour($color_box, 20px, $col_degrade_clair);
     @include img_contain (255px);
 
     &--imgfit {
@@ -87,7 +87,7 @@
 
     &--layoutdescr {
     @include position_absolue(100, 0, 0, 1.2rem);
-    @include description_inside(white, 0.7rem, 15px);
+    @include description_inside($color_box, 0.7rem, 15px);
     }
 
     &--nouveau::after {
