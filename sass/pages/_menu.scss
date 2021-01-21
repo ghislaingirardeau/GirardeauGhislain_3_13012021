@@ -43,7 +43,7 @@ header{
            
     }
 }
-label {
+.menu {
     @include box_contour ($text_bouton, 15px, $col_degrade_clair);
     @include flex_layout(row, nowrap, flex-start);
     position: relative;

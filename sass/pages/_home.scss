@@ -98,13 +98,16 @@
       @include position_absolue (5%, 82%, 70%, 1rem);
       @include pseudoe_layout ($thrid-sombre, center, $third, 0.4rem, 2px);    
     }
-  }
-  & i {
-    @include position_absolue (30%, 35%, 80%, 1.7rem);
-    
-    &:hover{
-      background-color: white;
+    & i{
+      @include position_absolue (77%, 0%, 80%, 1.7rem);
     }
+  }
+}
+#coeur--plein{
+  color: red;
+  opacity: 0;
+  &:checked {
+    opacity: 1;   
   }
 }
 

@@ -322,16 +322,21 @@ footer a {
   padding: 0.4rem;
   border-radius: 2px;
 }
-.resultats i {
+.resultats__contenu i, .resultats__contenu--nouveau i {
   box-sizing: content-box;
   position: absolute;
-  top: 30%;
-  bottom: 35%;
+  top: 77%;
+  bottom: 0%;
   left: 80%;
   font-size: 1.7rem;
 }
-.resultats i:hover {
-  background-color: white;
+
+#coeur--plein {
+  color: red;
+  opacity: 0;
+}
+#coeur--plein:checked {
+  opacity: 1;
 }
 
 header > a {
@@ -414,7 +419,7 @@ header > a {
   text-align: left;
 }
 
-label {
+.menu {
   background-color: white;
   border-radius: 15px;
   box-shadow: 5px 5px 5px #eaeaea;
@@ -426,20 +431,20 @@ label {
   padding-left: 10px;
   margin-bottom: 15px;
 }
-label .menu--descriptif {
+.menu .menu--descriptif {
   border: solid 2px green;
   width: 80%;
 }
-label .menu--descriptif h3 {
+.menu .menu--descriptif h3 {
   font-size: 1.1rem;
 }
-label .menu--descriptif p {
+.menu .menu--descriptif p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   margin-top: -0.5rem;
 }
-label .menu--prix {
+.menu .menu--prix {
   width: 60px;
   position: absolute;
   left: 85%;
@@ -545,6 +550,14 @@ label .menu--prix {
   }
   .resultats__contenu--imgfit, .resultats__contenu--nouveau--imgfit {
     object-position: 0 0px;
+  }
+
+  #coeur--plein {
+    color: red;
+    opacity: 0;
+  }
+  #coeur--plein:hover {
+    opacity: 1;
   }
 }
 @media screen and (min-width: 666px) {
