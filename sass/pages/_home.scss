@@ -30,12 +30,12 @@
   @include flex_layout (column, nowrap, space-around);
   @include box_height (440px, 60px, unset);
   & > h2 {
-    @include box_width(325px, 20px 20px, left);
+    @include box_width($width-box-home, 20px 20px, left);
   }
 
   &__fonction {
     height: 75px;
-    @include box_width(325px, 0 20px, left);
+    @include box_width($width-box-home, 0 20px, left);
     @include box_contour($color_background, 20px, $col_degrade_clair);
     position: relative;
 
@@ -54,7 +54,7 @@
   }
   & p {
     margin-top: 9%;
-    @include font (roboto, 1rem, bold);
+    font-weight: bold;
   }
   & i {
     padding: 0 25px 0 35px;
@@ -69,11 +69,11 @@
   align-items: space-between;
 
   & > h2 {
-    @include box_width(325px, 20px 20px, left);
+    @include box_width($width-box-home, 20px 20px, left);
   }
 
   &__contenu, &__contenu--nouveau {
-    @include box_width(335px, 0 20px, left);
+    @include box_width($width-box-resto, 0 20px, left);
     @include box_contour($color_box, 20px, $col_degrade_clair);
     @include img_contain (255px);
 
@@ -88,6 +88,9 @@
     &--layoutdescr {
     @include position_absolue(100, 0, 0, 1.2rem);
     @include description_inside($color_box, 0.7rem, 15px);
+    > h3 {
+      font-size: $h3size;
+    }
     }
 
     &--nouveau::after {

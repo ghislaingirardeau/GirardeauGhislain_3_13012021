@@ -8,11 +8,11 @@
       @include box_width(100px, 0 10px, center);
     }
     & > h2 {
-      @include box_width(345px, 30px 10px, left);
+    @include box_width(345px, 30px 10px, left);
     }
     & i {
       padding: 0 15px 0 15px;
-      margin-left: unset;
+      margin-left: unset; 
     }
   }
 

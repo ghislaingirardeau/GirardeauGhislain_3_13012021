@@ -57,6 +57,10 @@ a {
   color: black;
 }
 
+p {
+  font-size: 1rem;
+}
+
 header {
   min-height: 65px;
   text-align: center;
@@ -242,8 +246,6 @@ footer > h4 {
 }
 .explicatif p {
   margin-top: 9%;
-  font-family: roboto;
-  font-size: 1rem;
   font-weight: bold;
 }
 .explicatif i {
@@ -298,6 +300,9 @@ footer > h4 {
   line-height: 0.7rem;
   padding-left: 15px;
 }
+.resultats__contenu--layoutdescr > h3, .resultats__contenu--nouveau--layoutdescr > h3 {
+  font-size: 1.1rem;
+}
 .resultats__contenu--nouveau::after, .resultats__contenu--nouveau--nouveau::after {
   content: "Nouveau";
   box-sizing: content-box;
@@ -331,7 +336,6 @@ header > a {
   bottom: 0%;
   left: 20px;
   font-size: 1.2rem;
-  color: black;
 }
 
 .presentation {
@@ -422,10 +426,9 @@ label .menu--descriptif {
   width: 80%;
 }
 label .menu--descriptif h3 {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 label .menu--descriptif p {
-  font-size: 1rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;

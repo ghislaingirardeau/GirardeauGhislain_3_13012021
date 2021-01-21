@@ -1,7 +1,6 @@
 header{
     > a {
         @include position_absolue (2%, 0%, 20px, 1.2rem);
-        color: black;
     }
 }
 
@@ -40,7 +39,7 @@ header{
         border-bottom: 4px solid $third;
     }
     > form {
-        @include box_width(350px, 0 12px, left);
+        @include box_width($width-box-menu, 0 12px, left);
            
     }
 }
@@ -55,10 +54,9 @@ label {
         border: solid 2px green;
         width: 80%;
         & h3 {
-            font-size: 1rem;
+            font-size: $h3size;
         }
         & p {
-            font-size: 1rem;
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
