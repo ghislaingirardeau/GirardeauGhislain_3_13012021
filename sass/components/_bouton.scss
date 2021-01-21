@@ -9,3 +9,23 @@
       @include btn_layout(45px 0 65px, none, 1.2rem 5.2rem, center);
     }
   }
+
+input[name=choix] {
+    position: relative;
+    margin-left: 0px;
+    &::before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      background-color: blue;
+      top: 0px;
+      left: 20px;
+    } 
+    &:checked::before {
+      margin-right: 0.5em;
+      background-color: red;
+  }
+}    
+
+
