@@ -9,6 +9,10 @@ footer {
     @include font("Shrikhand", 1.2rem, 200);
     @include box_width (325px, 20px 20px, left);
   }
+  & a {
+    color: $text_footer;
+    text-decoration: none;
+  }
   
 }
 #icone--rotate {

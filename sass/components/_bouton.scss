@@ -13,6 +13,7 @@
 input[name=choix] {
     position: relative;
     margin-left: 0px;
+    display: unset;
     &::before {
       content: "";
       width: 15px;
@@ -20,7 +21,7 @@ input[name=choix] {
       background-color: blue;
       position: absolute;
       top: 0px;
-      left: 20px;
+      left: 0px;
     } 
     &:checked::before {
       margin-right: 0.5em;
