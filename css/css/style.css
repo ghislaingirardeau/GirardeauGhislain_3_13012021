@@ -14,7 +14,12 @@
   border-radius: 40px;
   color: white;
   box-shadow: 5px 5px 5px #eaeaea;
+  transition: 150ms ease-out;
   cursor: pointer;
+}
+.submit:hover {
+  box-shadow: 5px 5px 5px #9e9e9e;
+  filter: brightness(1.1);
 }
 .submit--explorer {
   margin: 30px 0 35px;
@@ -29,10 +34,19 @@
   text-align: center;
 }
 
-.jaime::after {
+.jaime--restaurant {
+  box-sizing: content-box;
+  position: absolute;
+  top: 75%;
+  bottom: 0;
+  left: 80%;
+  font-size: 1.6rem;
+}
+.jaime--restaurant::after {
   font-family: "Font Awesome 5 free";
   font-weight: 900;
   width: 35px;
+  height: 35px;
   content: "";
   cursor: pointer;
   opacity: 0;
@@ -44,17 +58,10 @@
   font-size: 1.6rem;
   transition: opacity 200ms ease-out;
 }
-.jaime:hover::after {
+.jaime--restaurant:hover::after {
   opacity: 1;
   color: red;
-}
-.jaime--restaurant {
-  box-sizing: content-box;
-  position: absolute;
-  top: 75%;
-  bottom: 0;
-  left: 80%;
-  font-size: 1.6rem;
+  background-color: white;
 }
 .jaime--menu {
   box-sizing: content-box;
@@ -63,6 +70,27 @@
   bottom: 0;
   left: 80%;
   font-size: 1.6rem;
+}
+.jaime--menu::after {
+  font-family: "Font Awesome 5 free";
+  font-weight: 900;
+  width: 35px;
+  height: 35px;
+  content: "";
+  cursor: pointer;
+  opacity: 0;
+  box-sizing: content-box;
+  position: absolute;
+  top: 1px;
+  bottom: 0;
+  left: 0px;
+  font-size: 1.6rem;
+  transition: opacity 200ms ease-out;
+}
+.jaime--menu:hover::after {
+  opacity: 1;
+  color: red;
+  background-color: #f6f6f6;
 }
 
 input[name=choix] {

@@ -82,7 +82,14 @@
   border-radius: 40px;
   color: $text_bouton;
   box-shadow: 5px 5px 5px $col_shad;
-} /* commun au bouton type submit */
+} 
+@mixin degrade_color ($col_1, $esp_1, $col_2, $esp_2) {
+  background: linear-gradient(
+    to bottom,
+    $col_1 $esp_1,
+    $col_2 $esp_2
+  );
+}/* commun au bouton type submit */
 
 @mixin tablette {
   @media screen and (min-width: 666px) {

@@ -1,6 +1,7 @@
 .submit {
     @include font (roboto, 1.1rem, bold);
     @include btn_color($col_degrade_clair);
+    @include animation_btnsubmit ($col_degrade_clair);
     cursor: pointer;
     &--explorer {
       @include btn_layout(30px 0 35px, none, 1.2rem 2rem, center);
@@ -11,12 +12,13 @@
   }
 
   .jaime {
-    @include animation_jaime;
     &--restaurant {
       @include position_absolue (75%, 0, 80%, 1.6rem);
+      @include animation_jaime ($color_box);
     }
     &--menu{
       @include position_absolue (80%, 0, 80%, 1.6rem);
+      @include animation_jaime ($color_background);
     }
   }
   
