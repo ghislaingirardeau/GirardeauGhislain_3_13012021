@@ -32,6 +32,72 @@
   text-align: center;
 }
 
+.jaime {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: absolute;
+  top: 75%;
+  bottom: 0;
+  left: 80%;
+  font-size: 1.6rem;
+}
+
+.jaime::after {
+  font-family: "Font Awesome 5 free";
+  font-weight: 900;
+  width: 35px;
+  content: "\f004";
+  cursor: pointer;
+  opacity: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: absolute;
+  top: 1px;
+  bottom: 0;
+  left: 0px;
+  font-size: 1.6rem;
+  -webkit-transition: opacity 200ms ease-out;
+  transition: opacity 200ms ease-out;
+}
+
+.jaime:hover::after {
+  opacity: 1;
+  color: red;
+}
+
+.jaime--menu {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: absolute;
+  top: 80%;
+  bottom: 0;
+  left: 80%;
+  font-size: 1.6rem;
+}
+
+.jaime--menu::after {
+  font-family: "Font Awesome 5 free";
+  font-weight: 900;
+  width: 35px;
+  content: "\f004";
+  cursor: pointer;
+  opacity: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: absolute;
+  top: 1px;
+  bottom: 0;
+  left: 0px;
+  font-size: 1.6rem;
+  -webkit-transition: opacity 200ms ease-out;
+  transition: opacity 200ms ease-out;
+}
+
+.jaime--menu:hover::after {
+  opacity: 1;
+  color: red;
+}
+
 input[name=choix] {
   position: relative;
   margin-left: 0px;
@@ -408,40 +474,6 @@ footer a {
   border-radius: 2px;
 }
 
-#jaime {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  position: absolute;
-  top: 75%;
-  bottom: 0;
-  left: 80%;
-  font-size: 1.6rem;
-}
-
-#jaime::after {
-  font-family: "Font Awesome 5 free";
-  font-weight: 900;
-  width: 35px;
-  content: "\f004";
-  cursor: pointer;
-  opacity: 0;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  position: absolute;
-  top: 0px;
-  bottom: 0;
-  left: 0px;
-  font-size: 1.6rem;
-  -webkit-transition: opacity 200ms ease-out;
-  transition: opacity 200ms ease-out;
-}
-
-#jaime:hover::after {
-  opacity: 1;
-  color: red;
-  background-color: white;
-}
-
 header > a {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -501,16 +533,6 @@ main {
   font-size: 1.5rem;
   font-weight: 300;
   margin-left: 20px;
-}
-
-.presentation__restaurant > i {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  position: absolute;
-  top: 38%;
-  bottom: 0%;
-  left: 80%;
-  font-size: 1.7rem;
 }
 
 .entrees, .plats, .desserts {
@@ -793,6 +815,10 @@ main {
   }
   .presentation__restaurant {
     width: 40%;
+  }
+  .jaime--menu {
+    left: 30%;
+    top: 83%;
   }
   .entrees,
   .plats,

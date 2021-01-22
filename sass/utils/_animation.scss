@@ -1,0 +1,16 @@
+@mixin animation_jaime {
+    &::after{
+      font-family: "Font Awesome 5 free";
+      font-weight: 900;
+      width: 35px;
+      content: "\f004";
+      cursor: pointer;
+      opacity: 0;
+      @include position_absolue (1px, 0, 0px, 1.6rem);
+      transition: opacity 200ms ease-out;
+    }
+    &:hover::after {
+      opacity: 1;
+      color: red;
+      }
+  }

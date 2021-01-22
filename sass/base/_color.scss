@@ -20,4 +20,11 @@ $color_bg_footer: #353535;
       $col_2 $esp_2
     );
 }
+@mixin degrade ($col_1, $esp_1, $col_2, $esp_2) {
+  color: linear-gradient(
+    to bottom,
+    $col_1 $esp_1,
+    $col_2 $esp_2
+  );
+}
 

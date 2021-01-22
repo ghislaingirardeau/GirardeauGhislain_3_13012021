@@ -25,9 +25,6 @@ main {
             @include font (Shrikhand, $h1size, 300);
             margin-left: 20px;
         }
-        > i {
-            @include position_absolue (38%, 0%, 80%, 1.7rem);
-        }
     }
 }
 
