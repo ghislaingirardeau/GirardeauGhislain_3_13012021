@@ -25,22 +25,18 @@
 
 
 input[name=choix] {
-    position: relative;
+    position: absolute;
+    left: 40px;
     margin-left: 0px;
-    display: unset;
     &::before {
-      content: "";
-      width: 15px;
-      height: 15px;
-      background-color: blue;
-      position: absolute;
-      top: 0px;
-      left: 0px;
+      @include import_icone (regular);
+      content: "\f058";
+      @include position_absolue(0, 0, 0px, 1.6rem);
+      color: $third;
     } 
     &:checked::before {
       margin-right: 0.5em;
       background-color: red;
   }
 }    
-
 

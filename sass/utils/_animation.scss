@@ -1,26 +1,30 @@
-@mixin animation_jaime ($colbg) {
-    &::after{
-      font-family: "Font Awesome 5 free";
-      font-weight: 900;
-      width: 35px;
-      height: 35px;
-      content: "\f004";
-      cursor: pointer;
-      opacity: 0;
-      @include position_absolue (1px, 0, 0px, 1.6rem);
-      transition: opacity 200ms ease-out;
-    }
-    &:hover::after {
-      opacity: 1;
-      color: red;
-      background-color: $colbg;
-      }
-  }
+@mixin import_icone ($weight) {
+  font-family: "Font Awesome 5 free";
+  font-weight: $weight;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
 
-  @mixin animation_btnsubmit ($col_shad) {
-    transition: 150ms ease-out;
-    &:hover{
-      box-shadow: 5px 5px 5px darken($col_shad, 30%);
-      filter: brightness(1.1);
-    }
+@mixin animation_jaime($colbg) {
+  &::after {
+    @include import_icone (900);
+    content: "\f004";
+    opacity: 0;
+    @include position_absolue(1px, 0, 0px, 1.6rem);
+    transition: opacity 200ms ease-out;
   }
+  &:hover::after {
+    opacity: 1;
+    color: red;
+    background-color: $colbg;
+  }
+}
+
+@mixin animation_btnsubmit($col_shad) {
+  transition: 150ms ease-out;
+  &:hover {
+    box-shadow: 5px 5px 5px darken($col_shad, 30%);
+    filter: brightness(1.1);
+  }
+}

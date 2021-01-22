@@ -56,8 +56,8 @@
   font-weight: 900;
   width: 35px;
   height: 35px;
-  content: "\f004";
   cursor: pointer;
+  content: "\f004";
   opacity: 0;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -91,8 +91,8 @@
   font-weight: 900;
   width: 35px;
   height: 35px;
-  content: "\f004";
   cursor: pointer;
+  content: "\f004";
   opacity: 0;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -112,19 +112,26 @@
 }
 
 input[name=choix] {
-  position: relative;
+  position: absolute;
+  left: 40px;
   margin-left: 0px;
-  display: unset;
 }
 
 input[name=choix]::before {
-  content: "";
-  width: 15px;
-  height: 15px;
-  background-color: blue;
+  font-family: "Font Awesome 5 free";
+  font-weight: regular;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  content: "\f058";
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   position: absolute;
-  top: 0px;
+  top: 0;
+  bottom: 0;
   left: 0px;
+  font-size: 1.6rem;
+  color: #99E2D0;
 }
 
 input[name=choix]:checked::before {
