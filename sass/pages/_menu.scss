@@ -3,7 +3,9 @@ header{
         @include position_absolue (20px, 0, 20px, 1.2rem);
     }
 }
-
+main {
+    background-color: $color_background;
+}
 .presentation{
     @include img_contain (310px);
     &--fitpaysage {

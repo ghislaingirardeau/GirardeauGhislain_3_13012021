@@ -452,6 +452,10 @@ header > a {
   font-size: 1.2rem;
 }
 
+main {
+  background-color: #f6f6f6;
+}
+
 .presentation {
   height: 310px;
   overflow: hidden;
@@ -742,6 +746,9 @@ header > a {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .presentation {
     width: 50%;

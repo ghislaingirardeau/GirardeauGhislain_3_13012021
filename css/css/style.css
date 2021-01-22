@@ -364,6 +364,10 @@ header > a {
   font-size: 1.2rem;
 }
 
+main {
+  background-color: #f6f6f6;
+}
+
 .presentation {
   height: 310px;
   overflow: hidden;
@@ -591,6 +595,7 @@ header > a {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .presentation {

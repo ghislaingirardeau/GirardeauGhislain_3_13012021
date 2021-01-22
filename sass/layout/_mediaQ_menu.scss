@@ -7,6 +7,7 @@
 
   main {
     @include flex_layout (row, wrap, flex-start);
+    align-items: flex-start;
   }
   .presentation {
     width: 50%;
