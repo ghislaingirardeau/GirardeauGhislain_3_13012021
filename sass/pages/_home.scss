@@ -97,30 +97,28 @@
       @include position_absolue (5%, 82%, 70%, 1rem);
       @include pseudoe_layout ($thrid-sombre, center, $third, 0.4rem, 2px);    
     }
-    & .jaime{
-      @include position_absolue (77%, 0%, 85%, 1.7rem);
-    }
   }
 }
 
 
 #jaime {
+  @include position_absolue (75%, 0, 80%, 1.6rem);
   &::after{
     font-family: "Font Awesome 5 free";
-    font-weight: regular;
+    font-weight: 900;
+    width: 35px;
     content: "\f004";
-    width: 25px;
-    height: 25px;
-    color: red;
-    position: absolute;
-    top: 0;
-    left: 0;
+    cursor: pointer;
+    opacity: 0;
+    @include position_absolue (0px, 0, 0px, 1.6rem);
+    transition: opacity 200ms ease-out;
   }
+  &:hover::after {
+    opacity: 1;
+    color: red;
+    background-color: white;
+    }
 }
-#coeur--plein{
-  @include position_absolue (0%, 0%, 0%, 1.7rem);
-  color: red;
-  opacity: 0;
-}
+
 
 
