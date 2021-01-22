@@ -29,14 +29,6 @@
   text-align: center;
 }
 
-.jaime {
-  box-sizing: content-box;
-  position: absolute;
-  top: 75%;
-  bottom: 0;
-  left: 80%;
-  font-size: 1.6rem;
-}
 .jaime::after {
   font-family: "Font Awesome 5 free";
   font-weight: 900;
@@ -56,7 +48,14 @@
   opacity: 1;
   color: red;
 }
-
+.jaime--restaurant {
+  box-sizing: content-box;
+  position: absolute;
+  top: 75%;
+  bottom: 0;
+  left: 80%;
+  font-size: 1.6rem;
+}
 .jaime--menu {
   box-sizing: content-box;
   position: absolute;
@@ -64,25 +63,6 @@
   bottom: 0;
   left: 80%;
   font-size: 1.6rem;
-}
-.jaime--menu::after {
-  font-family: "Font Awesome 5 free";
-  font-weight: 900;
-  width: 35px;
-  content: "";
-  cursor: pointer;
-  opacity: 0;
-  box-sizing: content-box;
-  position: absolute;
-  top: 1px;
-  bottom: 0;
-  left: 0px;
-  font-size: 1.6rem;
-  transition: opacity 200ms ease-out;
-}
-.jaime--menu:hover::after {
-  opacity: 1;
-  color: red;
 }
 
 input[name=choix] {
