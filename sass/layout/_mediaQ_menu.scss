@@ -1,7 +1,7 @@
 @include tablette {
   header {
     > a {
-      @include position_absolue(25px, 0%, 80px, 3rem);
+    @include position_absolue(45px, 0px, 80px, 3rem);
     }
   }
 
@@ -10,8 +10,7 @@
   }
   .presentation {
     width: 50%;
-    order: 1;
-    height: 380px;
+    height: 390px;
 
     & h1 {
       padding-top: 10px;
@@ -22,15 +21,6 @@
   .desserts {
     width: 50%;
   }
-  .entrees {
-    order: 3;
-  }
-  .plats {
-    order: 2;
-  }
-  .desserts {
-    order: 4;
-  }
   .menu--prix {
     width: 60px;
     position: absolute;
@@ -39,7 +29,6 @@
   }
 
   .btn-bloc {
-    order: 5;
     margin: auto;
     width: 100%;
   }
@@ -48,13 +37,12 @@
 @include laptop {
   header {
     > a {
-      display: none;
+      top: 15px;
     }
   }
   .presentation {
     width: 100%;
     margin: auto;
-    order: 1;
     height: 300px;
 
     &--fitpaysage {
@@ -71,11 +59,5 @@
   .desserts {
     width: 33.3%;
     padding-top: 20px;
-  }
-  .entrees {
-    order: 2;
-  }
-  .plats {
-    order: 3;
   }
 }

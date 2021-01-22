@@ -75,7 +75,7 @@ header {
 
 header img {
   width: 44%;
-  margin: 3% 2%;
+  margin: 5% 0;
   text-align: center;
 }
 
@@ -418,8 +418,16 @@ footer a {
   font-size: 1.7rem;
 }
 
-#jaime:checked #coeur--plein {
-  opacity: 1;
+#jaime::after {
+  font-family: "Font Awesome 5 free";
+  font-weight: regular;
+  content: "\f004";
+  width: 25px;
+  height: 25px;
+  color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #coeur--plein {
@@ -438,8 +446,8 @@ header > a {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   position: absolute;
-  top: 2%;
-  bottom: 0%;
+  top: 20px;
+  bottom: 0;
   left: 20px;
   font-size: 1.2rem;
 }
@@ -689,12 +697,13 @@ header > a {
   }
   .resultats {
     min-height: unset;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .resultats__contenu, .resultats__contenu--nouveau {
     width: 24%;
-    margin: 0px 0px;
+    margin: 0px 7px 15px;
     text-align: left;
   }
   .resultats__contenu--imgfit, .resultats__contenu--nouveau--imgfit {
@@ -715,8 +724,8 @@ header > a {
     -webkit-box-sizing: content-box;
             box-sizing: content-box;
     position: absolute;
-    top: 25px;
-    bottom: 0%;
+    top: 45px;
+    bottom: 0px;
     left: 80px;
     font-size: 3rem;
   }
@@ -736,10 +745,7 @@ header > a {
   }
   .presentation {
     width: 50%;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    height: 380px;
+    height: 390px;
   }
   .presentation h1 {
     padding-top: 10px;
@@ -749,21 +755,6 @@ header > a {
   .desserts {
     width: 50%;
   }
-  .entrees {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-  .plats {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-  .desserts {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
-  }
   .menu--prix {
     width: 60px;
     position: absolute;
@@ -771,9 +762,6 @@ header > a {
     padding-top: 5%;
   }
   .btn-bloc {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
     margin: auto;
     width: 100%;
   }
@@ -781,14 +769,11 @@ header > a {
 
 @media screen and (min-width: 1025px) {
   header > a {
-    display: none;
+    top: 15px;
   }
   .presentation {
     width: 100%;
     margin: auto;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
     height: 300px;
   }
   .presentation--fitpaysage {
@@ -807,16 +792,6 @@ header > a {
   .desserts {
     width: 33.3%;
     padding-top: 20px;
-  }
-  .entrees {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-  .plats {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
   }
 }
 /*# sourceMappingURL=main.css.map */

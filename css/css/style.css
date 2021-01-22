@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* aujustement commun des font */
 /* aujuster les sousbloc en flex grace a width et margin */
 /* pour tous les elements utilisant position absolue */
@@ -68,7 +69,7 @@ header {
 }
 header img {
   width: 44%;
-  margin: 3% 2%;
+  margin: 5% 0;
   text-align: center;
 }
 
@@ -331,8 +332,16 @@ footer a {
   font-size: 1.7rem;
 }
 
-#jaime:checked #coeur--plein {
-  opacity: 1;
+#jaime::after {
+  font-family: "Font Awesome 5 free";
+  font-weight: regular;
+  content: "";
+  width: 25px;
+  height: 25px;
+  color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #coeur--plein {
@@ -349,8 +358,8 @@ footer a {
 header > a {
   box-sizing: content-box;
   position: absolute;
-  top: 2%;
-  bottom: 0%;
+  top: 20px;
+  bottom: 0;
   left: 20px;
   font-size: 1.2rem;
 }
@@ -548,11 +557,11 @@ header > a {
 
   .resultats {
     min-height: unset;
-    justify-content: space-around;
+    justify-content: flex-start;
   }
   .resultats__contenu, .resultats__contenu--nouveau {
     width: 24%;
-    margin: 0px 0px;
+    margin: 0px 7px 15px;
     text-align: left;
   }
   .resultats__contenu--imgfit, .resultats__contenu--nouveau--imgfit {
@@ -571,8 +580,8 @@ header > a {
   header > a {
     box-sizing: content-box;
     position: absolute;
-    top: 25px;
-    bottom: 0%;
+    top: 45px;
+    bottom: 0px;
     left: 80px;
     font-size: 3rem;
   }
@@ -586,8 +595,7 @@ header > a {
 
   .presentation {
     width: 50%;
-    order: 1;
-    height: 380px;
+    height: 390px;
   }
   .presentation h1 {
     padding-top: 10px;
@@ -599,18 +607,6 @@ header > a {
     width: 50%;
   }
 
-  .entrees {
-    order: 3;
-  }
-
-  .plats {
-    order: 2;
-  }
-
-  .desserts {
-    order: 4;
-  }
-
   .menu--prix {
     width: 60px;
     position: absolute;
@@ -619,20 +615,18 @@ header > a {
   }
 
   .btn-bloc {
-    order: 5;
     margin: auto;
     width: 100%;
   }
 }
 @media screen and (min-width: 1025px) {
   header > a {
-    display: none;
+    top: 15px;
   }
 
   .presentation {
     width: 100%;
     margin: auto;
-    order: 1;
     height: 300px;
   }
   .presentation--fitpaysage {
@@ -650,14 +644,6 @@ header > a {
 .desserts {
     width: 33.3%;
     padding-top: 20px;
-  }
-
-  .entrees {
-    order: 2;
-  }
-
-  .plats {
-    order: 3;
   }
 }
 

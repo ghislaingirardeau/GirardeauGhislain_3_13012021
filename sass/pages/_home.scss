@@ -105,10 +105,16 @@
 
 
 #jaime {
-  &:checked{
-  & #coeur--plein{
-      opacity: 1;
-    }
+  &::after{
+    font-family: "Font Awesome 5 free";
+    font-weight: regular;
+    content: "\f004";
+    width: 25px;
+    height: 25px;
+    color: red;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 #coeur--plein{

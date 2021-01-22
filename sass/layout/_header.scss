@@ -2,7 +2,7 @@ header {
   min-height: 65px;
   text-align: center;
   & img {
-    @include box_width (165px, 3% 2%, center);
+    @include box_width (165px, 5% 0, center);
   }
 }
 

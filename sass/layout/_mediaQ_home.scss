@@ -58,10 +58,10 @@
 
   .resultats {
     min-height: unset;
-    justify-content: space-around;
+    justify-content: flex-start;
 
     &__contenu, &__contenu--nouveau {
-      @include box_width(90px, 0px 0px, left);
+      @include box_width(90px, 0px 7px 15px, left);
 
       &--imgfit {
         object-position: 0 0px;

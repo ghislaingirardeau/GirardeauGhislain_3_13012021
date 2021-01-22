@@ -1,6 +1,6 @@
 header{
     > a {
-        @include position_absolue (2%, 0%, 20px, 1.2rem);
+        @include position_absolue (20px, 0, 20px, 1.2rem);
     }
 }
 
