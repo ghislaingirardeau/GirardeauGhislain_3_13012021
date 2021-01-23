@@ -632,7 +632,9 @@ main {
   margin-left: 20px;
 }
 
-.entrees, .plats, .desserts {
+.entrees,
+.plats,
+.desserts {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -649,7 +651,9 @@ main {
   background-color: #f6f6f6;
 }
 
-.entrees > h2, .plats > h2, .desserts > h2 {
+.entrees > h2,
+.plats > h2,
+.desserts > h2 {
   width: 10.66667%;
   margin: 20px;
   text-align: left;
@@ -660,7 +664,9 @@ main {
   border-bottom: 4px solid #99E2D0;
 }
 
-.entrees > form, .plats > form, .desserts > form {
+.entrees > form,
+.plats > form,
+.desserts > form {
   width: 93.33333%;
   margin: 0 12px;
   text-align: left;
@@ -691,21 +697,24 @@ main {
 .menu .menu--descriptif {
   border: solid 2px green;
   width: 83%;
+  overflow: hidden;
 }
 
 .menu .menu--descriptif h3 {
   font-size: 1.1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .menu .menu--descriptif p {
   white-space: nowrap;
   text-overflow: ellipsis;
-  overflow: hidden;
   margin-top: -0.5rem;
 }
 
 .menu .menu--prix {
   width: 34%;
+  border: solid 2px green;
   padding-top: 16%;
   /* pour ne pas bouger la box en Y pour animation */
   padding-left: 5px;

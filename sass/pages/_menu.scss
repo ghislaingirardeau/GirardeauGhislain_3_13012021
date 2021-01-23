@@ -1,99 +1,100 @@
-header{
-    > a {
-        @include position_absolue (20px, 0, 20px, 1.2rem);
-    }
+header {
+  > a {
+    @include position_absolue(20px, 0, 20px, 1.2rem);
+  }
 }
 main {
-    background-color: $color_background;
+  background-color: $color_background;
 }
-.presentation{
-    @include img_contain (310px);
-    &--fitpaysage {
-        @include img_ajust_height (-50px -30px);
+.presentation {
+  @include img_contain(310px);
+  &--fitpaysage {
+    @include img_ajust_height(-50px -30px);
+  }
+  &--fitportrait {
+    @include img_ajust_width(-30px);
+  }
+  &__restaurant {
+    @include position_absolue(100, 0px, 0, 1.2rem);
+    @include description_inside($color_background, 4rem, 0px);
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    width: 100%;
+
+    > h1 {
+      @include font(Shrikhand, $h1size, 300);
+      margin-left: 20px;
     }
-    &--fitportrait {
-        @include img_ajust_width (-30px);
-    }
-    &__restaurant{       
-        @include position_absolue (100, 0px, 0, 1.2rem);
-        @include description_inside ($color_background, 4rem, 0px);        
-        border-top-left-radius: 50px;
-        border-top-right-radius: 50px;
-        width: 100%;
-        
-        > h1 {
-            @include font (Shrikhand, $h1size, 300);
-            margin-left: 20px;
-        }
-    }
+  }
 }
 
-.entrees, .plats, .desserts {
-    @include flex_layout(column, nowrap, space-around,);
-    @include box_height (310px, 10px, $color_background);
-    > h2 {
-        @include box_width(40px, 20px, left);
-        @include font (roboto, 1.1rem, 300);
-        padding-bottom: 8px;
-        border-bottom: 4px solid $third;
-    }
-    > form {
-        @include box_width($width-box-menu, 0 12px, left);
-           
-    }
+.entrees,
+.plats,
+.desserts {
+  @include flex_layout(column, nowrap, space-around);
+  @include box_height(310px, 10px, $color_background);
+  > h2 {
+    @include box_width(40px, 20px, left);
+    @include font(roboto, 1.1rem, 300);
+    padding-bottom: 8px;
+    border-bottom: 4px solid $third;
+  }
+  > form {
+    @include box_width($width-box-menu, 0 12px, left);
+  }
 }
 .menu {
-    @include box_contour ($text_bouton, 15px, $col_degrade_clair);
-    @include flex_layout(row, nowrap, flex-start);
-    padding-left: 10px;
-    margin-bottom: 15px;
-    overflow: hidden;
-    
-    & .menu--descriptif {
-        border: solid 2px green;
-        width: 83%;
-        & h3 {
-            font-size: $h3size;
-        }
-        & p {
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            margin-top: -0.5rem;
-        }
-    }
+  @include box_contour($text_bouton, 15px, $col_degrade_clair);
+  @include flex_layout(row, nowrap, flex-start);
+  padding-left: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
 
-    & .menu--prix{
-        width: 34%;
-        padding-top: 16%; /* pour ne pas bouger la box en Y pour animation */
-        padding-left: 5px;
-        position: relative;
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            height: 200px;
-            background-color: $third;
-          }
-        &::before {
-            font-family: "Font Awesome 5 free";
-          font-weight: regular;
-          content: "\f058";
-          cursor: pointer;
-          transform: rotate(180deg);
-          z-index: 2;
-          position: absolute;
-          top: 0px;
-          right: -30px;
-          }
+  & .menu--descriptif {
+    border: solid 2px green;
+    width: 83%;
+    overflow: hidden;
+    & h3 {
+      font-size: $h3size;
+      white-space: nowrap;
+      text-overflow: ellipsis;
     }
+    & p {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-top: -0.5rem;
+    }
+  }
+
+  & .menu--prix {
+    width: 34%;
+    border: solid 2px green;
+    padding-top: 16%; /* pour ne pas bouger la box en Y pour animation */
+    padding-left: 5px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      height: 200px;
+      background-color: $third;
+    }
+    &::before {
+      font-family: "Font Awesome 5 free";
+      font-weight: regular;
+      content: "\f058";
+      cursor: pointer;
+      transform: rotate(180deg);
+      z-index: 2;
+      position: absolute;
+      top: 0px;
+      right: -30px;
+    }
+  }
 }
 
-
-
-
-.btn-bloc{
-    background-color: $color_background;
-    text-align: center;
+.btn-bloc {
+  background-color: $color_background;
+  text-align: center;
 }
