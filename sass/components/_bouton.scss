@@ -22,9 +22,13 @@
     }
   }
   
+  input[name=choix] {
+    position: absolute;
+    z-index: -1;
+  }
 
 
-input[name=choix] {
+/* input[name=choix] {
     position: absolute;
     left: 40px;
     margin-left: 0px;
@@ -38,5 +42,6 @@ input[name=choix] {
       margin-right: 0.5em;
       background-color: red;
   }
-}    
+}     */
+
 

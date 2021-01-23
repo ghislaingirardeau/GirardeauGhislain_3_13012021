@@ -1,11 +1,6 @@
-
-
-<div class="menu--check">
-                    <i class="fas fa-check-circle"></i>
-                </div>
-
-                width: 120%; 
-  object-fit: contain;
-  background-color: red;
-
-  <input type="checkbox" name="test" id="test">
+& .menu--prix{
+        width: 34%;
+        position: relative;
+        left: 85%;
+        padding-top: 10%; /* pour ne pas bouger la box en Y pour animation */
+    }

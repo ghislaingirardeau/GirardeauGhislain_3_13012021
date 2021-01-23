@@ -6,6 +6,46 @@
 /* ajustement bloc dans l'image en absolue */
 /* mixin bouton */
 /* commun au bouton type submit */
+input[name=choix]:checked + .menu > .menu--descriptif {
+  animation: barre 1s forwards ease-in-out alternate;
+}
+
+input[name=choix]:checked + .menu > .menu--prix::after {
+  animation: after 1s 200ms forwards ease-in-out alternate;
+}
+
+input[name=choix]:checked + .menu > .menu--prix::before {
+  animation: icone 1s 400ms forwards ease-in-out alternate;
+}
+
+@keyframes barre {
+  from {
+    width: 83%;
+    /* 290/350 */
+  }
+  to {
+    width: 66%;
+    /* 230/350 */
+  }
+}
+@keyframes after {
+  from {
+    width: 0;
+    transform: translateZ(0);
+  }
+  to {
+    width: 50%;
+    transform: translateZ(1);
+  }
+}
+@keyframes icone {
+  0% {
+    transform: translateX(0px) rotateZ(180deg);
+  }
+  100% {
+    transform: translateX(-50px) rotateZ(0);
+  }
+}
 .submit {
   font-family: roboto;
   font-size: 1.1rem;
@@ -95,29 +135,24 @@
 
 input[name=choix] {
   position: absolute;
-  left: 40px;
-  margin-left: 0px;
-}
-input[name=choix]::before {
-  font-family: "Font Awesome 5 free";
-  font-weight: regular;
-  width: 35px;
-  height: 35px;
-  cursor: pointer;
-  content: "";
-  box-sizing: content-box;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0px;
-  font-size: 1.6rem;
-  color: #99E2D0;
-}
-input[name=choix]:checked::before {
-  margin-right: 0.5em;
-  background-color: red;
+  z-index: -1;
 }
 
+/* input[name=choix] {
+    position: absolute;
+    left: 40px;
+    margin-left: 0px;
+    &::before {
+      @include import_icone (regular);
+      content: "\f058";
+      @include position_absolue(0, 0, 0px, 1.6rem);
+      color: $third;
+    } 
+    &:checked::before {
+      margin-right: 0.5em;
+      background-color: red;
+  }
+}     */
 body {
   margin: auto;
   font-family: roboto;
@@ -478,13 +513,13 @@ main {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
-  position: relative;
   padding-left: 10px;
   margin-bottom: 15px;
+  overflow: hidden;
 }
 .menu .menu--descriptif {
   border: solid 2px green;
-  width: 80%;
+  width: 83%;
 }
 .menu .menu--descriptif h3 {
   font-size: 1.1rem;
@@ -496,11 +531,30 @@ main {
   margin-top: -0.5rem;
 }
 .menu .menu--prix {
-  width: 60px;
-  position: absolute;
-  left: 85%;
-  padding-top: 10%;
+  width: 34%;
+  padding-top: 16%;
   /* pour ne pas bouger la box en Y pour animation */
+  padding-left: 5px;
+  position: relative;
+}
+.menu .menu--prix::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 200px;
+  background-color: #99E2D0;
+}
+.menu .menu--prix::before {
+  font-family: "Font Awesome 5 free";
+  font-weight: regular;
+  content: "";
+  cursor: pointer;
+  transform: rotate(180deg);
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  right: -30px;
 }
 
 .btn-bloc {

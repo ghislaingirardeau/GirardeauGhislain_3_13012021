@@ -1,0 +1,96 @@
+.menu {
+    width: 350px;
+    height: 100px;
+    display: flex;
+    flex: row;
+    overflow: hidden;
+    
+}
+input {
+    position: absolute;
+    z-index: -1;
+}
+p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+} 
+
+.barre1 {
+    width: 83%;
+    background-color: red;
+}
+.barre2 {
+    width: 34%;
+    background-color:blue;
+    position: relative;
+}
+
+
+ .barre2::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 200px;
+    background-color: chartreuse;
+}
+
+.barre2::before {
+    font-family: "Font Awesome 5 free";
+  font-weight: regular;
+  content: "\f058";
+  cursor: pointer;
+  transform: rotate(180deg);
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  right: -30px;
+
+}
+
+input:checked + .menu > .barre1 {
+    animation: barre 1s forwards ease-in-out alternate;
+}
+
+ input:checked + .menu > .barre2::after {
+    animation: after 1s 200ms forwards ease-in-out alternate;
+}
+
+input:checked + .menu > .barre2::before {
+   
+    animation: icone 1s 400ms forwards ease-in-out alternate;
+}
+
+
+
+@keyframes barre {
+    from {
+        width: 83%; /* 290/350 */
+    }
+    to{
+        width: 66%; /* 230/350 */
+    }
+}
+
+@keyframes after {
+    from {
+        width: 0;
+        transform: translateZ(0);
+    }
+    to{
+        width: 50%;
+        transform: translateZ(1);
+    }
+}
+
+@keyframes icone {
+    0% {
+        
+        transform: translateX(0px) rotateZ(180deg) ;
+    }
+    100%{
+        transform: translateX(-50px) rotateZ(0);
+    }
+}
+

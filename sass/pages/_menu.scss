@@ -45,13 +45,13 @@ main {
 .menu {
     @include box_contour ($text_bouton, 15px, $col_degrade_clair);
     @include flex_layout(row, nowrap, flex-start);
-    position: relative;
     padding-left: 10px;
     margin-bottom: 15px;
+    overflow: hidden;
     
     & .menu--descriptif {
         border: solid 2px green;
-        width: 80%;
+        width: 83%;
         & h3 {
             font-size: $h3size;
         }
@@ -64,10 +64,29 @@ main {
     }
 
     & .menu--prix{
-        width: 60px;
-        position: absolute;
-        left: 85%;
-        padding-top: 10%; /* pour ne pas bouger la box en Y pour animation */
+        width: 34%;
+        padding-top: 16%; /* pour ne pas bouger la box en Y pour animation */
+        padding-left: 5px;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            height: 200px;
+            background-color: $third;
+          }
+        &::before {
+            font-family: "Font Awesome 5 free";
+          font-weight: regular;
+          content: "\f058";
+          cursor: pointer;
+          transform: rotate(180deg);
+          z-index: 2;
+          position: absolute;
+          top: 0px;
+          right: -30px;
+          }
     }
 }
 
