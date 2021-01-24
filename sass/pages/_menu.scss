@@ -70,14 +70,14 @@ main {
 
   & .menu--prix {
     width: 17%;
-    padding-top: 7%; /* pour ne pas bouger la box en Y pour animation */
+    padding-top: 15%; /* pour ne pas bouger la box en Y pour animation */
     padding-left: 5px;
     position: relative;
     &::after {
       content: "";
       position: absolute;
       top: 0px;
-      right: -40px;
+      right: -65px; /* a changer en responsive */
       height: 200px;
       background-color: $third;
     }
@@ -89,7 +89,7 @@ main {
       transform: rotate(180deg);
       z-index: 2;
       @include position_absolue(35%, unset, unset, 1.6rem);
-      right: -40px;
+      right: -65px; /* a changer en responsive */
     }
   }
 }
