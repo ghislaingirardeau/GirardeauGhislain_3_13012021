@@ -75,13 +75,13 @@
     position: absolute;
     z-index: -1;
     &:hover + .menu > .menu--descriptif {
-      @include animation_menu (reduction_descriptif);
+      @include animation_menu (descriptif_in);
     }
     &:hover + .menu > .menu--prix::after {
-      @include animation_menu (apparition_after);
+      @include animation_menu (after_in);
     }
     &:hover + .menu > .menu--prix::before {
-      @include animation_menu (icone);
+      @include animation_menu (icone_in);
   } 
   }
 }

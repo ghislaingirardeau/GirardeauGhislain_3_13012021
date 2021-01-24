@@ -30,17 +30,17 @@ input[name="choix"] {
   position: absolute;
   z-index: -1;
   &:checked + .menu > .menu--descriptif {
-    @include animation_menu(reduction_descriptif);
+    @include animation_menu(descriptif_in);
   }
   &:checked + .menu > .menu--prix::after {
-    @include animation_menu(apparition_after);
+    @include animation_menu(after_in);
   }
   &:checked + .menu > .menu--prix::before {
-    @include animation_menu(icone);
+    @include animation_menu(icone_in);
   }
 }
 .menu--descriptif {
-  @include animation_menu(reduction_descriptif_out);
+  @include animation_menu(descriptif_out);
 }
 .menu--prix{
   &::after{

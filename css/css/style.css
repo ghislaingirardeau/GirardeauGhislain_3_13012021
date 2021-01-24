@@ -6,7 +6,7 @@
 /* ajustement bloc dans l'image en absolue */
 /* mixin bouton */
 /* commun au bouton type submit */
-@keyframes reduction_descriptif {
+@keyframes descriptif_in {
   from {
     width: 83%;
   }
@@ -14,7 +14,7 @@
     width: 65%;
   }
 }
-@keyframes reduction_descriptif_out {
+@keyframes descriptif_out {
   from {
     width: 65%;
   }
@@ -22,7 +22,7 @@
     width: 83%;
   }
 }
-@keyframes apparition_after {
+@keyframes after_in {
   from {
     width: 0px;
     transform: translateZ(0);
@@ -42,7 +42,7 @@
     transform: translateZ(0);
   }
 }
-@keyframes icone {
+@keyframes icone_in {
   0% {
     transform: translateX(0px) rotateZ(180deg);
   }
@@ -152,17 +152,17 @@ input[name=choix] {
   z-index: -1;
 }
 input[name=choix]:checked + .menu > .menu--descriptif {
-  animation: reduction_descriptif 800ms forwards ease-in-out;
+  animation: descriptif_in 800ms forwards ease-in-out;
 }
 input[name=choix]:checked + .menu > .menu--prix::after {
-  animation: apparition_after 800ms forwards ease-in-out;
+  animation: after_in 800ms forwards ease-in-out;
 }
 input[name=choix]:checked + .menu > .menu--prix::before {
-  animation: icone 800ms forwards ease-in-out;
+  animation: icone_in 800ms forwards ease-in-out;
 }
 
 .menu--descriptif {
-  animation: reduction_descriptif_out 800ms forwards ease-in-out;
+  animation: descriptif_out 800ms forwards ease-in-out;
 }
 
 .menu--prix::after {
@@ -786,13 +786,13 @@ main {
     z-index: -1;
   }
   input[name=choix]:hover + .menu > .menu--descriptif {
-    animation: reduction_descriptif 800ms forwards ease-in-out;
+    animation: descriptif_in 800ms forwards ease-in-out;
   }
   input[name=choix]:hover + .menu > .menu--prix::after {
-    animation: apparition_after 800ms forwards ease-in-out;
+    animation: after_in 800ms forwards ease-in-out;
   }
   input[name=choix]:hover + .menu > .menu--prix::before {
-    animation: icone 800ms forwards ease-in-out;
+    animation: icone_in 800ms forwards ease-in-out;
   }
 }
 
