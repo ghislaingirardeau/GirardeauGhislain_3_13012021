@@ -7,34 +7,32 @@
 /* mixin bouton */
 /* commun au bouton type submit */
 input[name=choix]:checked + .menu > .menu--descriptif {
-  animation: barre 1s forwards ease-in-out alternate;
+  animation: reduction_descriptif 800ms forwards ease-in-out alternate;
 }
 
 input[name=choix]:checked + .menu > .menu--prix::after {
-  animation: after 1s 200ms forwards ease-in-out alternate;
+  animation: apparition_after 800ms forwards ease-in-out alternate;
 }
 
 input[name=choix]:checked + .menu > .menu--prix::before {
-  animation: icone 1s 400ms forwards ease-in-out alternate;
+  animation: icone 800ms forwards ease-in-out alternate;
 }
 
-@keyframes barre {
+@keyframes reduction_descriptif {
   from {
     width: 83%;
-    /* 290/350 */
   }
   to {
-    width: 66%;
-    /* 230/350 */
+    width: 75%;
   }
 }
-@keyframes after {
+@keyframes apparition_after {
   from {
-    width: 0;
+    width: 0px;
     transform: translateZ(0);
   }
   to {
-    width: 50%;
+    width: 80px;
     transform: translateZ(1);
   }
 }
@@ -43,7 +41,7 @@ input[name=choix]:checked + .menu > .menu--prix::before {
     transform: translateX(0px) rotateZ(180deg);
   }
   100% {
-    transform: translateX(-50px) rotateZ(0);
+    transform: translateX(-30px) rotateZ(0);
   }
 }
 .submit {
@@ -524,7 +522,6 @@ main {
   overflow: hidden;
 }
 .menu .menu--descriptif {
-  border: solid 2px green;
   width: 83%;
   overflow: hidden;
 }
@@ -539,9 +536,8 @@ main {
   margin-top: -0.5rem;
 }
 .menu .menu--prix {
-  width: 34%;
-  border: solid 2px green;
-  padding-top: 16%;
+  width: 17%;
+  padding-top: 7%;
   /* pour ne pas bouger la box en Y pour animation */
   padding-left: 5px;
   position: relative;
@@ -550,20 +546,23 @@ main {
   content: "";
   position: absolute;
   top: 0px;
-  right: 0px;
+  right: -40px;
   height: 200px;
   background-color: #99E2D0;
 }
 .menu .menu--prix::before {
   font-family: "Font Awesome 5 free";
-  font-weight: regular;
+  font-weight: 900;
+  font-size: 1.6rem;
   content: "";
   cursor: pointer;
+  color: white;
+  background-color: #99E2D0;
   transform: rotate(180deg);
   z-index: 2;
   position: absolute;
-  top: 0px;
-  right: -30px;
+  top: 35%;
+  right: -40px;
 }
 
 .btn-bloc {

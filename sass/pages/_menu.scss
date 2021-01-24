@@ -51,7 +51,6 @@ main {
   overflow: hidden;
 
   & .menu--descriptif {
-    border: solid 2px green;
     width: 83%;
     overflow: hidden;
     & h3 {
@@ -67,29 +66,31 @@ main {
   }
 
   & .menu--prix {
-    width: 34%;
-    border: solid 2px green;
-    padding-top: 16%; /* pour ne pas bouger la box en Y pour animation */
+    width: 17%;
+    padding-top: 7%; /* pour ne pas bouger la box en Y pour animation */
     padding-left: 5px;
     position: relative;
     &::after {
       content: "";
       position: absolute;
       top: 0px;
-      right: 0px;
+      right: -40px;
       height: 200px;
       background-color: $third;
     }
     &::before {
       font-family: "Font Awesome 5 free";
-      font-weight: regular;
+      font-weight: 900;
+      font-size: 1.6rem;
       content: "\f058";
       cursor: pointer;
+      color: white;
+      background-color: $third;
       transform: rotate(180deg);
       z-index: 2;
       position: absolute;
-      top: 0px;
-      right: -30px;
+      top: 35%;
+      right: -40px;
     }
   }
 }
