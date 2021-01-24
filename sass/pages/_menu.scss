@@ -49,6 +49,7 @@ main {
   padding-left: 10px;
   margin-bottom: 15px;
   overflow: hidden;
+  cursor: pointer;
 
   & .menu--descriptif {
     width: 83%;
@@ -57,10 +58,12 @@ main {
       font-size: $h3size;
       white-space: nowrap;
       text-overflow: ellipsis;
+      overflow: hidden;
     }
     & p {
       white-space: nowrap;
       text-overflow: ellipsis;
+      overflow: hidden;
       margin-top: -0.5rem;
     }
   }
@@ -79,17 +82,13 @@ main {
       background-color: $third;
     }
     &::before {
-      font-family: "Font Awesome 5 free";
-      font-weight: 900;
-      font-size: 1.6rem;
+      @include import_icone(900);
       content: "\f058";
-      cursor: pointer;
       color: white;
       background-color: $third;
       transform: rotate(180deg);
       z-index: 2;
-      position: absolute;
-      top: 35%;
+      @include position_absolue(35%, unset, unset, 1.6rem);
       right: -40px;
     }
   }

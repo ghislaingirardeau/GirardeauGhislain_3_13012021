@@ -22,26 +22,22 @@
     }
   }
   
-  input[name=choix] {
+input[name=choix] {
     position: absolute;
     z-index: -1;
+    &:checked + .menu > .menu--descriptif {
+      animation: reduction_descriptif 800ms forwards ease-in-out alternate;
+    }
+    &:checked + .menu > .menu--prix::after {
+      animation: apparition_after 800ms forwards ease-in-out alternate;
+    }
+    &:checked + .menu > .menu--prix::before {
+      animation: icone 800ms forwards ease-in-out alternate;
+  } 
   }
 
 
-/* input[name=choix] {
-    position: absolute;
-    left: 40px;
-    margin-left: 0px;
-    &::before {
-      @include import_icone (regular);
-      content: "\f058";
-      @include position_absolue(0, 0, 0px, 1.6rem);
-      color: $third;
-    } 
-    &:checked::before {
-      margin-right: 0.5em;
-      background-color: red;
-  }
-}     */
+
+
 
 

@@ -1,15 +1,15 @@
 @mixin import_icone ($weight) {
   font-family: "Font Awesome 5 free";
   font-weight: $weight;
-  width: 35px;
-  height: 35px;
   cursor: pointer;
 }
 
 @mixin animation_jaime($colbg) {
   &::after {
-    @include import_icone (900);
+    @include import_icone(900);
     content: "\f004";
+    width: 35px;
+    height: 35px;
     opacity: 0;
     @include position_absolue(1px, 0, 0px, 1.6rem);
     transition: opacity 200ms ease-out;
@@ -30,23 +30,13 @@
 }
 
 
-input[name=choix]:checked + .menu > .menu--descriptif {
-    animation: reduction_descriptif 800ms forwards ease-in-out alternate;
-}
 
- input[name=choix]:checked + .menu > .menu--prix::after {
-    animation: apparition_after 800ms forwards ease-in-out alternate;
-}
-
-input[name=choix]:checked + .menu > .menu--prix::before {
-    animation: icone 800ms forwards ease-in-out alternate;
-} 
 @keyframes reduction_descriptif {
   from {
       width: 83%; 
   }
   to{
-      width: 75%; 
+      width: 25%; 
   }
 }
 @keyframes apparition_after {
@@ -69,3 +59,4 @@ input[name=choix]:checked + .menu > .menu--prix::before {
       transform: translateX(-30px) rotateZ(0);
   }
 }
+

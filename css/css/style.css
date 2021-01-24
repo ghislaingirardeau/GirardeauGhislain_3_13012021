@@ -6,24 +6,12 @@
 /* ajustement bloc dans l'image en absolue */
 /* mixin bouton */
 /* commun au bouton type submit */
-input[name=choix]:checked + .menu > .menu--descriptif {
-  animation: reduction_descriptif 800ms forwards ease-in-out alternate;
-}
-
-input[name=choix]:checked + .menu > .menu--prix::after {
-  animation: apparition_after 800ms forwards ease-in-out alternate;
-}
-
-input[name=choix]:checked + .menu > .menu--prix::before {
-  animation: icone 800ms forwards ease-in-out alternate;
-}
-
 @keyframes reduction_descriptif {
   from {
     width: 83%;
   }
   to {
-    width: 75%;
+    width: 25%;
   }
 }
 @keyframes apparition_after {
@@ -83,10 +71,10 @@ input[name=choix]:checked + .menu > .menu--prix::before {
 .jaime--restaurant::after {
   font-family: "Font Awesome 5 free";
   font-weight: 900;
-  width: 35px;
-  height: 35px;
   cursor: pointer;
   content: "";
+  width: 35px;
+  height: 35px;
   opacity: 0;
   box-sizing: content-box;
   position: absolute;
@@ -112,10 +100,10 @@ input[name=choix]:checked + .menu > .menu--prix::before {
 .jaime--menu::after {
   font-family: "Font Awesome 5 free";
   font-weight: 900;
-  width: 35px;
-  height: 35px;
   cursor: pointer;
   content: "";
+  width: 35px;
+  height: 35px;
   opacity: 0;
   box-sizing: content-box;
   position: absolute;
@@ -135,22 +123,16 @@ input[name=choix] {
   position: absolute;
   z-index: -1;
 }
+input[name=choix]:checked + .menu > .menu--descriptif {
+  animation: reduction_descriptif 800ms forwards ease-in-out alternate;
+}
+input[name=choix]:checked + .menu > .menu--prix::after {
+  animation: apparition_after 800ms forwards ease-in-out alternate;
+}
+input[name=choix]:checked + .menu > .menu--prix::before {
+  animation: icone 800ms forwards ease-in-out alternate;
+}
 
-/* input[name=choix] {
-    position: absolute;
-    left: 40px;
-    margin-left: 0px;
-    &::before {
-      @include import_icone (regular);
-      content: "\f058";
-      @include position_absolue(0, 0, 0px, 1.6rem);
-      color: $third;
-    } 
-    &:checked::before {
-      margin-right: 0.5em;
-      background-color: red;
-  }
-}     */
 body {
   margin: auto;
   font-family: roboto;
@@ -520,6 +502,7 @@ main {
   padding-left: 10px;
   margin-bottom: 15px;
   overflow: hidden;
+  cursor: pointer;
 }
 .menu .menu--descriptif {
   width: 83%;
@@ -529,10 +512,12 @@ main {
   font-size: 1.1rem;
   white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
 }
 .menu .menu--descriptif p {
   white-space: nowrap;
   text-overflow: ellipsis;
+  overflow: hidden;
   margin-top: -0.5rem;
 }
 .menu .menu--prix {
@@ -553,15 +538,18 @@ main {
 .menu .menu--prix::before {
   font-family: "Font Awesome 5 free";
   font-weight: 900;
-  font-size: 1.6rem;
-  content: "";
   cursor: pointer;
+  content: "";
   color: white;
   background-color: #99E2D0;
   transform: rotate(180deg);
   z-index: 2;
+  box-sizing: content-box;
   position: absolute;
   top: 35%;
+  bottom: unset;
+  left: unset;
+  font-size: 1.6rem;
   right: -40px;
 }
 
