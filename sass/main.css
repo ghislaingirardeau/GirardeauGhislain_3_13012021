@@ -121,7 +121,6 @@
   font-weight: 900;
   cursor: pointer;
   content: "\f004";
-  opacity: 0;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   position: absolute;
@@ -129,14 +128,15 @@
   bottom: 0;
   left: 0px;
   font-size: 1.6rem;
+  opacity: 0;
   -webkit-transition: opacity 200ms ease-out;
   transition: opacity 200ms ease-out;
 }
 
 .jaime--restaurant:hover::after {
   opacity: 1;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(95%, #9356DC));
-  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 95%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(95%, #FF79DA));
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }
@@ -156,7 +156,6 @@
   font-weight: 900;
   cursor: pointer;
   content: "\f004";
-  opacity: 0;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   position: absolute;
@@ -164,14 +163,15 @@
   bottom: 0;
   left: 0px;
   font-size: 1.6rem;
+  opacity: 0;
   -webkit-transition: opacity 200ms ease-out;
   transition: opacity 200ms ease-out;
 }
 
 .jaime--menu:hover::after {
   opacity: 1;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(95%, #9356DC));
-  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 95%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(95%, #FF79DA));
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }

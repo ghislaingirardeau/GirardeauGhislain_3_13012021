@@ -2,13 +2,13 @@
   &::after {
     @include import_icone(900);
     content: "\f004";
-    opacity: 0;
     @include position_absolue(1px, 0, 0px, 1.6rem);
+    opacity: 0;
     transition: opacity 200ms ease-out;
   }
   &:hover::after {
     opacity: 1;
-    @include degrade_color($secondary, 0%, $primary, 95%);
+    @include degrade_color($primary, 0%, $secondary, 95%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
   }
