@@ -22,11 +22,14 @@
   .desserts {
     width: 50%;
   }
-  .menu--prix {
-    width: 60px;
-    position: absolute;
-    left: 85%;
-    padding-top: 5%;
+  .menu .menu--prix {
+    padding-top: 10%;
+    &::after{
+      right: -80px;
+    }
+    &::before{
+      right: -80px;
+    }
   }
 
   .btn-bloc {
