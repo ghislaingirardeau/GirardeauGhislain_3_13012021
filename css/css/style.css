@@ -86,8 +86,9 @@
 }
 .jaime--restaurant:hover::after {
   opacity: 1;
-  color: red;
-  background-color: white;
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 95%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 .jaime--menu {
   box-sizing: content-box;
@@ -115,8 +116,9 @@
 }
 .jaime--menu:hover::after {
   opacity: 1;
-  color: red;
-  background-color: #f6f6f6;
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 95%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 input[name=choix] {

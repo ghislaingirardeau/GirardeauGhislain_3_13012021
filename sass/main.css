@@ -137,8 +137,10 @@
 
 .jaime--restaurant:hover::after {
   opacity: 1;
-  color: red;
-  background-color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(95%, #9356DC));
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 95%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 .jaime--menu {
@@ -172,8 +174,10 @@
 
 .jaime--menu:hover::after {
   opacity: 1;
-  color: red;
-  background-color: #f6f6f6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(95%, #9356DC));
+  background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 95%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 
 input[name=choix] {

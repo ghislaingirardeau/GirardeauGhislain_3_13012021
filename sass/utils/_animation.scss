@@ -10,8 +10,9 @@
   }
   &:hover::after {
     opacity: 1;
-    color: red;
-    background-color: $colbg;
+    @include degrade_color($secondary, 0%, $primary, 95%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
   }
 }
 
