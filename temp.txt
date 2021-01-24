@@ -1,1 +1,11 @@
 animation menu : ajustement position en mobile
+
+&:checked + .menu > .menu--descriptif {
+      animation: reduction_descriptif 800ms forwards ease-in-out alternate;
+    }
+    &:checked + .menu > .menu--prix::after {
+      animation: apparition_after 800ms forwards ease-in-out alternate;
+    }
+    &:checked + .menu > .menu--prix::before {
+      animation: icone 800ms forwards ease-in-out alternate;
+  } 

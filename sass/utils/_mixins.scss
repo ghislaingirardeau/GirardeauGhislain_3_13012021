@@ -91,6 +91,12 @@
   );
 }/* commun au bouton type submit */
 
+@mixin import_icone ($weight) {
+  font-family: "Font Awesome 5 free";
+  font-weight: $weight;
+  cursor: pointer;
+}
+
 @mixin tablette {
   @media screen and (min-width: 666px) {
     @content;

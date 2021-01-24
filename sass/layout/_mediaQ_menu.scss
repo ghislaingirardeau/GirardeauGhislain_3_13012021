@@ -70,4 +70,20 @@
     width: 33.3%;
     padding-top: 20px;
   }
+  
+  input[name=choix] {
+    position: absolute;
+    z-index: -1;
+    &:hover + .menu > .menu--descriptif {
+      @include animation_menu (reduction_descriptif);
+    }
+    &:hover + .menu > .menu--prix::after {
+      @include animation_menu (apparition_after);
+    }
+    &:hover + .menu > .menu--prix::before {
+      @include animation_menu (icone);
+  } 
+  }
 }
+
+

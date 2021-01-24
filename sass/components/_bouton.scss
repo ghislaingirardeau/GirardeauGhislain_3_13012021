@@ -26,15 +26,18 @@ input[name=choix] {
     position: absolute;
     z-index: -1;
     &:checked + .menu > .menu--descriptif {
-      animation: reduction_descriptif 800ms forwards ease-in-out alternate;
+      @include animation_menu (reduction_descriptif);
     }
     &:checked + .menu > .menu--prix::after {
-      animation: apparition_after 800ms forwards ease-in-out alternate;
+      @include animation_menu (apparition_after);
     }
     &:checked + .menu > .menu--prix::before {
-      animation: icone 800ms forwards ease-in-out alternate;
+      @include animation_menu (icone);
   } 
-  }
+}
+
+
+
 
 
 

@@ -1,9 +1,3 @@
-@mixin import_icone ($weight) {
-  font-family: "Font Awesome 5 free";
-  font-weight: $weight;
-  cursor: pointer;
-}
-
 @mixin animation_jaime($colbg) {
   &::after {
     @include import_icone(900);
@@ -29,8 +23,9 @@
   }
 }
 
-
-
+@mixin animation_menu ($name) {
+  animation: $name 800ms forwards ease-in-out alternate;
+}
 @keyframes reduction_descriptif {
   from {
       width: 83%; 
@@ -49,7 +44,6 @@
       transform: translateZ(1);
   }
 }
-
 @keyframes icone {
   0% {
       

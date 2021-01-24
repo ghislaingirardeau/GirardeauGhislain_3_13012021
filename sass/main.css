@@ -947,5 +947,21 @@ main {
     width: 33.3%;
     padding-top: 20px;
   }
+  input[name=choix] {
+    position: absolute;
+    z-index: -1;
+  }
+  input[name=choix]:hover + .menu > .menu--descriptif {
+    -webkit-animation: reduction_descriptif 800ms forwards ease-in-out alternate;
+            animation: reduction_descriptif 800ms forwards ease-in-out alternate;
+  }
+  input[name=choix]:hover + .menu > .menu--prix::after {
+    -webkit-animation: apparition_after 800ms forwards ease-in-out alternate;
+            animation: apparition_after 800ms forwards ease-in-out alternate;
+  }
+  input[name=choix]:hover + .menu > .menu--prix::before {
+    -webkit-animation: icone 800ms forwards ease-in-out alternate;
+            animation: icone 800ms forwards ease-in-out alternate;
+  }
 }
 /*# sourceMappingURL=main.css.map */
