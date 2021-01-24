@@ -20,6 +20,10 @@
       @include position_absolue (80%, 0, 80%, 1.6rem);
       @include animation_jaime ($color_background);
     }
+    &:hover{
+      color: transparent;
+      transition: color 200ms ease-out;
+    }
   }
   
 input[name=choix] {

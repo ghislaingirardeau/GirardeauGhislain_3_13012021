@@ -121,8 +121,6 @@
   font-weight: 900;
   cursor: pointer;
   content: "\f004";
-  width: 35px;
-  height: 35px;
   opacity: 0;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -158,8 +156,6 @@
   font-weight: 900;
   cursor: pointer;
   content: "\f004";
-  width: 35px;
-  height: 35px;
   opacity: 0;
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -178,6 +174,12 @@
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 95%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+}
+
+.jaime:hover {
+  color: transparent;
+  -webkit-transition: color 200ms ease-out;
+  transition: color 200ms ease-out;
 }
 
 input[name=choix] {

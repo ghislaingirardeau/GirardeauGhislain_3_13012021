@@ -73,8 +73,6 @@
   font-weight: 900;
   cursor: pointer;
   content: "";
-  width: 35px;
-  height: 35px;
   opacity: 0;
   box-sizing: content-box;
   position: absolute;
@@ -103,8 +101,6 @@
   font-weight: 900;
   cursor: pointer;
   content: "";
-  width: 35px;
-  height: 35px;
   opacity: 0;
   box-sizing: content-box;
   position: absolute;
@@ -119,6 +115,10 @@
   background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 95%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+}
+.jaime:hover {
+  color: transparent;
+  transition: color 200ms ease-out;
 }
 
 input[name=choix] {

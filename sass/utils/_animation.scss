@@ -2,8 +2,6 @@
   &::after {
     @include import_icone(900);
     content: "\f004";
-    width: 35px;
-    height: 35px;
     opacity: 0;
     @include position_absolue(1px, 0, 0px, 1.6rem);
     transition: opacity 200ms ease-out;
