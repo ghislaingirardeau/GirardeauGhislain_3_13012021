@@ -1,50 +1,52 @@
 .submit {
-    @include font (roboto, 1.1rem, bold);
-    @include btn_color($col_degrade_clair);
-    @include animation_btnsubmit ($col_degrade_clair);
-    cursor: pointer;
-    &--explorer {
-      @include btn_layout(30px 0 35px, none, 1.2rem 2rem, center);
-    }
-    &--commander {
-      @include btn_layout(45px 0 65px, none, 1.2rem 5.2rem, center);
-    }
+  @include font(roboto, 1.1rem, bold);
+  @include btn_color($col_degrade_clair);
+  @include animation_btnsubmit($col_degrade_clair);
+  cursor: pointer;
+  &--explorer {
+    @include btn_layout(30px 0 35px, none, 1.2rem 2rem, center);
   }
-
-  .jaime {
-    &--restaurant {
-      @include position_absolue (75%, 0, 80%, 1.6rem);
-      @include animation_jaime ($color_box);
-    }
-    &--menu{
-      @include position_absolue (80%, 0, 80%, 1.6rem);
-      @include animation_jaime ($color_background);
-    }
-    &:hover{
-      color: transparent;
-      transition: color 200ms ease-out;
-    }
+  &--commander {
+    @include btn_layout(45px 0 65px, none, 1.2rem 5.2rem, center);
   }
-  
-input[name=choix] {
-    position: absolute;
-    z-index: -1;
-    &:checked + .menu > .menu--descriptif {
-      @include animation_menu (reduction_descriptif);
-    }
-    &:checked + .menu > .menu--prix::after {
-      @include animation_menu (apparition_after);
-    }
-    &:checked + .menu > .menu--prix::before {
-      @include animation_menu (icone);
-  } 
 }
 
+.jaime {
+  &--restaurant {
+    @include position_absolue(75%, 0, 80%, 1.6rem);
+    @include animation_jaime($color_box);
+  }
+  &--menu {
+    @include position_absolue(80%, 0, 80%, 1.6rem);
+    @include animation_jaime($color_background);
+  }
+  &:hover {
+    color: transparent;
+    transition: color 100ms ease-out;
+  }
+}
 
-
-
-
-
-
-
-
+input[name="choix"] {
+  position: absolute;
+  z-index: -1;
+  &:checked + .menu > .menu--descriptif {
+    @include animation_menu(reduction_descriptif);
+  }
+  &:checked + .menu > .menu--prix::after {
+    @include animation_menu(apparition_after);
+  }
+  &:checked + .menu > .menu--prix::before {
+    @include animation_menu(icone);
+  }
+}
+.menu--descriptif {
+  @include animation_menu(reduction_descriptif_out);
+}
+.menu--prix{
+  &::after{
+    @include animation_menu(after_out);
+  }
+  &::before{
+    @include animation_menu(icone_out);
+  }
+}

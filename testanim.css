@@ -19,7 +19,13 @@ p {
 .barre1 {
     width: 83%;
     background-color: red;
+    animation: barrerev 1s ease-in-out;
 }
+
+input:hover + .menu > .barre1 {
+    animation: barre 1s forwards ease-in-out;
+}
+
 .barre2 {
     width: 34%;
     background-color:blue;
@@ -49,36 +55,51 @@ p {
 
 }
 
-input:checked + .menu > .barre1 {
-    animation: barre 1s forwards ease-in-out alternate;
+input:hover + .menu > .barre2::after {
+    animation: after 1s 200ms ease-in-out alternate;
 }
 
- input:checked + .menu > .barre2::after {
-    animation: after 1s 200ms forwards ease-in-out alternate;
-}
-
-input:checked + .menu > .barre2::before {
+input:hover + .menu > .barre2::before {
    
-    animation: icone 1s 400ms forwards ease-in-out alternate;
+    animation: icone 1s 400ms ease-in-out alternate;
 }
 
 
 
 @keyframes barre {
-    from {
+    0% {
         width: 83%; /* 290/350 */
     }
-    to{
+    100%{
         width: 66%; /* 230/350 */
     }
 }
+@keyframes barrerev {
+    0% {
+        width: 66%; /* 290/350 */
+    }
+    100%{
+        width: 83%; /* 230/350 */
+    }
+}
+
 
 @keyframes after {
-    from {
+    0% {
         width: 0;
         transform: translateZ(0);
     }
-    to{
+    100%{
+        width: 50%;
+        transform: translateZ(1);
+    }
+}
+@keyframes afterrev {
+    0% {
+        width: 0;
+        transform: translateZ(0);
+    }
+    100%{
         width: 50%;
         transform: translateZ(1);
     }

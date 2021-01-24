@@ -23,14 +23,24 @@
 }
 
 @mixin animation_menu ($name) {
-  animation: $name 800ms forwards ease-in-out alternate;
+  animation: $name 800ms forwards ease-in-out;
 }
+
+
 @keyframes reduction_descriptif {
   from {
       width: 83%; 
   }
   to{
       width: 65%;
+  }
+}
+@keyframes reduction_descriptif_out {
+  from {
+      width: 65%; 
+  }
+  to{
+      width: 83%;
   }
 }
 @keyframes apparition_after {
@@ -43,6 +53,16 @@
       transform: translateZ(1);
   }
 }
+@keyframes after_out {
+  from {
+    width: 80px;
+      transform: translateZ(1);
+  }
+  to{
+    width: 0px;
+      transform: translateZ(0);
+  }
+}
 @keyframes icone {
   0% {
       
@@ -50,6 +70,15 @@
   }
   100%{
       transform: translateX(-35px) rotateZ(0);
+  }
+}
+@keyframes icone_out {
+  0% {
+      
+      transform: translateX(-35px) rotateZ(0) ;
+  }
+  100%{
+      transform: translateX(0px);
   }
 }
 

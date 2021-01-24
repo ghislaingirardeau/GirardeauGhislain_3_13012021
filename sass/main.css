@@ -22,6 +22,24 @@
   }
 }
 
+@-webkit-keyframes reduction_descriptif_out {
+  from {
+    width: 65%;
+  }
+  to {
+    width: 83%;
+  }
+}
+
+@keyframes reduction_descriptif_out {
+  from {
+    width: 65%;
+  }
+  to {
+    width: 83%;
+  }
+}
+
 @-webkit-keyframes apparition_after {
   from {
     width: 0px;
@@ -48,6 +66,32 @@
   }
 }
 
+@-webkit-keyframes after_out {
+  from {
+    width: 80px;
+    -webkit-transform: translateZ(1);
+            transform: translateZ(1);
+  }
+  to {
+    width: 0px;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+}
+
+@keyframes after_out {
+  from {
+    width: 80px;
+    -webkit-transform: translateZ(1);
+            transform: translateZ(1);
+  }
+  to {
+    width: 0px;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+  }
+}
+
 @-webkit-keyframes icone {
   0% {
     -webkit-transform: translateX(0px) rotateZ(180deg);
@@ -67,6 +111,28 @@
   100% {
     -webkit-transform: translateX(-35px) rotateZ(0);
             transform: translateX(-35px) rotateZ(0);
+  }
+}
+
+@-webkit-keyframes icone_out {
+  0% {
+    -webkit-transform: translateX(-35px) rotateZ(0);
+            transform: translateX(-35px) rotateZ(0);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes icone_out {
+  0% {
+    -webkit-transform: translateX(-35px) rotateZ(0);
+            transform: translateX(-35px) rotateZ(0);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 
@@ -178,28 +244,43 @@
 
 .jaime:hover {
   color: transparent;
-  -webkit-transition: color 200ms ease-out;
-  transition: color 200ms ease-out;
+  -webkit-transition: color 100ms ease-out;
+  transition: color 100ms ease-out;
 }
 
-input[name=choix] {
+input[name="choix"] {
   position: absolute;
   z-index: -1;
 }
 
-input[name=choix]:checked + .menu > .menu--descriptif {
-  -webkit-animation: reduction_descriptif 800ms forwards ease-in-out alternate;
-          animation: reduction_descriptif 800ms forwards ease-in-out alternate;
+input[name="choix"]:checked + .menu > .menu--descriptif {
+  -webkit-animation: reduction_descriptif 800ms forwards ease-in-out;
+          animation: reduction_descriptif 800ms forwards ease-in-out;
 }
 
-input[name=choix]:checked + .menu > .menu--prix::after {
-  -webkit-animation: apparition_after 800ms forwards ease-in-out alternate;
-          animation: apparition_after 800ms forwards ease-in-out alternate;
+input[name="choix"]:checked + .menu > .menu--prix::after {
+  -webkit-animation: apparition_after 800ms forwards ease-in-out;
+          animation: apparition_after 800ms forwards ease-in-out;
 }
 
-input[name=choix]:checked + .menu > .menu--prix::before {
-  -webkit-animation: icone 800ms forwards ease-in-out alternate;
-          animation: icone 800ms forwards ease-in-out alternate;
+input[name="choix"]:checked + .menu > .menu--prix::before {
+  -webkit-animation: icone 800ms forwards ease-in-out;
+          animation: icone 800ms forwards ease-in-out;
+}
+
+.menu--descriptif {
+  -webkit-animation: reduction_descriptif_out 800ms forwards ease-in-out;
+          animation: reduction_descriptif_out 800ms forwards ease-in-out;
+}
+
+.menu--prix::after {
+  -webkit-animation: after_out 800ms forwards ease-in-out;
+          animation: after_out 800ms forwards ease-in-out;
+}
+
+.menu--prix::before {
+  -webkit-animation: icone_out 800ms forwards ease-in-out;
+          animation: icone_out 800ms forwards ease-in-out;
 }
 
 body {
@@ -958,16 +1039,16 @@ main {
     z-index: -1;
   }
   input[name=choix]:hover + .menu > .menu--descriptif {
-    -webkit-animation: reduction_descriptif 800ms forwards ease-in-out alternate;
-            animation: reduction_descriptif 800ms forwards ease-in-out alternate;
+    -webkit-animation: reduction_descriptif 800ms forwards ease-in-out;
+            animation: reduction_descriptif 800ms forwards ease-in-out;
   }
   input[name=choix]:hover + .menu > .menu--prix::after {
-    -webkit-animation: apparition_after 800ms forwards ease-in-out alternate;
-            animation: apparition_after 800ms forwards ease-in-out alternate;
+    -webkit-animation: apparition_after 800ms forwards ease-in-out;
+            animation: apparition_after 800ms forwards ease-in-out;
   }
   input[name=choix]:hover + .menu > .menu--prix::before {
-    -webkit-animation: icone 800ms forwards ease-in-out alternate;
-            animation: icone 800ms forwards ease-in-out alternate;
+    -webkit-animation: icone 800ms forwards ease-in-out;
+            animation: icone 800ms forwards ease-in-out;
   }
 }
 /*# sourceMappingURL=main.css.map */
