@@ -136,6 +136,32 @@
   }
 }
 
+@-webkit-keyframes anim_loading {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes anim_loading {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .submit {
   font-family: roboto;
   font-size: 1.1rem;
@@ -707,26 +733,47 @@ main {
   cursor: pointer;
 }
 
-.menu .menu--descriptif {
+.menu--1 {
+  -webkit-animation: anim_loading 1s both;
+          animation: anim_loading 1s both;
+  -webkit-animation-delay: 100ms;
+          animation-delay: 100ms;
+}
+
+.menu--2 {
+  -webkit-animation: anim_loading 1s both;
+          animation: anim_loading 1s both;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+
+.menu--3 {
+  -webkit-animation: anim_loading 1s both;
+          animation: anim_loading 1s both;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.menu > .menu--descriptif {
   width: 83%;
   overflow: hidden;
 }
 
-.menu .menu--descriptif h3 {
+.menu > .menu--descriptif h3 {
   font-size: 1.1rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-.menu .menu--descriptif p {
+.menu > .menu--descriptif p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   margin-top: -0.5rem;
 }
 
-.menu .menu--prix {
+.menu > .menu--prix {
   width: 17%;
   padding-top: 15%;
   /* pour ne pas bouger la box en Y pour animation */
@@ -734,7 +781,7 @@ main {
   position: relative;
 }
 
-.menu .menu--prix::after {
+.menu > .menu--prix::after {
   content: "";
   position: absolute;
   top: 0px;
@@ -744,7 +791,7 @@ main {
   background-color: #99E2D0;
 }
 
-.menu .menu--prix::before {
+.menu > .menu--prix::before {
   font-family: "Font Awesome 5 free";
   font-weight: 900;
   cursor: pointer;

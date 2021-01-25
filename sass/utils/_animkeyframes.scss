@@ -56,4 +56,27 @@
         transform: translateX(0px);
     }
   }
+
+
+  @mixin loading_menu {
+  @for $i from 1 through 3 {
+      &--#{$i} {
+        animation: anim_loading 1s both;
+        animation-delay: map-get($delay, $i);
+      }
+    }
+  }
+
+  $delay:(1:100ms, 2:300ms, 3:500ms);
+  
+  @keyframes anim_loading {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
   

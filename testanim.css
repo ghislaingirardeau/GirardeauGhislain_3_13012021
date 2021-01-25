@@ -11,7 +11,7 @@ p {
     overflow: hidden;
 } 
 
-.barre1 {
+.barre {
     width: 83%;
     opacity: 0;
     background-color: red;
