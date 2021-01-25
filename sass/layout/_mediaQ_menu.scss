@@ -70,10 +70,9 @@
     width: 33.3%;
     padding-top: 20px;
   }
-  
+
   input[name=choix] {
-    position: absolute;
-    z-index: -1;
+    
     &:hover + .menu > .menu--descriptif {
       @include animation_menu (descriptif_in);
     }
@@ -87,8 +86,7 @@
 }
 
 input[name=choix] {
-  position: absolute;
-  z-index: -1;
+  
   &:not(:hover) + .menu > .menu--descriptif {
     @include animation_menu (descriptif_out);
   }
@@ -99,6 +97,4 @@ input[name=choix] {
     @include animation_menu (icone_out);
 } 
 }
-
-
 

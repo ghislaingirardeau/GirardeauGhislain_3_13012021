@@ -1,7 +1,57 @@
- @for $i from 1 through 3 {
-      &--#{$i}::before {
-      content: "#{$i}";
-      @include pseudoe_layout ($text_bouton, center, $primary, 4px 8px, 20px);
-      @include position_absolue (26px, 26px, -12.5px, 0.8rem);
-      }
+fichier bouton
+
+input[name="choix"] {
+  position: absolute;
+  z-index: -1;
+  &:checked + .menu > .menu--descriptif {
+    @include animation_menu(descriptif_in);
+  }
+  &:checked + .menu > .menu--prix::after {
+    @include animation_menu(after_in);
+  }
+  &:checked + .menu > .menu--prix::before {
+    @include animation_menu(icone_in);
+    animation-delay: 100ms;
+  }
+}
+.menu--descriptif {
+  @include animation_menu(descriptif_out);
+}
+.menu--prix{
+  &::after{
+    @include animation_menu(after_out);
+  }
+  &::before{
+    @include animation_menu(icone_out);
+  }
+}
+
+fichier mediaqueries laptop menu
+
+input[name=choix] {
+    
+    &:hover + .menu > .menu--descriptif {
+      @include animation_menu (descriptif_in);
     }
+    &:hover + .menu > .menu--prix::after {
+      @include animation_menu (after_in);
+    }
+    &:hover + .menu > .menu--prix::before {
+      @include animation_menu (icone_in);
+  } 
+  }
+}
+
+input[name=choix] {
+  
+  &:not(:hover) + .menu > .menu--descriptif {
+    @include animation_menu (descriptif_out);
+  }
+  &:not(:hover) + .menu > .menu--prix::after {
+    @include animation_menu (after_out);
+  }
+  &:not(:hover) + .menu > .menu--prix::before {
+    @include animation_menu (icone_out);
+} 
+
+

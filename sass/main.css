@@ -249,9 +249,19 @@
   transition: color 100ms ease-out;
 }
 
-input[name="choix"] {
+label:before {
+  content: "";
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 100%;
+  height: 85px;
+  z-index: 1;
+  cursor: pointer;
   position: absolute;
-  z-index: -1;
+}
+
+input[name="choix"] {
+  display: none;
 }
 
 input[name="choix"]:checked + .menu > .menu--descriptif {
@@ -708,6 +718,7 @@ main {
   width: 93.33333%;
   margin: 0 12px;
   text-align: left;
+  position: relative;
 }
 
 .menu {
@@ -730,7 +741,6 @@ main {
   padding-left: 10px;
   margin-bottom: 15px;
   overflow: hidden;
-  cursor: pointer;
 }
 
 .menu--1 {
@@ -1026,10 +1036,6 @@ main {
     width: 33.3%;
     padding-top: 20px;
   }
-  input[name=choix] {
-    position: absolute;
-    z-index: -1;
-  }
   input[name=choix]:hover + .menu > .menu--descriptif {
     -webkit-animation: descriptif_in 800ms forwards ease-in-out;
             animation: descriptif_in 800ms forwards ease-in-out;
@@ -1042,11 +1048,6 @@ main {
     -webkit-animation: icone_in 800ms forwards ease-in-out;
             animation: icone_in 800ms forwards ease-in-out;
   }
-}
-
-input[name=choix] {
-  position: absolute;
-  z-index: -1;
 }
 
 input[name=choix]:not(:hover) + .menu > .menu--descriptif {

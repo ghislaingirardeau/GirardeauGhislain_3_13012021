@@ -25,9 +25,18 @@
   }
 }
 
-input[name="choix"] {
+label:before {
+  content: "";
+  box-sizing: content-box;
+  width: 100%;
+  height: 85px;
+  z-index: 1;
+  cursor: pointer;
   position: absolute;
-  z-index: -1;
+}
+
+input[name="choix"] {
+  display: none;
   &:checked + .menu > .menu--descriptif {
     @include animation_menu(descriptif_in);
   }
@@ -39,6 +48,7 @@ input[name="choix"] {
     animation-delay: 100ms;
   }
 }
+
 .menu--descriptif {
   @include animation_menu(descriptif_out);
 }

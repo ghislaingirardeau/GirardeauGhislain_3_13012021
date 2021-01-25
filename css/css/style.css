@@ -137,9 +137,18 @@
   transition: color 100ms ease-out;
 }
 
-input[name=choix] {
+label:before {
+  content: "";
+  box-sizing: content-box;
+  width: 100%;
+  height: 85px;
+  z-index: 1;
+  cursor: pointer;
   position: absolute;
-  z-index: -1;
+}
+
+input[name=choix] {
+  display: none;
 }
 input[name=choix]:checked + .menu > .menu--descriptif {
   animation: descriptif_in 800ms forwards ease-in-out;
@@ -493,6 +502,7 @@ main {
   width: 93.3333333333%;
   margin: 0 12px;
   text-align: left;
+  position: relative;
 }
 
 .menu {
@@ -506,7 +516,6 @@ main {
   padding-left: 10px;
   margin-bottom: 15px;
   overflow: hidden;
-  cursor: pointer;
 }
 .menu--1 {
   animation: anim_loading 1s both;
@@ -758,10 +767,6 @@ main {
     padding-top: 20px;
   }
 
-  input[name=choix] {
-    position: absolute;
-    z-index: -1;
-  }
   input[name=choix]:hover + .menu > .menu--descriptif {
     animation: descriptif_in 800ms forwards ease-in-out;
   }
@@ -771,10 +776,6 @@ main {
   input[name=choix]:hover + .menu > .menu--prix::before {
     animation: icone_in 800ms forwards ease-in-out;
   }
-}
-input[name=choix] {
-  position: absolute;
-  z-index: -1;
 }
 input[name=choix]:not(:hover) + .menu > .menu--descriptif {
   animation: descriptif_out 800ms forwards ease-in-out;

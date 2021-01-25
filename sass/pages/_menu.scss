@@ -42,6 +42,7 @@ main {
   }
   > form {
     @include box_width($width-box-menu, 0 12px, left);
+    position: relative;
   }
 }
 .menu {
@@ -50,7 +51,6 @@ main {
   padding-left: 10px;
   margin-bottom: 15px;
   overflow: hidden;
-  cursor: pointer;
   @include loading_menu;
 
   > .menu--descriptif {
