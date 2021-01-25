@@ -29,13 +29,13 @@
   }
   to {
     width: 80px;
-    transform: translateZ(1);
+    transform: translateZ(1px);
   }
 }
 @keyframes after_out {
   from {
     width: 80px;
-    transform: translateZ(1);
+    transform: translateZ(1px);
   }
   to {
     width: 0px;
@@ -356,7 +356,6 @@ footer a {
   min-height: 1225px;
   padding-bottom: 60px;
   background-color: #f6f6f6;
-  align-items: space-between;
 }
 .resultats > h2 {
   width: 86.6666666667%;
@@ -365,7 +364,7 @@ footer a {
 }
 .resultats__contenu, .resultats__contenu--nouveau {
   width: 89.3333333333%;
-  margin: 0 20px;
+  margin: 0px 20px;
   text-align: left;
   background-color: white;
   border-radius: 20px;
@@ -379,13 +378,13 @@ footer a {
   object-fit: contain;
   object-position: 0 -20px;
 }
-.resultats__contenu--imgfit.--potrait, .resultats__contenu--nouveau--imgfit.--potrait {
+.resultats__contenu--imgfit .--potrait, .resultats__contenu--nouveau--imgfit .--potrait {
   object-position: 0 -200px;
 }
 .resultats__contenu--layoutdescr, .resultats__contenu--nouveau--layoutdescr {
   box-sizing: content-box;
   position: absolute;
-  top: 100;
+  top: 69%;
   bottom: 0;
   left: 0;
   font-size: 1.2rem;
@@ -445,9 +444,9 @@ main {
 .presentation__restaurant {
   box-sizing: content-box;
   position: absolute;
-  top: 100;
+  top: 69%;
   bottom: 0px;
-  left: 0;
+  left: 0px;
   font-size: 1.2rem;
   width: 100%;
   height: 31%;

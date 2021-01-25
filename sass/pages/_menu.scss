@@ -16,7 +16,7 @@ main {
     @include img_ajust_width(-30px);
   }
   &__restaurant {
-    @include position_absolue(100, 0px, 0, 1.2rem);
+    @include position_absolue(69%, 0px, 0px, 1.2rem);
     @include description_inside($color_background, 4rem, 0px);
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;

@@ -25,13 +25,13 @@
     }
     to{
       width: 80px;
-        transform: translateZ(1);
+        transform: translateZ(1px);
     }
   }
   @keyframes after_out {
     from {
       width: 80px;
-        transform: translateZ(1);
+        transform: translateZ(1px);
     }
     to{
       width: 0px;

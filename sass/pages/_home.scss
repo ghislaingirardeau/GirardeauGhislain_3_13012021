@@ -67,27 +67,26 @@
 .resultats {
   @include flex_layout (column, nowrap, space-between);
   @include box_height (1225px, 60px, $color_background);
-  align-items: space-between;
 
   & > h2 {
     @include box_width($width-box-home, 20px 20px, left);
   }
 
   &__contenu, &__contenu--nouveau {
-    @include box_width($width-box-resto, 0 20px, left);
+    @include box_width($width-box-resto, 0px 20px, left);
     @include box_contour($color_box, 20px, $col_degrade_clair);
     @include img_contain (255px);
 
     &--imgfit {
       @include img_ajust_width (-20px);
 
-      &.--potrait {
+      & .--potrait {
         object-position: 0 -200px;
       }
     }
 
     &--layoutdescr {
-    @include position_absolue(100, 0, 0, 1.2rem);
+    @include position_absolue(69%, 0, 0, 1.2rem);
     @include description_inside($color_box, 0.7rem, 15px);
     > h3 {
       font-size: $h3size;

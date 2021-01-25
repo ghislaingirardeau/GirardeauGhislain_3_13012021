@@ -48,8 +48,8 @@
   }
   to {
     width: 80px;
-    -webkit-transform: translateZ(1);
-            transform: translateZ(1);
+    -webkit-transform: translateZ(1px);
+            transform: translateZ(1px);
   }
 }
 
@@ -61,16 +61,16 @@
   }
   to {
     width: 80px;
-    -webkit-transform: translateZ(1);
-            transform: translateZ(1);
+    -webkit-transform: translateZ(1px);
+            transform: translateZ(1px);
   }
 }
 
 @-webkit-keyframes after_out {
   from {
     width: 80px;
-    -webkit-transform: translateZ(1);
-            transform: translateZ(1);
+    -webkit-transform: translateZ(1px);
+            transform: translateZ(1px);
   }
   to {
     width: 0px;
@@ -82,8 +82,8 @@
 @keyframes after_out {
   from {
     width: 80px;
-    -webkit-transform: translateZ(1);
-            transform: translateZ(1);
+    -webkit-transform: translateZ(1px);
+            transform: translateZ(1px);
   }
   to {
     width: 0px;
@@ -539,9 +539,6 @@ footer a {
   min-height: 1225px;
   padding-bottom: 60px;
   background-color: #f6f6f6;
-  -webkit-box-align: space-between;
-      -ms-flex-align: space-between;
-          align-items: space-between;
 }
 
 .resultats > h2 {
@@ -552,7 +549,7 @@ footer a {
 
 .resultats__contenu, .resultats__contenu--nouveau {
   width: 89.33333%;
-  margin: 0 20px;
+  margin: 0px 20px;
   text-align: left;
   background-color: white;
   border-radius: 20px;
@@ -571,7 +568,7 @@ footer a {
      object-position: 0 -20px;
 }
 
-.resultats__contenu--imgfit.--potrait, .resultats__contenu--nouveau--imgfit.--potrait {
+.resultats__contenu--imgfit .--potrait, .resultats__contenu--nouveau--imgfit .--potrait {
   -o-object-position: 0 -200px;
      object-position: 0 -200px;
 }
@@ -580,7 +577,7 @@ footer a {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   position: absolute;
-  top: 100;
+  top: 69%;
   bottom: 0;
   left: 0;
   font-size: 1.2rem;
@@ -652,9 +649,9 @@ main {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
   position: absolute;
-  top: 100;
+  top: 69%;
   bottom: 0px;
-  left: 0;
+  left: 0px;
   font-size: 1.2rem;
   width: 100%;
   height: 31%;
