@@ -29,20 +29,6 @@ input[name="choix"] {
 fichier mediaqueries laptop menu
 
 input[name=choix] {
-    
-    &:hover + .menu > .menu--descriptif {
-      @include animation_menu (descriptif_in);
-    }
-    &:hover + .menu > .menu--prix::after {
-      @include animation_menu (after_in);
-    }
-    &:hover + .menu > .menu--prix::before {
-      @include animation_menu (icone_in);
-  } 
-  }
-}
-
-input[name=choix] {
   
   &:not(:hover) + .menu > .menu--descriptif {
     @include animation_menu (descriptif_out);

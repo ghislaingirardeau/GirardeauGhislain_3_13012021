@@ -47,16 +47,13 @@ input[name="choix"] {
     @include animation_menu(icone_in);
     animation-delay: 100ms;
   }
-}
-
-.menu--descriptif {
-  @include animation_menu(descriptif_out);
-}
-.menu--prix{
-  &::after{
-    @include animation_menu(after_out);
+  &:not(:checked) + .menu > .menu--descriptif {
+    @include animation_menu (descriptif_out);
   }
-  &::before{
-    @include animation_menu(icone_out);
+  &:not(:checked) + .menu > .menu--prix::after {
+    @include animation_menu (after_out);
   }
+  &:not(:checked) + .menu > .menu--prix::before {
+    @include animation_menu (icone_out);
+  } 
 }

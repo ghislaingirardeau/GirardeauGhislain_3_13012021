@@ -265,35 +265,35 @@ input[name="choix"] {
 }
 
 input[name="choix"]:checked + .menu > .menu--descriptif {
-  -webkit-animation: descriptif_in 800ms forwards ease-in-out;
-          animation: descriptif_in 800ms forwards ease-in-out;
+  -webkit-animation: descriptif_in 800ms both ease-in-out;
+          animation: descriptif_in 800ms both ease-in-out;
 }
 
 input[name="choix"]:checked + .menu > .menu--prix::after {
-  -webkit-animation: after_in 800ms forwards ease-in-out;
-          animation: after_in 800ms forwards ease-in-out;
+  -webkit-animation: after_in 800ms both ease-in-out;
+          animation: after_in 800ms both ease-in-out;
 }
 
 input[name="choix"]:checked + .menu > .menu--prix::before {
-  -webkit-animation: icone_in 800ms forwards ease-in-out;
-          animation: icone_in 800ms forwards ease-in-out;
+  -webkit-animation: icone_in 800ms both ease-in-out;
+          animation: icone_in 800ms both ease-in-out;
   -webkit-animation-delay: 100ms;
           animation-delay: 100ms;
 }
 
-.menu--descriptif {
-  -webkit-animation: descriptif_out 800ms forwards ease-in-out;
-          animation: descriptif_out 800ms forwards ease-in-out;
+input[name="choix"]:not(:checked) + .menu > .menu--descriptif {
+  -webkit-animation: descriptif_out 800ms both ease-in-out;
+          animation: descriptif_out 800ms both ease-in-out;
 }
 
-.menu--prix::after {
-  -webkit-animation: after_out 800ms forwards ease-in-out;
-          animation: after_out 800ms forwards ease-in-out;
+input[name="choix"]:not(:checked) + .menu > .menu--prix::after {
+  -webkit-animation: after_out 800ms both ease-in-out;
+          animation: after_out 800ms both ease-in-out;
 }
 
-.menu--prix::before {
-  -webkit-animation: icone_out 800ms forwards ease-in-out;
-          animation: icone_out 800ms forwards ease-in-out;
+input[name="choix"]:not(:checked) + .menu > .menu--prix::before {
+  -webkit-animation: icone_out 800ms both ease-in-out;
+          animation: icone_out 800ms both ease-in-out;
 }
 
 body {
@@ -1037,31 +1037,28 @@ main {
     padding-top: 20px;
   }
   input[name=choix]:hover + .menu > .menu--descriptif {
-    -webkit-animation: descriptif_in 800ms forwards ease-in-out;
-            animation: descriptif_in 800ms forwards ease-in-out;
+    -webkit-animation: descriptif_in 800ms both ease-in-out;
+            animation: descriptif_in 800ms both ease-in-out;
   }
   input[name=choix]:hover + .menu > .menu--prix::after {
-    -webkit-animation: after_in 800ms forwards ease-in-out;
-            animation: after_in 800ms forwards ease-in-out;
+    -webkit-animation: after_in 800ms both ease-in-out;
+            animation: after_in 800ms both ease-in-out;
   }
   input[name=choix]:hover + .menu > .menu--prix::before {
-    -webkit-animation: icone_in 800ms forwards ease-in-out;
-            animation: icone_in 800ms forwards ease-in-out;
+    -webkit-animation: icone_in 800ms both ease-in-out;
+            animation: icone_in 800ms both ease-in-out;
   }
-}
-
-input[name=choix]:not(:hover) + .menu > .menu--descriptif {
-  -webkit-animation: descriptif_out 800ms forwards ease-in-out;
-          animation: descriptif_out 800ms forwards ease-in-out;
-}
-
-input[name=choix]:not(:hover) + .menu > .menu--prix::after {
-  -webkit-animation: after_out 800ms forwards ease-in-out;
-          animation: after_out 800ms forwards ease-in-out;
-}
-
-input[name=choix]:not(:hover) + .menu > .menu--prix::before {
-  -webkit-animation: icone_out 800ms forwards ease-in-out;
-          animation: icone_out 800ms forwards ease-in-out;
+  input[name=choix]:not(:hover) + .menu > .menu--descriptif {
+    -webkit-animation: descriptif_out 800ms both ease-in-out;
+            animation: descriptif_out 800ms both ease-in-out;
+  }
+  input[name=choix]:not(:hover) + .menu > .menu--prix::after {
+    -webkit-animation: after_out 800ms both ease-in-out;
+            animation: after_out 800ms both ease-in-out;
+  }
+  input[name=choix]:not(:hover) + .menu > .menu--prix::before {
+    -webkit-animation: icone_out 800ms both ease-in-out;
+            animation: icone_out 800ms both ease-in-out;
+  }
 }
 /*# sourceMappingURL=main.css.map */

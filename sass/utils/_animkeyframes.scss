@@ -1,5 +1,5 @@
 @mixin animation_menu ($name) {
-    animation: $name 800ms forwards ease-in-out;
+    animation: $name 800ms both ease-in-out;
   }
   
   @keyframes descriptif_in {
