@@ -24,6 +24,18 @@ p {
     animation: test 2s both 500ms;
 }
 
+input{
+    display: none;
+}
+
+input[type=checkbox] + label:before {
+    content: "";
+    width: 300px;
+    height: 50px;
+    background-color:blue;
+    position: absolute;
+  }
+
 
 @keyframes test {
     0% {
