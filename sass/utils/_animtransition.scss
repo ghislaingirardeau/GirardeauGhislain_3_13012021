@@ -1,4 +1,4 @@
-@mixin animation_jaime($colbg) {
+@mixin animation_jaime {
     &::after {
       @include import_icone(900);
       content: "\f004";

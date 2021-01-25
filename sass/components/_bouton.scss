@@ -12,13 +12,12 @@
 }
 
 .jaime {
+  @include animation_jaime;
   &--restaurant {
     @include position_absolue(75%, 0, 80%, 1.6rem);
-    @include animation_jaime($color_box);
   }
   &--menu {
     @include position_absolue(80%, 0, 80%, 1.6rem);
-    @include animation_jaime($color_background);
   }
   &:hover {
     color: transparent;
