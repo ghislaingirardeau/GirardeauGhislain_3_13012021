@@ -36,6 +36,7 @@ input[name="choix"] {
   }
   &:checked + .menu > .menu--prix::before {
     @include animation_menu(icone_in);
+    animation-delay: 100ms;
   }
 }
 .menu--descriptif {

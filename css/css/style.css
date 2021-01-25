@@ -61,7 +61,7 @@
 @keyframes anim_loading {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
@@ -108,7 +108,7 @@
   left: 0px;
   font-size: 1.6rem;
   opacity: 0;
-  transition: opacity 200ms ease-out;
+  transition: opacity 400ms ease-out;
 }
 .jaime:hover::after {
   opacity: 1;
@@ -149,6 +149,7 @@ input[name=choix]:checked + .menu > .menu--prix::after {
 }
 input[name=choix]:checked + .menu > .menu--prix::before {
   animation: icone_in 800ms forwards ease-in-out;
+  animation-delay: 100ms;
 }
 
 .menu--descriptif {
@@ -419,6 +420,7 @@ header > a {
   bottom: 0;
   left: 20px;
   font-size: 1.2rem;
+  height: 30px;
 }
 
 main {

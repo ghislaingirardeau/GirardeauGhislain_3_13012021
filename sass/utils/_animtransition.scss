@@ -4,7 +4,7 @@
       content: "\f004";
       @include position_absolue(1px, 0, 0px, 1.6rem);
       opacity: 0;
-      transition: opacity 200ms ease-out;
+      transition: opacity 400ms ease-out;
     }
     &:hover::after {
       opacity: 1;

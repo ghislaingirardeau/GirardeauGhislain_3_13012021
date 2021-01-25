@@ -1,6 +1,7 @@
 header {
   > a {
     @include position_absolue(20px, 0, 20px, 1.2rem);
+    height: 30px;
   }
 }
 main {
