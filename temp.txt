@@ -1,11 +1,7 @@
-animation menu : ajustement position en mobile
-
-&:checked + .menu > .menu--descriptif {
-      animation: reduction_descriptif 800ms forwards ease-in-out alternate;
+ @for $i from 1 through 3 {
+      &--#{$i}::before {
+      content: "#{$i}";
+      @include pseudoe_layout ($text_bouton, center, $primary, 4px 8px, 20px);
+      @include position_absolue (26px, 26px, -12.5px, 0.8rem);
+      }
     }
-    &:checked + .menu > .menu--prix::after {
-      animation: apparition_after 800ms forwards ease-in-out alternate;
-    }
-    &:checked + .menu > .menu--prix::before {
-      animation: icone 800ms forwards ease-in-out alternate;
-  } 

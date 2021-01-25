@@ -86,4 +86,19 @@
   }
 }
 
+input[name=choix] {
+  position: absolute;
+  z-index: -1;
+  &:not(:hover) + .menu > .menu--descriptif {
+    @include animation_menu (descriptif_out);
+  }
+  &:not(:hover) + .menu > .menu--prix::after {
+    @include animation_menu (after_out);
+  }
+  &:not(:hover) + .menu > .menu--prix::before {
+    @include animation_menu (icone_out);
+} 
+}
+
+
 

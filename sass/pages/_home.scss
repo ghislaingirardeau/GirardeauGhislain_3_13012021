@@ -29,6 +29,7 @@
 .explicatif {
   @include flex_layout (column, nowrap, space-around);
   @include box_height (440px, 60px, unset);
+  counter-reset: etape;
   & > h2 {
     @include box_width($width-box-home, 20px 20px, left);
   }
@@ -38,14 +39,14 @@
     @include box_width($width-box-home, 0 20px, left);
     @include box_contour($color_background, 20px, $col_degrade_clair);
     position: relative;
+    counter-increment: etape;
 
-    @for $i from 1 through 3 {
-      &--#{$i}::before {
-      content: "#{$i}";
-      @include pseudoe_layout ($text_bouton, center, $primary, 4px 8px, 20px);
-      @include position_absolue (26px, 26px, -12.5px, 0.8rem);
-      }
-    }
+   &::before {
+    content: ""counter(etape)"";
+    @include pseudoe_layout ($text_bouton, center, $primary, 4px 8px, 20px);
+    @include position_absolue (26px, 26px, -12.5px, 0.8rem);
+   }
+    
     &:hover{
       & i {
         color: $primary;

@@ -1,15 +1,10 @@
-.menu {
+body {
     width: 350px;
-    height: 100px;
+    height: 200px;
     display: flex;
-    flex: row;
-    overflow: hidden;
-    
+    flex: column;  
 }
-input {
-    position: absolute;
-    z-index: -1;
-}
+
 p {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -18,13 +13,38 @@ p {
 
 .barre1 {
     width: 83%;
+    opacity: 0;
     background-color: red;
-    animation: barrerev 1s ease-in-out;
+    animation: test 2s both;
+}
+.barre2 {
+    width: 83%;
+    background-color: red;
+    opacity: 0;
+    animation: test 2s both 500ms;
 }
 
+
+@keyframes test {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*  
 input:hover + .menu > .barre1 {
     animation: barre 1s forwards ease-in-out;
 }
+
+input:not(:hover) + .menu > .barre1 {
+    animation: barrerev 1s ease-in-out;
+}
+
 
 .barre2 {
     width: 34%;
@@ -115,3 +135,4 @@ input:hover + .menu > .barre2::before {
     }
 }
 
+*/
