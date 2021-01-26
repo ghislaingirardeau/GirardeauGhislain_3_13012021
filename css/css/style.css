@@ -207,6 +207,7 @@ p {
   flex: row;
   flex-wrap: wrap;
   justify-content: space-between;
+  animation: effacement 100ms 2600ms both ease-in;
 }
 .loader > div {
   width: 47%;
@@ -279,6 +280,14 @@ p {
     background: radial-gradient(ellipse at center, yellow 0%, #ffc401 30%, white 70%);
   }
 }
+@keyframes effacement {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 header {
   min-height: 65px;
   text-align: center;
@@ -287,6 +296,7 @@ header img {
   width: 44%;
   margin: 5% 0;
   text-align: center;
+  animation: logo_header 400ms 2600ms both ease-in-out;
 }
 
 @media screen and (min-width: 1025px) {
@@ -294,6 +304,16 @@ header img {
     width: 24%;
     margin: 1% 1%;
     text-align: center;
+  }
+}
+@keyframes logo_header {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 footer {

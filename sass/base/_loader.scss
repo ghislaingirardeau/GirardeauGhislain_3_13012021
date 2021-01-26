@@ -20,8 +20,8 @@
     flex: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    animation: effacement 100ms 2600ms both ease-in;
     > div {
-
         width: 47%;
         margin-bottom: 10%; 
     }
@@ -44,7 +44,6 @@
         animation: logo3 800ms 1000ms forwards ease-in-out;
     }
     & .logo4{
-
         width: 100%;
         margin-top: 5%; 
         animation: logo4 600ms 1400ms both ease-in;
@@ -103,4 +102,14 @@
         background: radial-gradient(ellipse at center, rgb(255, 255, 0, 1) 0%, rgb(255, 196, 1) 30%, white 70%);
     }
 }
+
+@keyframes effacement {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 
