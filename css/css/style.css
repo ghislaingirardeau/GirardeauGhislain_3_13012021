@@ -185,20 +185,6 @@ p {
   font-size: 1rem;
 }
 
-.contain_logo {
-  position: relative;
-  width: 30%;
-}
-.contain_logo .logoheader {
-  width: 80%;
-  filter: invert(1);
-  position: absolute;
-  z-index: 1;
-  top: 60%;
-  left: 10%;
-  animation: logo1 2400ms forwards ease-in-out;
-}
-
 .loader {
   margin: auto;
   margin-top: 30%;
@@ -207,7 +193,7 @@ p {
   flex: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  animation: effacement 100ms 2600ms both ease-in;
+  /* animation: effacement 100ms 2600ms both ease-in; */
 }
 .loader > div {
   width: 47%;
@@ -231,6 +217,20 @@ p {
   width: 100%;
   margin-top: 5%;
   animation: logo4 600ms 1400ms both ease-in;
+}
+
+.contain_logo {
+  position: relative;
+  width: 30%;
+}
+.contain_logo .logoheader {
+  width: 80%;
+  filter: invert(1);
+  position: absolute;
+  z-index: 1;
+  top: 60%;
+  left: 10%;
+  animation: logo1 2400ms forwards ease-in-out;
 }
 
 @keyframes logo1 {
@@ -296,7 +296,7 @@ header img {
   width: 44%;
   margin: 5% 0;
   text-align: center;
-  animation: logo_header 400ms 2600ms both ease-in-out;
+  animation: logo_header 400ms 2600ms both ease-out;
 }
 
 @media screen and (min-width: 1025px) {

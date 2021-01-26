@@ -1,16 +1,3 @@
-.contain_logo {
-    position: relative;
-    width: 30%;
-    & .logoheader {
-        width: 80%;
-        filter:invert(1);
-        position: absolute;
-        z-index: 1; 
-        top: 60%;
-        left: 10%;
-        animation: logo1 2400ms forwards ease-in-out;
-    }
-}
 
 .loader {
     margin: auto;
@@ -20,7 +7,8 @@
     flex: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    animation: effacement 100ms 2600ms both ease-in;
+    /* animation: effacement 100ms 2600ms both ease-in; */
+    
     > div {
         width: 47%;
         margin-bottom: 10%; 
@@ -47,6 +35,19 @@
         width: 100%;
         margin-top: 5%; 
         animation: logo4 600ms 1400ms both ease-in;
+    }
+}
+.contain_logo {
+    position: relative;
+    width: 30%;
+    & .logoheader {
+        width: 80%;
+        filter:invert(1);
+        position: absolute;
+        z-index: 1; 
+        top: 60%;
+        left: 10%;
+        animation: logo1 2400ms forwards ease-in-out;
     }
 }
 
