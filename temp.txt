@@ -42,13 +42,20 @@ input[name=choix] {
 
 
 
- #img--paysage {
-  @include img_ajust_width (-20px);
+@keyframes logo4 {
+    0% {
+        background: radial-gradient(ellipse at center, rgb(255, 255, 0, 0) 0%, white 0%);   
 }
-
-#img--portrait {
-  @include img_ajust_width (-20px);
-  object-position: 0 -100px;
+    25% {
+    background: radial-gradient(ellipse at center, rgb(255, 255, 0, 0.6) 0%, white 10%);   
 }
-
-
+    50% {
+        background: radial-gradient(ellipse at center, rgb(255, 255, 0, 1) 0%, rgb(255, 196, 0.5) 5%, white 30%);   
+}
+    75% {
+    background: radial-gradient(ellipse at center, rgb(255, 255, 0, 1) 0%, rgb(255, 196, 0.5) 15%, white 50%);   
+}
+    100% {
+        background: radial-gradient(ellipse at center, rgb(255, 255, 0, 1) 0%, rgb(255, 196, 1) 30%, white 70%);
+    }
+}

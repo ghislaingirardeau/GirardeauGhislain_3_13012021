@@ -1,3 +1,53 @@
+.bloc {
+    width: 100%;
+    display: flex;
+    flex: row;
+}
+
+.logo1 {
+animation: logo1 2s ease-in-out;
+}
+@keyframes logo1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.logo4{
+    background-color: red;
+}
+
+.logo5 {
+    animation: logo5 3s ease-in-out;
+    transform-origin: top;
+    }
+    @keyframes logo5 {
+        0% {
+            transform: rotateX(0deg) translateZ(0px);
+        }
+        25%{
+            transform: rotateX(-45deg) translateZ(-10px);
+
+        }
+        50% {
+            transform: rotateX(0deg) translateZ(0px);
+        }
+        75%{
+            transform: rotateX(45deg) translateZ(10px);
+        }
+        100% {
+            transform: rotateX(0deg);
+        }
+    }
+
+
+
 .conteneur {
     width: 350px;
     height: 200px;
@@ -14,14 +64,11 @@ border: 2px solid green;
 
 
 .barre1:hover{
-    animation: test1 1s forwards ease-in-out;
+    /* animation: test1 1s forwards ease-in-out; */
 }
 .barre1:not(:hover){
-    animation: test-out 1s forwards ease-in-out;
+    /* animation: test-out 1s forwards ease-in-out; */
 }
-
-
-
 
 .barre2 {
     width: 17%;
