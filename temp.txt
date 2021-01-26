@@ -41,3 +41,14 @@ input[name=choix] {
 } 
 
 
+
+ #img--paysage {
+  @include img_ajust_width (-20px);
+}
+
+#img--portrait {
+  @include img_ajust_width (-20px);
+  object-position: 0 -100px;
+}
+
+

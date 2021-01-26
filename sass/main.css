@@ -570,19 +570,6 @@ footer a {
   position: relative;
 }
 
-.resultats__contenu--imgfit, .resultats__contenu--nouveau--imgfit {
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: 0 -20px;
-     object-position: 0 -20px;
-}
-
-.resultats__contenu--imgfit .--potrait, .resultats__contenu--nouveau--imgfit .--potrait {
-  -o-object-position: 0 -200px;
-     object-position: 0 -200px;
-}
-
 .resultats__contenu--layoutdescr, .resultats__contenu--nouveau--layoutdescr {
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -616,6 +603,22 @@ footer a {
   background-color: #99E2D0;
   padding: 0.4rem;
   border-radius: 2px;
+}
+
+.resultats__img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: 0 -20px;
+     object-position: 0 -20px;
+}
+
+.resultats__img--portrait {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: 0 -80px;
+     object-position: 0 -80px;
 }
 
 header > a {
@@ -938,10 +941,6 @@ main {
     width: 24%;
     margin: 0px 7px 15px;
     text-align: left;
-  }
-  .resultats__contenu--imgfit, .resultats__contenu--nouveau--imgfit {
-    -o-object-position: 0 0px;
-       object-position: 0 0px;
   }
   #coeur--plein {
     color: red;

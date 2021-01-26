@@ -63,9 +63,6 @@
     &__contenu, &__contenu--nouveau {
       @include box_width(90px, 0px 7px 15px, left);
 
-      &--imgfit {
-        object-position: 0 0px;
-      }
     }
   }
   #coeur--plein{
