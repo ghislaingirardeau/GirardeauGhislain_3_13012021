@@ -308,10 +308,7 @@ p {
 }
 @keyframes logo4 {
   0% {
-    background: radial-gradient(ellipse at center, rgba(255, 255, 0, 0.2) 15%, rgba(255, 196, 0, 0.2) 30%, white 30%);
-  }
-  50% {
-    background: radial-gradient(ellipse at center, rgba(255, 255, 0, 0.5) 15%, rgba(255, 196, 0, 0.5) 30%, white 50%);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 0, 0.4) 15%, rgba(255, 196, 0, 0.4) 30%, white 30%);
   }
   100% {
     background: radial-gradient(ellipse at center, yellow 15%, #ffc400 30%, white 70%);
