@@ -338,8 +338,8 @@ p {
 
 /* Animation header deplacement pour position final */
 #logo_ohmyfood--index {
-  -webkit-animation: logo_header 400ms 2000ms both ease-out;
-          animation: logo_header 400ms 2000ms both ease-out;
+  -webkit-animation: logo_header 400ms 2400ms both ease-out;
+          animation: logo_header 400ms 2400ms both ease-out;
 }
 
 @-webkit-keyframes logo_header {
@@ -388,8 +388,8 @@ p {
           justify-content: space-between;
   border: 2px solid black;
   border-radius: 5px;
-  -webkit-animation: loader-out 300ms 2300ms both ease-in;
-          animation: loader-out 300ms 2300ms both ease-in;
+  -webkit-animation: loader-out 300ms 2400ms both ease-in;
+          animation: loader-out 300ms 2400ms both ease-in;
 }
 
 .loader > div {
@@ -404,8 +404,8 @@ p {
 .loader .logo2 {
   width: 40%;
   margin: 10% 30%;
-  -webkit-animation: logo2 400ms 400ms forwards ease-out alternate;
-          animation: logo2 400ms 400ms forwards ease-out alternate;
+  -webkit-animation: logo2 400ms 200ms forwards ease-out alternate;
+          animation: logo2 400ms 200ms forwards ease-out alternate;
 }
 
 .loader .logo3 {
@@ -413,15 +413,15 @@ p {
   margin: 0% 10%;
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
-  -webkit-animation: logo3 400ms 800ms forwards ease-in-out;
-          animation: logo3 400ms 800ms forwards ease-in-out;
+  -webkit-animation: logo3 400ms 600ms forwards ease-in-out;
+          animation: logo3 400ms 600ms forwards ease-in-out;
 }
 
 .loader .logo4 {
   width: 100%;
   margin: 5% -2%;
-  -webkit-animation: logo4 600ms 1200ms both ease-in;
-          animation: logo4 600ms 1200ms both ease-in;
+  -webkit-animation: logo4 400ms 1000ms both ease-in;
+          animation: logo4 400ms 1000ms both ease-in;
 }
 
 /* Animation du logo menu */
@@ -430,28 +430,30 @@ p {
   width: 30%;
 }
 
-.contain_logo .logoheader {
-  width: 80%;
-  -webkit-filter: invert(1);
-          filter: invert(1);
+.contain_logo::after {
+  content: "OHMYFOOD";
+  font-family: "Shrikhand";
+  font-size: 0.8rem;
+  font-weight: 200;
+  color: white;
   position: absolute;
   top: 60%;
   left: 10%;
-  z-index: 1;
-  -webkit-animation: logo1 2000ms 200ms forwards ease-in-out;
-          animation: logo1 2000ms 200ms forwards ease-in-out;
+  opacity: 0;
+  -webkit-animation: logo1 2400ms forwards ease-in-out;
+          animation: logo1 2400ms forwards ease-in-out;
 }
 
 @-webkit-keyframes logo1 {
   0% {
     opacity: 0;
   }
-  30% {
+  10% {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  85% {
+  90% {
     -webkit-transform: translateY(10px);
             transform: translateY(10px);
     opacity: 1;
@@ -467,12 +469,12 @@ p {
   0% {
     opacity: 0;
   }
-  30% {
+  10% {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
-  85% {
+  90% {
     -webkit-transform: translateY(10px);
             transform: translateY(10px);
     opacity: 1;
@@ -584,6 +586,10 @@ p {
     margin-left: 12%;
     width: 35%;
   }
+  .contain_logo::after {
+    font-size: 1rem;
+    margin-left: 4%;
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -591,6 +597,10 @@ p {
     margin-top: 0%;
     margin-left: 17%;
     width: 25%;
+  }
+  .contain_logo::after {
+    font-size: 1.2rem;
+    margin-left: 4%;
   }
 }
 

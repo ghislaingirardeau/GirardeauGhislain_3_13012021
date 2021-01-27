@@ -19,7 +19,7 @@
 
   /* Animation header deplacement pour position final */
   #logo_ohmyfood--index {
-    animation: logo_header 400ms 2000ms both ease-out;
+    animation: logo_header 400ms 2400ms both ease-out;
   }
   @keyframes logo_header {
     0% {
@@ -40,8 +40,8 @@
     @include flex_layout (row, wrap, space-between);
     border: 2px solid black;
     border-radius: 5px;
-    animation: loader-out 300ms 2300ms both ease-in;
-
+    animation: loader-out 300ms 2400ms both ease-in;
+ 
     > div {
         @include position_width (47%, 0 0 10%);
     }
@@ -51,28 +51,29 @@
     }
     & .logo2{
         @include position_width (40%, 10% 30%);
-        animation: logo2 400ms 400ms forwards ease-out alternate;
+        animation: logo2 400ms 200ms forwards ease-out alternate;
     }
     & .logo3{
         @include position_width (80%, 0% 10%);
         transform: rotate(-180deg);
-        animation: logo3 400ms 800ms forwards ease-in-out;
+        animation: logo3 400ms 600ms forwards ease-in-out;
     }
     & .logo4{
         @include position_width (100%, 5% -2%);
-        animation: logo4 600ms 1200ms both ease-in;
+        animation: logo4 400ms 1000ms both ease-in;
     }
 }
 /* Animation du logo menu */
 .contain_logo {
     position: relative;
     width: 30%;
-    & .logoheader {
-        width: 80%;
-        filter:invert(1);
+    &::after{
+        content: "OHMYFOOD";
+        @include font("Shrikhand", 0.8rem, 200);
+        color: $text_footer;
         @include position_abs_top_left (60%, 10%);
-        z-index: 1; 
-        animation: logo1 2000ms 200ms forwards ease-in-out;
+        opacity: 0;
+        animation: logo1 2400ms forwards ease-in-out;
     }
 }
 
@@ -80,11 +81,11 @@
     0% {
         opacity: 0;
     }
-    30%{
+    10%{
         opacity: 1;
         transform: translateY(0);
     }
-    85% {
+    90% {
         transform: translateY(10px);
         opacity: 1;
     }
@@ -143,6 +144,12 @@
         margin-left: 12%;
         width: 35%;
     }
+    .contain_logo {
+        &::after{
+            font-size: 1rem;
+            margin-left: 4%;
+        }
+    }
 }
 
 @include laptop {
@@ -150,6 +157,12 @@
         margin-top: 0%;
         margin-left: 17%;
         width: 25%;
+    }
+    .contain_logo {
+        &::after{
+            font-size: 1.2rem;
+            margin-left: 4%;
+        }
     }
 }
 
