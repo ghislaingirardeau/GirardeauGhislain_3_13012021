@@ -185,6 +185,7 @@ p {
   font-size: 1rem;
 }
 
+/* Animation corps page */
 @keyframes load-home {
   0% {
     opacity: 0;
@@ -193,6 +194,22 @@ p {
     opacity: 1;
   }
 }
+/* Animation header */
+#logo_ohmyfood--index {
+  animation: logo_header 400ms 2000ms both ease-out;
+}
+
+@keyframes logo_header {
+  0% {
+    opacity: 0;
+    transform: translateY(205px) translateX(-80px) scale(0.2);
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+}
+/* Animation du loader */
 .loader {
   position: absolute;
   top: 35%;
@@ -230,6 +247,7 @@ p {
   animation: logo4 600ms 1200ms both ease-in;
 }
 
+/* Animation du logo menu */
 .contain_logo {
   position: relative;
   width: 30%;
@@ -323,25 +341,11 @@ header img {
   text-align: center;
 }
 
-#logo_ohmyfood--index {
-  animation: logo_header 400ms 2000ms both ease-out;
-}
-
 @media screen and (min-width: 1025px) {
   header img {
     width: 24%;
     margin: 1% 1%;
     text-align: center;
-  }
-}
-@keyframes logo_header {
-  0% {
-    opacity: 0;
-    transform: translateY(150px) translateX(-50px) scale(0.2);
-  }
-  100% {
-    transform: translateY(0px) scale(1);
-    opacity: 1;
   }
 }
 footer {
@@ -460,6 +464,7 @@ footer a {
   padding-bottom: 60px;
   background-color: unset;
   counter-reset: etape;
+  background-color: white;
 }
 .explicatif > h2 {
   width: 86.6666666667%;

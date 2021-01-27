@@ -34,6 +34,7 @@
   @include flex_layout (column, nowrap, space-around);
   @include box_height (440px, 60px, unset);
   counter-reset: etape;
+  background-color: $color_box;
   & > h2 {
     @include box_width($width-box-home, 20px 20px, left);
   }

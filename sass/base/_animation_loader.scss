@@ -1,8 +1,7 @@
-
+/* Animation corps page */
 @mixin load-home {
     animation: load-home 250ms 2200ms forwards ease-in-out;
 }
-
 
 @keyframes load-home {
     0% {
@@ -13,6 +12,23 @@
     }
   }
 
+  /* Animation header */
+  #logo_ohmyfood--index {
+    animation: logo_header 400ms 2000ms both ease-out;
+  }
+  @keyframes logo_header {
+    0% {
+      opacity: 0;
+      transform: translateY(205px) translateX(-80px) scale(0.2);
+  }
+  
+  100% {
+      transform: translateY(0px) scale(1);
+      opacity: 1;
+  }
+  }
+
+  /* Animation du loader */
 .loader {
     @include position_abs_top_left (35%, 20%);
     width: 60%;
@@ -42,6 +58,7 @@
         animation: logo4 600ms 1200ms both ease-in;
     }
 }
+/* Animation du logo menu */
 .contain_logo {
     position: relative;
     width: 30%;
