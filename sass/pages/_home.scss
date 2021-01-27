@@ -1,4 +1,6 @@
 .recherche {
+  opacity: 0;
+  animation: load-home 100ms 3s forwards ease-in-out;
   @include flex_layout (column, nowrap, flex-start);
   @include box_height (340px, 0, $color_background);
   text-align: center;
@@ -27,6 +29,8 @@
 }
 
 .explicatif {
+  opacity: 0;
+  animation: load-home 100ms 3s forwards ease-in-out;
   @include flex_layout (column, nowrap, space-around);
   @include box_height (440px, 60px, unset);
   counter-reset: etape;
@@ -65,6 +69,8 @@
 }
 
 .resultats {
+  opacity: 0;
+  animation: load-home 100ms 3s forwards ease-in-out;
   @include flex_layout (column, nowrap, space-between);
   @include box_height (1225px, 60px, $color_background);
 

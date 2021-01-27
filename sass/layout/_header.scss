@@ -3,7 +3,7 @@ header {
   text-align: center;
   & img {
     @include box_width (165px, 5% 0, center);
-    animation: logo_header 400ms 2600ms both ease-out;
+    animation: logo_header 400ms 2000ms both ease-out;
   }
 }
 
@@ -19,11 +19,11 @@ header {
 @keyframes logo_header {
   0% {
     opacity: 0;
-    transform: translateY(300px);
+    transform: translateY(150px) translateX(-50px) scale(0.2);
 }
 
 100% {
-    transform: translateY(0px);
+    transform: translateY(0px) scale(1);
     opacity: 1;
 }
 }

@@ -1,14 +1,23 @@
 
+.contain__loader {
+position: absolute;
+width: 100%;
+height: 100%;
+animation: loader-out 400ms 2300ms both ease-in;
+}
 .loader {
     margin: auto;
-    margin-top: 30%;
-    width: 70%;
+    margin-top: 45%;
+    width: 60%;
     display: flex;
     flex: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* animation: effacement 100ms 2600ms both ease-in; */
+    border: 2px solid black;
+    border-radius: 5px;
     
+    /*  */
+
     > div {
         width: 47%;
         margin-bottom: 10%; 
@@ -19,22 +28,21 @@
         width: 100%;
     }
     & .logo2{
-
         width: 40%;
-        margin: 10% 30%;
-        animation: logo2 800ms 400ms ease-out alternate;
+        margin: 5% 30%;
+        animation: logo2 400ms 400ms forwards ease-out alternate;
     }
     & .logo3{
 
         width: 80%;
         margin-left: 10%;
         transform: rotate(-180deg);
-        animation: logo3 800ms 1000ms forwards ease-in-out;
+        animation: logo3 400ms 800ms forwards ease-in-out;
     }
     & .logo4{
         width: 100%;
-        margin-top: 5%; 
-        animation: logo4 600ms 1400ms both ease-in;
+        margin: 5% -2%; 
+        animation: logo4 600ms 1200ms both ease-in;
     }
 }
 .contain_logo {
@@ -47,7 +55,7 @@
         z-index: 1; 
         top: 60%;
         left: 10%;
-        animation: logo1 2400ms forwards ease-in-out;
+        animation: logo1 2000ms forwards ease-in-out;
     }
 }
 
@@ -61,11 +69,11 @@
         transform: translateY(0);
     }
     85% {
-        transform: translateY(30px);
+        transform: translateY(10px);
         opacity: 1;
     }
     100% {
-        transform: translateY(-400px);
+        transform: translateY(-50px);
         opacity: 0;
     }
 }
@@ -75,11 +83,11 @@
     0% {
         transform: translateY(0px);
     }
-    85% {
-        transform: translateY(-40px);
+    80% {
+        transform: translateY(-15px);
     }
     100%{
-        transform: translateY(0px);
+        transform: translateY(20px);
     }
 }
 
@@ -93,18 +101,19 @@
 }
 
 @keyframes logo4 {
+  
     0% {
-        background: radial-gradient(ellipse at center, rgb(255, 255, 0, 0) 0%, white 0%);   
-}
+    background: radial-gradient(ellipse at center, rgba(255, 255, 0, 0.2) 15%, rgba(255, 196, 0, 0.2) 30%, white 30%);
+    }
     50% {
-    background: radial-gradient(ellipse at center, rgb(255, 255, 0, 1) 0%, white 30%);   
+    background: radial-gradient(ellipse at center, rgba(255, 255, 0, 0.5) 15%, rgba(255, 196, 0, 0.5) 30%, white 50%);
 }
     100% {
-        background: radial-gradient(ellipse at center, rgb(255, 255, 0, 1) 0%, rgb(255, 196, 1) 30%, white 70%);
+        background: radial-gradient(ellipse at center, rgba(255, 255, 0, 1) 15%, rgba(255, 196, 0, 1) 30%, white 70%);
     }
 }
 
-@keyframes effacement {
+@keyframes loader-out {
     0% {
         opacity: 1;
     }
@@ -112,5 +121,6 @@
         opacity: 0;
     }
 }
+
 
 
