@@ -162,24 +162,6 @@
   }
 }
 
-@-webkit-keyframes load-home {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes load-home {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 .submit {
   font-family: roboto;
   font-size: 1.1rem;
@@ -329,9 +311,27 @@ p {
   font-size: 1rem;
 }
 
+@-webkit-keyframes load-home {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes load-home {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .loader {
   position: absolute;
-  top: 45%;
+  top: 35%;
   left: 20%;
   width: 60%;
   display: -webkit-box;
@@ -537,6 +537,22 @@ p {
   }
 }
 
+@media screen and (min-width: 666px) {
+  .loader {
+    margin-top: 5%;
+    margin-left: 12%;
+    width: 35%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .loader {
+    margin-top: 0%;
+    margin-left: 17%;
+    width: 25%;
+  }
+}
+
 header {
   min-height: 65px;
   text-align: center;
@@ -589,8 +605,8 @@ header img {
 
 footer {
   opacity: 0;
-  -webkit-animation: load-home 100ms 3s forwards ease-in-out;
-          animation: load-home 100ms 3s forwards ease-in-out;
+  -webkit-animation: load-home 250ms 2200ms forwards ease-in-out;
+          animation: load-home 250ms 2200ms forwards ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -678,8 +694,8 @@ footer a {
 
 .recherche {
   opacity: 0;
-  -webkit-animation: load-home 100ms 3s forwards ease-in-out;
-          animation: load-home 100ms 3s forwards ease-in-out;
+  -webkit-animation: load-home 250ms 2200ms forwards ease-in-out;
+          animation: load-home 250ms 2200ms forwards ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -731,8 +747,8 @@ footer a {
 
 .explicatif {
   opacity: 0;
-  -webkit-animation: load-home 100ms 3s forwards ease-in-out;
-          animation: load-home 100ms 3s forwards ease-in-out;
+  -webkit-animation: load-home 250ms 2200ms forwards ease-in-out;
+          animation: load-home 250ms 2200ms forwards ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -801,8 +817,8 @@ footer a {
 
 .resultats {
   opacity: 0;
-  -webkit-animation: load-home 100ms 3s forwards ease-in-out;
-          animation: load-home 100ms 3s forwards ease-in-out;
+  -webkit-animation: load-home 250ms 2200ms forwards ease-in-out;
+          animation: load-home 250ms 2200ms forwards ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
