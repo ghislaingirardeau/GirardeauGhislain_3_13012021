@@ -193,24 +193,17 @@ p {
   font-size: 1rem;
 }
 
-.contain__loader {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  animation: loader-out 400ms 2300ms both ease-in;
-}
-
 .loader {
-  margin: auto;
-  margin-top: 45%;
+  position: absolute;
+  margin: 45% 20%;
   width: 60%;
   display: flex;
-  flex: row;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   border: 2px solid black;
   border-radius: 5px;
-  /*  */
+  animation: loader-out 400ms 2300ms both ease-in;
 }
 .loader > div {
   width: 47%;
@@ -313,6 +306,9 @@ header img {
   width: 44%;
   margin: 5% 0;
   text-align: center;
+}
+
+#logo_ohmyfood--index {
   animation: logo_header 400ms 2000ms both ease-out;
 }
 
