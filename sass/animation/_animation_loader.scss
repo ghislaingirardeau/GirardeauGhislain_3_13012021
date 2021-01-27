@@ -51,7 +51,7 @@
     }
     & .logo2{
         @include position_width (40%, 10% 30%);
-        animation: logo2 400ms 200ms forwards ease-out alternate;
+        animation: logo2 400ms 200ms forwards ease-out;
     }
     & .logo3{
         @include position_width (80%, 0% 10%);
@@ -81,7 +81,7 @@
     0% {
         opacity: 0;
     }
-    10%{
+    20%{
         opacity: 1;
         transform: translateY(0);
     }
@@ -136,9 +136,7 @@
 
 @include tablette {
     .loader {
-        margin-top: 5%;
-        margin-left: 12%;
-        width: 35%;
+        @include position_width(35%, 5% 12%);
     }
     .contain_logo {
         &::after{
@@ -150,9 +148,7 @@
 
 @include laptop {
     .loader {
-        margin-top: 0%;
-        margin-left: 17%;
-        width: 25%;
+        @include position_width(25%, 0% 17%);
     }
     .contain_logo {
         &::after{

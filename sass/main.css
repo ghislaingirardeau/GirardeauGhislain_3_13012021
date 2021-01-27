@@ -5,6 +5,291 @@
 /* ajustement bloc dans l'image en absolue */
 /* mixin bouton */
 /* commun au bouton type submit */
+/* Animation corps page pour apparition */
+.recherche, .explicatif, .resultats, footer {
+  opacity: 0;
+  -webkit-animation: load-home 250ms 2300ms forwards ease-in-out;
+          animation: load-home 250ms 2300ms forwards ease-in-out;
+}
+
+@-webkit-keyframes load-home {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes load-home {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animation header deplacement pour position final */
+#logo_ohmyfood--index {
+  -webkit-animation: logo_header 400ms 2400ms both ease-out;
+          animation: logo_header 400ms 2400ms both ease-out;
+}
+
+@-webkit-keyframes logo_header {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(225px) translateX(-60px) scale(0.2);
+            transform: translateY(225px) translateX(-60px) scale(0.2);
+  }
+  100% {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes logo_header {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(225px) translateX(-60px) scale(0.2);
+            transform: translateY(225px) translateX(-60px) scale(0.2);
+  }
+  100% {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Animation du loader */
+.loader {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 2px solid black;
+  border-radius: 5px;
+  -webkit-animation: loader-out 300ms 2400ms both ease-in;
+          animation: loader-out 300ms 2400ms both ease-in;
+}
+
+.loader > div {
+  width: 47%;
+  margin: 0 0 10%;
+}
+
+.loader .logo1 {
+  width: 100%;
+}
+
+.loader .logo2 {
+  width: 40%;
+  margin: 10% 30%;
+  -webkit-animation: logo2 400ms 200ms forwards ease-out;
+          animation: logo2 400ms 200ms forwards ease-out;
+}
+
+.loader .logo3 {
+  width: 80%;
+  margin: 0% 10%;
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  -webkit-animation: logo3 400ms 600ms forwards ease-in-out;
+          animation: logo3 400ms 600ms forwards ease-in-out;
+}
+
+.loader .logo4 {
+  width: 100%;
+  margin: 5% -2%;
+  -webkit-animation: logo4 400ms 1000ms both ease-in;
+          animation: logo4 400ms 1000ms both ease-in;
+}
+
+/* Animation du logo menu */
+.contain_logo {
+  position: relative;
+  width: 30%;
+}
+
+.contain_logo::after {
+  content: "OHMYFOOD";
+  font-family: "Shrikhand";
+  font-size: 0.8rem;
+  font-weight: 200;
+  color: white;
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  opacity: 0;
+  -webkit-animation: logo1 2400ms forwards ease-in-out;
+          animation: logo1 2400ms forwards ease-in-out;
+}
+
+@-webkit-keyframes logo1 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  90% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+}
+
+@keyframes logo1 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  90% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes logo2 {
+  0% {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+  80% {
+    -webkit-transform: translateY(-10px) scale(1.1);
+            transform: translateY(-10px) scale(1.1);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+
+@keyframes logo2 {
+  0% {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+  }
+  80% {
+    -webkit-transform: translateY(-10px) scale(1.1);
+            transform: translateY(-10px) scale(1.1);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+
+@-webkit-keyframes logo3 {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes logo3 {
+  0% {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes logo4 {
+  0% {
+    background: radial-gradient(ellipse at center, rgba(255, 255, 0, 0.4) 15%, rgba(255, 196, 0, 0.4) 30%, white 30%);
+  }
+  100% {
+    background: radial-gradient(ellipse at center, yellow 15%, #ffc400 30%, white 70%);
+  }
+}
+
+@keyframes logo4 {
+  0% {
+    background: radial-gradient(ellipse at center, rgba(255, 255, 0, 0.4) 15%, rgba(255, 196, 0, 0.4) 30%, white 30%);
+  }
+  100% {
+    background: radial-gradient(ellipse at center, yellow 15%, #ffc400 30%, white 70%);
+  }
+}
+
+@-webkit-keyframes loader-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes loader-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 666px) {
+  .loader {
+    width: 35%;
+    margin: 5% 12%;
+  }
+  .contain_logo::after {
+    font-size: 1rem;
+    margin-left: 4%;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .loader {
+    width: 25%;
+    margin: 0% 17%;
+  }
+  .contain_logo::after {
+    font-size: 1.2rem;
+    margin-left: 4%;
+  }
+}
+
 @-webkit-keyframes descriptif_in {
   from {
     width: 83%;
@@ -13,6 +298,7 @@
     width: 65%;
   }
 }
+
 @keyframes descriptif_in {
   from {
     width: 83%;
@@ -296,6 +582,33 @@ input[name="choix"]:not(:checked) + .menu > .menu--prix::before {
           animation: icone_out 800ms both ease-in-out;
 }
 
+@media screen and (min-width: 1025px) {
+  input[name=choix]:hover + .menu > .menu--descriptif {
+    -webkit-animation: descriptif_in 800ms both ease-in-out;
+            animation: descriptif_in 800ms both ease-in-out;
+  }
+  input[name=choix]:hover + .menu > .menu--prix::after {
+    -webkit-animation: after_in 800ms both ease-in-out;
+            animation: after_in 800ms both ease-in-out;
+  }
+  input[name=choix]:hover + .menu > .menu--prix::before {
+    -webkit-animation: icone_in 800ms both ease-in-out;
+            animation: icone_in 800ms both ease-in-out;
+  }
+  input[name=choix]:not(:hover) + .menu > .menu--descriptif {
+    -webkit-animation: descriptif_out 800ms both ease-in-out;
+            animation: descriptif_out 800ms both ease-in-out;
+  }
+  input[name=choix]:not(:hover) + .menu > .menu--prix::after {
+    -webkit-animation: after_out 800ms both ease-in-out;
+            animation: after_out 800ms both ease-in-out;
+  }
+  input[name=choix]:not(:hover) + .menu > .menu--prix::before {
+    -webkit-animation: icone_out 800ms both ease-in-out;
+            animation: icone_out 800ms both ease-in-out;
+  }
+}
+
 body {
   margin: auto;
   font-family: roboto;
@@ -309,293 +622,6 @@ a {
 
 p {
   font-size: 1rem;
-}
-
-/* Animation corps page pour apparition */
-.recherche, .explicatif, .resultats, footer {
-  opacity: 0;
-  -webkit-animation: load-home 250ms 2300ms forwards ease-in-out;
-          animation: load-home 250ms 2300ms forwards ease-in-out;
-}
-
-@-webkit-keyframes load-home {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes load-home {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/* Animation header deplacement pour position final */
-#logo_ohmyfood--index {
-  -webkit-animation: logo_header 400ms 2400ms both ease-out;
-          animation: logo_header 400ms 2400ms both ease-out;
-}
-
-@-webkit-keyframes logo_header {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(225px) translateX(-60px) scale(0.2);
-            transform: translateY(225px) translateX(-60px) scale(0.2);
-  }
-  100% {
-    -webkit-transform: translateY(0px) scale(1);
-            transform: translateY(0px) scale(1);
-    opacity: 1;
-  }
-}
-
-@keyframes logo_header {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(225px) translateX(-60px) scale(0.2);
-            transform: translateY(225px) translateX(-60px) scale(0.2);
-  }
-  100% {
-    -webkit-transform: translateY(0px) scale(1);
-            transform: translateY(0px) scale(1);
-    opacity: 1;
-  }
-}
-
-/* Animation du loader */
-.loader {
-  position: absolute;
-  top: 35%;
-  left: 20%;
-  width: 60%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  border: 2px solid black;
-  border-radius: 5px;
-  -webkit-animation: loader-out 300ms 2400ms both ease-in;
-          animation: loader-out 300ms 2400ms both ease-in;
-}
-
-.loader > div {
-  width: 47%;
-  margin: 0 0 10%;
-}
-
-.loader .logo1 {
-  width: 100%;
-}
-
-.loader .logo2 {
-  width: 40%;
-  margin: 10% 30%;
-  -webkit-animation: logo2 400ms 200ms forwards ease-out alternate;
-          animation: logo2 400ms 200ms forwards ease-out alternate;
-}
-
-.loader .logo3 {
-  width: 80%;
-  margin: 0% 10%;
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-  -webkit-animation: logo3 400ms 600ms forwards ease-in-out;
-          animation: logo3 400ms 600ms forwards ease-in-out;
-}
-
-.loader .logo4 {
-  width: 100%;
-  margin: 5% -2%;
-  -webkit-animation: logo4 400ms 1000ms both ease-in;
-          animation: logo4 400ms 1000ms both ease-in;
-}
-
-/* Animation du logo menu */
-.contain_logo {
-  position: relative;
-  width: 30%;
-}
-
-.contain_logo::after {
-  content: "OHMYFOOD";
-  font-family: "Shrikhand";
-  font-size: 0.8rem;
-  font-weight: 200;
-  color: white;
-  position: absolute;
-  top: 60%;
-  left: 10%;
-  opacity: 0;
-  -webkit-animation: logo1 2400ms forwards ease-in-out;
-          animation: logo1 2400ms forwards ease-in-out;
-}
-
-@-webkit-keyframes logo1 {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  90% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
-    opacity: 0;
-  }
-}
-
-@keyframes logo1 {
-  0% {
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  90% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: translateY(-50px);
-            transform: translateY(-50px);
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes logo2 {
-  0% {
-    -webkit-transform: translateY(0px) scale(1);
-            transform: translateY(0px) scale(1);
-  }
-  80% {
-    -webkit-transform: translateY(-10px) scale(1.1);
-            transform: translateY(-10px) scale(1.1);
-  }
-  100% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-}
-
-@keyframes logo2 {
-  0% {
-    -webkit-transform: translateY(0px) scale(1);
-            transform: translateY(0px) scale(1);
-  }
-  80% {
-    -webkit-transform: translateY(-10px) scale(1.1);
-            transform: translateY(-10px) scale(1.1);
-  }
-  100% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
-  }
-}
-
-@-webkit-keyframes logo3 {
-  0% {
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-@keyframes logo3 {
-  0% {
-    -webkit-transform: rotate(-180deg);
-            transform: rotate(-180deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-@-webkit-keyframes logo4 {
-  0% {
-    background: radial-gradient(ellipse at center, rgba(255, 255, 0, 0.4) 15%, rgba(255, 196, 0, 0.4) 30%, white 30%);
-  }
-  100% {
-    background: radial-gradient(ellipse at center, yellow 15%, #ffc400 30%, white 70%);
-  }
-}
-
-@keyframes logo4 {
-  0% {
-    background: radial-gradient(ellipse at center, rgba(255, 255, 0, 0.4) 15%, rgba(255, 196, 0, 0.4) 30%, white 30%);
-  }
-  100% {
-    background: radial-gradient(ellipse at center, yellow 15%, #ffc400 30%, white 70%);
-  }
-}
-
-@-webkit-keyframes loader-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes loader-out {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@media screen and (min-width: 666px) {
-  .loader {
-    margin-top: 5%;
-    margin-left: 12%;
-    width: 35%;
-  }
-  .contain_logo::after {
-    font-size: 1rem;
-    margin-left: 4%;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .loader {
-    margin-top: 0%;
-    margin-left: 17%;
-    width: 25%;
-  }
-  .contain_logo::after {
-    font-size: 1.2rem;
-    margin-left: 4%;
-  }
 }
 
 header {
@@ -1314,30 +1340,6 @@ main {
   .desserts {
     width: 33.3%;
     padding-top: 20px;
-  }
-  input[name=choix]:hover + .menu > .menu--descriptif {
-    -webkit-animation: descriptif_in 800ms both ease-in-out;
-            animation: descriptif_in 800ms both ease-in-out;
-  }
-  input[name=choix]:hover + .menu > .menu--prix::after {
-    -webkit-animation: after_in 800ms both ease-in-out;
-            animation: after_in 800ms both ease-in-out;
-  }
-  input[name=choix]:hover + .menu > .menu--prix::before {
-    -webkit-animation: icone_in 800ms both ease-in-out;
-            animation: icone_in 800ms both ease-in-out;
-  }
-  input[name=choix]:not(:hover) + .menu > .menu--descriptif {
-    -webkit-animation: descriptif_out 800ms both ease-in-out;
-            animation: descriptif_out 800ms both ease-in-out;
-  }
-  input[name=choix]:not(:hover) + .menu > .menu--prix::after {
-    -webkit-animation: after_out 800ms both ease-in-out;
-            animation: after_out 800ms both ease-in-out;
-  }
-  input[name=choix]:not(:hover) + .menu > .menu--prix::before {
-    -webkit-animation: icone_out 800ms both ease-in-out;
-            animation: icone_out 800ms both ease-in-out;
   }
 }
 /*# sourceMappingURL=main.css.map */
