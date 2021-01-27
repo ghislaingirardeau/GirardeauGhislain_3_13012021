@@ -43,7 +43,7 @@
     animation: loader-out 300ms 2400ms both ease-in;
  
     > div {
-        @include position_width (47%, 0 0 10%);
+        @include position_width (47%, 5% 1% 5%);
     }
 
     & .logo1 {
