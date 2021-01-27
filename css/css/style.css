@@ -269,7 +269,7 @@
   opacity: 0;
   transition: opacity 400ms ease-out;
 }
-.jaime:hover::after {
+.jaime:active::after {
   opacity: 1;
   background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
   -webkit-text-fill-color: transparent;
@@ -291,12 +291,12 @@
   left: 80%;
   font-size: 1.6rem;
 }
-.jaime:hover {
+.jaime:active {
   color: transparent;
   transition: color 100ms ease-out;
 }
 
-label:before {
+label::before {
   content: "";
   box-sizing: content-box;
   width: 100%;
@@ -330,6 +330,31 @@ input[name=choix]:not(:checked) + .menu > .menu--prix::before {
 }
 
 @media screen and (min-width: 1025px) {
+  .jaime:hover {
+    color: transparent;
+    transition: color 100ms ease-out;
+  }
+  .jaime::after {
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    cursor: pointer;
+    content: "";
+    box-sizing: content-box;
+    position: absolute;
+    top: 1px;
+    bottom: 0;
+    left: 0px;
+    font-size: 1.6rem;
+    opacity: 0;
+    transition: opacity 400ms ease-out;
+  }
+  .jaime:hover::after {
+    opacity: 1;
+    background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+
   input[name=choix]:hover + .menu > .menu--descriptif {
     animation: descriptif_in 800ms both ease-in-out;
   }
@@ -708,6 +733,9 @@ main {
 .menu--3 {
   animation: loading_menu 1s both;
   animation-delay: 500ms;
+}
+.menu--4 {
+  animation: loading_menu 1s both;
 }
 .menu > .menu--descriptif {
   width: 83%;

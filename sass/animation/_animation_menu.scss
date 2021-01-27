@@ -59,7 +59,7 @@
 
 
   @mixin loading_menu {
-  @for $i from 1 through 3 {
+  @for $i from 1 through 4 {
       &--#{$i} {
         animation: loading_menu 1s both;
         animation-delay: map-get($delay, $i);

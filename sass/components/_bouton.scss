@@ -19,13 +19,13 @@
   &--menu {
     @include position_absolue(80%, 0, 80%, 1.6rem);
   }
-  &:hover {
+  &:active {
     color: transparent;
     transition: color 100ms ease-out;
   }
 }
 
-label:before {
+label::before {
   content: "";
   box-sizing: content-box;
   width: 100%;
@@ -59,6 +59,26 @@ input[name="choix"] {
 }
 
 @include laptop {
+  .jaime {
+    &:hover {
+      color: transparent;
+      transition: color 100ms ease-out;
+    }
+    &::after {
+      @include import_icone(900);
+      content: "\f004";
+      @include position_absolue(1px, 0, 0px, 1.6rem);
+      opacity: 0;
+      transition: opacity 400ms ease-out;
+    }
+    &:hover::after {
+      opacity: 1;
+      @include degrade_color($primary, 0%, $secondary, 95%);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
+  }
+
   input[name=choix] {
     
     &:hover + .menu > .menu--descriptif {

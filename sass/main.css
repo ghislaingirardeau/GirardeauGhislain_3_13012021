@@ -501,7 +501,7 @@
   transition: opacity 400ms ease-out;
 }
 
-.jaime:hover::after {
+.jaime:active::after {
   opacity: 1;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(95%, #FF79DA));
   background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
@@ -529,13 +529,13 @@
   font-size: 1.6rem;
 }
 
-.jaime:hover {
+.jaime:active {
   color: transparent;
   -webkit-transition: color 100ms ease-out;
   transition: color 100ms ease-out;
 }
 
-label:before {
+label::before {
   content: "";
   -webkit-box-sizing: content-box;
           box-sizing: content-box;
@@ -583,6 +583,34 @@ input[name="choix"]:not(:checked) + .menu > .menu--prix::before {
 }
 
 @media screen and (min-width: 1025px) {
+  .jaime:hover {
+    color: transparent;
+    -webkit-transition: color 100ms ease-out;
+    transition: color 100ms ease-out;
+  }
+  .jaime::after {
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    cursor: pointer;
+    content: "\f004";
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    position: absolute;
+    top: 1px;
+    bottom: 0;
+    left: 0px;
+    font-size: 1.6rem;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-out;
+    transition: opacity 400ms ease-out;
+  }
+  .jaime:hover::after {
+    opacity: 1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(95%, #FF79DA));
+    background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
   input[name=choix]:hover + .menu > .menu--descriptif {
     -webkit-animation: descriptif_in 800ms both ease-in-out;
             animation: descriptif_in 800ms both ease-in-out;
@@ -1078,6 +1106,11 @@ main {
           animation: loading_menu 1s both;
   -webkit-animation-delay: 500ms;
           animation-delay: 500ms;
+}
+
+.menu--4 {
+  -webkit-animation: loading_menu 1s both;
+          animation: loading_menu 1s both;
 }
 
 .menu > .menu--descriptif {
