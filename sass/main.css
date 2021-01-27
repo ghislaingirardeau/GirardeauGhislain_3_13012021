@@ -918,7 +918,7 @@ footer a {
   border-radius: 2px;
 }
 
-.resultats__img {
+.resultats__img--paysage {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;

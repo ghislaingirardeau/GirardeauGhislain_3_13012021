@@ -94,7 +94,9 @@
     }
   }
   &__img {
-    @include img_ajust_width (-20px);
+    &--paysage {
+      @include img_ajust_width (-20px);
+    }
     &--portrait {
       @include img_ajust_width (-80px);
     }
