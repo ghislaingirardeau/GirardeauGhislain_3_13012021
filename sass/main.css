@@ -422,7 +422,7 @@
   }
 }
 
-@-webkit-keyframes anim_loading {
+@-webkit-keyframes loading_menu {
   0% {
     opacity: 0;
     -webkit-transform: translateY(20px);
@@ -435,7 +435,7 @@
   }
 }
 
-@keyframes anim_loading {
+@keyframes loading_menu {
   0% {
     opacity: 0;
     -webkit-transform: translateY(20px);
@@ -1060,22 +1060,22 @@ main {
 }
 
 .menu--1 {
-  -webkit-animation: anim_loading 1s both;
-          animation: anim_loading 1s both;
+  -webkit-animation: loading_menu 1s both;
+          animation: loading_menu 1s both;
   -webkit-animation-delay: 100ms;
           animation-delay: 100ms;
 }
 
 .menu--2 {
-  -webkit-animation: anim_loading 1s both;
-          animation: anim_loading 1s both;
+  -webkit-animation: loading_menu 1s both;
+          animation: loading_menu 1s both;
   -webkit-animation-delay: 300ms;
           animation-delay: 300ms;
 }
 
 .menu--3 {
-  -webkit-animation: anim_loading 1s both;
-          animation: anim_loading 1s both;
+  -webkit-animation: loading_menu 1s both;
+          animation: loading_menu 1s both;
   -webkit-animation-delay: 500ms;
           animation-delay: 500ms;
 }

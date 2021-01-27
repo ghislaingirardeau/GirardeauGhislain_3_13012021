@@ -217,7 +217,7 @@
     transform: translateX(0px);
   }
 }
-@keyframes anim_loading {
+@keyframes loading_menu {
   0% {
     opacity: 0;
     transform: translateY(20px);
@@ -698,15 +698,15 @@ main {
   overflow: hidden;
 }
 .menu--1 {
-  animation: anim_loading 1s both;
+  animation: loading_menu 1s both;
   animation-delay: 100ms;
 }
 .menu--2 {
-  animation: anim_loading 1s both;
+  animation: loading_menu 1s both;
   animation-delay: 300ms;
 }
 .menu--3 {
-  animation: anim_loading 1s both;
+  animation: loading_menu 1s both;
   animation-delay: 500ms;
 }
 .menu > .menu--descriptif {
