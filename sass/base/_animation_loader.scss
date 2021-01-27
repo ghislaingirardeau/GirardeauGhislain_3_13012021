@@ -72,7 +72,7 @@
         filter:invert(1);
         @include position_abs_top_left (60%, 10%);
         z-index: 1; 
-        animation: logo1 2000ms forwards ease-in-out;
+        animation: logo1 2000ms 200ms forwards ease-in-out;
     }
 }
 
@@ -124,7 +124,7 @@
     background: radial-gradient(ellipse at center, rgba(255, 255, 0, 0.5) 15%, rgba(255, 196, 0, 0.5) 30%, white 50%);
 }
     100% {
-        background: radial-gradient(ellipse at center, rgba(255, 255, 0, 1) 15%, rgba(255, 196, 0, 1) 30%, white 70%);
+    background: radial-gradient(ellipse at center, rgba(255, 255, 0, 1) 15%, rgba(255, 196, 0, 1) 30%, white 70%);
     }
 }
 

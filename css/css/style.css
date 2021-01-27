@@ -264,7 +264,7 @@ p {
   top: 60%;
   left: 10%;
   z-index: 1;
-  animation: logo1 2000ms forwards ease-in-out;
+  animation: logo1 2000ms 200ms forwards ease-in-out;
 }
 
 @keyframes logo1 {
