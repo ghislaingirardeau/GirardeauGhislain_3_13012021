@@ -1,7 +1,12 @@
-/* Animation corps page */
+/* Animation corps page pour apparition */
+
 @mixin load-home {
-    animation: load-home 250ms 2200ms forwards ease-in-out;
+    animation: load-home 250ms 2300ms forwards ease-in-out;
 }
+.recherche, .explicatif, .resultats, footer {
+    opacity: 0;
+      @include load-home;
+    }
 
 @keyframes load-home {
     0% {
@@ -12,14 +17,14 @@
     }
   }
 
-  /* Animation header */
+  /* Animation header deplacement pour position final */
   #logo_ohmyfood--index {
     animation: logo_header 400ms 2000ms both ease-out;
   }
   @keyframes logo_header {
     0% {
       opacity: 0;
-      transform: translateY(205px) translateX(-80px) scale(0.2);
+      transform: translateY(225px) translateX(-60px) scale(0.2);
   }
   
   100% {
@@ -35,7 +40,7 @@
     @include flex_layout (row, wrap, space-between);
     border: 2px solid black;
     border-radius: 5px;
-    animation: loader-out 400ms 2300ms both ease-in;
+    animation: loader-out 300ms 2300ms both ease-in;
 
     > div {
         @include position_width (47%, 0 0 10%);
@@ -45,7 +50,7 @@
         width: 100%;
     }
     & .logo2{
-        @include position_width (40%, 5% 30%);
+        @include position_width (40%, 10% 30%);
         animation: logo2 400ms 400ms forwards ease-out alternate;
     }
     & .logo3{
@@ -91,13 +96,13 @@
 
 @keyframes logo2 {
     0% {
-        transform: translateY(0px);
+        transform: translateY(0px) scale(1);
     }
     80% {
-        transform: translateY(-15px);
+        transform: translateY(-10px) scale(1.1);
     }
     100%{
-        transform: translateY(20px);
+        transform: translateY(10px);
     }
 }
 

@@ -1,6 +1,5 @@
 .recherche {
-  opacity: 0;
-  @include load-home;
+  
   @include flex_layout (column, nowrap, flex-start);
   @include box_height (340px, 0, $color_background);
   text-align: center;
@@ -29,12 +28,9 @@
 }
 
 .explicatif {
-  opacity: 0;
-  @include load-home;
   @include flex_layout (column, nowrap, space-around);
-  @include box_height (440px, 60px, unset);
+  @include box_height (440px, 60px, $color_box);
   counter-reset: etape;
-  background-color: $color_box;
   & > h2 {
     @include box_width($width-box-home, 20px 20px, left);
   }
@@ -70,8 +66,7 @@
 }
 
 .resultats {
-  opacity: 0;
-  @include load-home;
+  
   @include flex_layout (column, nowrap, space-between);
   @include box_height (1225px, 60px, $color_background);
 

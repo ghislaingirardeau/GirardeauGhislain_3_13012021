@@ -185,7 +185,12 @@ p {
   font-size: 1rem;
 }
 
-/* Animation corps page */
+/* Animation corps page pour apparition */
+.recherche, .explicatif, .resultats, footer {
+  opacity: 0;
+  animation: load-home 250ms 2300ms forwards ease-in-out;
+}
+
 @keyframes load-home {
   0% {
     opacity: 0;
@@ -194,7 +199,7 @@ p {
     opacity: 1;
   }
 }
-/* Animation header */
+/* Animation header deplacement pour position final */
 #logo_ohmyfood--index {
   animation: logo_header 400ms 2000ms both ease-out;
 }
@@ -202,7 +207,7 @@ p {
 @keyframes logo_header {
   0% {
     opacity: 0;
-    transform: translateY(205px) translateX(-80px) scale(0.2);
+    transform: translateY(225px) translateX(-60px) scale(0.2);
   }
   100% {
     transform: translateY(0px) scale(1);
@@ -221,7 +226,7 @@ p {
   justify-content: space-between;
   border: 2px solid black;
   border-radius: 5px;
-  animation: loader-out 400ms 2300ms both ease-in;
+  animation: loader-out 300ms 2300ms both ease-in;
 }
 .loader > div {
   width: 47%;
@@ -232,7 +237,7 @@ p {
 }
 .loader .logo2 {
   width: 40%;
-  margin: 5% 30%;
+  margin: 10% 30%;
   animation: logo2 400ms 400ms forwards ease-out alternate;
 }
 .loader .logo3 {
@@ -281,13 +286,13 @@ p {
 }
 @keyframes logo2 {
   0% {
-    transform: translateY(0px);
+    transform: translateY(0px) scale(1);
   }
   80% {
-    transform: translateY(-15px);
+    transform: translateY(-10px) scale(1.1);
   }
   100% {
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
 }
 @keyframes logo3 {
@@ -349,8 +354,6 @@ header img {
   }
 }
 footer {
-  opacity: 0;
-  animation: load-home 250ms 2200ms forwards ease-in-out;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -416,8 +419,6 @@ footer a {
   }
 }
 .recherche {
-  opacity: 0;
-  animation: load-home 250ms 2200ms forwards ease-in-out;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -454,17 +455,14 @@ footer a {
 }
 
 .explicatif {
-  opacity: 0;
-  animation: load-home 250ms 2200ms forwards ease-in-out;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-around;
   min-height: 440px;
   padding-bottom: 60px;
-  background-color: unset;
-  counter-reset: etape;
   background-color: white;
+  counter-reset: etape;
 }
 .explicatif > h2 {
   width: 86.6666666667%;
@@ -509,8 +507,6 @@ footer a {
 }
 
 .resultats {
-  opacity: 0;
-  animation: load-home 250ms 2200ms forwards ease-in-out;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -748,7 +744,7 @@ main {
     justify-content: space-around;
     min-height: 200px;
     padding-bottom: 40px;
-    background-color: unset;
+    background-color: white;
   }
   .explicatif__fonction {
     width: 26.6666666667%;
@@ -830,14 +826,6 @@ main {
     width: 24%;
     margin: 0px 7px 15px;
     text-align: left;
-  }
-
-  #coeur--plein {
-    color: red;
-    opacity: 0;
-  }
-  #coeur--plein:hover {
-    opacity: 1;
   }
 }
 @media screen and (min-width: 666px) {

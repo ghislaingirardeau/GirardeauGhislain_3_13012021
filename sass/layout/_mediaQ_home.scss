@@ -2,7 +2,7 @@
 
   .explicatif {
     @include flex_layout (row, wrap, space-around);
-    @include box_height (200px, 40px, unset);
+    @include box_height (200px, 40px, $color_box);
 
     &__fonction {
       @include box_width(100px, 0 10px, center);
@@ -63,13 +63,6 @@
     &__contenu, &__contenu--nouveau {
       @include box_width(90px, 0px 7px 15px, left);
 
-    }
-  }
-  #coeur--plein{
-    color: red;
-    opacity: 0;
-    &:hover {
-      opacity: 1;   
     }
   }
 }

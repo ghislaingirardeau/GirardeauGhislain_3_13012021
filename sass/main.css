@@ -311,7 +311,13 @@ p {
   font-size: 1rem;
 }
 
-/* Animation corps page */
+/* Animation corps page pour apparition */
+.recherche, .explicatif, .resultats, footer {
+  opacity: 0;
+  -webkit-animation: load-home 250ms 2300ms forwards ease-in-out;
+          animation: load-home 250ms 2300ms forwards ease-in-out;
+}
+
 @-webkit-keyframes load-home {
   0% {
     opacity: 0;
@@ -320,6 +326,7 @@ p {
     opacity: 1;
   }
 }
+
 @keyframes load-home {
   0% {
     opacity: 0;
@@ -329,7 +336,7 @@ p {
   }
 }
 
-/* Animation header */
+/* Animation header deplacement pour position final */
 #logo_ohmyfood--index {
   -webkit-animation: logo_header 400ms 2000ms both ease-out;
           animation: logo_header 400ms 2000ms both ease-out;
@@ -338,8 +345,8 @@ p {
 @-webkit-keyframes logo_header {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(205px) translateX(-80px) scale(0.2);
-            transform: translateY(205px) translateX(-80px) scale(0.2);
+    -webkit-transform: translateY(225px) translateX(-60px) scale(0.2);
+            transform: translateY(225px) translateX(-60px) scale(0.2);
   }
   100% {
     -webkit-transform: translateY(0px) scale(1);
@@ -351,8 +358,8 @@ p {
 @keyframes logo_header {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(205px) translateX(-80px) scale(0.2);
-            transform: translateY(205px) translateX(-80px) scale(0.2);
+    -webkit-transform: translateY(225px) translateX(-60px) scale(0.2);
+            transform: translateY(225px) translateX(-60px) scale(0.2);
   }
   100% {
     -webkit-transform: translateY(0px) scale(1);
@@ -381,8 +388,8 @@ p {
           justify-content: space-between;
   border: 2px solid black;
   border-radius: 5px;
-  -webkit-animation: loader-out 400ms 2300ms both ease-in;
-          animation: loader-out 400ms 2300ms both ease-in;
+  -webkit-animation: loader-out 300ms 2300ms both ease-in;
+          animation: loader-out 300ms 2300ms both ease-in;
 }
 
 .loader > div {
@@ -396,7 +403,7 @@ p {
 
 .loader .logo2 {
   width: 40%;
-  margin: 5% 30%;
+  margin: 10% 30%;
   -webkit-animation: logo2 400ms 400ms forwards ease-out alternate;
           animation: logo2 400ms 400ms forwards ease-out alternate;
 }
@@ -479,31 +486,31 @@ p {
 
 @-webkit-keyframes logo2 {
   0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
   }
   80% {
-    -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
+    -webkit-transform: translateY(-10px) scale(1.1);
+            transform: translateY(-10px) scale(1.1);
   }
   100% {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
 }
 
 @keyframes logo2 {
   0% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
   }
   80% {
-    -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
+    -webkit-transform: translateY(-10px) scale(1.1);
+            transform: translateY(-10px) scale(1.1);
   }
   100% {
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
 }
 
@@ -607,9 +614,6 @@ header img {
 }
 
 footer {
-  opacity: 0;
-  -webkit-animation: load-home 250ms 2200ms forwards ease-in-out;
-          animation: load-home 250ms 2200ms forwards ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -696,9 +700,6 @@ footer a {
 }
 
 .recherche {
-  opacity: 0;
-  -webkit-animation: load-home 250ms 2200ms forwards ease-in-out;
-          animation: load-home 250ms 2200ms forwards ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -749,9 +750,6 @@ footer a {
 }
 
 .explicatif {
-  opacity: 0;
-  -webkit-animation: load-home 250ms 2200ms forwards ease-in-out;
-          animation: load-home 250ms 2200ms forwards ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -765,9 +763,8 @@ footer a {
       justify-content: space-around;
   min-height: 440px;
   padding-bottom: 60px;
-  background-color: unset;
-  counter-reset: etape;
   background-color: white;
+  counter-reset: etape;
 }
 
 .explicatif > h2 {
@@ -820,9 +817,6 @@ footer a {
 }
 
 .resultats {
-  opacity: 0;
-  -webkit-animation: load-home 250ms 2200ms forwards ease-in-out;
-          animation: load-home 250ms 2200ms forwards ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1134,7 +1128,7 @@ main {
         justify-content: space-around;
     min-height: 200px;
     padding-bottom: 40px;
-    background-color: unset;
+    background-color: white;
   }
   .explicatif__fonction {
     width: 26.66667%;
@@ -1230,13 +1224,6 @@ main {
     width: 24%;
     margin: 0px 7px 15px;
     text-align: left;
-  }
-  #coeur--plein {
-    color: red;
-    opacity: 0;
-  }
-  #coeur--plein:hover {
-    opacity: 1;
   }
 }
 
