@@ -22,6 +22,10 @@
   margin: $marg;
   text-align: $textalign;
 }
+@mixin position_width($width, $marg) {
+  width: $width;
+  margin: $marg;
+}
 
 
 @mixin box_contour($color, $radius, $col_shad) {
@@ -39,6 +43,11 @@
   left: $left;
   font-size: $ftsize;
 } 
+@mixin position_abs_top_left ($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+}
 
 /* ajustement des images */
 @mixin img_contain($height) {
