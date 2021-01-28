@@ -9,7 +9,7 @@ main {
 }
 .presentation {
   @include img_contain(310px);
-  &--fitpaysage {
+  &--fitpaysage { /* 2 ecritures html suivant le format de límage a integrer */
     @include img_ajust_height(-50px -30px);
   }
   &--fitportrait {
@@ -40,7 +40,7 @@ main {
     padding-bottom: 8px;
     border-bottom: 4px solid $third;
   }
-  > form {
+  > form { /* bloc comprant les .menu */
     @include box_width($width-box-menu, 0 12px, left);
     position: relative;
   }
@@ -56,7 +56,7 @@ main {
   > .menu--descriptif {
     width: 83%;
     overflow: hidden;
-    & h3 {
+    & h3 { /* rogner le texte lors de l'animation */
       font-size: $h3size;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -72,10 +72,10 @@ main {
 
   > .menu--prix {
     width: 17%;
-    padding-top: 15%; /* pour ne pas bouger la box en Y pour animation */
+    padding-top: 15%; /* padding pour ne pas bouger la box en Y pour animation */
     padding-left: 5px;
     position: relative;
-    &::after {
+    &::after { /* la boite verte en pseudo element */
       content: "";
       position: absolute;
       top: 0px;
@@ -83,7 +83,7 @@ main {
       height: 200px;
       background-color: $third;
     }
-    &::before {
+    &::before { /* l'icone check en pseudo element */
       @include import_icone(900);
       content: "\f058";
       color: white;

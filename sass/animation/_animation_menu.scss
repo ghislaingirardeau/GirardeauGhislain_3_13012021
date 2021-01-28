@@ -18,6 +18,7 @@
     @include animation_composition (icone_out);
   } 
 }
+
 @mixin animation_composition ($name) {
     animation: $name 800ms both ease-in-out;
   }
@@ -77,7 +78,7 @@
     }
   }
 
-
+/* Animation au chargement des pages menu */
   @mixin loading_menu {
   @for $i from 1 through 4 {
       &--#{$i} {

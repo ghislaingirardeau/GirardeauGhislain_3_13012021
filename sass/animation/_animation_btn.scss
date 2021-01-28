@@ -12,7 +12,7 @@
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
     }
-  }
+  }/* efface le coeur vide pour faire apparaitre le coeur plein dont 2 animations */
 
   @mixin animation_btn_submit($col_shad) {
     transition: 150ms ease-out;

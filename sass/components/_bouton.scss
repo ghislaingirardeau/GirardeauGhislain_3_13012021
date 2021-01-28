@@ -24,7 +24,7 @@
     transition: color 100ms ease-out;
   }
 }
-
+/* layout du label pour rendre toute la zone cliquable */
 label::before {
   content: "";
   box-sizing: content-box;
@@ -35,6 +35,7 @@ label::before {
   position: absolute;
 }
 
+/* tous les btn des repas dans la page menu */
 input[name="choix"] {
   display: none;
   @include animation_repas (checked);

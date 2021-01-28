@@ -1,5 +1,5 @@
 .recherche {
-  
+
   @include flex_layout (column, nowrap, flex-start);
   @include box_height (340px, 0, $color_background);
   text-align: center;
@@ -25,7 +25,7 @@
     @include box_width(310px, auto, center);
     
   }
-}
+} /* layout bouton traité via le fichier bouton */
 
 .explicatif {
   @include flex_layout (column, nowrap, space-around);
@@ -74,7 +74,7 @@
     @include box_width($width-box-home, 20px 20px, left);
   }
 
-  &__contenu, &__contenu--nouveau {
+  &__contenu, &__contenu--nouveau { /* ajout de la class --nouveau en html pour identifier celui-ci */
     @include box_width($width-box-resto, 0px 20px, left);
     @include box_contour($color_box, 20px, $col_degrade_clair);
     @include img_contain (255px);
@@ -93,7 +93,7 @@
       @include pseudoe_layout ($thrid-sombre, center, $third, 0.4rem, 2px);    
     }
   }
-  &__img {
+  &__img { /* 2 ecritures html suivant le format de límage a integrer */
     &--paysage {
       @include img_ajust_width (-20px);
     }

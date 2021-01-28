@@ -75,7 +75,7 @@
   animation: logo4 400ms 1000ms both ease-in;
 }
 
-/* Animation du logo menu */
+/* Animation du logo1, creation d'un after pour animer le texte */
 .contain_logo {
   position: relative;
   width: 30%;
@@ -167,6 +167,7 @@
     margin-left: 4%;
   }
 }
+/* efface le coeur vide pour faire apparaitre le coeur plein dont 2 animations */
 @keyframes descriptif_in {
   from {
     width: 83%;
@@ -219,6 +220,7 @@
     transform: translateX(0px);
   }
 }
+/* Animation au chargement des pages menu */
 @keyframes loading_menu {
   0% {
     opacity: 0;
@@ -229,6 +231,7 @@
     transform: translateY(0);
   }
 }
+/* Definit pour insertion du nouveau et ordre explicatif qui sont non animé */
 .submit {
   font-family: roboto;
   font-size: 1.1rem;
@@ -298,6 +301,7 @@
   transition: color 100ms ease-out;
 }
 
+/* layout du label pour rendre toute la zone cliquable */
 label::before {
   content: "";
   box-sizing: content-box;
@@ -308,6 +312,7 @@ label::before {
   position: absolute;
 }
 
+/* tous les btn des repas dans la page menu */
 input[name=choix] {
   display: none;
 }
@@ -386,6 +391,7 @@ a {
   color: black;
 }
 
+/* taille de reference de font */
 p {
   font-size: 1rem;
 }
@@ -508,6 +514,7 @@ footer a {
   text-align: center;
 }
 
+/* layout bouton traité via le fichier bouton */
 .explicatif {
   display: flex;
   flex-direction: column;
@@ -575,6 +582,7 @@ footer a {
   text-align: left;
 }
 .resultats__contenu, .resultats__contenu--nouveau {
+  /* ajout de la class --nouveau en html pour identifier celui-ci */
   width: 89.3333333333%;
   margin: 0px 20px;
   text-align: left;
@@ -615,6 +623,9 @@ footer a {
   padding: 0.4rem;
   border-radius: 2px;
 }
+.resultats__img {
+  /* 2 ecritures html suivant le format de límage a integrer */
+}
 .resultats__img--paysage {
   width: 100%;
   object-fit: contain;
@@ -646,6 +657,7 @@ main {
   position: relative;
 }
 .presentation--fitpaysage {
+  /* 2 ecritures html suivant le format de límage a integrer */
   height: 100%;
   object-fit: contain;
   object-position: -50px -30px;
@@ -704,6 +716,7 @@ main {
 .entrees > form,
 .plats > form,
 .desserts > form {
+  /* bloc comprant les .menu */
   width: 93.3333333333%;
   margin: 0 12px;
   text-align: left;
@@ -742,6 +755,7 @@ main {
   overflow: hidden;
 }
 .menu > .menu--descriptif h3 {
+  /* rogner le texte lors de l'animation */
   font-size: 1.1rem;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -756,11 +770,12 @@ main {
 .menu > .menu--prix {
   width: 17%;
   padding-top: 15%;
-  /* pour ne pas bouger la box en Y pour animation */
+  /* padding pour ne pas bouger la box en Y pour animation */
   padding-left: 5px;
   position: relative;
 }
 .menu > .menu--prix::after {
+  /* la boite verte en pseudo element */
   content: "";
   position: absolute;
   top: 0px;
@@ -770,6 +785,7 @@ main {
   background-color: #99E2D0;
 }
 .menu > .menu--prix::before {
+  /* l'icone check en pseudo element */
   font-family: "Font Awesome 5 free";
   font-weight: 900;
   cursor: pointer;
