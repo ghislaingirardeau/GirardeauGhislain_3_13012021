@@ -79,6 +79,7 @@
   }
 
 /* Animation au chargement des pages menu */
+/* Si ajout d'un plat: ajout dans $delay, changement through X */
   @mixin loading_menu {
   @for $i from 1 through 4 {
       &--#{$i} {
@@ -88,7 +89,7 @@
     }
   }
 
-  $delay:(1:100ms, 2:300ms, 3:500ms);
+  $delay:(1:200ms, 2:350ms, 3:500ms, 4:650ms);
   
   @keyframes loading_menu {
     0% {

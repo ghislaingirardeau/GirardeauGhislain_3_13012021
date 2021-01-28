@@ -221,6 +221,7 @@
   }
 }
 /* Animation au chargement des pages menu */
+/* Si ajout d'un plat: ajout dans $delay, changement through X */
 @keyframes loading_menu {
   0% {
     opacity: 0;
@@ -737,11 +738,11 @@ main {
 }
 .menu--1 {
   animation: loading_menu 1s both;
-  animation-delay: 100ms;
+  animation-delay: 200ms;
 }
 .menu--2 {
   animation: loading_menu 1s both;
-  animation-delay: 300ms;
+  animation-delay: 350ms;
 }
 .menu--3 {
   animation: loading_menu 1s both;
@@ -749,6 +750,7 @@ main {
 }
 .menu--4 {
   animation: loading_menu 1s both;
+  animation-delay: 650ms;
 }
 .menu > .menu--descriptif {
   width: 83%;

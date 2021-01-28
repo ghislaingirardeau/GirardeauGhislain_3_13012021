@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* aujustement commun des font */
 /* aujuster les sousbloc en flex grace a width et margin */
 /* pour tous les elements utilisant position absolue */
@@ -121,7 +122,7 @@
           animation: logo4 400ms 1000ms both ease-in;
 }
 
-/* Animation du logo menu */
+/* Animation du logo1, creation d'un after pour animer le texte */
 .contain_logo {
   position: relative;
   width: 30%;
@@ -293,6 +294,7 @@
   }
 }
 
+/* efface le coeur vide pour faire apparaitre le coeur plein dont 2 animations */
 @-webkit-keyframes descriptif_in {
   from {
     width: 83%;
@@ -301,7 +303,6 @@
     width: 65%;
   }
 }
-
 @keyframes descriptif_in {
   from {
     width: 83%;
@@ -425,6 +426,8 @@
   }
 }
 
+/* Animation au chargement des pages menu */
+/* Si ajout d'un plat: ajout dans $delay, changement through X */
 @-webkit-keyframes loading_menu {
   0% {
     opacity: 0;
@@ -437,7 +440,6 @@
             transform: translateY(0);
   }
 }
-
 @keyframes loading_menu {
   0% {
     opacity: 0;
@@ -451,6 +453,7 @@
   }
 }
 
+/* Definit pour insertion du nouveau et ordre explicatif qui sont non animé */
 .submit {
   font-family: roboto;
   font-size: 1.1rem;
@@ -538,6 +541,7 @@
   transition: color 100ms ease-out;
 }
 
+/* layout du label pour rendre toute la zone cliquable */
 label::before {
   content: "";
   -webkit-box-sizing: content-box;
@@ -549,6 +553,7 @@ label::before {
   position: absolute;
 }
 
+/* tous les btn des repas dans la page menu */
 input[name="choix"] {
   display: none;
 }
@@ -649,6 +654,7 @@ a {
   color: black;
 }
 
+/* taille de reference de font */
 p {
   font-size: 1rem;
 }
@@ -808,6 +814,7 @@ footer a {
   text-align: center;
 }
 
+/* layout bouton traité via le fichier bouton */
 .explicatif {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -900,6 +907,7 @@ footer a {
 }
 
 .resultats__contenu, .resultats__contenu--nouveau {
+  /* ajout de la class --nouveau en html pour identifier celui-ci */
   width: 89.33333%;
   margin: 0px 20px;
   text-align: left;
@@ -947,6 +955,10 @@ footer a {
   border-radius: 2px;
 }
 
+.resultats__img {
+  /* 2 ecritures html suivant le format de límage a integrer */
+}
+
 .resultats__img--paysage {
   width: 100%;
   -o-object-fit: contain;
@@ -985,6 +997,7 @@ main {
 }
 
 .presentation--fitpaysage {
+  /* 2 ecritures html suivant le format de límage a integrer */
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
@@ -1060,6 +1073,7 @@ main {
 .entrees > form,
 .plats > form,
 .desserts > form {
+  /* bloc comprant les .menu */
   width: 93.33333%;
   margin: 0 12px;
   text-align: left;
@@ -1091,15 +1105,15 @@ main {
 .menu--1 {
   -webkit-animation: loading_menu 1s both;
           animation: loading_menu 1s both;
-  -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
 }
 
 .menu--2 {
   -webkit-animation: loading_menu 1s both;
           animation: loading_menu 1s both;
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
+  -webkit-animation-delay: 350ms;
+          animation-delay: 350ms;
 }
 
 .menu--3 {
@@ -1112,6 +1126,8 @@ main {
 .menu--4 {
   -webkit-animation: loading_menu 1s both;
           animation: loading_menu 1s both;
+  -webkit-animation-delay: 650ms;
+          animation-delay: 650ms;
 }
 
 .menu > .menu--descriptif {
@@ -1120,6 +1136,7 @@ main {
 }
 
 .menu > .menu--descriptif h3 {
+  /* rogner le texte lors de l'animation */
   font-size: 1.1rem;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -1136,12 +1153,13 @@ main {
 .menu > .menu--prix {
   width: 17%;
   padding-top: 15%;
-  /* pour ne pas bouger la box en Y pour animation */
+  /* padding pour ne pas bouger la box en Y pour animation */
   padding-left: 5px;
   position: relative;
 }
 
 .menu > .menu--prix::after {
+  /* la boite verte en pseudo element */
   content: "";
   position: absolute;
   top: 0px;
@@ -1152,6 +1170,7 @@ main {
 }
 
 .menu > .menu--prix::before {
+  /* l'icone check en pseudo element */
   font-family: "Font Awesome 5 free";
   font-weight: 900;
   cursor: pointer;
