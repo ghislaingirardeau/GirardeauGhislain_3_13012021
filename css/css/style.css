@@ -332,9 +332,9 @@ input[name=choix]:not(:checked) + .menu > .menu--prix::before {
 @media screen and (min-width: 1025px) {
   .jaime:hover {
     color: transparent;
-    transition: color 100ms ease-out;
+    transition: color ease-out;
   }
-  .jaime::after {
+  .jaime:hover::after {
     font-family: "Font Awesome 5 free";
     font-weight: 900;
     cursor: pointer;
@@ -348,7 +348,7 @@ input[name=choix]:not(:checked) + .menu > .menu--prix::before {
     opacity: 0;
     transition: opacity 400ms ease-out;
   }
-  .jaime:hover::after {
+  .jaime:hover:hover::after {
     opacity: 1;
     background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
     -webkit-text-fill-color: transparent;

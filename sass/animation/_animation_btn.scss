@@ -1,4 +1,4 @@
-@mixin animation_jaime{
+  @mixin animation_btn_jaime ($etat){
     &::after {
       @include import_icone(900);
       content: "\f004";
@@ -6,7 +6,7 @@
       opacity: 0;
       transition: opacity 400ms ease-out;
     }
-    &:active::after {
+    &:#{$etat}::after {
       opacity: 1;
       @include degrade_color($primary, 0%, $secondary, 95%);
       -webkit-text-fill-color: transparent;
@@ -14,8 +14,7 @@
     }
   }
 
-  
-  @mixin animation_btnsubmit($col_shad) {
+  @mixin animation_btn_submit($col_shad) {
     transition: 150ms ease-out;
     &:hover {
       box-shadow: 5px 5px 5px darken($col_shad, 30%);
