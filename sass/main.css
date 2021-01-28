@@ -80,8 +80,11 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border: 2px solid black;
+  border: 2px solid #cfcfcf;
+  background-color: unset;
   border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 5px #cfcfcf;
+          box-shadow: 5px 5px 5px #cfcfcf;
   -webkit-animation: loader-out 300ms 2400ms both ease-in;
           animation: loader-out 300ms 2400ms both ease-in;
 }
@@ -586,7 +589,7 @@ input[name="choix"]:not(:checked) + .menu > .menu--prix::before {
     -webkit-transition: color ease-out;
     transition: color ease-out;
   }
-  .jaime:hover::after {
+  .jaime::after {
     font-family: "Font Awesome 5 free";
     font-weight: 900;
     cursor: pointer;
@@ -602,7 +605,7 @@ input[name="choix"]:not(:checked) + .menu > .menu--prix::before {
     -webkit-transition: opacity 400ms ease-out;
     transition: opacity 400ms ease-out;
   }
-  .jaime:hover:hover::after {
+  .jaime:hover::after {
     opacity: 1;
     background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(95%, #FF79DA));
     background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);

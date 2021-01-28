@@ -45,8 +45,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  border: 2px solid black;
+  border: 2px solid #cfcfcf;
+  background-color: unset;
   border-radius: 5px;
+  box-shadow: 5px 5px 5px #cfcfcf;
   animation: loader-out 300ms 2400ms both ease-in;
 }
 .loader > div {
@@ -333,7 +335,7 @@ input[name=choix]:not(:checked) + .menu > .menu--prix::before {
     color: transparent;
     transition: color ease-out;
   }
-  .jaime:hover::after {
+  .jaime::after {
     font-family: "Font Awesome 5 free";
     font-weight: 900;
     cursor: pointer;
@@ -347,7 +349,7 @@ input[name=choix]:not(:checked) + .menu > .menu--prix::before {
     opacity: 0;
     transition: opacity 400ms ease-out;
   }
-  .jaime:hover:hover::after {
+  .jaime:hover::after {
     opacity: 1;
     background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
     -webkit-text-fill-color: transparent;

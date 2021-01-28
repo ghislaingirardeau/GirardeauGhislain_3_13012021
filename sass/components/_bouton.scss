@@ -45,8 +45,8 @@ input[name="choix"] {
     &:hover {
       color: transparent;
       transition: color ease-out;
-      @include animation_btn_jaime (hover);
     }
+    @include animation_btn_jaime (hover);
   }
 
   input[name=choix] {
