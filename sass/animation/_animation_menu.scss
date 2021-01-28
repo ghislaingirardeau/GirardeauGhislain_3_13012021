@@ -8,11 +8,20 @@
   &:#{$pseudo} + .menu > .menu--prix::before {
     @include animation_composition (icone_in);
   }
+  &:not(:#{$pseudo}) + .menu > .menu--descriptif {
+    @include animation_composition (descriptif_out);
+  }
+  &:not(:#{$pseudo}) + .menu > .menu--prix::after {
+    @include animation_composition (after_out);
+  }
+  &:not(:#{$pseudo}) + .menu > .menu--prix::before {
+    @include animation_composition (icone_out);
+  } 
   
 }
 
 @mixin animation_composition ($name) {
-    animation: $name 800ms both ease-in-out;
+    animation: $name 800ms both ease-in-out alternate;
   }
 
   @keyframes descriptif_in {

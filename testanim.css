@@ -1,6 +1,4 @@
 
-
-
 .conteneur {
     width: 350px;
     height: 200px;
@@ -12,17 +10,12 @@ border: 2px solid green;
 .barre1{
     width: 83%;
     background-color: red;
-    position: relative;
+    transition: 1s;
 }
-
 
 .barre1:hover{
-     animation: test1 1s forwards ease-in-out;
+    width: 65%;
 }
-.barre1:not(:hover){
-    animation: test-out 1s forwards ease-in-out;
-}
-
 
 .barre2 {
     width: 17%;
@@ -37,13 +30,3 @@ border: 2px solid green;
         width: 65%;
     }
 }
-
-@keyframes test-out {
-    0% {
-        width: 65%;
-    }
-    100%{
-        width: 83%;
-    }
-}
-  

@@ -318,13 +318,22 @@ input[name=choix] {
   display: none;
 }
 input[name=choix]:checked + .menu > .menu--descriptif {
-  animation: descriptif_in 800ms both ease-in-out;
+  animation: descriptif_in 800ms both ease-in-out alternate;
 }
 input[name=choix]:checked + .menu > .menu--prix::after {
-  animation: after_in 800ms both ease-in-out;
+  animation: after_in 800ms both ease-in-out alternate;
 }
 input[name=choix]:checked + .menu > .menu--prix::before {
-  animation: icone_in 800ms both ease-in-out;
+  animation: icone_in 800ms both ease-in-out alternate;
+}
+input[name=choix]:not(:checked) + .menu > .menu--descriptif {
+  animation: descriptif_out 800ms both ease-in-out alternate;
+}
+input[name=choix]:not(:checked) + .menu > .menu--prix::after {
+  animation: after_out 800ms both ease-in-out alternate;
+}
+input[name=choix]:not(:checked) + .menu > .menu--prix::before {
+  animation: icone_out 800ms both ease-in-out alternate;
 }
 
 @media screen and (min-width: 1025px) {
@@ -354,13 +363,22 @@ input[name=choix]:checked + .menu > .menu--prix::before {
   }
 
   input[name=choix]:hover + .menu > .menu--descriptif {
-    animation: descriptif_in 800ms both ease-in-out;
+    animation: descriptif_in 800ms both ease-in-out alternate;
   }
   input[name=choix]:hover + .menu > .menu--prix::after {
-    animation: after_in 800ms both ease-in-out;
+    animation: after_in 800ms both ease-in-out alternate;
   }
   input[name=choix]:hover + .menu > .menu--prix::before {
-    animation: icone_in 800ms both ease-in-out;
+    animation: icone_in 800ms both ease-in-out alternate;
+  }
+  input[name=choix]:not(:hover) + .menu > .menu--descriptif {
+    animation: descriptif_out 800ms both ease-in-out alternate;
+  }
+  input[name=choix]:not(:hover) + .menu > .menu--prix::after {
+    animation: after_out 800ms both ease-in-out alternate;
+  }
+  input[name=choix]:not(:hover) + .menu > .menu--prix::before {
+    animation: icone_out 800ms both ease-in-out alternate;
   }
 }
 body {
@@ -880,7 +898,7 @@ main {
     justify-content: flex-start;
   }
   .resultats__contenu, .resultats__contenu--nouveau {
-    width: 24%;
+    width: 22.6666666667%;
     margin: 0px 7px 15px;
     text-align: left;
   }
