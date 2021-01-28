@@ -8,15 +8,7 @@
   &:#{$pseudo} + .menu > .menu--prix::before {
     @include animation_composition (icone_in);
   }
-  &:not(:#{$pseudo}) + .menu > .menu--descriptif {
-    @include animation_composition (descriptif_out);
-  }
-  &:not(:#{$pseudo}) + .menu > .menu--prix::after {
-    @include animation_composition (after_out);
-  }
-  &:not(:#{$pseudo}) + .menu > .menu--prix::before {
-    @include animation_composition (icone_out);
-  } 
+  
 }
 
 @mixin animation_composition ($name) {
@@ -24,37 +16,37 @@
   }
 
   @keyframes descriptif_in {
-    from {
+    0% {
         width: 83%; 
     }
-    to{
+    100%{
         width: 65%;
     }
   }
   @keyframes descriptif_out {
-    from {
+    0% {
         width: 65%; 
     }
-    to{
+    100%{
         width: 83%;
     }
   }
   @keyframes after_in {
-    from {
+    0% {
       width: 0px;
         transform: translateZ(0);
     }
-    to{
+    100%{
       width: 80px;
         transform: translateZ(1px);
     }
   }
   @keyframes after_out {
-    from {
+    0% {
       width: 80px;
         transform: translateZ(1px);
     }
-    to{
+    100%{
       width: 0px;
         transform: translateZ(0);
     }

@@ -169,37 +169,37 @@
 }
 /* efface le coeur vide pour faire apparaitre le coeur plein dont 2 animations */
 @keyframes descriptif_in {
-  from {
+  0% {
     width: 83%;
   }
-  to {
+  100% {
     width: 65%;
   }
 }
 @keyframes descriptif_out {
-  from {
+  0% {
     width: 65%;
   }
-  to {
+  100% {
     width: 83%;
   }
 }
 @keyframes after_in {
-  from {
+  0% {
     width: 0px;
     transform: translateZ(0);
   }
-  to {
+  100% {
     width: 80px;
     transform: translateZ(1px);
   }
 }
 @keyframes after_out {
-  from {
+  0% {
     width: 80px;
     transform: translateZ(1px);
   }
-  to {
+  100% {
     width: 0px;
     transform: translateZ(0);
   }
@@ -326,15 +326,6 @@ input[name=choix]:checked + .menu > .menu--prix::after {
 input[name=choix]:checked + .menu > .menu--prix::before {
   animation: icone_in 800ms both ease-in-out;
 }
-input[name=choix]:not(:checked) + .menu > .menu--descriptif {
-  animation: descriptif_out 800ms both ease-in-out;
-}
-input[name=choix]:not(:checked) + .menu > .menu--prix::after {
-  animation: after_out 800ms both ease-in-out;
-}
-input[name=choix]:not(:checked) + .menu > .menu--prix::before {
-  animation: icone_out 800ms both ease-in-out;
-}
 
 @media screen and (min-width: 1025px) {
   .jaime:hover {
@@ -370,15 +361,6 @@ input[name=choix]:not(:checked) + .menu > .menu--prix::before {
   }
   input[name=choix]:hover + .menu > .menu--prix::before {
     animation: icone_in 800ms both ease-in-out;
-  }
-  input[name=choix]:not(:hover) + .menu > .menu--descriptif {
-    animation: descriptif_out 800ms both ease-in-out;
-  }
-  input[name=choix]:not(:hover) + .menu > .menu--prix::after {
-    animation: after_out 800ms both ease-in-out;
-  }
-  input[name=choix]:not(:hover) + .menu > .menu--prix::before {
-    animation: icone_out 800ms both ease-in-out;
   }
 }
 body {
