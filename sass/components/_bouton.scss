@@ -37,25 +37,7 @@ label::before {
 
 input[name="choix"] {
   display: none;
-  &:checked + .menu > .menu--descriptif {
-    @include animation_composition(descriptif_in);
-  }
-  &:checked + .menu > .menu--prix::after {
-    @include animation_composition(after_in);
-  }
-  &:checked + .menu > .menu--prix::before {
-    @include animation_composition(icone_in);
-    animation-delay: 100ms;
-  }
-  &:not(:checked) + .menu > .menu--descriptif {
-    @include animation_composition (descriptif_out);
-  }
-  &:not(:checked) + .menu > .menu--prix::after {
-    @include animation_composition (after_out);
-  }
-  &:not(:checked) + .menu > .menu--prix::before {
-    @include animation_composition (icone_out);
-  } 
+  @include animation_repas (checked);
 }
 
 @include laptop {
@@ -68,27 +50,6 @@ input[name="choix"] {
   }
 
   input[name=choix] {
-    
-    &:hover + .menu > .menu--descriptif {
-      @include animation_composition (descriptif_in);
-    }
-    &:hover + .menu > .menu--prix::after {
-      @include animation_composition (after_in);
-    }
-    &:hover + .menu > .menu--prix::before {
-      @include animation_composition (icone_in);
-  } 
-  }
-  input[name=choix] {
-  
-    &:not(:hover) + .menu > .menu--descriptif {
-      @include animation_composition (descriptif_out);
-    }
-    &:not(:hover) + .menu > .menu--prix::after {
-      @include animation_composition (after_out);
-    }
-    &:not(:hover) + .menu > .menu--prix::before {
-      @include animation_composition (icone_out);
-  } 
+    @include animation_repas (hover);
 }
 }

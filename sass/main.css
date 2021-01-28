@@ -563,8 +563,6 @@ input[name="choix"]:checked + .menu > .menu--prix::after {
 input[name="choix"]:checked + .menu > .menu--prix::before {
   -webkit-animation: icone_in 800ms both ease-in-out;
           animation: icone_in 800ms both ease-in-out;
-  -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
 }
 
 input[name="choix"]:not(:checked) + .menu > .menu--descriptif {

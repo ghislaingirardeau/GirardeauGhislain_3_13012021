@@ -317,7 +317,6 @@ input[name=choix]:checked + .menu > .menu--prix::after {
 }
 input[name=choix]:checked + .menu > .menu--prix::before {
   animation: icone_in 800ms both ease-in-out;
-  animation-delay: 100ms;
 }
 input[name=choix]:not(:checked) + .menu > .menu--descriptif {
   animation: descriptif_out 800ms both ease-in-out;
@@ -364,7 +363,6 @@ input[name=choix]:not(:checked) + .menu > .menu--prix::before {
   input[name=choix]:hover + .menu > .menu--prix::before {
     animation: icone_in 800ms both ease-in-out;
   }
-
   input[name=choix]:not(:hover) + .menu > .menu--descriptif {
     animation: descriptif_out 800ms both ease-in-out;
   }

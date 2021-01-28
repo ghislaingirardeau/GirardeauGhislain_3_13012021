@@ -1,7 +1,27 @@
+@mixin animation_repas ($pseudo) {
+  &:#{$pseudo} + .menu > .menu--descriptif {
+    @include animation_composition (descriptif_in);
+  }
+  &:#{$pseudo} + .menu > .menu--prix::after {
+    @include animation_composition (after_in);
+  }
+  &:#{$pseudo} + .menu > .menu--prix::before {
+    @include animation_composition (icone_in);
+  }
+  &:not(:#{$pseudo}) + .menu > .menu--descriptif {
+    @include animation_composition (descriptif_out);
+  }
+  &:not(:#{$pseudo}) + .menu > .menu--prix::after {
+    @include animation_composition (after_out);
+  }
+  &:not(:#{$pseudo}) + .menu > .menu--prix::before {
+    @include animation_composition (icone_out);
+  } 
+}
 @mixin animation_composition ($name) {
     animation: $name 800ms both ease-in-out;
   }
-  
+
   @keyframes descriptif_in {
     from {
         width: 83%; 
