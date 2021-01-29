@@ -38,7 +38,13 @@ label::before {
 /* tous les btn des repas dans la page menu */
 input[name="choix"] {
   display: none;
-  @include animation_repas (checked);
+  @include animation_repas (checked, -45px);
+}
+
+@include tablette { 
+  input[name="choix"] {
+    @include animation_repas (hover, -35px);
+  }
 }
 
 @include laptop {
@@ -49,8 +55,5 @@ input[name="choix"] {
     }
     @include animation_btn_jaime (hover);
   }
-
-  input[name=choix] {
-    @include animation_repas (hover);
-}
+  
 }

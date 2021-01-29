@@ -1,107 +1,71 @@
-@mixin animation_repas ($pseudo) {
-  &:#{$pseudo} + .menu > .menu--descriptif {
-    @include animation_composition (descriptif_in);
+/* Animation des plats sur l'etat btn input choix  */
+.menu {
+  & > .menu--descriptif {
+    transition: all 800ms ease-in-out;
   }
-  &:#{$pseudo} + .menu > .menu--prix::after {
-    @include animation_composition (after_in);
+  & > .menu--prix::after {/* la boite verte en pseudo element */
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: -65px; /* a changer en responsive */
+    height: 200px;
+    background-color: $third;
+    width: 0px;
+    transform: translateZ(0);
+    transition: all 800ms ease-in-out;
   }
-  &:#{$pseudo} + .menu > .menu--prix::before {
-    @include animation_composition (icone_in);
+  & > .menu--prix::before { /* icone en pseudo element */
+    @include import_icone(900);
+    content: "\f058";
+    color: white;
+    background-color: $third;
+    transform: rotate(180deg);
+    z-index: 2;
+    @include position_absolue(35%, unset, unset, 1.6rem);
+    right: -75px; /* a changer en responsive */
+    transform: translateX(0px) rotateZ(180deg);
+    transition: all 800ms ease-in-out;
   }
-  &:not(:#{$pseudo}) + .menu > .menu--descriptif {
-    @include animation_composition (descriptif_out);
-  }
-  &:not(:#{$pseudo}) + .menu > .menu--prix::after {
-    @include animation_composition (after_out);
-  }
-  &:not(:#{$pseudo}) + .menu > .menu--prix::before {
-    @include animation_composition (icone_out);
-  } 
-  
 }
 
-@mixin animation_composition ($name) {
-    animation: $name 800ms both ease-in-out alternate;
+@mixin animation_repas($pseudo, $tranico) {
+  &:#{$pseudo} + .menu > .menu--descriptif {
+    width: 65%;
   }
-
-  @keyframes descriptif_in {
-    0% {
-        width: 83%; 
-    }
-    100%{
-        width: 65%;
-    }
+  &:#{$pseudo} + .menu > .menu--prix::after {
+    width: 80px;
+    transform: translateZ(1px);
   }
-  @keyframes descriptif_out {
-    0% {
-        width: 65%; 
-    }
-    100%{
-        width: 83%;
-    }
+  &:#{$pseudo} + .menu > .menu--prix::before {
+    transform: translateX($tranico) rotateZ(0);
   }
-  @keyframes after_in {
-    0% {
-      width: 0px;
-        transform: translateZ(0);
-    }
-    100%{
-      width: 80px;
-        transform: translateZ(1px);
-    }
-  }
-  @keyframes after_out {
-    0% {
-      width: 80px;
-        transform: translateZ(1px);
-    }
-    100%{
-      width: 0px;
-        transform: translateZ(0);
-    }
-  }
-  @keyframes icone_in {
-    0% {
-        
-        transform: translateX(0px) rotateZ(180deg) ;
-    }
-    100%{
-        transform: translateX(-35px) rotateZ(0);
-    }
-  }
-  @keyframes icone_out {
-    0% {
-        
-        transform: translateX(-35px) rotateZ(0) ;
-    }
-    100%{
-        transform: translateX(0px);
-    }
-  }
+}
 
 /* Animation au chargement des pages menu */
 /* Si ajout d'un plat: ajout dans $delay, changement through X */
-  @mixin loading_menu {
+@mixin loading_menu {
   @for $i from 1 through 4 {
-      &--#{$i} {
-        animation: loading_menu 1s both;
-        animation-delay: map-get($delay, $i);
-      }
+    &--#{$i} {
+      animation: loading_menu 1s both;
+      animation-delay: map-get($delay, $i);
     }
   }
-
-  $delay:(1:200ms, 2:350ms, 3:500ms, 4:650ms);
-  
-  @keyframes loading_menu {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
+$delay: (
+  1: 200ms,
+  2: 350ms,
+  3: 500ms,
+  4: 650ms,
+);
 
-  
+@keyframes loading_menu {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

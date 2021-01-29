@@ -74,25 +74,7 @@ main {
     width: 17%;
     padding-top: 15%; /* padding pour ne pas bouger la box en Y pour animation */
     padding-left: 5px;
-    position: relative;
-    &::after { /* la boite verte en pseudo element */
-      content: "";
-      position: absolute;
-      top: 0px;
-      right: -65px; /* a changer en responsive */
-      height: 200px;
-      background-color: $third;
-    }
-    &::before { /* l'icone check en pseudo element */
-      @include import_icone(900);
-      content: "\f058";
-      color: white;
-      background-color: $third;
-      transform: rotate(180deg);
-      z-index: 2;
-      @include position_absolue(35%, unset, unset, 1.6rem);
-      right: -65px; /* a changer en responsive */
-    }
+    position: relative; 
   }
 }
 

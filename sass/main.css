@@ -295,135 +295,52 @@
 }
 
 /* efface le coeur vide pour faire apparaitre le coeur plein dont 2 animations */
-@-webkit-keyframes descriptif_in {
-  from {
-    width: 83%;
-  }
-  to {
-    width: 65%;
-  }
-}
-@keyframes descriptif_in {
-  from {
-    width: 83%;
-  }
-  to {
-    width: 65%;
-  }
+/* Animation des plats sur l'etat btn input choix  */
+.menu > .menu--descriptif {
+  -webkit-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
 }
 
-@-webkit-keyframes descriptif_out {
-  from {
-    width: 65%;
-  }
-  to {
-    width: 83%;
-  }
+.menu > .menu--prix::after {
+  /* la boite verte en pseudo element */
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: -65px;
+  /* a changer en responsive */
+  height: 200px;
+  background-color: #99E2D0;
+  width: 0px;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
 }
 
-@keyframes descriptif_out {
-  from {
-    width: 65%;
-  }
-  to {
-    width: 83%;
-  }
-}
-
-@-webkit-keyframes after_in {
-  from {
-    width: 0px;
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-  }
-  to {
-    width: 80px;
-    -webkit-transform: translateZ(1px);
-            transform: translateZ(1px);
-  }
-}
-
-@keyframes after_in {
-  from {
-    width: 0px;
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-  }
-  to {
-    width: 80px;
-    -webkit-transform: translateZ(1px);
-            transform: translateZ(1px);
-  }
-}
-
-@-webkit-keyframes after_out {
-  from {
-    width: 80px;
-    -webkit-transform: translateZ(1px);
-            transform: translateZ(1px);
-  }
-  to {
-    width: 0px;
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-  }
-}
-
-@keyframes after_out {
-  from {
-    width: 80px;
-    -webkit-transform: translateZ(1px);
-            transform: translateZ(1px);
-  }
-  to {
-    width: 0px;
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-  }
-}
-
-@-webkit-keyframes icone_in {
-  0% {
-    -webkit-transform: translateX(0px) rotateZ(180deg);
-            transform: translateX(0px) rotateZ(180deg);
-  }
-  100% {
-    -webkit-transform: translateX(-35px) rotateZ(0);
-            transform: translateX(-35px) rotateZ(0);
-  }
-}
-
-@keyframes icone_in {
-  0% {
-    -webkit-transform: translateX(0px) rotateZ(180deg);
-            transform: translateX(0px) rotateZ(180deg);
-  }
-  100% {
-    -webkit-transform: translateX(-35px) rotateZ(0);
-            transform: translateX(-35px) rotateZ(0);
-  }
-}
-
-@-webkit-keyframes icone_out {
-  0% {
-    -webkit-transform: translateX(-35px) rotateZ(0);
-            transform: translateX(-35px) rotateZ(0);
-  }
-  100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-}
-
-@keyframes icone_out {
-  0% {
-    -webkit-transform: translateX(-35px) rotateZ(0);
-            transform: translateX(-35px) rotateZ(0);
-  }
-  100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
+.menu > .menu--prix::before {
+  /* icone en pseudo element */
+  font-family: "Font Awesome 5 free";
+  font-weight: 900;
+  cursor: pointer;
+  content: "\f058";
+  color: white;
+  background-color: #99E2D0;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  z-index: 2;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  position: absolute;
+  top: 35%;
+  bottom: unset;
+  left: unset;
+  font-size: 1.6rem;
+  right: -75px;
+  /* a changer en responsive */
+  -webkit-transform: translateX(0px) rotateZ(180deg);
+          transform: translateX(0px) rotateZ(180deg);
+  -webkit-transition: all 800ms ease-in-out;
+  transition: all 800ms ease-in-out;
 }
 
 /* Animation au chargement des pages menu */
@@ -559,33 +476,33 @@ input[name="choix"] {
 }
 
 input[name="choix"]:checked + .menu > .menu--descriptif {
-  -webkit-animation: descriptif_in 800ms both ease-in-out;
-          animation: descriptif_in 800ms both ease-in-out;
+  width: 65%;
 }
 
 input[name="choix"]:checked + .menu > .menu--prix::after {
-  -webkit-animation: after_in 800ms both ease-in-out;
-          animation: after_in 800ms both ease-in-out;
+  width: 80px;
+  -webkit-transform: translateZ(1px);
+          transform: translateZ(1px);
 }
 
 input[name="choix"]:checked + .menu > .menu--prix::before {
-  -webkit-animation: icone_in 800ms both ease-in-out;
-          animation: icone_in 800ms both ease-in-out;
+  -webkit-transform: translateX(-45px) rotateZ(0);
+          transform: translateX(-45px) rotateZ(0);
 }
 
-input[name="choix"]:not(:checked) + .menu > .menu--descriptif {
-  -webkit-animation: descriptif_out 800ms both ease-in-out;
-          animation: descriptif_out 800ms both ease-in-out;
-}
-
-input[name="choix"]:not(:checked) + .menu > .menu--prix::after {
-  -webkit-animation: after_out 800ms both ease-in-out;
-          animation: after_out 800ms both ease-in-out;
-}
-
-input[name="choix"]:not(:checked) + .menu > .menu--prix::before {
-  -webkit-animation: icone_out 800ms both ease-in-out;
-          animation: icone_out 800ms both ease-in-out;
+@media screen and (min-width: 666px) {
+  input[name="choix"]:hover + .menu > .menu--descriptif {
+    width: 65%;
+  }
+  input[name="choix"]:hover + .menu > .menu--prix::after {
+    width: 80px;
+    -webkit-transform: translateZ(1px);
+            transform: translateZ(1px);
+  }
+  input[name="choix"]:hover + .menu > .menu--prix::before {
+    -webkit-transform: translateX(-35px) rotateZ(0);
+            transform: translateX(-35px) rotateZ(0);
+  }
 }
 
 @media screen and (min-width: 1025px) {
@@ -616,30 +533,6 @@ input[name="choix"]:not(:checked) + .menu > .menu--prix::before {
     background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-  }
-  input[name=choix]:hover + .menu > .menu--descriptif {
-    -webkit-animation: descriptif_in 800ms both ease-in-out;
-            animation: descriptif_in 800ms both ease-in-out;
-  }
-  input[name=choix]:hover + .menu > .menu--prix::after {
-    -webkit-animation: after_in 800ms both ease-in-out;
-            animation: after_in 800ms both ease-in-out;
-  }
-  input[name=choix]:hover + .menu > .menu--prix::before {
-    -webkit-animation: icone_in 800ms both ease-in-out;
-            animation: icone_in 800ms both ease-in-out;
-  }
-  input[name=choix]:not(:hover) + .menu > .menu--descriptif {
-    -webkit-animation: descriptif_out 800ms both ease-in-out;
-            animation: descriptif_out 800ms both ease-in-out;
-  }
-  input[name=choix]:not(:hover) + .menu > .menu--prix::after {
-    -webkit-animation: after_out 800ms both ease-in-out;
-            animation: after_out 800ms both ease-in-out;
-  }
-  input[name=choix]:not(:hover) + .menu > .menu--prix::before {
-    -webkit-animation: icone_out 800ms both ease-in-out;
-            animation: icone_out 800ms both ease-in-out;
   }
 }
 
@@ -1158,39 +1051,6 @@ main {
   position: relative;
 }
 
-.menu > .menu--prix::after {
-  /* la boite verte en pseudo element */
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: -65px;
-  /* a changer en responsive */
-  height: 200px;
-  background-color: #99E2D0;
-}
-
-.menu > .menu--prix::before {
-  /* l'icone check en pseudo element */
-  font-family: "Font Awesome 5 free";
-  font-weight: 900;
-  cursor: pointer;
-  content: "\f058";
-  color: white;
-  background-color: #99E2D0;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  z-index: 2;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  position: absolute;
-  top: 35%;
-  bottom: unset;
-  left: unset;
-  font-size: 1.6rem;
-  right: -65px;
-  /* a changer en responsive */
-}
-
 .btn-bloc {
   background-color: #f6f6f6;
   text-align: center;
@@ -1304,7 +1164,7 @@ main {
             justify-content: flex-start;
   }
   .resultats__contenu, .resultats__contenu--nouveau {
-    width: 24%;
+    width: 22.66667%;
     margin: 0px 7px 15px;
     text-align: left;
   }

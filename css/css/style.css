@@ -168,58 +168,45 @@
   }
 }
 /* efface le coeur vide pour faire apparaitre le coeur plein dont 2 animations */
-@keyframes descriptif_in {
-  0% {
-    width: 83%;
-  }
-  100% {
-    width: 65%;
-  }
+/* Animation des plats sur l'etat btn input choix  */
+.menu > .menu--descriptif {
+  transition: all 800ms ease-in-out;
 }
-@keyframes descriptif_out {
-  0% {
-    width: 65%;
-  }
-  100% {
-    width: 83%;
-  }
+.menu > .menu--prix::after {
+  /* la boite verte en pseudo element */
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: -65px;
+  /* a changer en responsive */
+  height: 200px;
+  background-color: #99E2D0;
+  width: 0px;
+  transform: translateZ(0);
+  transition: all 800ms ease-in-out;
 }
-@keyframes after_in {
-  0% {
-    width: 0px;
-    transform: translateZ(0);
-  }
-  100% {
-    width: 80px;
-    transform: translateZ(1px);
-  }
+.menu > .menu--prix::before {
+  /* icone en pseudo element */
+  font-family: "Font Awesome 5 free";
+  font-weight: 900;
+  cursor: pointer;
+  content: "";
+  color: white;
+  background-color: #99E2D0;
+  transform: rotate(180deg);
+  z-index: 2;
+  box-sizing: content-box;
+  position: absolute;
+  top: 35%;
+  bottom: unset;
+  left: unset;
+  font-size: 1.6rem;
+  right: -75px;
+  /* a changer en responsive */
+  transform: translateX(0px) rotateZ(180deg);
+  transition: all 800ms ease-in-out;
 }
-@keyframes after_out {
-  0% {
-    width: 80px;
-    transform: translateZ(1px);
-  }
-  100% {
-    width: 0px;
-    transform: translateZ(0);
-  }
-}
-@keyframes icone_in {
-  0% {
-    transform: translateX(0px) rotateZ(180deg);
-  }
-  100% {
-    transform: translateX(-35px) rotateZ(0);
-  }
-}
-@keyframes icone_out {
-  0% {
-    transform: translateX(-35px) rotateZ(0);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
+
 /* Animation au chargement des pages menu */
 /* Si ajout d'un plat: ajout dans $delay, changement through X */
 @keyframes loading_menu {
@@ -318,24 +305,28 @@ input[name=choix] {
   display: none;
 }
 input[name=choix]:checked + .menu > .menu--descriptif {
-  animation: descriptif_in 800ms both ease-in-out alternate;
+  width: 65%;
 }
 input[name=choix]:checked + .menu > .menu--prix::after {
-  animation: after_in 800ms both ease-in-out alternate;
+  width: 80px;
+  transform: translateZ(1px);
 }
 input[name=choix]:checked + .menu > .menu--prix::before {
-  animation: icone_in 800ms both ease-in-out alternate;
-}
-input[name=choix]:not(:checked) + .menu > .menu--descriptif {
-  animation: descriptif_out 800ms both ease-in-out alternate;
-}
-input[name=choix]:not(:checked) + .menu > .menu--prix::after {
-  animation: after_out 800ms both ease-in-out alternate;
-}
-input[name=choix]:not(:checked) + .menu > .menu--prix::before {
-  animation: icone_out 800ms both ease-in-out alternate;
+  transform: translateX(-45px) rotateZ(0);
 }
 
+@media screen and (min-width: 666px) {
+  input[name=choix]:hover + .menu > .menu--descriptif {
+    width: 65%;
+  }
+  input[name=choix]:hover + .menu > .menu--prix::after {
+    width: 80px;
+    transform: translateZ(1px);
+  }
+  input[name=choix]:hover + .menu > .menu--prix::before {
+    transform: translateX(-35px) rotateZ(0);
+  }
+}
 @media screen and (min-width: 1025px) {
   .jaime:hover {
     color: transparent;
@@ -360,25 +351,6 @@ input[name=choix]:not(:checked) + .menu > .menu--prix::before {
     background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
-  }
-
-  input[name=choix]:hover + .menu > .menu--descriptif {
-    animation: descriptif_in 800ms both ease-in-out alternate;
-  }
-  input[name=choix]:hover + .menu > .menu--prix::after {
-    animation: after_in 800ms both ease-in-out alternate;
-  }
-  input[name=choix]:hover + .menu > .menu--prix::before {
-    animation: icone_in 800ms both ease-in-out alternate;
-  }
-  input[name=choix]:not(:hover) + .menu > .menu--descriptif {
-    animation: descriptif_out 800ms both ease-in-out alternate;
-  }
-  input[name=choix]:not(:hover) + .menu > .menu--prix::after {
-    animation: after_out 800ms both ease-in-out alternate;
-  }
-  input[name=choix]:not(:hover) + .menu > .menu--prix::before {
-    animation: icone_out 800ms both ease-in-out alternate;
   }
 }
 body {
@@ -775,35 +747,6 @@ main {
   /* padding pour ne pas bouger la box en Y pour animation */
   padding-left: 5px;
   position: relative;
-}
-.menu > .menu--prix::after {
-  /* la boite verte en pseudo element */
-  content: "";
-  position: absolute;
-  top: 0px;
-  right: -65px;
-  /* a changer en responsive */
-  height: 200px;
-  background-color: #99E2D0;
-}
-.menu > .menu--prix::before {
-  /* l'icone check en pseudo element */
-  font-family: "Font Awesome 5 free";
-  font-weight: 900;
-  cursor: pointer;
-  content: "";
-  color: white;
-  background-color: #99E2D0;
-  transform: rotate(180deg);
-  z-index: 2;
-  box-sizing: content-box;
-  position: absolute;
-  top: 35%;
-  bottom: unset;
-  left: unset;
-  font-size: 1.6rem;
-  right: -65px;
-  /* a changer en responsive */
 }
 
 .btn-bloc {
