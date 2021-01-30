@@ -407,29 +407,66 @@
   text-align: center;
 }
 
-.jaime::after {
-  font-family: "Font Awesome 5 free";
-  font-weight: 900;
-  cursor: pointer;
-  content: "\f004";
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
-  position: absolute;
-  top: 1px;
-  bottom: 0;
-  left: 0px;
-  font-size: 1.6rem;
-  opacity: 0;
-  -webkit-transition: opacity 400ms ease-out;
-  transition: opacity 400ms ease-out;
+@media screen and (max-width: 666px) {
+  .jaime::after {
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    cursor: pointer;
+    content: "\f004";
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    position: absolute;
+    top: 1px;
+    bottom: 0;
+    left: 0px;
+    font-size: 1.6rem;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-out;
+    transition: opacity 400ms ease-out;
+  }
+  .jaime:active::after {
+    opacity: 1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(95%, #FF79DA));
+    background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  .jaime:active {
+    color: transparent;
+    -webkit-transition: color 100ms ease-out;
+    transition: color 100ms ease-out;
+  }
 }
 
-.jaime:active::after {
-  opacity: 1;
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(95%, #FF79DA));
-  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+@media screen and (min-width: 666px) {
+  .jaime::after {
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    cursor: pointer;
+    content: "\f004";
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    position: absolute;
+    top: 1px;
+    bottom: 0;
+    left: 0px;
+    font-size: 1.6rem;
+    opacity: 0;
+    -webkit-transition: opacity 400ms ease-out;
+    transition: opacity 400ms ease-out;
+  }
+  .jaime:hover::after {
+    opacity: 1;
+    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(95%, #FF79DA));
+    background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  .jaime:hover {
+    color: transparent;
+    -webkit-transition: color 100ms ease-out;
+    transition: color 100ms ease-out;
+  }
 }
 
 .jaime--restaurant {
@@ -450,12 +487,6 @@
   bottom: 0;
   left: 80%;
   font-size: 1.6rem;
-}
-
-.jaime:active {
-  color: transparent;
-  -webkit-transition: color 100ms ease-out;
-  transition: color 100ms ease-out;
 }
 
 /* layout du label pour rendre toute la zone cliquable */
@@ -502,37 +533,6 @@ input[name="choix"] {
   input[name="choix"]:hover + .menu > .menu--prix::before {
     -webkit-transform: translateX(-35px) rotateZ(0);
             transform: translateX(-35px) rotateZ(0);
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .jaime:hover {
-    color: transparent;
-    -webkit-transition: color ease-out;
-    transition: color ease-out;
-  }
-  .jaime::after {
-    font-family: "Font Awesome 5 free";
-    font-weight: 900;
-    cursor: pointer;
-    content: "\f004";
-    -webkit-box-sizing: content-box;
-            box-sizing: content-box;
-    position: absolute;
-    top: 1px;
-    bottom: 0;
-    left: 0px;
-    font-size: 1.6rem;
-    opacity: 0;
-    -webkit-transition: opacity 400ms ease-out;
-    transition: opacity 400ms ease-out;
-  }
-  .jaime:hover::after {
-    opacity: 1;
-    background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), color-stop(95%, #FF79DA));
-    background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
   }
 }
 

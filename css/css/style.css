@@ -248,25 +248,57 @@
   text-align: center;
 }
 
-.jaime::after {
-  font-family: "Font Awesome 5 free";
-  font-weight: 900;
-  cursor: pointer;
-  content: "";
-  box-sizing: content-box;
-  position: absolute;
-  top: 1px;
-  bottom: 0;
-  left: 0px;
-  font-size: 1.6rem;
-  opacity: 0;
-  transition: opacity 400ms ease-out;
+@media screen and (max-width: 666px) {
+  .jaime::after {
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    cursor: pointer;
+    content: "";
+    box-sizing: content-box;
+    position: absolute;
+    top: 1px;
+    bottom: 0;
+    left: 0px;
+    font-size: 1.6rem;
+    opacity: 0;
+    transition: opacity 400ms ease-out;
+  }
+  .jaime:active::after {
+    opacity: 1;
+    background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  .jaime:active {
+    color: transparent;
+    transition: color 100ms ease-out;
+  }
 }
-.jaime:active::after {
-  opacity: 1;
-  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
+@media screen and (min-width: 666px) {
+  .jaime::after {
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+    cursor: pointer;
+    content: "";
+    box-sizing: content-box;
+    position: absolute;
+    top: 1px;
+    bottom: 0;
+    left: 0px;
+    font-size: 1.6rem;
+    opacity: 0;
+    transition: opacity 400ms ease-out;
+  }
+  .jaime:hover::after {
+    opacity: 1;
+    background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+  .jaime:hover {
+    color: transparent;
+    transition: color 100ms ease-out;
+  }
 }
 .jaime--restaurant {
   box-sizing: content-box;
@@ -283,10 +315,6 @@
   bottom: 0;
   left: 80%;
   font-size: 1.6rem;
-}
-.jaime:active {
-  color: transparent;
-  transition: color 100ms ease-out;
 }
 
 /* layout du label pour rendre toute la zone cliquable */
@@ -329,32 +357,6 @@ input[name=choix] {
   }
 }
 
-@media screen and (min-width: 1025px) {
-  .jaime:hover {
-    color: transparent;
-    transition: color ease-out;
-  }
-  .jaime::after {
-    font-family: "Font Awesome 5 free";
-    font-weight: 900;
-    cursor: pointer;
-    content: "";
-    box-sizing: content-box;
-    position: absolute;
-    top: 1px;
-    bottom: 0;
-    left: 0px;
-    font-size: 1.6rem;
-    opacity: 0;
-    transition: opacity 400ms ease-out;
-  }
-  .jaime:hover::after {
-    opacity: 1;
-    background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 95%);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-  }
-}
 body {
   margin: auto;
   font-family: roboto;

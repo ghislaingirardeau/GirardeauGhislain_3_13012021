@@ -30,7 +30,6 @@
 
 @mixin animation_repas($taille, $pseudo, $tranico) {
   @media screen and (#{$taille}: 666px) {
-  
   &:#{$pseudo} + .menu > .menu--descriptif {
     width: 65%;
   }

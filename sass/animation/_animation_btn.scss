@@ -1,4 +1,5 @@
-  @mixin animation_btn_jaime ($etat){
+  @mixin animation_btn_jaime ($taille, $etat){
+    @media screen and (#{$taille}: 666px) {
     &::after {
       @include import_icone(900);
       content: "\f004";
@@ -12,6 +13,11 @@
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
     }
+    &:#{$etat} {
+      color: transparent;
+      transition: color 100ms ease-out;
+    }
+  }
   }/* efface le coeur vide pour faire apparaitre le coeur plein dont 2 animations */
 
   @mixin animation_btn_submit($col_shad) {

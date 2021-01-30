@@ -12,16 +12,13 @@
 }
 
 .jaime {
-  @include animation_btn_jaime (active);
+  @include animation_btn_jaime (max-width, active);
+  @include animation_btn_jaime (min-width, hover);
   &--restaurant {
     @include position_absolue(75%, 0, 80%, 1.6rem);
   }
   &--menu {
     @include position_absolue(80%, 0, 80%, 1.6rem);
-  }
-  &:active {
-    color: transparent;
-    transition: color 100ms ease-out;
   }
 }
 /* layout du label pour rendre toute la zone cliquable */
@@ -40,15 +37,4 @@ input[name="choix"] {
   display: none;
   @include animation_repas (max-width, checked, -45px);
   @include animation_repas (min-width, hover, -35px);
-}
-
-@include laptop {
-  .jaime {
-    &:hover {
-      color: transparent;
-      transition: color ease-out;
-    }
-    @include animation_btn_jaime (hover);
-  }
-  
 }
