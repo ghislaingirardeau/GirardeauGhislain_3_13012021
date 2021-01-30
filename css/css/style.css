@@ -799,7 +799,7 @@ main {
   }
   .resultats__contenu, .resultats__contenu--nouveau {
     width: 42.6666666667%;
-    margin: 0 10px;
+    margin: 0 10px 15px;
     text-align: left;
   }
 }

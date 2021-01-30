@@ -23,7 +23,7 @@
       @include box_width(345px, 30px 10px, left);
     }
     &__contenu, &__contenu--nouveau {
-      @include box_width (160px, 0 10px, left);
+      @include box_width (160px, 0 10px 15px, left);
     }
   }
 }

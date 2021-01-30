@@ -1110,7 +1110,7 @@ main {
   }
   .resultats__contenu, .resultats__contenu--nouveau {
     width: 42.66667%;
-    margin: 0 10px;
+    margin: 0 10px 15px;
     text-align: left;
   }
 }
