@@ -19,14 +19,14 @@
 
   /* Animation header deplacement pour position final */
   #logo_ohmyfood--index {
-    animation: logo_header 400ms 2400ms both ease-out;
+    animation: logo_header 400ms 2400ms both cubic-bezier(0.42, 0, 0.24, 1.26);
   }
   @keyframes logo_header {
     0% {
       opacity: 0;
       transform: translateY(225px) translateX(-60px) scale(0.2);
   }
-  
+
   100% {
       transform: translateY(0px) scale(1);
       opacity: 1;
