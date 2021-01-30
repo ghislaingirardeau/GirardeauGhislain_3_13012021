@@ -28,7 +28,9 @@
   }
 }
 
-@mixin animation_repas($pseudo, $tranico) {
+@mixin animation_repas($taille, $pseudo, $tranico) {
+  @media screen and (#{$taille}: 666px) {
+  
   &:#{$pseudo} + .menu > .menu--descriptif {
     width: 65%;
   }
@@ -39,6 +41,7 @@
   &:#{$pseudo} + .menu > .menu--prix::before {
     transform: translateX($tranico) rotateZ(0);
   }
+}
 }
 
 /* Animation au chargement des pages menu */

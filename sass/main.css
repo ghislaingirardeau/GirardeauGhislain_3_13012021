@@ -475,19 +475,19 @@ input[name="choix"] {
   display: none;
 }
 
-input[name="choix"]:checked + .menu > .menu--descriptif {
-  width: 65%;
-}
-
-input[name="choix"]:checked + .menu > .menu--prix::after {
-  width: 80px;
-  -webkit-transform: translateZ(1px);
-          transform: translateZ(1px);
-}
-
-input[name="choix"]:checked + .menu > .menu--prix::before {
-  -webkit-transform: translateX(-45px) rotateZ(0);
-          transform: translateX(-45px) rotateZ(0);
+@media screen and (max-width: 666px) {
+  input[name="choix"]:checked + .menu > .menu--descriptif {
+    width: 65%;
+  }
+  input[name="choix"]:checked + .menu > .menu--prix::after {
+    width: 80px;
+    -webkit-transform: translateZ(1px);
+            transform: translateZ(1px);
+  }
+  input[name="choix"]:checked + .menu > .menu--prix::before {
+    -webkit-transform: translateX(-45px) rotateZ(0);
+            transform: translateX(-45px) rotateZ(0);
+  }
 }
 
 @media screen and (min-width: 666px) {

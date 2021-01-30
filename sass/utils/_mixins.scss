@@ -118,3 +118,9 @@
   }
 }
 
+@mixin animation_responsive ($taille) {
+  @media screen and (#{$taille}: 666px) {
+    @content;
+  }
+}
+

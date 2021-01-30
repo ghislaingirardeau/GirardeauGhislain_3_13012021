@@ -38,13 +38,8 @@ label::before {
 /* tous les btn des repas dans la page menu */
 input[name="choix"] {
   display: none;
-  @include animation_repas (checked, -45px);
-}
-
-@include tablette { 
-  input[name="choix"] {
-    @include animation_repas (hover, -35px);
-  }
+  @include animation_repas (max-width, checked, -45px);
+  @include animation_repas (min-width, hover, -35px);
 }
 
 @include laptop {
