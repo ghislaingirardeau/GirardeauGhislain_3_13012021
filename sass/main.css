@@ -1045,7 +1045,7 @@ main {
 
 .menu > .menu--prix {
   width: 17%;
-  padding-top: 15%;
+  padding-top: 10%;
   /* padding pour ne pas bouger la box en Y pour animation */
   padding-left: 5px;
   position: relative;
@@ -1208,9 +1208,6 @@ main {
   .plats,
   .desserts {
     width: 50%;
-  }
-  .menu .menu--prix {
-    padding-top: 10%;
   }
   .menu .menu--prix::after {
     right: -100px;
