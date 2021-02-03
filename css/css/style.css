@@ -177,7 +177,7 @@
   content: "";
   position: absolute;
   top: 0px;
-  right: -65px;
+  right: -105px;
   /* a changer en responsive */
   height: 200px;
   background-color: #99E2D0;
@@ -201,7 +201,7 @@
   bottom: unset;
   left: unset;
   font-size: 1.6rem;
-  right: -75px;
+  right: -105px;
   /* a changer en responsive */
   transform: translateX(0px) rotateZ(180deg);
   transition: all 800ms ease-in-out;
@@ -337,11 +337,11 @@ input[name=choix] {
     width: 65%;
   }
   input[name=choix]:checked + .menu > .menu--prix::after {
-    width: 80px;
+    width: 120px;
     transform: translateZ(1px);
   }
   input[name=choix]:checked + .menu > .menu--prix::before {
-    transform: translateX(-45px) rotateZ(0);
+    transform: translateX(-75px) rotateZ(0);
   }
 }
 @media screen and (min-width: 666px) {
@@ -349,7 +349,7 @@ input[name=choix] {
     width: 65%;
   }
   input[name=choix]:hover + .menu > .menu--prix::after {
-    width: 80px;
+    width: 120px;
     transform: translateZ(1px);
   }
   input[name=choix]:hover + .menu > .menu--prix::before {
@@ -886,7 +886,7 @@ main {
     padding-top: 10%;
   }
   .menu .menu--prix::after {
-    right: -80px;
+    right: -100px;
   }
   .menu .menu--prix::before {
     right: -80px;

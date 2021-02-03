@@ -35,6 +35,7 @@ label::before {
 /* tous les btn des repas dans la page menu */
 input[name="choix"] {
   display: none;
-  @include animation_repas (max-width, checked, -45px);
+  @include animation_repas (max-width, checked, -75px);
   @include animation_repas (min-width, hover, -35px);
 }
+

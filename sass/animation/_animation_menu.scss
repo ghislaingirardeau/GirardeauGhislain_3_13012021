@@ -7,7 +7,7 @@
     content: "";
     position: absolute;
     top: 0px;
-    right: -65px; /* a changer en responsive */
+    right: -105px; /* a changer en responsive */
     height: 200px;
     background-color: $third;
     width: 0px;
@@ -22,7 +22,7 @@
     transform: rotate(180deg);
     z-index: 2;
     @include position_absolue(35%, unset, unset, 1.6rem);
-    right: -75px; /* a changer en responsive */
+    right: -105px; /* a changer en responsive */
     transform: translateX(0px) rotateZ(180deg);
     transition: all 800ms ease-in-out;
   }
@@ -34,7 +34,7 @@
     width: 65%;
   }
   &:#{$pseudo} + .menu > .menu--prix::after {
-    width: 80px;
+    width: 120px;
     transform: translateZ(1px);
   }
   &:#{$pseudo} + .menu > .menu--prix::before {

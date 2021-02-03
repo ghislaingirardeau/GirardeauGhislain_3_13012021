@@ -306,7 +306,7 @@
   content: "";
   position: absolute;
   top: 0px;
-  right: -65px;
+  right: -105px;
   /* a changer en responsive */
   height: 200px;
   background-color: #99E2D0;
@@ -335,7 +335,7 @@
   bottom: unset;
   left: unset;
   font-size: 1.6rem;
-  right: -75px;
+  right: -105px;
   /* a changer en responsive */
   -webkit-transform: translateX(0px) rotateZ(180deg);
           transform: translateX(0px) rotateZ(180deg);
@@ -511,13 +511,13 @@ input[name="choix"] {
     width: 65%;
   }
   input[name="choix"]:checked + .menu > .menu--prix::after {
-    width: 80px;
+    width: 120px;
     -webkit-transform: translateZ(1px);
             transform: translateZ(1px);
   }
   input[name="choix"]:checked + .menu > .menu--prix::before {
-    -webkit-transform: translateX(-45px) rotateZ(0);
-            transform: translateX(-45px) rotateZ(0);
+    -webkit-transform: translateX(-75px) rotateZ(0);
+            transform: translateX(-75px) rotateZ(0);
   }
 }
 
@@ -526,7 +526,7 @@ input[name="choix"] {
     width: 65%;
   }
   input[name="choix"]:hover + .menu > .menu--prix::after {
-    width: 80px;
+    width: 120px;
     -webkit-transform: translateZ(1px);
             transform: translateZ(1px);
   }
@@ -1213,7 +1213,7 @@ main {
     padding-top: 10%;
   }
   .menu .menu--prix::after {
-    right: -80px;
+    right: -100px;
   }
   .menu .menu--prix::before {
     right: -80px;
